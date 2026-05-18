@@ -1,0 +1,368 @@
+[
+  {
+    "uuid": "ec508739-2e2f-40a9-b2c9-eaa1e2610d39",
+    "slug": "carrefour",
+    "name": "Carrefour",
+    "type": "company"
+  },
+  {
+    "uuid": "05e48ab0-2864-4489-92a9-25f82d43aec5",
+    "slug": "openai-chatgpt",
+    "name": "OpenAI ChatGPT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "41ef199c-87bb-4990-a4e0-78625d0fae7b",
+    "slug": "walmart",
+    "name": "Walmart",
+    "type": "company"
+  },
+  {
+    "uuid": "983a619d-f3a0-46b7-86ec-ba79463ca8cc",
+    "slug": "microsoft-copilot-studio",
+    "name": "Microsoft Copilot Studio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4d96271c-b4da-47c4-95b3-a297a6d8f043",
+    "slug": "newmans-own",
+    "name": "Newman's Own",
+    "type": "company"
+  },
+  {
+    "uuid": "b3aa6185-6f3d-4123-998a-ffbcc87a8715",
+    "slug": "microsoft-365-copilot",
+    "name": "Microsoft 365 Copilot",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7a14137d-842d-4ba3-9c72-b58e0c00d004",
+    "slug": "gong",
+    "name": "Gong",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1f651b49-2746-4d34-b7a7-2959d39fa00c",
+    "slug": "chorus",
+    "name": "Chorus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ed4af423-f70d-46a7-8256-fc32d122ce62",
+    "slug": "bain-company",
+    "name": "Bain & Company",
+    "type": "company"
+  },
+  {
+    "uuid": "ecb97847-2c8d-4678-81a2-66cc841eef8d",
+    "slug": "pwc-company",
+    "name": "PwC",
+    "type": "company"
+  },
+  {
+    "uuid": "a5609ccc-5530-4b84-bab0-8ba70fd4f9fd",
+    "slug": "zoom",
+    "name": "Zoom",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f71a3b6c-6586-4113-b9ad-38cb6b126ff8",
+    "slug": "glean",
+    "name": "Glean",
+    "type": "vendor"
+  },
+  {
+    "uuid": "752b9636-bcc7-40d8-b98f-3f4118f61ea9",
+    "slug": "zapier",
+    "name": "Zapier",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d3d4ef37-6aac-43d5-9f1b-60592612c74b",
+    "slug": "make-com",
+    "name": "Make",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ca524711-3498-439c-b905-7538ac03e4b2",
+    "slug": "n8n",
+    "name": "n8n",
+    "type": "vendor"
+  },
+  {
+    "uuid": "00e5e36a-b672-4209-a961-bbcfc4a15718",
+    "slug": "sap",
+    "name": "SAP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "33dee22a-499d-4cb6-b187-a19be88d0eeb",
+    "slug": "salesforce",
+    "name": "Salesforce",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d2ba161f-5418-45ba-8104-1e41a3e84c6f",
+    "slug": "ibm",
+    "name": "IBM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0069c0e4-f33c-48fb-b931-d1f12616f220",
+    "slug": "microsoft-azure",
+    "name": "Microsoft Azure",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3e57f8e7-6d6e-448f-94cb-1e800e977ed3",
+    "slug": "openai",
+    "name": "OpenAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "766c9156-692a-4bf0-b389-bc6fb139c938",
+    "slug": "aws",
+    "name": "AWS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0949cf61-ab61-4665-9148-6243ca1a8815",
+    "slug": "google-cloud",
+    "name": "Google Cloud",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fe1b94ac-646b-45cf-a926-d163491b8df7",
+    "slug": "microsoft-corporation",
+    "name": "Microsoft",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dae8f214-9c03-4c49-ab19-37972e32fa04",
+    "slug": "coca-cola",
+    "name": "The Coca-Cola Company",
+    "type": "company"
+  },
+  {
+    "uuid": "33e1c3e0-641f-40d2-9f68-ba950f55ff22",
+    "slug": "mastercard",
+    "name": "Mastercard",
+    "type": "company"
+  },
+  {
+    "uuid": "4f1099e2-a6de-4f4c-ac03-680e31edd61c",
+    "slug": "blackline",
+    "name": "BlackLine",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c37399e2-a17c-4739-8960-b71d589fb26c",
+    "slug": "zillow",
+    "name": "Zillow",
+    "type": "company"
+  },
+  {
+    "uuid": "1f9c2d8d-c5d6-492f-82ce-9ee6c0589bf7",
+    "slug": "altumatim",
+    "name": "Altumatim",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42278c3c-a488-4b63-ac23-ad55fd0253df",
+    "slug": "google-vertex-ai",
+    "name": "Google Vertex AI / Gemini",
+    "type": "vendor"
+  },
+  {
+    "uuid": "532d8b80-1936-4e04-9634-8e569092ffc7",
+    "slug": "spellbook",
+    "name": "Spellbook",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ddae0f2d-f74b-4003-9e9b-ce0f5014c40f",
+    "slug": "harvey",
+    "name": "Harvey",
+    "type": "vendor"
+  },
+  {
+    "uuid": "17edbe64-fb98-43ee-be8b-5cddda827752",
+    "slug": "cocounsel",
+    "name": "CoCounsel",
+    "type": "vendor"
+  },
+  {
+    "uuid": "362c2ee3-d98e-490f-aba9-6411af3095cb",
+    "slug": "clio-grow",
+    "name": "Clio Grow",
+    "type": "vendor"
+  },
+  {
+    "uuid": "133f3cc7-5a63-4d9c-b44e-9a628dc410e8",
+    "slug": "bank-of-america",
+    "name": "Bank of America",
+    "type": "company"
+  },
+  {
+    "uuid": "4511d39a-582a-4a51-9391-448b80c4a4e7",
+    "slug": "darktrace",
+    "name": "Darktrace",
+    "type": "vendor"
+  },
+  {
+    "uuid": "13c97798-0c2e-4c69-b6da-50097fccdf20",
+    "slug": "aviso",
+    "name": "Aviso",
+    "type": "company"
+  },
+  {
+    "uuid": "ffb62832-6259-4266-86e3-64fa20f47548",
+    "slug": "memcyco",
+    "name": "Memcyco",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2e5e7d8e-c71f-4e11-81f8-6982ee0594bb",
+    "slug": "dxc-technology",
+    "name": "DXC Technology",
+    "type": "vendor"
+  },
+  {
+    "uuid": "71824113-7396-4ec4-a519-2a4ce60f7ee6",
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1c980ce5-1201-437b-a33d-b38a70086b69",
+    "slug": "continental-ag",
+    "name": "Continental AG",
+    "type": "company"
+  },
+  {
+    "uuid": "139655de-b8b0-4e13-a51f-6c90d7773187",
+    "slug": "manhattan-associates",
+    "name": "Manhattan Associates",
+    "type": "vendor"
+  },
+  {
+    "uuid": "07c53004-bb72-4447-b85d-db9c0d087d4f",
+    "slug": "aviva",
+    "name": "Aviva",
+    "type": "company"
+  },
+  {
+    "uuid": "824321e4-b6ce-44f4-8d7c-04015b3e59e7",
+    "slug": "sciencesoft",
+    "name": "ScienceSoft",
+    "type": "vendor"
+  },
+  {
+    "uuid": "50a08bfb-7845-44a5-bb14-c897523f046b",
+    "slug": "schrodinger",
+    "name": "Schr\u00f6dinger",
+    "type": "vendor"
+  },
+  {
+    "uuid": "14b2b306-85a6-4a92-bd7b-1235b3116157",
+    "slug": "exscientia",
+    "name": "Exscientia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "aa724aac-e3af-4cb9-bb84-c020f8579e73",
+    "slug": "insilico-medicine",
+    "name": "Insilico Medicine",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8f8f1da3-52bc-4894-8cce-b7e2b54c343d",
+    "slug": "recursion",
+    "name": "Recursion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c5aa793e-87d6-493e-9e38-1710e53c46a1",
+    "slug": "adobe",
+    "name": "Adobe",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1b407c1e-991d-45a9-bb7f-a0010482d91f",
+    "slug": "cummins",
+    "name": "Cummins",
+    "type": "company"
+  },
+  {
+    "uuid": "d495578b-1835-4ef0-8e34-a53a9df4e9c8",
+    "slug": "jacobs",
+    "name": "Jacobs Engineering",
+    "type": "company"
+  },
+  {
+    "uuid": "b4392de2-768a-4d55-abd1-ab1581068d39",
+    "slug": "hpe-coxa",
+    "name": "HPE COXA",
+    "type": "company"
+  },
+  {
+    "uuid": "60f36d70-fedd-47a7-9cc3-30ae6fee47f7",
+    "slug": "ptc-creo",
+    "name": "PTC Creo / Creo GTO",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ca80a1e2-c220-4ec6-a975-7d9e20483dd9",
+    "slug": "autodesk",
+    "name": "Autodesk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9cba1fd1-5f7d-43be-bed2-c7916502eb0b",
+    "slug": "siemens-nx",
+    "name": "Siemens NX",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e51faf3f-4a60-48ef-a29c-70b58bab9ab2",
+    "slug": "octopus-energy",
+    "name": "Octopus Energy",
+    "type": "company"
+  },
+  {
+    "uuid": "fdfb3371-7dbe-4792-a61a-e83f63d3679c",
+    "slug": "bp",
+    "name": "BP",
+    "type": "company"
+  },
+  {
+    "uuid": "2c7d3239-0b85-46b4-a69b-220d4c55c6f0",
+    "slug": "con-edison",
+    "name": "Con Edison",
+    "type": "company"
+  },
+  {
+    "uuid": "40d1d815-490d-4619-ad12-c3843b71a695",
+    "slug": "netflix",
+    "name": "Netflix",
+    "type": "company"
+  },
+  {
+    "uuid": "7a2255b3-71b4-43f1-874b-c01e69d1ee14",
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8d946730-7e5e-4a8e-b54b-d0b2103d28c5",
+    "slug": "carnegie-learning",
+    "name": "Carnegie Learning",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5a59761f-1114-44c0-b170-3b108590bde3",
+    "slug": "squirrel-ai",
+    "name": "Squirrel Ai Learning",
+    "type": "vendor"
+  }
+]

@@ -1,0 +1,1654 @@
+[
+  {
+    "uuid": "0275f620-75ea-42ed-ba71-a1204708de98",
+    "slug": "conversational-shopping-assistant",
+    "title": "Conversational shopping assistant",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "520d9a30-ab4c-4590-a4d7-998c62e63012",
+    "slug": "ai-generated-product-description-sheets",
+    "title": "AI-generated product description sheets",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d1020367-b54f-4c95-9719-108648233b3e",
+    "slug": "purchase-journey-assistant",
+    "title": "Purchase journey assistant",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "17b91bb0-3cd3-4268-97dd-80914e6b329c",
+    "slug": "personalized-recommendation-engines",
+    "title": "Personalized recommendation engines",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "68d70890-ff20-4b0f-86dc-6990836c4c47",
+    "slug": "self-service-commerce-bot-walmart",
+    "title": "Self-service commerce bot (Walmart pattern)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+    "slug": "marketing-throughput-multiplier-newmans-own",
+    "title": "Marketing throughput multiplier (Newman's Own pattern)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "af74862c-8a22-4423-a9cb-63599ca1d940",
+    "slug": "agentic-sdr-outbound-prospecting",
+    "title": "Agentic SDR / outbound prospecting",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e41684d2-f3d4-44a0-acad-30fac4c22c92",
+    "slug": "hyper-personalization-at-scale",
+    "title": "Hyper-personalization at scale",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+    "slug": "brand-tuned-image-generation",
+    "title": "Brand-tuned image generation",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a43f6658-b61b-496d-b578-0cb69ced66ed",
+    "slug": "virtual-try-on-generative-product-imagery",
+    "title": "Virtual try-on / generative product imagery",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "137c7b67-a2db-4467-961e-e8285a3e79fa",
+    "slug": "generative-engine-optimization-geo",
+    "title": "Generative Engine Optimization (GEO)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "cacf7b19-9ce8-41af-bb87-576c6b658bdb",
+    "slug": "automated-lead-scoring",
+    "title": "Automated lead scoring",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "55ac250c-c20e-4cfc-9a42-fa5b86f40b46",
+    "slug": "ai-content-brief-generation",
+    "title": "AI content brief generation",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "bee44942-10ed-45c3-b300-1a90dc293ee0",
+    "slug": "social-media-response-automation",
+    "title": "Social media response automation",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "48e9d534-f03a-4666-9d98-2504bf535a0a",
+    "slug": "ai-powered-dynamic-pricing",
+    "title": "AI-powered dynamic pricing",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ec0ab3fe-e354-41f6-833f-e18660585735",
+    "slug": "autonomous-marketing-mix-modeling",
+    "title": "Autonomous Marketing Mix Modeling (MMM)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "15905406-5a29-40ac-9084-104f2eb27c2d",
+    "slug": "ai-driven-multi-touch-attribution-incrementality",
+    "title": "AI-driven multi-touch attribution + incrementality",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e1f8c212-8495-4fba-a57c-85071addec29",
+    "slug": "ai-lead-generation-prospecting",
+    "title": "AI lead generation / prospecting",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "14f74cb4-39d0-4ee9-aff1-6e4a71b9242e",
+    "slug": "b2b-outbound-automation-linkedin-cold-email",
+    "title": "B2B outbound automation (LinkedIn / cold email)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "9557f88b-7deb-49d6-9539-d5093d1d35f2",
+    "slug": "personalized-email-content-generation",
+    "title": "Personalized email content generation",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6cece292-ec7f-4678-8f27-2ff6b8e91601",
+    "slug": "upsell-cross-sell-prediction",
+    "title": "Upsell / cross-sell prediction",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "aa6fd9b1-7d51-4b57-a238-8a03b5343c05",
+    "slug": "customer-churn-prediction",
+    "title": "Customer churn prediction (SaaS / subscription)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5b731609-c8cd-4f29-928d-21734ae7795c",
+    "slug": "cart-abandonment-prediction-recovery",
+    "title": "Cart abandonment prediction & recovery",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "1486d436-0e68-45e8-a1b1-106e08585977",
+    "slug": "visual-search-for-products",
+    "title": "Visual search for products",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "88ebc4b2-3ff8-4592-a49b-101b165d0e44",
+    "slug": "dynamic-personalized-landing-pages",
+    "title": "Dynamic personalized landing pages",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "87e92a69-088a-4a2a-8285-611e82490a69",
+    "slug": "customer-segmentation-clustering-ml",
+    "title": "Customer segmentation (clustering ML)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "99412339-1f02-4e2b-b35f-fe2bd05b894f",
+    "slug": "ai-sales-coach-live-call-coaching",
+    "title": "AI sales coach (live call coaching)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7514c3b9-7f8a-4135-a63a-10cde839b96b",
+    "slug": "ai-sales-call-analysis-revenue-intelligence",
+    "title": "AI sales-call analysis (revenue intelligence)",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "08c15828-613d-43ab-8b02-f3dafc370a9a",
+    "slug": "ai-assisted-purchasing-procedures",
+    "title": "AI-assisted purchasing procedures",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6b51654d-d608-4619-b343-5fa25efb237d",
+    "slug": "process-automation-foundational-analyses",
+    "title": "Process automation of foundational analyses",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "77090d21-ce07-47b8-9b28-4269287fbb3e",
+    "slug": "ai-invoice-processing-agents",
+    "title": "AI invoice processing agents",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f64f2e16-25d9-4bba-9058-04498966ed3f",
+    "slug": "intelligent-document-processing-idp",
+    "title": "Intelligent Document Processing (IDP)",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "cc0e3466-7a62-4507-9f3d-a99301aff652",
+    "slug": "ai-sourcing-agent",
+    "title": "AI sourcing agent",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "aa725720-685c-4a75-a0eb-8d4ae4ea397c",
+    "slug": "smart-email-ticket-routing",
+    "title": "Smart email / ticket routing",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "622d33ce-c091-4ab8-a9eb-caddea47addb",
+    "slug": "hyperautomation-rpa-ai-agents",
+    "title": "Hyperautomation (RPA + AI agents)",
+    "section": "2. Procurement & Operations Support",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "2e2b6e8a-a1a9-4be2-9342-7590999cf0ee",
+    "slug": "crm-data-entry-automation",
+    "title": "CRM data entry automation",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b39cc607-3b10-4b27-b623-e8ed43ff42fd",
+    "slug": "task-assignment-workload-routing",
+    "title": "Task assignment / workload-routing automation",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ac70368d-03ad-4ae2-b8b0-1ef53cee7f34",
+    "slug": "vendor-evaluation-scoring",
+    "title": "Vendor evaluation & scoring",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "794ad530-d16b-4fc2-8dd9-5305c7030659",
+    "slug": "call-center-insight-extraction",
+    "title": "Call-center insight extraction",
+    "section": "3. Customer Insights & Voice of Customer",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3794293a-a01d-4fef-a31b-86fbc9740996",
+    "slug": "sentiment-analysis-tooling",
+    "title": "Sentiment analysis tooling",
+    "section": "3. Customer Insights & Voice of Customer",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f6697045-d435-4513-a5e7-8862a554f57e",
+    "slug": "dataset-categorization-assistants",
+    "title": "Dataset categorization assistants",
+    "section": "3. Customer Insights & Voice of Customer",
+    "kind": "idea"
+  },
+  {
+    "uuid": "605ef4b7-a1bb-4f27-be5d-1038fa0e0689",
+    "slug": "ai-customer-review-summarizer",
+    "title": "AI customer review summarizer",
+    "section": "3. Customer Insights & Voice of Customer",
+    "kind": "idea"
+  },
+  {
+    "uuid": "17f3f8c2-8131-4bac-8363-19129da5cf91",
+    "slug": "proprietary-information-agent-platform",
+    "title": "Proprietary information-agent platform (\u00e0 la Bain's \"Sage\")",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f8c0b08a-b5d5-456a-a564-67ef5dc459bb",
+    "slug": "answer-copilot-pattern",
+    "title": "\"Answer Copilot\" pattern",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "672711fd-07f7-4f98-ab76-9be121d0088f",
+    "slug": "insight-reuse-fabric",
+    "title": "Insight reuse fabric",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b552e216-4289-4e1d-bee1-c36086575f29",
+    "slug": "enterprise-ai-search-glean",
+    "title": "Enterprise AI search (Glean pattern)",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "394e8ad0-d005-4045-a0a1-bb02e422b6bb",
+    "slug": "agentic-knowledge-actions",
+    "title": "Agentic knowledge actions",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8752f79a-d743-4fbe-ab4e-5f3bf7875dbc",
+    "slug": "internal-mygpt-custom-agent-marketplace",
+    "title": "Internal MyGPT / custom-agent marketplace",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ee0c4f7b-7d01-4204-9fd0-096152fe6a8f",
+    "slug": "microsoft-copilot-rollout",
+    "title": "Microsoft Copilot rollout",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ed577809-b7cd-441f-967e-b027dc0a1540",
+    "slug": "meeting-intelligence-zoomai",
+    "title": "Meeting intelligence (e.g., ZoomAI)",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "364a4289-7735-4a3b-80ff-3f45e44a38ad",
+    "slug": "small-ai-innovations-pattern",
+    "title": "200+ \"small AI\" innovations",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "8d0d2011-6798-44cf-aa79-f445a9b24f04",
+    "slug": "global-copilot-rollout-pwc",
+    "title": "Global Copilot rollout with custom agents (PwC pattern)",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "be8d1fab-efe2-4729-be5f-592d89b7d30c",
+    "slug": "no-code-ai-agent-platforms",
+    "title": "No-code AI agent platforms (Zapier Agents, Make Maia, n8n LangChain)",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "10a53c79-b075-4736-bdf0-841ba110a576",
+    "slug": "automated-reporting-narrative-dashboards",
+    "title": "Automated reporting and narrative dashboards",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ef32869e-d009-43ed-a95a-e9d6949fbfdc",
+    "slug": "ai-project-management-bot",
+    "title": "AI project management bot",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b1a2e9c0-4126-4074-ae1d-82fba4da38eb",
+    "slug": "internal-employee-helpdesk-bot",
+    "title": "Internal employee helpdesk bot",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5aafddff-16e9-4312-9d39-047a826ea936",
+    "slug": "e-signature-workflow-automation",
+    "title": "E-signature workflow automation",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "41dc6af1-63af-4b21-948d-980a159c6fa6",
+    "slug": "resume-career-narrative-rewriter",
+    "title": "Resume / career-narrative rewriter",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "300402ee-930f-4e65-9cee-234f3f4ba93b",
+    "slug": "automated-high-level-analysis-platforms",
+    "title": "Automated high-level analysis platforms",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ac85f3ca-549e-4eee-a225-a1effc1736be",
+    "slug": "ai-augmented-data-engineering-teams",
+    "title": "AI-augmented data engineering teams",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "e5239deb-5671-4526-8421-e719ed7a6d3c",
+    "slug": "data-quality-monitoring",
+    "title": "Data quality monitoring",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "1c260d7a-146d-4507-8702-8b95f621230f",
+    "slug": "ai-augmented-process-mining",
+    "title": "AI-augmented process mining",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "0d303df6-d9d6-49b0-8820-1c85d0ad13af",
+    "slug": "rag-evaluation-harness",
+    "title": "RAG evaluation harness",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "80ae0264-6880-48ca-a8ee-17553618c144",
+    "slug": "ai-enabled-enterprise-tech-modernization",
+    "title": "AI-enabled enterprise technology modernization",
+    "section": "7. Enterprise Technology & Architecture",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "6d027f8a-3245-4100-8029-a351a316860f",
+    "slug": "cloud-foundation-model-integration",
+    "title": "Cloud + foundation-model integration",
+    "section": "7. Enterprise Technology & Architecture",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "703adbd0-e409-40d5-b896-fc3e8cb32b06",
+    "slug": "saas-ai-co-deployment",
+    "title": "SaaS-AI co-deployment",
+    "section": "7. Enterprise Technology & Architecture",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3a4d9620-2d4e-4f82-889e-1c0d74afaaff",
+    "slug": "ai-strategy-roadmap-engagements",
+    "title": "AI strategy & roadmap engagements",
+    "section": "8. Strategy & Transformation Advisory",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "f71a4346-488b-4276-bf2c-f275a1f611bd",
+    "slug": "digital-ai-transformation-programs",
+    "title": "Digital and AI transformation programs",
+    "section": "8. Strategy & Transformation Advisory",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "d767053d-00be-49ef-9449-010cdd1648fd",
+    "slug": "ma-operational-improvement-ai-lens",
+    "title": "M&A and operational improvement with AI lens",
+    "section": "8. Strategy & Transformation Advisory",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "86d14fc1-350c-4040-b519-4a9a697c28b3",
+    "slug": "industry-reimagination",
+    "title": "Industry reimagination",
+    "section": "8. Strategy & Transformation Advisory",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "33247f63-bdc2-45b3-986c-7c259787a6fb",
+    "slug": "ai-driven-innovation-labs",
+    "title": "AI-driven innovation labs",
+    "section": "9. Innovation & Design",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "bc09b616-8998-45f9-abf0-321cf5e18511",
+    "slug": "design-plus-ai",
+    "title": "Design + AI",
+    "section": "9. Innovation & Design",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "8c8dcd83-b528-47c9-a3ae-fa6f26876214",
+    "slug": "alliance-partnership-office",
+    "title": "Alliance partnership office",
+    "section": "10. Partnerships & Ecosystem Management",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "188c21c4-25fb-46b0-a010-58d6d97399ae",
+    "slug": "curated-ecosystem-700-partners",
+    "title": "Curated ecosystem of 700+ partners",
+    "section": "10. Partnerships & Ecosystem Management",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "e22f4e17-c839-427c-b854-4e5d33bfcdd0",
+    "slug": "ai-responsible-use-policy",
+    "title": "AI Responsible Use Policy",
+    "section": "11. Governance, Risk & Responsible AI",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "db61a1d1-54ca-464c-a6dc-30db8eca46e4",
+    "slug": "participation-responsible-ai-initiatives",
+    "title": "Participation in Responsible AI initiatives (e.g., Microsoft's Responsible AI Partner Initiative)",
+    "section": "11. Governance, Risk & Responsible AI",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "d378b779-6040-4805-a2a3-f09ac0533776",
+    "slug": "ai-security-safety-guardrails",
+    "title": "AI security & safety guardrails",
+    "section": "11. Governance, Risk & Responsible AI",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "2cb6e741-f2a0-4dc7-8d25-2bac18f5d546",
+    "slug": "human-in-the-loop-oversight",
+    "title": "Human-in-the-loop oversight for high-stakes AI decisions",
+    "section": "11. Governance, Risk & Responsible AI",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "d1ff3562-7823-4709-8b05-e5d737a6550b",
+    "slug": "ai-fluent-workforce-uplift",
+    "title": "AI-fluent workforce uplift",
+    "section": "12. Talent, People & Organization",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "00556f7f-446d-4611-911a-398eb2347618",
+    "slug": "premium-ai-tech-talent-strategy",
+    "title": "Premium AI/technology consulting talent strategy",
+    "section": "12. Talent, People & Organization",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "4569dc01-8625-421d-91b0-9f501d4a6eca",
+    "slug": "global-delivery-hub-model",
+    "title": "Global delivery hub model",
+    "section": "12. Talent, People & Organization",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "bf1ca679-72d6-4770-9450-c76c62bce166",
+    "slug": "ai-aware-org-design",
+    "title": "AI-aware org design",
+    "section": "12. Talent, People & Organization",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "0e7a30d7-d27b-40ba-b1eb-6822d8a109db",
+    "slug": "continuous-innovation-it-operating-model",
+    "title": "Continuous innovation in the IT operating model",
+    "section": "13. CIO / Internal IT Function",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "21983d71-2604-432c-8d80-5c2a1432be7e",
+    "slug": "internal-ai-tool-portfolio-governance",
+    "title": "Internal AI tool portfolio governance",
+    "section": "13. CIO / Internal IT Function",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "e20f0c2f-1922-4bb2-b09f-e637ee6a7084",
+    "slug": "ai-driven-fraud-detection-transactions",
+    "title": "AI-driven fraud detection on transactions",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "439d9dc6-19ac-4365-93c4-5b8694fe53f0",
+    "slug": "accounts-payable-automation",
+    "title": "Accounts-payable automation",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "86d8b84f-0ac7-45dc-9f69-91415b8017d9",
+    "slug": "reconciliation-cash-flow-oversight",
+    "title": "Reconciliation & cash-flow oversight",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "88e8bd10-d5f7-4aa3-80bd-d09f8f9d9707",
+    "slug": "agentic-kyc-aml-banking",
+    "title": "Agentic KYC/AML in banking",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "9003be7c-9885-43ce-8cce-6b597b304b74",
+    "slug": "automatic-payment-matching",
+    "title": "Automatic payment matching / cash application",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "39c513d0-bfe9-481e-ad24-176334df3199",
+    "slug": "financial-close-anomaly-detection",
+    "title": "Financial close anomaly detection",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "274a7a5a-8171-4a45-85b5-edcfa1a625c0",
+    "slug": "ai-driven-fpa-agent",
+    "title": "AI-driven FP&A agent",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3830ec3e-63b0-4ffa-9558-0e022a79cf32",
+    "slug": "ai-treasury-cash-management",
+    "title": "AI treasury & cash management",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b8bad69b-6ec8-4586-8105-b90e5f881cd8",
+    "slug": "continuous-internal-auditing",
+    "title": "Continuous internal auditing",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "893ecffd-4fb4-4b90-9079-2cc0c2743945",
+    "slug": "expense-management-ai",
+    "title": "Expense management AI",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "63e1341b-4fd9-43bd-94c5-f8014c42423f",
+    "slug": "ai-accelerated-financial-close-blackline",
+    "title": "AI-accelerated financial close (BlackLine pattern)",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "cb0c8955-d761-46c6-8166-49191b196fe0",
+    "slug": "credit-scoring-automation",
+    "title": "Credit scoring automation",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8859cb4a-e3a7-4954-a85f-3ecbba64818a",
+    "slug": "tax-form-prefilling-ai",
+    "title": "Tax form pre-filling AI",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "29639b78-a436-4fc0-905a-c71d3859c38e",
+    "slug": "wealth-management-advisor-chatbot",
+    "title": "Wealth management advisor chatbot",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8aa25b70-5856-4c28-b958-1e1c3fc8a60b",
+    "slug": "cryptocurrency-analysis-agent",
+    "title": "Cryptocurrency analysis agent",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a0ec7f17-954a-475d-baa2-3bd78f6ddceb",
+    "slug": "automated-property-valuation-avm",
+    "title": "Automated property valuation (AVM)",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "26b1ef4d-c106-4152-b60b-2634fed0ed8a",
+    "slug": "ai-resume-screening-interview-scheduling",
+    "title": "AI resume screening + interview scheduling",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a4942b40-749f-47c3-a27f-933c0b417f10",
+    "slug": "diverse-atypical-hire-targeting",
+    "title": "Diverse / atypical-hire targeting",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4b98c360-4957-4613-ae44-1d1bd3a9e4ef",
+    "slug": "personalized-learning-training-paths",
+    "title": "Personalized learning & training paths",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "10fd248b-8e47-4015-afc8-2668411a3d2f",
+    "slug": "onboarding-orchestration-agent",
+    "title": "Onboarding orchestration agent",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "0c008f6b-a129-4629-8126-1f1107903b69",
+    "slug": "employee-benefits-qa-copilot",
+    "title": "Employee benefits Q&A copilot",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "30000a1d-6f4e-41ba-9441-b33b2e75feca",
+    "slug": "talent-intelligence-internal-mobility",
+    "title": "Talent intelligence + internal mobility",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d8a9f44d-cc2d-4770-a6b9-ffecf70436f7",
+    "slug": "retention-attrition-risk-prediction",
+    "title": "Retention / attrition risk prediction",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6c18db5b-e026-4322-acf3-cf4bc40d6114",
+    "slug": "continuous-employee-sentiment-pulse-ai",
+    "title": "Continuous employee sentiment / pulse AI",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "334c0a00-1411-4345-9cb6-406619e75fd1",
+    "slug": "skills-based-workforce-planning",
+    "title": "Skills-based workforce planning",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "cb0fdc62-1393-4abd-b6e1-1b807ce967fc",
+    "slug": "ai-augmented-performance-management",
+    "title": "AI-augmented performance management",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fd2af077-dd40-4eeb-ba3a-8779ded60284",
+    "slug": "employee-exit-survey-ai-summarization",
+    "title": "Employee exit-survey AI summarization",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "12e8e5ca-20b2-41f3-ba94-f5a13a03d1fa",
+    "slug": "ai-fairness-audit-dashboard-hiring",
+    "title": "AI fairness audit dashboard (hiring / placement)",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "88445d53-7291-4dab-8ec4-9f3829cd323f",
+    "slug": "ai-powered-ediscovery",
+    "title": "AI-powered eDiscovery",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a9c6a22c-eb8b-485f-81ad-691865d85e33",
+    "slug": "contract-review-extraction-agents",
+    "title": "Contract review & extraction agents",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c64c1bb4-f75e-4a14-8c0b-cbe9a325c964",
+    "slug": "automated-compliance-monitoring",
+    "title": "Automated compliance monitoring",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4868a1ac-f7ca-479b-9e04-50c1cc54319b",
+    "slug": "ai-contract-drafting-word-spellbook",
+    "title": "AI contract drafting in Word (Spellbook pattern)",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "82a3fe42-3056-467c-ad2f-6166ad67a33d",
+    "slug": "ai-legal-research-harvey-cocounsel",
+    "title": "AI legal research / Deep Research (Harvey, CoCounsel)",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d8c4809c-e41b-4c90-a32c-5a31a2b27ee2",
+    "slug": "matter-client-intake-automation",
+    "title": "Matter / client intake automation",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5f430623-e67f-4667-a595-7894177d15fe",
+    "slug": "generative-ai-agent-assist",
+    "title": "Generative AI agent assist",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "294cb7df-7cf6-4b4a-8d00-e4ead47e866c",
+    "slug": "voice-of-customer-copilots-boa",
+    "title": "Voice-of-customer copilots (Bank of America pattern)",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5b42365c-6056-4769-b623-a6164c1f3e36",
+    "slug": "tier1-ticket-auto-resolution-agents",
+    "title": "Tier-1 ticket auto-resolution agents",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "476e2605-03b8-45ce-bd0d-acfe71d88a28",
+    "slug": "ai-customer-support-triage",
+    "title": "AI customer support triage",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "26039bbc-58e9-44a1-b5f5-091602f39499",
+    "slug": "support-ticket-summarization",
+    "title": "Support ticket summarization",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d1dc5b4e-ea0e-446c-929b-9c177c4afc35",
+    "slug": "escalation-prediction",
+    "title": "Escalation prediction",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "898c7a83-d0b1-410f-ab95-87400d73cb8e",
+    "slug": "ai-faq-auto-builder",
+    "title": "AI FAQ auto-builder",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a4d86fe5-8d34-48cd-b2b0-5cd42296f9c3",
+    "slug": "ai-refund-dispute-agent",
+    "title": "AI refund / dispute agent",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f3a0a149-e121-4840-8b01-450c235a92a5",
+    "slug": "voice-ai-receptionist",
+    "title": "Voice AI receptionist",
+    "section": "18. Customer Service & Contact Center",
+    "kind": "idea"
+  },
+  {
+    "uuid": "07e00625-3616-4f98-b92b-fabd4aba74e6",
+    "slug": "ai-alert-triage-false-positive-reduction",
+    "title": "AI alert triage & false-positive reduction",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c18c920a-53a1-41fa-875c-3faad3133070",
+    "slug": "autonomous-network-defense-darktrace",
+    "title": "Autonomous self-learning network defense (Darktrace pattern)",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a864514b-16e2-45c8-bea2-ace288c59703",
+    "slug": "account-takeover-prevention",
+    "title": "Account takeover (ATO) prevention",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7b792822-4194-4a27-8015-e23925137ff2",
+    "slug": "ai-enabled-managed-soc-service",
+    "title": "AI-enabled managed SOC service",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "60e0c08e-1a82-4753-b863-fec01a7e5b0f",
+    "slug": "cyber-ai-industry-impact-stat",
+    "title": "Reported industry impact",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "146aa2a8-fff3-48d5-a452-7c621cadc515",
+    "slug": "ai-pair-programmer-github-copilot",
+    "title": "AI pair-programmer rollout (GitHub Copilot)",
+    "section": "20. Software Engineering & DevOps",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5bcf1687-3d62-4276-950d-ebfaf68021a9",
+    "slug": "dev-productivity-gains-market-stat",
+    "title": "Measurable productivity gains",
+    "section": "20. Software Engineering & DevOps",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "0be126ba-45ce-4b2b-a410-347a7025eb79",
+    "slug": "automated-test-generation-documentation",
+    "title": "Automated test generation & documentation",
+    "section": "20. Software Engineering & DevOps",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7d1b7e4e-1b9b-4d67-a564-b256137ee8c2",
+    "slug": "dev-copilot-roi-window",
+    "title": "Enterprise ROI window",
+    "section": "20. Software Engineering & DevOps",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "2b81da27-3eb7-4dff-a046-3d7dd090dc78",
+    "slug": "ai-code-review-assistant",
+    "title": "AI code review assistant",
+    "section": "20. Software Engineering & DevOps",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e18de3bd-570b-41c6-b464-82996f92b670",
+    "slug": "ai-bug-triage-cicd",
+    "title": "AI bug triage in CI/CD",
+    "section": "20. Software Engineering & DevOps",
+    "kind": "idea"
+  },
+  {
+    "uuid": "af83870b-2a8e-40f8-8ea6-bea2445dada0",
+    "slug": "predictive-maintenance",
+    "title": "Predictive maintenance",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b355d159-d6af-437d-b322-48bf1d1c457f",
+    "slug": "dynamic-safety-stock-optimization",
+    "title": "Dynamic safety-stock optimization",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "026366d6-2781-43f6-8d0c-b1e7cb7eeff7",
+    "slug": "supplier-risk-monitoring-rerouting",
+    "title": "Supplier-risk monitoring & auto-rerouting",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2e82697e-4e47-4fa4-8a41-c1970e654f55",
+    "slug": "digital-twins-failure-mode-simulation",
+    "title": "Digital twins + generative AI for failure-mode simulation",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ba2ceae5-cc83-42f3-91a7-420f5ca37f91",
+    "slug": "agentic-warehouse-transport-order-mgmt",
+    "title": "Agentic warehouse / transport / order management (Manhattan Associates)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fbe36c5a-e487-49be-8e65-7f33026ecf62",
+    "slug": "ai-driven-inventory-forecasting",
+    "title": "AI-driven inventory forecasting",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "59072c93-bb23-434c-9bc1-c75701805a6f",
+    "slug": "ai-traffic-route-prediction",
+    "title": "AI traffic & route prediction",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f7dcfe0c-39ff-437e-b24d-281502e59462",
+    "slug": "agricultural-pest-disease-detection",
+    "title": "Agricultural pest & disease detection",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c55b2824-fdc3-47ec-aca4-55e50742ca15",
+    "slug": "workplace-safety-ppe-vision",
+    "title": "Workplace safety / PPE compliance vision",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3f35122e-fb0d-4974-9bab-3d3fbd4de9ec",
+    "slug": "ai-claims-automation",
+    "title": "AI claims automation",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7ecc8153-27b9-4d68-928a-01b5bc2e676b",
+    "slug": "underwriting-acceleration",
+    "title": "Underwriting acceleration",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "95ca993f-6b89-4af9-bbe2-18e3316bb8ff",
+    "slug": "aviva-motor-claims-ai-estate",
+    "title": "Aviva motor-claims AI estate",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3a03a040-f8d5-4322-a979-4c9edb48b376",
+    "slug": "insurance-fraud-detection",
+    "title": "Insurance fraud detection",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "1f66134b-32bc-4f07-b54b-fa79d69990cb",
+    "slug": "medical-records-parsing-prior-auth",
+    "title": "Medical-records parsing for prior auth / medical necessity",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "58416830-bd30-4ab5-a5d9-583333ee450b",
+    "slug": "insurance-cost-productivity-impact",
+    "title": "Cost & productivity impact",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "2232c84c-8e8c-4a1d-bc97-2fe76c9ca5fd",
+    "slug": "agentic-ai-market-trajectory",
+    "title": "Market trajectory",
+    "section": "23. Agentic AI (Cross-Functional Pattern)",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "101932db-c363-4664-b1df-f8fca441d07d",
+    "slug": "agentic-ai-high-roi-starting-domains",
+    "title": "High-ROI starting domains",
+    "section": "23. Agentic AI (Cross-Functional Pattern)",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "b237614c-d4a8-4a40-bdd5-f8dea92ab785",
+    "slug": "agentic-architecture-concerns",
+    "title": "Agentic architecture concerns",
+    "section": "23. Agentic AI (Cross-Functional Pattern)",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "9f79f896-aa88-47c7-8f40-df90b36d0891",
+    "slug": "generative-molecule-design",
+    "title": "Generative molecule design",
+    "section": "24. R&D, Life Sciences & Drug Discovery",
+    "kind": "idea"
+  },
+  {
+    "uuid": "60e40c18-566b-4033-8642-c5b919d9e934",
+    "slug": "fragment-based-generative-discovery",
+    "title": "Fragment-based generative discovery",
+    "section": "24. R&D, Life Sciences & Drug Discovery",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5bc9373a-eb72-4e34-a25e-0f3925998cc8",
+    "slug": "end-to-end-ai-drug-platform-insilico",
+    "title": "End-to-end AI drug platform (Insilico Medicine)",
+    "section": "24. R&D, Life Sciences & Drug Discovery",
+    "kind": "idea"
+  },
+  {
+    "uuid": "646d3afc-8de9-403d-9488-92b773bf03ef",
+    "slug": "automated-wet-lab-ml-recursion",
+    "title": "Automated wet lab + ML platform (Recursion)",
+    "section": "24. R&D, Life Sciences & Drug Discovery",
+    "kind": "idea"
+  },
+  {
+    "uuid": "051f53f9-b6e9-4304-b051-6b6e5dcc7cd9",
+    "slug": "drug-discovery-industry-impact",
+    "title": "Industry impact",
+    "section": "24. R&D, Life Sciences & Drug Discovery",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "8af34eb8-7a9a-4691-850d-231ac9b86649",
+    "slug": "ai-video-content-at-scale",
+    "title": "AI video content at scale",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d997f9fe-776f-4cce-a31f-6f7af7ebb09c",
+    "slug": "real-time-campaign-optimization",
+    "title": "Real-time campaign optimization",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "61a21e06-907b-4e3f-a55b-0f0b40ae731e",
+    "slug": "ai-generated-brand-characters-mascots",
+    "title": "AI-generated brand characters / mascots",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "98f36e8d-6c89-4b14-a3cc-cd535dfae924",
+    "slug": "automated-content-localization",
+    "title": "Automated content localization",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8c7d4ad9-fb40-4bef-b6ad-43bddf3cd20a",
+    "slug": "voice-ai-for-marketing",
+    "title": "Voice AI for marketing",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "cd3cc71f-6218-482d-b1a0-44408cbe004c",
+    "slug": "gen-marketing-adoption-baseline",
+    "title": "Adoption baseline",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "fd60bfa2-3c34-48b4-b0bc-197002930702",
+    "slug": "dynamic-creative-optimization-dco",
+    "title": "Dynamic creative optimization (DCO)",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "dfb577b3-7e9e-42be-9550-ffac80b11fad",
+    "slug": "agentic-programmatic-ad-budget-allocator",
+    "title": "Agentic programmatic ad budget allocator",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7fdcbcd1-19d7-41e0-a1dc-84063c464cbd",
+    "slug": "synthetic-ad-audiences-ab-testing",
+    "title": "Synthetic ad audiences for A/B testing",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c20dbc96-bf82-4853-97cb-67efd2830b2f",
+    "slug": "ai-voice-cloning-brand-narration",
+    "title": "AI voice cloning for brand narration",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fc62c8b9-8c4c-4dd8-97fe-c6314f8a88d0",
+    "slug": "image-captioning-at-scale",
+    "title": "Image captioning at scale",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6f7db1ce-c450-4bc5-8bbc-e2deb9a9e3ea",
+    "slug": "ai-content-editor-brand-voice",
+    "title": "AI content editor (brand-voice + fact-check)",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2ae6e1bd-a1e8-4f63-b63a-9104301be7da",
+    "slug": "ai-ugc-avatar-ad-creative",
+    "title": "AI UGC / avatar ad creative",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "60984221-3298-484f-98ca-9155c3b874f8",
+    "slug": "ai-content-repurposing-service",
+    "title": "AI content repurposing service",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5ab9b00d-838a-4cb6-ad92-5a0017e99684",
+    "slug": "topology-optimized-generative-design",
+    "title": "Topology-optimized generative design",
+    "section": "26. Generative Product Design & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ffbbb989-1688-448c-9c80-64b8e2223d7d",
+    "slug": "ai-design-review-validation",
+    "title": "AI design review & validation",
+    "section": "26. Generative Product Design & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fd7524d9-c06f-488a-91b2-9f437aaf1049",
+    "slug": "engineering-part-search-knowledge-reuse",
+    "title": "Engineering part search & knowledge reuse",
+    "section": "26. Generative Product Design & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2894c7fa-0dd6-4578-9cb7-50164016363c",
+    "slug": "gen-design-customer-examples",
+    "title": "Customer examples",
+    "section": "26. Generative Product Design & Engineering",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "52c050b4-ba9b-4463-964b-251eaf8ad01b",
+    "slug": "synth-data-adoption-trajectory",
+    "title": "Adoption trajectory",
+    "section": "27. Synthetic Data Generation",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "2f253103-7d12-491e-80f7-04fb10a74ed9",
+    "slug": "synthetic-documents-model-training",
+    "title": "Synthetic documents for model training",
+    "section": "27. Synthetic Data Generation",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5e2667f1-f9e3-43e6-a87f-cbc1b015d432",
+    "slug": "conversation-data-generation",
+    "title": "Conversation-data generation",
+    "section": "27. Synthetic Data Generation",
+    "kind": "idea"
+  },
+  {
+    "uuid": "730f98ef-fdc1-4c76-ad43-587a1a12e814",
+    "slug": "healthcare-synthetic-imaging",
+    "title": "Healthcare synthetic imaging",
+    "section": "27. Synthetic Data Generation",
+    "kind": "idea"
+  },
+  {
+    "uuid": "88882314-6043-4f51-9427-d62f37468398",
+    "slug": "synthetic-personas-marketing-research",
+    "title": "Synthetic personas for marketing research",
+    "section": "27. Synthetic Data Generation",
+    "kind": "idea"
+  },
+  {
+    "uuid": "34cf883f-8441-4aaa-940d-9a2d0ab7dec7",
+    "slug": "synthetic-failure-events-pdm",
+    "title": "Synthetic failure events for predictive maintenance",
+    "section": "27. Synthetic Data Generation",
+    "kind": "idea"
+  },
+  {
+    "uuid": "dec95f7d-c522-4a52-94c2-f2ba7101e8b8",
+    "slug": "synth-data-guardrails-pattern",
+    "title": "Guardrails",
+    "section": "27. Synthetic Data Generation",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "2edad9f6-aaf2-4bee-8f4f-63512cbb7202",
+    "slug": "autonomous-networks",
+    "title": "Autonomous networks",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d2779f8a-3dac-41ec-8316-a3b1d602f7a3",
+    "slug": "generative-ai-customer-service-chatbots-telco",
+    "title": "Generative AI customer-service chatbots",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "0ede3a70-5c24-4679-81be-3a4598b055c7",
+    "slug": "network-performance-forecasting-demand-surge",
+    "title": "Network-performance forecasting & demand-surge prediction",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "027f036d-c40b-47db-997f-83988ea6bfff",
+    "slug": "predictive-maintenance-network-equipment",
+    "title": "Predictive maintenance on network equipment",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "725934a6-101f-4270-924f-0442540f234b",
+    "slug": "telco-ai-investment-signal",
+    "title": "Investment signal",
+    "section": "28. Telecom & Network Operations",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "e96fbd7b-9501-4533-8cfc-a9da264c9ccb",
+    "slug": "energy-demand-forecasting",
+    "title": "Energy demand forecasting",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e7ad8c33-ba76-441a-8339-f3899fcb6b39",
+    "slug": "grid-operation-optimization-der",
+    "title": "Grid operation optimization & distributed energy coordination",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "23f78eba-3b05-4c2f-be74-933b9ed8f966",
+    "slug": "customer-service-automation-octopus-energy",
+    "title": "Customer-service automation (Octopus Energy pattern)",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ee7d9d2a-b9c6-4837-82db-7a70194f08b7",
+    "slug": "reservoir-modeling-drilling-optimization",
+    "title": "Reservoir modeling & drilling optimization (oil & gas)",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "55b25458-7ba9-4932-bf5a-c7cfbba4f3e7",
+    "slug": "refining-process-optimization",
+    "title": "Refining process optimization",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e8a454be-0bc1-4fb4-ba28-149bd5585b4e",
+    "slug": "energy-ai-market-context",
+    "title": "Market context",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "f109e1a8-81d5-481b-b965-592f4091b3b4",
+    "slug": "ev-charging-infrastructure-placement",
+    "title": "EV charging infrastructure placement optimization",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3030943b-092f-4619-90ae-e495325ad6ba",
+    "slug": "der-orchestration",
+    "title": "Distributed energy resource (DER) orchestration",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "54a18673-f25a-4999-8182-51c026be3e63",
+    "slug": "wildfire-risk-prediction-drone-cv",
+    "title": "Wildfire risk prediction + drone CV inspection",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a3df2ac9-f571-48db-8e00-9bdf61cc5012",
+    "slug": "renewable-generation-forecasting",
+    "title": "Renewable generation forecasting",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c6105761-2722-4e23-a121-ffafdec3f6a8",
+    "slug": "generative-film-tv-production",
+    "title": "Generative film/TV production",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "abbd8574-12ef-4aa9-9759-93821ca99ab1",
+    "slug": "indie-micro-studio-generative-pipelines",
+    "title": "Indie / micro-studio generative pipelines",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "82f21bbd-72de-419d-80a8-3ea413835aa7",
+    "slug": "tv-resident-generative-experiences",
+    "title": "TV-resident generative experiences (Google Gemini for Google TV)",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d08c2031-e6a0-46e1-901c-b23377ca1af2",
+    "slug": "personalized-learning-content-generation-edu",
+    "title": "Personalized learning & content generation in education",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f08ab0a0-a61f-4db3-9c74-afa5147f012a",
+    "slug": "generative-entertainment-category",
+    "title": "Generative entertainment as a category",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "96be8962-6062-4764-a7b1-e3a366ae05e8",
+    "slug": "intelligent-tutoring-systems",
+    "title": "Intelligent tutoring systems (Carnegie / Squirrel AI pattern)",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6d502b35-49e3-4f07-9f4f-d48ff0a90a3a",
+    "slug": "ai-grading-feedback",
+    "title": "AI-powered grading and feedback",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8fd5a39b-4ffc-4122-8faf-578a187693c0",
+    "slug": "teacher-administrative-copilots",
+    "title": "Teacher administrative copilots",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fb48a547-9c20-493f-b433-b308b52756d0",
+    "slug": "ai-academic-integrity-detection",
+    "title": "AI academic-integrity detection",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5760e5a5-c7ee-4c7c-a3c2-811204f2ac3b",
+    "slug": "fake-news-misinformation-detection",
+    "title": "Fake-news / misinformation detection",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "99992527-fd36-4a66-8719-157cf36ff332",
+    "slug": "hate-speech-toxicity-detection",
+    "title": "Hate-speech & toxicity detection",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "1099e39c-83aa-41b2-9693-f85a7cf2347b",
+    "slug": "violence-explicit-content-detection-video",
+    "title": "Violence / explicit-content detection in video",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "04d3c054-8af1-4f0c-bc29-f067d467f394",
+    "slug": "auto-transcription-captioning-at-scale",
+    "title": "Auto-transcription & captioning at scale",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "04e17376-35f4-4512-8236-a8e2813c4b6c",
+    "slug": "automatic-test-quiz-generation",
+    "title": "Automatic test / quiz generation",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "aafa123d-8441-4914-857a-93b0fbdb297b",
+    "slug": "student-dropout-risk-prediction",
+    "title": "Student dropout / risk prediction",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "28b4b5a6-7f0c-4d53-95bb-10a1bca89ba8",
+    "slug": "ai-attendance-monitoring-cv",
+    "title": "AI attendance monitoring (computer vision)",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "48f909f9-32b6-4905-80f2-71bdbe3b7b4c",
+    "slug": "rag-why-it-matters",
+    "title": "Why it matters",
+    "section": "31. Retrieval-Augmented Generation (RAG) \u2014 Cross-Cutting Pattern",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "832359ca-cd8c-4421-a27e-57e53b41ecc5",
+    "slug": "rag-business-impact",
+    "title": "Business impact",
+    "section": "31. Retrieval-Augmented Generation (RAG) \u2014 Cross-Cutting Pattern",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "597b95a4-7044-4fec-8fc7-37f9f878c348",
+    "slug": "rag-market-growth",
+    "title": "Market growth",
+    "section": "31. Retrieval-Augmented Generation (RAG) \u2014 Cross-Cutting Pattern",
+    "kind": "pattern"
+  },
+  {
+    "uuid": "182e7fef-4e50-4a52-8fe3-b5dc47b164ac",
+    "slug": "agentic-citizen-services-workflows",
+    "title": "Agentic citizen-services workflows",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "74af0b71-f191-4fbe-95aa-74cfb958fd8c",
+    "slug": "permitting-licensing-ai",
+    "title": "Permitting & licensing AI",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b6b817ff-7535-4e1a-a865-0c3c839ce721",
+    "slug": "public-sector-fraud-detection-benefits",
+    "title": "Public-sector fraud detection in benefits",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4d46e1d8-26d9-4dcd-ac6a-5958426b3bb4",
+    "slug": "government-translation-accessibility",
+    "title": "Government translation & accessibility services",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d771daeb-d228-4217-b59a-042e5cae964e",
+    "slug": "inspection-automation-drone-cv",
+    "title": "Inspection automation (drone + CV)",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "902b8113-8163-4d14-a850-27403df8c3a1",
+    "slug": "ai-license-plate-recognition-alpr",
+    "title": "AI license plate recognition (ALPR)",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "cbde9a44-8acd-48a8-bae1-b55b9ac8c3c7",
+    "slug": "medical-imaging-diagnostic-ai",
+    "title": "Medical imaging diagnostic AI",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "52606a8a-4409-4268-b5b7-eb9e8ed546c8",
+    "slug": "patient-appointment-scheduling-automation",
+    "title": "Patient appointment scheduling automation",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7902eead-7238-46b1-9d9b-e60eee32a5a0",
+    "slug": "patient-triage-symptom-checker-chatbot",
+    "title": "Patient triage / symptom-checker chatbot",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8c03825b-3707-43c9-9d96-967a459cd0d5",
+    "slug": "health-record-summarization",
+    "title": "Health-record summarization",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "be37518b-9558-4a15-a989-4edd08719d89",
+    "slug": "medical-billing-code-prediction",
+    "title": "Medical billing code prediction",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "784c29af-27c0-47f5-91e8-f18c2343a511",
+    "slug": "patient-sentiment-analysis",
+    "title": "Patient sentiment analysis",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6c54ef65-5dc3-4a11-b854-339c2a069dc7",
+    "slug": "chronic-care-ai-consumer-assistant",
+    "title": "Chronic-care AI consumer assistant",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "71fda103-a62d-4f10-8960-2caa7f739c40",
+    "slug": "sign-language-recognition-accessibility-ai",
+    "title": "Sign-language recognition / accessibility AI",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "0d89c586-ac76-47cb-b53b-3d701e0b6c12",
+    "slug": "wearable-activity-vitals-recognition",
+    "title": "Wearable activity / vitals recognition",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "224ddf9d-a472-4b54-80b5-3fe5c674b284",
+    "slug": "healthcare-risk-prediction-explainability",
+    "title": "Healthcare risk prediction with explainability",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  }
+]

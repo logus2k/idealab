@@ -1,0 +1,13 @@
+services:
+  idealab:
+    build: .
+    container_name: idealab
+    ports:
+      - "6444:6444"
+    restart: unless-stopped
+    networks:
+      - logus2k_network
+
+networks:
+  logus2k_network:
+    external: true

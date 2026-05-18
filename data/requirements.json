@@ -1,0 +1,896 @@
+[
+  {
+    "uuid": "ec8ee7c9-437e-4150-a57b-4b05061bf42c",
+    "slug": "cart-abandonment",
+    "label": "Cart abandonment",
+    "description": "Shoppers leave checkout, configuration, or sign-up before completing the purchase, eroding conversion and revenue."
+  },
+  {
+    "uuid": "8344af08-5ac5-4a69-a45f-978b4f5e9039",
+    "slug": "shopping-guidance-gap",
+    "label": "Shopping guidance gap",
+    "description": "Buyers can't easily compare options, configure complex products, or get advice without contacting a human."
+  },
+  {
+    "uuid": "bb2f2617-46c7-4fca-9d97-05c218591171",
+    "slug": "checkout-friction",
+    "label": "Checkout / purchase-flow friction",
+    "description": "Customers stall mid-purchase on eligibility, fulfillment, configuration, or policy questions that block completion."
+  },
+  {
+    "uuid": "5d6a27e0-706c-4106-a4e4-32891ee1b9c7",
+    "slug": "tier1-ticket-volume",
+    "label": "High Tier-1 ticket volume",
+    "description": "Front-line teams are saturated with repetitive low-complexity questions that could be resolved through self-service."
+  },
+  {
+    "uuid": "d8fa60cf-9387-4dfd-9839-6d6db1771b4f",
+    "slug": "catalog-content-gap",
+    "label": "Catalog / product-content gap",
+    "description": "Product pages lack consistent, complete, on-brand descriptions and imagery at the scale the catalog requires."
+  },
+  {
+    "uuid": "c9c20868-3e95-4ee3-9d2c-8746895633a8",
+    "slug": "slow-product-onboarding",
+    "label": "Slow product onboarding to catalog",
+    "description": "New SKUs or own-brand items take too long to publish with full content (copy, imagery, attributes)."
+  },
+  {
+    "uuid": "f7550fb3-ddff-4c65-94dd-dbab0bacd883",
+    "slug": "brand-voice-inconsistency",
+    "label": "Brand voice / visual inconsistency",
+    "description": "Copy, creative, and assets drift in tone or visual identity across teams, regions, channels, or agencies."
+  },
+  {
+    "uuid": "524b3f0c-9650-4203-825f-f8eb82835671",
+    "slug": "creative-bottleneck",
+    "label": "Creative production bottleneck",
+    "description": "Creative team / agency capacity cannot keep up with channel and personalization demand for assets."
+  },
+  {
+    "uuid": "f449a11e-954c-4cbc-8159-21ee2a3f01f5",
+    "slug": "long-content-cycle",
+    "label": "Long content / campaign cycle time",
+    "description": "Briefs, drafts, and approvals stretch across days or weeks, delaying time-to-market for campaigns and content."
+  },
+  {
+    "uuid": "9594df5a-90a6-4377-9aad-fa2b382c770a",
+    "slug": "brief-writing-overhead",
+    "label": "Manual brief / spec writing overhead",
+    "description": "Significant analyst or strategist time is spent assembling briefs, research summaries, and competitor scans by hand."
+  },
+  {
+    "uuid": "f1eb1bfe-716b-4789-a2c4-738a2363efeb",
+    "slug": "low-cross-sell",
+    "label": "Low cross-sell / upsell capture",
+    "description": "Customers buy a narrow basket; adjacent or complementary products are under-recommended at the right moments."
+  },
+  {
+    "uuid": "c422debf-32d8-4b49-ab26-13c247a6ddce",
+    "slug": "generic-offers",
+    "label": "Generic offers / messaging",
+    "description": "Marketing offers and creative are one-size-fits-all, missing customer-level signals that would lift relevance and conversion."
+  },
+  {
+    "uuid": "036afdeb-2c32-4c1e-9eaa-bf1628479eea",
+    "slug": "low-pipeline-coverage",
+    "label": "Insufficient pipeline coverage",
+    "description": "Top-of-funnel volume falls short of the coverage ratio sales needs to hit quota."
+  },
+  {
+    "uuid": "0ed3b0c9-5b0a-40f0-8702-e4ba283475cd",
+    "slug": "manual-outreach-load",
+    "label": "Manual outbound outreach load",
+    "description": "SDRs / reps spend most of their day on list-building, personalization, and sequencing instead of conversations."
+  },
+  {
+    "uuid": "477a9665-9dbf-41a6-a283-6bec3547a746",
+    "slug": "missed-buying-signals",
+    "label": "Missed buying signals",
+    "description": "Intent signals (site visits, job changes, social activity, product use) go unmonitored or untriaged before competitors react."
+  },
+  {
+    "uuid": "255cce93-db0d-494f-a139-b901ad245c2a",
+    "slug": "low-product-confidence",
+    "label": "Low product-confidence at purchase",
+    "description": "Customers hesitate online because they can't physically inspect, try on, or visualize the product in context."
+  },
+  {
+    "uuid": "36cf0ef5-2659-44ce-b6ab-5ea57ff1b721",
+    "slug": "high-return-rate",
+    "label": "High product return rate",
+    "description": "Returns / exchanges erode margin because expectations set online didn't match the product received."
+  },
+  {
+    "uuid": "d27a4cf4-1eb0-413d-9418-209083ea0c82",
+    "slug": "ai-channel-invisibility",
+    "label": "Invisibility in AI / LLM answer channels",
+    "description": "Brand and product information is not surfaced by LLM-powered shopping or answer engines, so AI-mediated demand bypasses the brand."
+  },
+  {
+    "uuid": "bfb97bbe-e897-4a89-ab1d-7e4de0c53f36",
+    "slug": "declining-organic-traffic",
+    "label": "Declining organic search traffic",
+    "description": "Traditional SEO traffic is shrinking as users shift to AI-generated answers and zero-click search."
+  },
+  {
+    "uuid": "4f818f8d-1404-4f50-8bc7-225be96afbaf",
+    "slug": "poor-lead-prioritization",
+    "label": "Poor lead prioritization",
+    "description": "Reps waste time on low-intent leads because scoring is rule-based, stale, or absent."
+  },
+  {
+    "uuid": "07bcb191-ad5c-4b74-923f-fb282e30d053",
+    "slug": "slow-social-response",
+    "label": "Slow social-channel response time",
+    "description": "Inbound DMs, mentions, and complaints sit too long in the queue, hurting brand perception and resolution times."
+  },
+  {
+    "uuid": "c98f6456-8917-4a77-87b4-f97d0a31e019",
+    "slug": "complaint-escalation-risk",
+    "label": "Complaint-escalation risk on social",
+    "description": "Negative mentions can spread before triage catches them, exposing the brand to viral complaint risk."
+  },
+  {
+    "uuid": "fc3a0da1-18a7-44b7-8fe2-d5be77e28b24",
+    "slug": "static-pricing",
+    "label": "Static / slow-moving pricing",
+    "description": "Prices are set on long review cycles and don't respond to live demand, competitor moves, inventory, or segment signals."
+  },
+  {
+    "uuid": "0758174a-45f1-49a2-93b7-7433512242b8",
+    "slug": "margin-erosion",
+    "label": "Margin erosion from price/promotion",
+    "description": "Discounting, promotion stacking, or competitor undercutting is compressing gross margin without commensurate volume."
+  },
+  {
+    "uuid": "411a6d85-9a1e-40a7-ac77-64fea9fee272",
+    "slug": "static-channel-allocation",
+    "label": "Static media-channel allocation",
+    "description": "Budget across paid channels is fixed quarterly and doesn't reallocate to where marginal ROI is currently highest."
+  },
+  {
+    "uuid": "dbb5c390-0980-4eaf-8bce-0e801bf6bbb0",
+    "slug": "slow-budget-decisions",
+    "label": "Slow marketing-budget decisions",
+    "description": "Marketing-mix and budget shifts wait on long analyst cycles instead of running on a continuous loop."
+  },
+  {
+    "uuid": "71a032cb-f49a-403e-a37f-3bccc5169c39",
+    "slug": "attribution-blind-spot",
+    "label": "Attribution blind-spot",
+    "description": "Cross-channel conversion attribution is degraded by cookie deprecation, walled gardens, and AI-influenced journeys, leaving spend decisions on weak ground."
+  },
+  {
+    "uuid": "c49723f2-71a6-4e3b-b4c2-d9848e724900",
+    "slug": "customer-churn-risk",
+    "label": "Customer churn risk",
+    "description": "At-risk customers (decreasing usage, falling sentiment, support friction) are not flagged in time to trigger retention plays before they cancel."
+  },
+  {
+    "uuid": "5ad5fac3-ab4e-4e16-97a2-e8e986596c1e",
+    "slug": "product-discovery-gap",
+    "label": "Product discovery gap",
+    "description": "Customers can't find relevant products through current keyword search or browse paths \u2014 especially in visually-driven categories where they know what they want but not what it's called."
+  },
+  {
+    "uuid": "4265a4e5-0766-418b-928c-c85842c333c5",
+    "slug": "slow-rep-ramp",
+    "label": "Slow rep ramp time",
+    "description": "New sales / service reps take too long to reach productive performance, dragging revenue and inflating onboarding cost."
+  },
+  {
+    "uuid": "92fb9860-e331-4f84-8909-81957bd4e817",
+    "slug": "inconsistent-rep-performance",
+    "label": "Inconsistent rep performance",
+    "description": "Top reps and average reps diverge on win rate, talk-tracks, and objection handling; coaching is ad hoc and uneven."
+  },
+  {
+    "uuid": "ebc9962b-f579-4b24-adce-b66530177642",
+    "slug": "deal-risk-blind-spot",
+    "label": "Deal-risk blind-spot",
+    "description": "Sales leadership can't see which open deals are at risk until forecasts slip, because risk signals live in scattered call recordings, emails, and notes."
+  },
+  {
+    "uuid": "f4561af9-6ac7-4148-8cb6-c4ec849e16f3",
+    "slug": "manual-rekeying",
+    "label": "Manual data re-keying",
+    "description": "Staff retype data across systems (invoices, forms, contracts, CRM) \u2014 slow, error-prone, and a productivity tax."
+  },
+  {
+    "uuid": "c9893d5a-1448-45ea-8813-acbb2dd30a62",
+    "slug": "procurement-cycle-friction",
+    "label": "Procurement / sourcing cycle friction",
+    "description": "Purchase requisitions, RFPs, supplier evaluations, and policy compliance checks stretch procurement cycle time and tie up buyers."
+  },
+  {
+    "uuid": "28dfd343-54b8-4e55-86a7-041fc6a94e0a",
+    "slug": "repetitive-analytical-rework",
+    "label": "Repetitive analytical rework",
+    "description": "Analysts rebuild the same artifacts (market sizing, financial cuts, weekly KPI decks) by hand each cycle instead of pulling from a pipeline."
+  },
+  {
+    "uuid": "7cfc0448-c0a2-4b7d-b816-37bf94abca87",
+    "slug": "triage-backlog",
+    "label": "Inbound triage backlog",
+    "description": "Inbound emails, tickets, or messages pile up because routing them to the right queue is manual and rule-based."
+  },
+  {
+    "uuid": "6ae53ea7-dac9-44e8-b5be-8184d168c97e",
+    "slug": "crm-hygiene-decay",
+    "label": "CRM hygiene decay",
+    "description": "Contact and interaction data in CRM is stale or missing because reps don't log it consistently; downstream analytics and forecasting suffer."
+  },
+  {
+    "uuid": "1f05f328-2659-4534-88b8-0fb271817272",
+    "slug": "manual-workload-dispatch",
+    "label": "Manual workload dispatching",
+    "description": "Work items are assigned by humans (dispatcher, lead, manager) instead of optimized against capacity, skills, and SLA \u2014 slow and uneven."
+  },
+  {
+    "uuid": "dd5bc496-0ac5-45b8-a19f-3e547986683e",
+    "slug": "vendor-evaluation-overhead",
+    "label": "Vendor evaluation overhead",
+    "description": "Scoring and comparing vendors across price, quality, ESG, and performance criteria is manual and inconsistent across procurement decisions."
+  },
+  {
+    "uuid": "3a641fa0-c3f1-4de1-8cb1-8440e1d9a631",
+    "slug": "customer-feedback-blind-spot",
+    "label": "Customer-feedback blind-spot",
+    "description": "Voice-of-customer signals across calls, reviews, surveys, and social are not aggregated into actionable themes for product, CX, or marketing teams."
+  },
+  {
+    "uuid": "95ff03b8-8f7a-4ffc-a1b9-dee0705bcfd2",
+    "slug": "unstructured-data-overhead",
+    "label": "Unstructured data tagging overhead",
+    "description": "Documents, transcripts, and other unstructured assets aren't classified or tagged at scale, blocking downstream analytics and search."
+  },
+  {
+    "uuid": "7453d2c1-ffd9-4916-a8e1-84d509900b17",
+    "slug": "knowledge-sprawl",
+    "label": "Enterprise knowledge sprawl",
+    "description": "Insights, decks, docs, and prior analyses live across dozens of apps with no unified search or retrieval \u2014 employees can't find what already exists."
+  },
+  {
+    "uuid": "22c27ad5-ffa8-4de7-a1f5-98d5a88523d2",
+    "slug": "repeated-foundational-work",
+    "label": "Repeated foundational work",
+    "description": "Teams recreate the same foundational analyses, slide templates, and benchmarks because prior work isn't surfaced when needed."
+  },
+  {
+    "uuid": "1d69d19e-5048-411d-89f6-dd346bfdb629",
+    "slug": "citation-trust-gap",
+    "label": "Citation / answer-trust gap",
+    "description": "Users won't act on AI answers unless the source is traceable; ungrounded LLM outputs can't pass internal trust thresholds."
+  },
+  {
+    "uuid": "cfdd3b44-0f62-44cc-ac5f-81a9079739b3",
+    "slug": "ai-tooling-fragmentation",
+    "label": "AI-tooling fragmentation across employees",
+    "description": "Employees build or use ad-hoc GPTs and prompts in isolation; no central catalog, governance, or reuse \u2014 innovation doesn't compound."
+  },
+  {
+    "uuid": "428c2063-6200-4825-adc0-9bd702394de2",
+    "slug": "knowledge-worker-productivity-cap",
+    "label": "Knowledge-worker productivity cap",
+    "description": "Drafting, summarizing, formatting, and follow-up tasks consume hours that an AI copilot embedded in the productivity suite can collapse."
+  },
+  {
+    "uuid": "19eca817-fa8a-4af4-8940-9e7aafe29859",
+    "slug": "meeting-overhead",
+    "label": "Meeting overhead",
+    "description": "Meeting prep, note-taking, action-item tracking, and follow-ups consume employee time and lose information in the gaps."
+  },
+  {
+    "uuid": "7b45bfc7-3fd0-41a8-8667-0921c219a4b5",
+    "slug": "limited-citizen-developer-velocity",
+    "label": "Limited citizen-developer velocity",
+    "description": "Business users can't safely compose multi-step automation across SaaS tools without engineering bottlenecks; ideas die in the backlog."
+  },
+  {
+    "uuid": "94969301-7055-45cc-9745-6ddc5ada3e0d",
+    "slug": "project-status-overhead",
+    "label": "Project-status reporting overhead",
+    "description": "PMs / leads spend hours each week chasing status, building rollups, and flagging blockers across tools instead of moving work forward."
+  },
+  {
+    "uuid": "677b65c4-36c4-4f0e-8b8c-c1cbd849a467",
+    "slug": "helpdesk-fragmentation",
+    "label": "Internal-helpdesk fragmentation",
+    "description": "Employees bounce between IT, HR, finance, and facilities portals to get answers; no unified self-service entry point."
+  },
+  {
+    "uuid": "42d4fd35-71c0-4268-80b3-f6c95a7c8f8c",
+    "slug": "e-sign-bottleneck",
+    "label": "E-signature workflow bottleneck",
+    "description": "Document signing workflows stall on reminders, routing exceptions, and escalations that no one owns end-to-end."
+  },
+  {
+    "uuid": "5fdec05e-bbae-4c76-aa04-0d6625095a9f",
+    "slug": "resume-writing-overhead",
+    "label": "Resume / career-narrative writing overhead",
+    "description": "Crafting impact bullets and role-tailored summaries is slow whether for external candidates or internal redeployment."
+  },
+  {
+    "uuid": "04be4ac3-0045-411d-996f-9f5f48c70e4a",
+    "slug": "data-quality-blind-spot",
+    "label": "Data-quality blind-spot",
+    "description": "Pipelines silently break (missing values, schema drift, dupes, anomalies) and bad data reaches dashboards / downstream models before anyone notices."
+  },
+  {
+    "uuid": "80e2f800-21c8-45e3-b7bd-09b1ce5fd82d",
+    "slug": "process-bottleneck-blind-spot",
+    "label": "Process-bottleneck blind-spot",
+    "description": "Workflow bottlenecks across approvals, ops, and cross-system processes aren't visible \u2014 automation targets are picked by hunch instead of data."
+  },
+  {
+    "uuid": "6c6ee5dc-bdfa-48dc-82c0-aa92147620e7",
+    "slug": "llm-hallucination-risk",
+    "label": "LLM hallucination / groundedness risk",
+    "description": "Production LLM apps lack a continuous evaluation harness \u2014 hallucinations, drift, and citation breakage slip into production responses."
+  },
+  {
+    "uuid": "49f4cc36-2f2a-4196-9654-6f14040dd643",
+    "slug": "saas-stack-ai-readiness",
+    "label": "SaaS-stack AI-readiness gap",
+    "description": "AI capabilities are bolted on outside of the core SaaS stack (SAP, Salesforce, IBM\u2026) rather than embedded where work already happens."
+  },
+  {
+    "uuid": "9dc36714-1491-42a3-8f6b-f59a876776d6",
+    "slug": "fraud-detection-gap",
+    "label": "Transaction-fraud detection gap",
+    "description": "Card / payment / merchant fraud slips past rule-based systems faster than ops can tune them, causing chargebacks, write-offs, and false-positive friction for good customers."
+  },
+  {
+    "uuid": "db820f93-af1e-4d0f-b0a3-05e01e3f44a7",
+    "slug": "reconciliation-overhead",
+    "label": "Reconciliation / matching overhead",
+    "description": "Manual reconciliation of payments, invoices, ledger entries, and bank statements eats finance-team capacity and stretches close cycle."
+  },
+  {
+    "uuid": "befaac80-b796-4128-94ab-5deba91bdbd1",
+    "slug": "cash-visibility-gap",
+    "label": "Cash-position visibility gap",
+    "description": "Real-time cash position, near-term inflows/outflows, and liquidity buffer aren't visible without analyst rebuilds; treasury decisions lag."
+  },
+  {
+    "uuid": "2a5ea6a2-9012-4ecf-99fa-47f1316dfeb8",
+    "slug": "kyc-aml-workflow-load",
+    "label": "KYC / AML workflow load",
+    "description": "Customer onboarding and ongoing AML monitoring carry heavy manual review at every step, slowing onboarding and inflating compliance cost."
+  },
+  {
+    "uuid": "5d15e7c2-6ae0-45ad-9ba4-abbc10f6b714",
+    "slug": "close-cycle-anomaly-risk",
+    "label": "Financial-close anomaly risk",
+    "description": "Reconciliation anomalies surface late in the close, forcing re-work after cutoff or escaping to audit findings."
+  },
+  {
+    "uuid": "f48dc600-933e-4e1d-8811-31e2ebb44749",
+    "slug": "audit-prep-overhead",
+    "label": "Audit-prep overhead",
+    "description": "Internal and external audits consume weeks of analyst time gathering, reconciling, and documenting evidence."
+  },
+  {
+    "uuid": "4a3e2116-50ae-4c2b-b995-488391dbcda3",
+    "slug": "compliance-monitoring-gap",
+    "label": "Compliance-monitoring gap",
+    "description": "Transactions, communications, and documents aren't continuously screened against regulatory rules \u2014 violations are caught after the fact or in audit."
+  },
+  {
+    "uuid": "6c08e93f-17e3-4029-85cd-82faca627f65",
+    "slug": "expense-policy-leakage",
+    "label": "Expense-policy leakage",
+    "description": "Out-of-policy or anomalous expense items slip through manual review, eroding margin and creating audit risk."
+  },
+  {
+    "uuid": "595e11bd-4824-4e76-9c7e-abd84d241647",
+    "slug": "credit-decisioning-overhead",
+    "label": "Credit-decisioning overhead",
+    "description": "Lending / BNPL / supplier credit decisions rely on slow manual underwriting; capacity caps growth or pushes risk thresholds in the wrong direction."
+  },
+  {
+    "uuid": "fcf108c0-0708-48dc-8a0e-a0366c0b6a73",
+    "slug": "advisor-analyst-throughput-cap",
+    "label": "Advisor / analyst throughput cap",
+    "description": "FP&A analysts and wealth advisors are bottlenecked by data prep, scenario modeling, and Q&A turnaround \u2014 judgment work waits on busywork."
+  },
+  {
+    "uuid": "150dcfd5-5d07-423f-b1dd-152ec7220ca8",
+    "slug": "market-monitoring-overhead",
+    "label": "Real-time market-monitoring overhead",
+    "description": "Trading / compliance teams can't watch token prices, on-chain flows, news, and sentiment fast enough to act on signals or flag anomalies."
+  },
+  {
+    "uuid": "59f2106b-cbff-4c0b-ac66-7f038e56e4ac",
+    "slug": "property-valuation-overhead",
+    "label": "Property valuation overhead",
+    "description": "Manual property appraisal is slow and inconsistent; consumer listings, mortgage underwriting, and tax assessment need scalable AVMs."
+  },
+  {
+    "uuid": "273e5ce0-cd9f-4bab-89f3-434e94b99633",
+    "slug": "resume-screening-overhead",
+    "label": "Resume screening overhead",
+    "description": "High applicant volume forces recruiters to do shallow first-pass screening or rely on rigid keyword filters \u2014 slow and lossy."
+  },
+  {
+    "uuid": "dd5cef01-577b-4bfb-a100-a7e8600407da",
+    "slug": "hiring-diversity-gap",
+    "label": "Hiring-diversity gap",
+    "description": "Pipeline composition under-indexes on atypical or diverse candidates because sourcing and screening default to familiar profiles."
+  },
+  {
+    "uuid": "9e040271-4bae-40f7-94f7-2e31fd682aeb",
+    "slug": "training-personalization-gap",
+    "label": "Training-personalization gap",
+    "description": "One-size training catalogs miss the learner's role, skill level, and aspirations \u2014 completion and impact stay low."
+  },
+  {
+    "uuid": "15b82270-3139-47da-8eb1-b636d914dd3f",
+    "slug": "onboarding-fragmentation",
+    "label": "Onboarding fragmentation",
+    "description": "New hires bounce between IT, benefits, learning, and team-specific setup steps with no coherent orchestration; productive ramp slips."
+  },
+  {
+    "uuid": "153fd886-eec9-4046-91f2-44ac0e64f65c",
+    "slug": "internal-mobility-gap",
+    "label": "Internal mobility / talent-marketplace gap",
+    "description": "Internal openings, stretch assignments, and reskilling paths aren't matched to employees by skill adjacency \u2014 companies hire externally for talent they already have."
+  },
+  {
+    "uuid": "cc62cc7a-2678-4b4e-9145-f09b1a4ec47f",
+    "slug": "attrition-risk",
+    "label": "Attrition / regrettable-loss risk",
+    "description": "Engagement, performance, and sentiment signals flagging at-risk employees aren't surfaced until exit interviews \u2014 too late to intervene."
+  },
+  {
+    "uuid": "df69dd0b-cd17-433e-aa3b-1700d00768b1",
+    "slug": "engagement-blind-spot",
+    "label": "Continuous-engagement blind-spot",
+    "description": "Annual surveys lag months behind reality; leaders can't see how teams are feeling now."
+  },
+  {
+    "uuid": "7c305b65-0915-47bd-9c4a-7edb12d4fced",
+    "slug": "skills-visibility-gap",
+    "label": "Workforce skills-visibility gap",
+    "description": "There's no living skills graph across the workforce \u2014 strategy, succession, and capability planning run on stale role inventories."
+  },
+  {
+    "uuid": "2cc8d9a5-0d66-40cc-bbbf-811d9ebe4447",
+    "slug": "performance-cycle-overhead",
+    "label": "Performance-management cycle overhead",
+    "description": "Once-a-year reviews consume weeks, miss in-flight feedback, and bake in manager bias."
+  },
+  {
+    "uuid": "571ef3a6-8dff-4505-99e6-fa53c4fbeaea",
+    "slug": "exit-feedback-overhead",
+    "label": "Exit-feedback synthesis overhead",
+    "description": "Exit interview text data isn't synthesized into themes \u2014 systemic drivers of attrition stay invisible."
+  },
+  {
+    "uuid": "25af1762-5f93-41b8-b0a4-1dc02e74ada1",
+    "slug": "ai-bias-risk",
+    "label": "AI bias / disparate-impact risk",
+    "description": "Predictive models used in hiring, placement, or promotion can produce disparate impact across protected groups without continuous auditing."
+  },
+  {
+    "uuid": "8e9687e4-51a4-4c20-9b20-56bfb695edf7",
+    "slug": "ediscovery-overhead",
+    "label": "eDiscovery overhead",
+    "description": "Litigation discovery requires reviewing millions of documents \u2014 slow, expensive, and inconsistent without AI-assisted relevance scoring."
+  },
+  {
+    "uuid": "3071632c-ce1c-41c6-ba3c-1b25a5673e6e",
+    "slug": "contract-cycle-overhead",
+    "label": "Contract review / drafting cycle overhead",
+    "description": "Reviewing clauses, obligations, risks, and drafting playbook-compliant contracts is high-volume, repetitive, and slow without AI assist in-flow."
+  },
+  {
+    "uuid": "d901f15a-84d4-4aa6-ae17-9de628467223",
+    "slug": "legal-research-overhead",
+    "label": "Legal-research overhead",
+    "description": "Multi-jurisdictional legal research and precedent analysis takes hours per question \u2014 capacity limits matter throughput."
+  },
+  {
+    "uuid": "1ab69bf4-604b-4638-9629-f81051220745",
+    "slug": "client-intake-overhead",
+    "label": "Client-intake / conflict-check overhead",
+    "description": "Lead capture, conflict checks, and matter intake are manual and slow \u2014 attorneys engage late and conversion suffers."
+  },
+  {
+    "uuid": "9acdd80d-f62f-4ff7-acde-7631d3cea082",
+    "slug": "agent-handle-time-cap",
+    "label": "Contact-center agent handle-time cap",
+    "description": "Average handle time stays high because agents read long threads, search KBs, and write summaries without AI assist in the workflow."
+  },
+  {
+    "uuid": "74e3bbc9-dd7f-4b7e-b544-60045ac362fd",
+    "slug": "escalation-risk-blind-spot",
+    "label": "Escalation-risk blind-spot",
+    "description": "Tickets likely to escalate aren't flagged early; supervisors only intervene after customer frustration is already public."
+  },
+  {
+    "uuid": "a43c4c66-c4de-4bad-9b36-ef31e8c5c575",
+    "slug": "kb-staleness",
+    "label": "Knowledge-base staleness",
+    "description": "FAQ and KB content drifts behind what customers actually ask; deflection suffers because the right answer isn't in the bot's corpus."
+  },
+  {
+    "uuid": "e57a3327-fade-4db7-b46e-ab07f997cb14",
+    "slug": "refund-dispute-load",
+    "label": "Refund / dispute handling load",
+    "description": "Refund and dispute cases consume agent time on policy lookups, order validation, and approvals that could be agent-resolved."
+  },
+  {
+    "uuid": "2e02f51f-491d-446d-b733-767f140cae45",
+    "slug": "missed-call-revenue-loss",
+    "label": "Missed-call revenue loss",
+    "description": "Front-of-house phone lines miss calls outside business hours or in peak load \u2014 booked appointments, leads, and revenue evaporate."
+  },
+  {
+    "uuid": "519e5aec-c259-4759-bad1-606462255f43",
+    "slug": "false-positive-load",
+    "label": "Alert false-positive load / fatigue",
+    "description": "SOC analysts spend the day on noise; high false-positive volume buries real threats and burns out the team."
+  },
+  {
+    "uuid": "e147f002-b829-4ed3-92ab-6aa484e0f82f",
+    "slug": "threat-detection-gap",
+    "label": "Threat-detection gap",
+    "description": "Legacy signature-based tools miss novel attack patterns; mean-time-to-detect lags the attacker's dwell time."
+  },
+  {
+    "uuid": "f43e179b-407c-4318-82c2-fc779b561235",
+    "slug": "account-takeover-risk",
+    "label": "Account-takeover (ATO) risk",
+    "description": "Credential-stuffing and session-hijack attacks slip past static MFA; customer accounts and admin accounts get compromised."
+  },
+  {
+    "uuid": "c27ba107-7bd3-48d1-aea4-cee43e43c11e",
+    "slug": "soc-coverage-gap",
+    "label": "SOC coverage / staffing gap",
+    "description": "24x7 monitoring and incident response require staffing levels most enterprises can't sustain internally."
+  },
+  {
+    "uuid": "340ea9c1-3e81-4a04-9362-dd7168671270",
+    "slug": "developer-velocity-cap",
+    "label": "Developer-velocity cap",
+    "description": "Engineering teams can't ship faster without proportional headcount; boilerplate, test writing, and doc maintenance soak up capacity."
+  },
+  {
+    "uuid": "dfc28289-a6d6-4ab1-a9b7-5900b647452e",
+    "slug": "test-and-docs-overhead",
+    "label": "Test & documentation overhead",
+    "description": "Writing tests, scaffolding, and docs is a real cost that gets deferred; coverage decays and onboarding suffers."
+  },
+  {
+    "uuid": "a52df0c4-e5e7-4aeb-9a8f-999217a68938",
+    "slug": "code-review-bottleneck",
+    "label": "Code-review bottleneck",
+    "description": "Pull-request reviews wait on senior engineer attention; merge cycle stretches and bugs slip past tired reviewers."
+  },
+  {
+    "uuid": "021ee3ae-0cb1-442d-8a96-0cc990945f80",
+    "slug": "bug-triage-overhead",
+    "label": "Bug triage / routing overhead",
+    "description": "Incoming bug reports pile up because deduping, prioritizing, and routing them to the right owner is manual."
+  },
+  {
+    "uuid": "e353cf3a-c014-48b9-adb6-26bfcf75505e",
+    "slug": "unplanned-downtime",
+    "label": "Unplanned equipment downtime",
+    "description": "Equipment failures cause unplanned production stoppages; reactive maintenance costs production and lost revenue."
+  },
+  {
+    "uuid": "d625dd57-0d9c-40a3-b1b7-160b4b4cc67d",
+    "slug": "inventory-imbalance",
+    "label": "Inventory imbalance",
+    "description": "Stockouts and excess inventory coexist because forecasts can't reconcile demand variability, lead time, and SKU criticality."
+  },
+  {
+    "uuid": "afc7c737-8e3f-4a11-bb63-72c8d0962912",
+    "slug": "supplier-disruption-risk",
+    "label": "Supplier-disruption risk",
+    "description": "Supplier outages, financial stress, geopolitical risk, and weather events disrupt deliveries before procurement can react."
+  },
+  {
+    "uuid": "426983e8-35db-453c-9aaf-5b31195fd70e",
+    "slug": "rare-failure-data-scarcity",
+    "label": "Rare-failure data scarcity",
+    "description": "Training failure-prediction models is hard when failures are rare; live data alone doesn't cover the long tail."
+  },
+  {
+    "uuid": "1a7dceb9-b570-46e6-9b3f-8aa3240180e3",
+    "slug": "route-optimization-gap",
+    "label": "Route / traffic optimization gap",
+    "description": "Delivery and fleet routing relies on static plans; live traffic, weather, and demand changes blow up ETAs."
+  },
+  {
+    "uuid": "072893c6-c32a-44e3-8789-963aaa8ad5d1",
+    "slug": "agricultural-loss-risk",
+    "label": "Agricultural pest / disease loss risk",
+    "description": "Crop losses from pests, diseases, and stress aren't detected early enough for targeted intervention."
+  },
+  {
+    "uuid": "5d7357b1-d9c0-4d89-b890-89592372d9b3",
+    "slug": "workplace-safety-gap",
+    "label": "Workplace-safety / PPE compliance gap",
+    "description": "PPE violations, unsafe behaviors, and restricted-zone entries on industrial sites aren't caught in real time; incident rates stay elevated."
+  },
+  {
+    "uuid": "5bcf87e4-0e9a-4f9f-966b-bfe3932047e6",
+    "slug": "claims-processing-bottleneck",
+    "label": "Claims-processing bottleneck",
+    "description": "Claims sit in queues waiting on document intake, validation, and adjuster review; cycle time costs CX and capacity."
+  },
+  {
+    "uuid": "114aa800-d9ef-413c-a478-6c3888d95932",
+    "slug": "underwriting-cycle-friction",
+    "label": "Underwriting cycle friction",
+    "description": "Multi-day underwriting cycles cap policy volume and lose deals to faster competitors; straight-through processing rate is low."
+  },
+  {
+    "uuid": "e5e4a81c-0197-45b4-a3a1-3f5543553cee",
+    "slug": "prior-auth-bottleneck",
+    "label": "Prior-auth / medical-necessity review bottleneck",
+    "description": "Payer prior-auth and medical-necessity reviews stretch decision time, frustrate providers, and delay care."
+  },
+  {
+    "uuid": "3d37527f-dee1-46fe-b079-8390b87b7971",
+    "slug": "drug-discovery-throughput-cap",
+    "label": "Drug-discovery throughput cap",
+    "description": "Identifying, designing, and screening drug candidates the traditional way takes years and costs hundreds of millions per program."
+  },
+  {
+    "uuid": "0d973761-e6c7-4659-984a-101d55252a43",
+    "slug": "campaign-optimization-lag",
+    "label": "Campaign-optimization lag",
+    "description": "Cross-channel performance review and budget reallocation runs on weekly / monthly cycles; spend leaks before humans react."
+  },
+  {
+    "uuid": "2f322c2a-59e1-4adc-84a9-ee43643d15c5",
+    "slug": "localization-bottleneck",
+    "label": "Content localization bottleneck",
+    "description": "Translating, transcreating, and re-shooting brand assets per region/language can't keep pace with global campaign cadence."
+  },
+  {
+    "uuid": "c8d622d1-fe97-4c83-9b27-9652420757df",
+    "slug": "dco-creative-lift-gap",
+    "label": "Dynamic-creative-optimization gap",
+    "description": "Same ad creative is served to every audience segment; conversion lift from element-level personalization is left on the table."
+  },
+  {
+    "uuid": "8d305566-d2b7-460b-9fee-e727154746ec",
+    "slug": "pre-launch-research-overhead",
+    "label": "Pre-launch audience research overhead",
+    "description": "Concept testing, message testing, and persona research before launch consumes weeks and budget; teams ship without it."
+  },
+  {
+    "uuid": "c5ce7702-8db3-4edc-8a24-b80c9ce19c93",
+    "slug": "ai-output-quality-gap",
+    "label": "Generic AI-output quality gap",
+    "description": "Raw LLM output is generic, off-brand, or factually shaky; closing the gap to publishable content requires editing capacity."
+  },
+  {
+    "uuid": "744f822f-3f8d-4818-aabf-b78d0e42ba4b",
+    "slug": "content-repurposing-overhead",
+    "label": "Content repurposing overhead",
+    "description": "Turning a long-form asset into short-form derivatives across formats and channels takes more time than producing the original."
+  },
+  {
+    "uuid": "92656e86-8382-4ac5-a81b-18a788424f8e",
+    "slug": "design-mass-efficiency-gap",
+    "label": "Design mass / cost-efficiency gap",
+    "description": "Engineering teams ship over-engineered parts because exploring topology-optimized geometry by hand isn't tractable; weight, cost, and material waste are higher than necessary."
+  },
+  {
+    "uuid": "cdcb66b8-3733-484b-a1d1-9036f69ae96e",
+    "slug": "design-manufacturability-risk",
+    "label": "Design manufacturability / compliance risk",
+    "description": "Designs reach review with manufacturability issues, regulatory non-compliance, or inconsistency with prior parts; rework wastes cycles."
+  },
+  {
+    "uuid": "6ba60069-6e1c-45bb-a4ad-4adc48145b55",
+    "slug": "pii-data-constraints",
+    "label": "PII / regulated-data constraints on training",
+    "description": "Privacy and regulatory restrictions block use of real customer / patient data for model training; teams need synthetic substitutes."
+  },
+  {
+    "uuid": "6f9f4590-0bb3-4283-81b4-49eca3bad6e6",
+    "slug": "training-data-scarcity",
+    "label": "Training-data scarcity",
+    "description": "Real-world data is too sparse, biased, or expensive to cover the long tail of intents, edge cases, and rare events the model must learn."
+  },
+  {
+    "uuid": "76dbdaea-3d49-4d26-a913-15422aaf153f",
+    "slug": "network-autonomy-gap",
+    "label": "Network-autonomy gap",
+    "description": "Telco networks require manual configuration, fault detection, and recovery; SLA misses and operational cost stay high."
+  },
+  {
+    "uuid": "07b2d8b1-ee12-45d5-b4fd-d013d1c5a8b8",
+    "slug": "capacity-planning-overhead",
+    "label": "Capacity / demand-surge planning overhead",
+    "description": "Network capacity decisions run on lagging telemetry and quarterly planning; demand surges cause congestion before ops can react."
+  },
+  {
+    "uuid": "f3c15952-6863-484f-88ae-670247ee9f48",
+    "slug": "demand-forecast-error",
+    "label": "Energy / load demand-forecast error",
+    "description": "Demand forecasts (electricity, gas, renewables generation) carry enough error that operators over-procure, under-deliver, or fail to pre-position storage / DR."
+  },
+  {
+    "uuid": "997d5c18-cb37-4747-a550-a8910b47b6a7",
+    "slug": "grid-balancing-gap",
+    "label": "Grid balancing / DER coordination gap",
+    "description": "Distributed energy resources (solar, batteries, EVs, flexible loads) aren't coordinated as a fleet; the grid wastes capacity and emissions stay elevated."
+  },
+  {
+    "uuid": "23a0f5a8-187f-4982-80b6-bd49f0100de2",
+    "slug": "carbon-pressure",
+    "label": "Carbon-emissions reduction pressure",
+    "description": "Regulatory, investor, and stakeholder pressure to reduce emissions outpaces operational levers; AI is needed to find new optimizations."
+  },
+  {
+    "uuid": "bd0d1e75-86ff-44bd-8b35-fa79284f7ac4",
+    "slug": "reservoir-modeling-gap",
+    "label": "Reservoir-modeling / drilling-optimization gap",
+    "description": "Drilling and reservoir teams can't simulate enough scenarios to optimize well placement and parameters; capital-allocation suffers."
+  },
+  {
+    "uuid": "348691a1-1a7f-42d4-bbf2-825d844f5f01",
+    "slug": "refining-yield-gap",
+    "label": "Refining yield / quality gap",
+    "description": "Refining process tuning relies on slow trial-and-error; yield, quality, and energy use lag what AI optimization could achieve."
+  },
+  {
+    "uuid": "a567d7ba-bbb1-4f9e-bd5c-732c86bae83d",
+    "slug": "ev-infrastructure-planning-gap",
+    "label": "EV charging infrastructure planning gap",
+    "description": "EV charger placement decisions don't optimize for equitable access, grid-upgrade cost, and DER coordination \u2014 adoption stalls or grids overload."
+  },
+  {
+    "uuid": "b5b376b5-711f-45fc-a27d-7221244d40e2",
+    "slug": "wildfire-ignition-risk",
+    "label": "Wildfire / utility-asset ignition risk",
+    "description": "Damaged poles, vegetation encroachment, and infrastructure faults cause wildfires; manual inspection can't keep up with mileage and seasonality."
+  },
+  {
+    "uuid": "e48726d9-9cc0-4dca-a355-75b2bd465d33",
+    "slug": "vfx-production-cost",
+    "label": "VFX / post-production cost",
+    "description": "Visual effects, dialogue replacement, and shot extension carry high per-second cost; studios can't afford the breadth of work they want to ship."
+  },
+  {
+    "uuid": "362e97ff-9b88-406d-a97c-4b8169692f92",
+    "slug": "solo-creator-throughput-cap",
+    "label": "Solo-creator / micro-studio throughput cap",
+    "description": "Single creators and micro-studios are bottlenecked on footage, sound, and voice capacity; generative pipelines enable studio-grade output at solo cost."
+  },
+  {
+    "uuid": "78541c90-35d8-46bd-b8d5-1bf58462bf1a",
+    "slug": "tv-interactivity-gap",
+    "label": "On-device interactive-experience gap",
+    "description": "TVs and streaming surfaces deliver static linear content; interactive, remixable, viewer-co-created experiences need on-device generative AI."
+  },
+  {
+    "uuid": "958898eb-cdc5-4ba9-b718-fc9307ae9d7d",
+    "slug": "student-mastery-gap",
+    "label": "Student-mastery gap",
+    "description": "One-pace classroom instruction leaves struggling students behind and bores advanced ones; mastery and outcomes suffer without personalization."
+  },
+  {
+    "uuid": "d2f1ed4e-8778-4e0e-a146-b88d383034dc",
+    "slug": "grading-overhead",
+    "label": "Grading / assessment overhead",
+    "description": "Manual grading of assignments and exams consumes instructor time better spent on teaching; at-scale courses are especially hit."
+  },
+  {
+    "uuid": "f6878c5d-3e71-4728-a82c-49468badc75a",
+    "slug": "teacher-admin-overhead",
+    "label": "Teacher / instructor admin overhead",
+    "description": "Lesson planning, parent communications, IEP drafting, worksheets, and attendance consume teacher hours; classroom time suffers."
+  },
+  {
+    "uuid": "865fc328-aa2f-4319-bcab-e24f40fa511c",
+    "slug": "academic-integrity-risk",
+    "label": "Academic-integrity risk",
+    "description": "AI-generated submissions, plagiarism, and contract cheating undermine academic assessment; institutions need detection plus policy."
+  },
+  {
+    "uuid": "16ec643f-4cef-4310-aca7-919b6e333dbb",
+    "slug": "content-moderation-need",
+    "label": "Content-moderation need (misinformation / toxicity / explicit)",
+    "description": "Platforms, newsrooms, and public-info teams need real-time classifiers to flag misinformation, hate speech, toxicity, or explicit content for moderation queues and policy enforcement."
+  },
+  {
+    "uuid": "2efb24e4-6a12-4fe8-98a7-fc7c61866efa",
+    "slug": "accessibility-gap",
+    "label": "Accessibility / inclusion gap",
+    "description": "Content and services aren't accessible to non-native speakers, hearing- or vision-impaired users, or people with disabilities at the speed they're produced."
+  },
+  {
+    "uuid": "50ebdd42-98ef-4f0d-a102-0f4e8ff4ebe0",
+    "slug": "dropout-risk",
+    "label": "Student dropout / disengagement risk",
+    "description": "Students at risk of dropping out aren't flagged early enough for intervention; outcomes and institutional metrics suffer."
+  },
+  {
+    "uuid": "1fc9f715-f9ff-4eb2-9e32-e07dbc97b584",
+    "slug": "attendance-tracking-overhead",
+    "label": "Attendance-tracking overhead",
+    "description": "Manual roll-call and occupancy tracking consume class time and produce stale data; teachers need automated, privacy-aware monitoring."
+  },
+  {
+    "uuid": "c16733bb-2667-4db2-8bef-7d02cad990b1",
+    "slug": "citizen-service-friction",
+    "label": "Citizen-service / agency-throughput friction",
+    "description": "Benefits, permits, and licensing forms require navigating cross-agency processes that frustrate citizens and tax agency staffing levels."
+  },
+  {
+    "uuid": "6be5be7b-a5f2-4d5f-a109-0c981ed40d14",
+    "slug": "inspection-coverage-gap",
+    "label": "Inspection coverage gap",
+    "description": "Infrastructure, building-code, environmental, and agricultural inspections can't keep pace with mileage and assets; coverage and consistency suffer."
+  },
+  {
+    "uuid": "08e68866-f6bb-434c-b111-0fb8e574cf2e",
+    "slug": "traffic-enforcement-coverage-gap",
+    "label": "Traffic-enforcement / ALPR coverage gap",
+    "description": "Manual plate observation and roadside enforcement can't scale; tolls, parking, and BOLO matching depend on automated plate recognition coverage."
+  },
+  {
+    "uuid": "60964fed-6618-4e8c-9453-8703755d0cfe",
+    "slug": "diagnostic-throughput-cap",
+    "label": "Diagnostic-imaging throughput cap",
+    "description": "Radiology / pathology read-volume per clinician caps throughput; backlog and turn-around time grow without AI assist."
+  },
+  {
+    "uuid": "c9b1f41a-2ee4-452a-af2b-30a16daca0d8",
+    "slug": "diagnostic-accuracy-gap",
+    "label": "Diagnostic-accuracy gap",
+    "description": "Subtle lesions and early-stage disease are missed by tired or junior readers; AI assistive review lifts catch rate at the same staffing."
+  },
+  {
+    "uuid": "4637f718-abe9-4e8f-acef-825aeb8c681e",
+    "slug": "appointment-scheduling-overhead",
+    "label": "Patient appointment-scheduling overhead",
+    "description": "Phone / web scheduling, rescheduling, reminders, and intake forms consume front-office staff time; missed slots erode revenue."
+  },
+  {
+    "uuid": "2e1694c7-54a2-4587-af8d-cc6df7925fb4",
+    "slug": "patient-self-triage-gap",
+    "label": "Patient self-triage gap",
+    "description": "Patients can't self-assess care level (self-care, telehealth, urgent care, ER), leading to over- and under-utilization."
+  },
+  {
+    "uuid": "0a20edf2-7b09-4b9c-b221-960fe7b2f93b",
+    "slug": "clinical-handoff-friction",
+    "label": "Clinical handoff / record-review friction",
+    "description": "Reviewing longitudinal patient records before encounters takes minutes that don't scale; handoffs lose context."
+  },
+  {
+    "uuid": "131bccd7-722f-405a-bd08-8524189ddaa0",
+    "slug": "billing-coding-overhead",
+    "label": "Medical billing / coding overhead",
+    "description": "Manual ICD-10 / CPT coding is slow and error-prone; coding errors drive denials and lost revenue."
+  },
+  {
+    "uuid": "6c554c1c-c4dc-438e-b3d6-6302249c0f21",
+    "slug": "chronic-care-adherence-gap",
+    "label": "Chronic-care adherence gap",
+    "description": "Patients with diabetes, hypertension, or post-op recovery miss adherence targets without continuous, personalized coaching."
+  },
+  {
+    "uuid": "1a1e3f93-a887-4f99-92be-6817d2660d06",
+    "slug": "continuous-vitals-monitoring-need",
+    "label": "Continuous-vitals monitoring need",
+    "description": "Wearable sensor data (activity, sleep, falls, arrhythmias) needs continuous ML interpretation to surface clinically meaningful events."
+  },
+  {
+    "uuid": "ad2145ab-6673-4eb4-9f9c-e36f0c4e9513",
+    "slug": "clinical-risk-prediction-gap",
+    "label": "Clinical risk-prediction gap",
+    "description": "Readmission, sepsis, fall, and flare risk for individual patients isn't estimated with explainability that clinicians and regulators can act on."
+  }
+]

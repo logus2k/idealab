@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Ideas & Plans Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>AI Ideas Catalog</h1>
+      <div class="view-toggle" role="tablist" aria-label="View">
+        <button id="viewIdeas" class="view-btn active" type="button" role="tab" aria-selected="true">Ideas</button>
+        <button id="viewPlans" class="view-btn" type="button" role="tab" aria-selected="false">Plans</button>
+      </div>
+      <div class="search-wrap">
+        <input type="search" id="search" placeholder="Search title, description, source, or tag…" autocomplete="off" spellcheck="false" />
+        <div class="result-count" id="resultCount">—</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Filters</h2>
+        <button id="clearFilters" class="ghost-btn" type="button">Clear all</button>
+      </div>
+      <div class="active-summary" id="activeSummary"></div>
+      <div id="filterFacets"></div>
+    </aside>
+
+    <main class="content" id="content">
+      <div id="loadingMsg" class="info-msg">Loading catalog…</div>
+      <div id="errorMsg" class="error-msg" hidden></div>
+      <div id="ideasContainer"></div>
+    </main>
+  </div>
+
+  <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Toggle filters">Filters</button>
+
+  <div id="planModal" class="modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="planModalTitle">
+      <button class="modal-close" type="button" data-close aria-label="Close">×</button>
+      <div id="planModalContent"></div>
+    </div>
+  </div>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

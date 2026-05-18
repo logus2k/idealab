@@ -1,0 +1,11 @@
+.git/
+.gitignore
+.claude/
+.vscode/
+.idea/
+node_modules/
+old/
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.swp
