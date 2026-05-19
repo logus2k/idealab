@@ -1626,7 +1626,7 @@ body.graph-view .content {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 2px 8px;
+  padding: 2px 4px 2px 10px;
   border-radius: 999px;
   background: var(--surface-2);
   cursor: pointer;
@@ -1634,6 +1634,33 @@ body.graph-view .content {
 }
 .graph-breadcrumb-crumb:hover { background: var(--border); }
 .graph-breadcrumb-crumb.current { background: var(--accent); color: white; cursor: default; }
+.graph-breadcrumb-x {
+  appearance: none;
+  background: transparent;
+  border: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  color: inherit;
+  opacity: 0.65;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s, opacity 0.12s, color 0.12s;
+}
+.graph-breadcrumb-x:hover {
+  opacity: 1;
+  background: rgba(220, 38, 38, 0.15);
+  color: #b91c1c;
+}
+.graph-breadcrumb-crumb.current .graph-breadcrumb-x:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
 .graph-breadcrumb-sep { color: var(--text-muted); }
 .graph-breadcrumb-empty { color: var(--text-muted); font-style: italic; }
 .graph-hud-status {
@@ -1700,6 +1727,21 @@ body.graph-view .content {
 }
 .graph-stage canvas { display: block; }
 
+/* Override 3d-force-graph's built-in hover tooltip — it ships with a
+ * dark-on-light theme inside an injected `<style>` block; our scene is
+ * light so we flip the contrast. Higher specificity guarantees we win
+ * even though the library's stylesheet is appended after ours. */
+body.graph-view .float-tooltip-kap {
+  background: rgba(255, 255, 255, 0.97) !important;
+  color: #1a202c !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 4px 12px rgba(20, 24, 36, 0.18) !important;
+  padding: 6px 10px !important;
+  border-radius: var(--radius) !important;
+  font: 12px var(--font-sans, system-ui, sans-serif) !important;
+  max-width: 360px !important;
+}
+
 /* Floating legend, toggled by the Settings → "Show legend" checkbox.
  * Also closeable from its own × in the panel header. */
 .graph-legend {
@@ -1757,6 +1799,38 @@ body.graph-view .content {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.12s, opacity 0.12s;
+}
+.graph-legend-row:hover { background: var(--surface-2); }
+.graph-legend-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+/* Toggled-off state — entity type is faded in the 3D scene; show that the
+ * row is "muted" but still clickable to bring it back. */
+.graph-legend-row--off {
+  opacity: 0.45;
+}
+.graph-legend-row--off .graph-legend-label {
+  text-decoration: line-through;
+}
+/* Mirror the 3D gold halo on the legend thumbnail by tinting the row's
+ * left edge — a subtle reinforcement that this row is a "category". */
+.graph-legend-row--category {
+  position: relative;
+}
+.graph-legend-row--category::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: #ffc107;
+  border-radius: 2px;
 }
 .graph-legend-icon {
   display: inline-flex;
@@ -1764,5 +1838,5 @@ body.graph-view .content {
   height: 20px;
   flex: 0 0 auto;
 }
-.graph-legend-icon svg { width: 20px; height: 20px; }
+.graph-legend-icon svg { width: 22px; height: 22px; }
 .graph-legend-label { color: var(--text); }

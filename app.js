@@ -1813,6 +1813,7 @@
           stage:            document.getElementById('graphStage'),
           breadcrumb:       document.getElementById('graphBreadcrumb'),
           hudStatus:        document.getElementById('graphHudStatus'),
+          showNodeLabels:   document.getElementById('graphShowNodeLabels'),
           showEdgeLabels:   document.getElementById('graphShowEdgeLabels'),
           showAll:          document.getElementById('graphShowAll'),
           showLegend:       document.getElementById('graphShowLegend'),
