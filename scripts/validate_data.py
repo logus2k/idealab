@@ -38,6 +38,14 @@ def check_unique(items, field, name):
     return len(dups)
 
 
+# Closed taxonomy for requirements.category (T-cat). Must match the
+# slugs listed in scripts/classify_requirements.py — keep in sync.
+REQUIREMENT_CATEGORIES = {
+    "workflow-friction", "coverage-gap", "accuracy-and-quality",
+    "decision-support", "compliance-and-risk",
+    "customer-experience-friction", "scaling-and-throughput",
+}
+
 RELATION_TAXONOMY = {
     ("idea", "kpi"):         {"reduces", "increases", "trades-off-against", "leading-indicator-of"},
     ("idea", "requirement"): {"addresses", "partially-mitigates", "creates-new-instance-of"},
@@ -163,6 +171,15 @@ def main():
             if kuid not in kpi_by_uuid:
                 print(f"  ERROR: plan_kpis -> unknown kpi {kuid}")
                 errors += 1
+
+    # --- requirements.category closed-set check ---
+    for r in requirements:
+        cat = r.get("category")
+        if cat is None:
+            continue        # null is allowed (not-yet-classified entry)
+        if cat not in REQUIREMENT_CATEGORIES:
+            print(f"  ERROR: requirement {r.get('slug')!r} has unknown category {cat!r}")
+            errors += 1
 
     # --- idea_semantics.json ---
     IDEA_SEM_FIELDS = {

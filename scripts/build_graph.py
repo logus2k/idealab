@@ -61,6 +61,11 @@ EDGE_LABELS = {
     "model_vendor":      "published by",
     "dataset_vendor":    "published by",
     "idea_idea":         "related to",  # refined by `relation` from semantic layer
+    # Phase-6 derived edges
+    "vendor_task":           "publishes for",     # entity → task
+    "model_base_model":      "fine-tuned from",   # model → model
+    "model_dataset_lineage": "trained on",        # model → dataset
+    "idea_similar":          "co-occurs with",    # idea → idea (computed)
 }
 
 # Polarity per relation (used by the viewer for color/icon hints).
@@ -376,6 +381,115 @@ def main() -> int:
         ent = entity_by_slug.get(author)
         if ent:
             add_edge(f"dataset:{hf_id}", f"entity:{ent['uuid']}", "dataset_vendor")
+
+    # ---- Phase-6 derived edges ----
+    # These edges are COMPUTED from the snapshot + already-emitted structural
+    # edges, not from data/links.json. They add analytic value (which vendor
+    # publishes for which task, which model is fine-tuned from which, which
+    # ideas co-occur) without expanding the curation burden.
+
+    # T6.1 — vendor ↔ task: count kept models per (author, task slug);
+    # emit weighted entity→task edges when the count meets a threshold so the
+    # graph doesn't drown in long-tail authors with one model in each task.
+    VENDOR_TASK_MIN = 3
+    vendor_task_count: dict[tuple[str, str], int] = defaultdict(int)
+    for hf_id, entry in kept_models.items():
+        item = entry["item"]
+        author_slug = (item.get("author") or "").lower()
+        ent = entity_by_slug.get(author_slug)
+        if not ent:
+            continue
+        tslugs: set[str] = set()
+        if item.get("pipeline_tag"):
+            tslugs.add(item["pipeline_tag"])
+        for s in entry.get("sources", []):
+            if s.get("axis") == "task" and s.get("vocab_slug"):
+                tslugs.add(s["vocab_slug"])
+        for slug in tslugs:
+            t = task_by_slug.get(slug)
+            if not t:
+                continue
+            vendor_task_count[(ent["uuid"], t["uuid"])] += 1
+    vendor_task_edges = 0
+    for (euid, tuid), n in vendor_task_count.items():
+        if n < VENDOR_TASK_MIN:
+            continue
+        # Manual emit so we can attach weight to the edge metadata.
+        src, dst, etype = f"entity:{euid}", f"task:{tuid}", "vendor_task"
+        if src not in seen_ids or dst not in seen_ids:
+            continue
+        edges.append({
+            "source": src, "target": dst, "type": etype,
+            "label": EDGE_LABELS[etype], "weight": n,
+        })
+        vendor_task_edges += 1
+
+    # T6.2 — model lineage from HF tag strings (`base_model:X`, `dataset:Y`).
+    # cardData isn't in our snapshot (the fetcher doesn't request `full=true`)
+    # so we mine the tags namespace instead. ~2800 models in the snapshot
+    # carry one or both of these tags.
+    BASE_MODEL_PREFIX = "base_model:"
+    DATASET_TAG_PREFIX = "dataset:"
+    lineage_model_edges = 0
+    lineage_dataset_edges = 0
+    for hf_id, entry in kept_models.items():
+        for tag in entry["item"].get("tags") or []:
+            if tag.startswith(BASE_MODEL_PREFIX):
+                inner = tag[len(BASE_MODEL_PREFIX):]
+                # Skip the "finetune:" / "quantized:" sub-namespaces — they
+                # repeat the same target with a sub-relation we don't model.
+                if ":" in inner:
+                    continue
+                base_id = inner
+                # Only emit if the base model is also a node in the graph.
+                if f"model:{base_id}" in seen_ids and base_id != hf_id:
+                    add_edge(f"model:{hf_id}", f"model:{base_id}", "model_base_model")
+                    lineage_model_edges += 1
+            elif tag.startswith(DATASET_TAG_PREFIX):
+                ds_id = tag[len(DATASET_TAG_PREFIX):]
+                if f"dataset:{ds_id}" in seen_ids:
+                    add_edge(f"model:{hf_id}", f"dataset:{ds_id}", "model_dataset_lineage")
+                    lineage_dataset_edges += 1
+
+    # T6.3 — idea co-occurrence (similar ideas).
+    # Score each pair by overlap on (requirements, KPIs, tasks). Keep the top
+    # MAX_SIMILAR per source idea where overlap ≥ MIN_OVERLAP. Symmetric in
+    # principle but emitted as directed pairs (the viewer treats both
+    # directions identically anyway).
+    MAX_SIMILAR = 3
+    MIN_OVERLAP = 3
+    idea_reqs    = {r["idea"]: set(r.get("requirements", [])) for r in links.get("idea_requirements", [])}
+    idea_kpis_in = {r["idea"]: set(r.get("kpis", []))         for r in links.get("idea_kpis", [])}
+    idea_tasks_in= {r["idea"]: set(r.get("tasks", []))        for r in links.get("idea_tasks", [])}
+    idea_uuids = [i["uuid"] for i in ideas if f"idea:{i['uuid']}" in seen_ids]
+    similar_edges = 0
+    for iuid in idea_uuids:
+        rs = idea_reqs.get(iuid, set())
+        ks = idea_kpis_in.get(iuid, set())
+        ts = idea_tasks_in.get(iuid, set())
+        if not (rs or ks or ts):
+            continue
+        scores: list[tuple[int, str]] = []
+        for juid in idea_uuids:
+            if juid == iuid:
+                continue
+            overlap = (len(rs & idea_reqs.get(juid, set()))
+                     + len(ks & idea_kpis_in.get(juid, set()))
+                     + len(ts & idea_tasks_in.get(juid, set())))
+            if overlap >= MIN_OVERLAP:
+                scores.append((overlap, juid))
+        scores.sort(reverse=True)
+        for score, juid in scores[:MAX_SIMILAR]:
+            edges.append({
+                "source": f"idea:{iuid}", "target": f"idea:{juid}", "type": "idea_similar",
+                "label": EDGE_LABELS["idea_similar"], "weight": score,
+            })
+            similar_edges += 1
+
+    print(f"derived edges: vendor_task={vendor_task_edges}, "
+          f"model_base_model={lineage_model_edges}, "
+          f"model_dataset_lineage={lineage_dataset_edges}, "
+          f"idea_similar={similar_edges}")
 
     # ---- semantic enrichment layer ----
     # Refines existing edges (sets `relation`/`polarity`/`confidence`/`rationale`)

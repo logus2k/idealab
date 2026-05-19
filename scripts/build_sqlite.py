@@ -55,8 +55,10 @@ CREATE TABLE requirements (
   uuid        TEXT PRIMARY KEY,
   slug        TEXT NOT NULL UNIQUE,
   label       TEXT NOT NULL,
-  description TEXT
+  description TEXT,
+  category    TEXT
 );
+CREATE INDEX idx_requirements_category ON requirements(category);
 
 CREATE TABLE kpis (
   uuid        TEXT PRIMARY KEY,
@@ -395,8 +397,8 @@ def main():
 
     for r in requirements:
         conn.execute(
-            "INSERT INTO requirements (uuid, slug, label, description) VALUES (?, ?, ?, ?)",
-            (r["uuid"], r["slug"], r["label"], r.get("description")),
+            "INSERT INTO requirements (uuid, slug, label, description, category) VALUES (?, ?, ?, ?, ?)",
+            (r["uuid"], r["slug"], r["label"], r.get("description"), r.get("category")),
         )
     for k in kpis:
         conn.execute(

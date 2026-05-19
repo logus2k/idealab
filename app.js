@@ -35,6 +35,38 @@
     kpi: 'KPI moved',
     entity: 'Company / vendor',
   };
+  // Closed taxonomies — must stay in sync with scripts/build_sqlite.py +
+  // scripts/classify_requirements.py + data/kpis.json categories.
+  // Display order is curated (not alphabetical) so the sidebar reads from
+  // most-frequent / most-strategic at the top.
+  const KPI_CATEGORY_ORDER = [
+    'revenue-and-growth', 'operational-efficiency', 'customer-experience',
+    'cost-and-margin', 'risk-and-compliance',
+    'talent-and-productivity', 'quality-and-accuracy',
+  ];
+  const KPI_CATEGORY_LABELS = {
+    'revenue-and-growth':      'Revenue & growth',
+    'operational-efficiency':  'Operational efficiency',
+    'customer-experience':     'Customer experience',
+    'cost-and-margin':         'Cost & margin',
+    'risk-and-compliance':     'Risk & compliance',
+    'talent-and-productivity': 'Talent & productivity',
+    'quality-and-accuracy':    'Quality & accuracy',
+  };
+  const REQUIREMENT_CATEGORY_ORDER = [
+    'workflow-friction', 'coverage-gap', 'accuracy-and-quality',
+    'decision-support', 'compliance-and-risk',
+    'customer-experience-friction', 'scaling-and-throughput',
+  ];
+  const REQUIREMENT_CATEGORY_LABELS = {
+    'workflow-friction':            'Workflow friction',
+    'coverage-gap':                 'Coverage gap',
+    'accuracy-and-quality':         'Accuracy & quality',
+    'decision-support':             'Decision support',
+    'compliance-and-risk':          'Compliance & risk',
+    'customer-experience-friction': 'Customer-experience friction',
+    'scaling-and-throughput':       'Scaling & throughput',
+  };
 
   // ===== Models view ======================================================
   // Category labels + a stable display order for the task picker.
@@ -113,6 +145,10 @@
     modelsLoading: false,
     selectedTaskSlugs: new Set(),         // task filter — OR within facet, like other filters
     collapsedTaskCategories: new Set(),   // category names currently collapsed in the sidebar
+    // Per-facet sets of currently-collapsed category sections in the
+    // vocab pickers. Defaults to "all open"; user toggles persist for the
+    // life of the session (not localStorage — these are ephemeral).
+    collapsedVocabCats: Object.fromEntries(VOCAB_FACETS.map(f => [f, new Set()])),
     modelsCountByTaskSlug: new Map(),     // task slug → # of models in snapshot
 
     // Datasets view (mirror of Models, two axes: task + modality)
@@ -317,22 +353,6 @@
     if (state.view === 'requirements') return state.requirements;
     if (state.view === 'kpis') return state.kpis;
     return [];
-  }
-
-  function matchesRequirement(r) {
-    if (!state.query) return true;
-    const q = state.query.toLowerCase();
-    return (r.label || '').toLowerCase().includes(q)
-        || (r.description || '').toLowerCase().includes(q)
-        || (r.slug || '').toLowerCase().includes(q);
-  }
-
-  function matchesKpi(k) {
-    if (!state.query) return true;
-    const q = state.query.toLowerCase();
-    return (k.label || '').toLowerCase().includes(q)
-        || (k.description || '').toLowerCase().includes(q)
-        || (k.slug || '').toLowerCase().includes(q);
   }
 
   function matchesTagFilters(item) {
@@ -649,14 +669,19 @@
     const showAll = state.vocabFacetSearch[facet] || state.vocabFilters[facet].size > 0;
     const visible = showAll ? filtered : filtered.filter(e => e.count > 0).slice(0, 40);
 
-    const options = document.createElement('div');
-    options.className = 'vocab-options';
-    for (const e of visible) {
+    // For KPIs / requirements, the entries carry a `category` from the
+    // closed taxonomy. We render category-section headers between groups
+    // of chips so the user can scan by bucket. Entities (no category)
+    // fall through to a flat single-section render.
+    const supportsCategories = (facet === 'kpi' || facet === 'requirement') &&
+                               visible.some(e => e.category);
+    const buildChip = (e) => {
       const isSelected = state.vocabFilters[facet].has(e.uuid);
       const liveCount = isSelected ? e.count : countWithVocab(facet, e.uuid);
+      const catCls = e.category ? ` vocab-cat-${e.category}` : '';
       const chip = document.createElement('button');
       chip.type = 'button';
-      chip.className = 'vocab-chip facet-' + facet + (isSelected ? ' selected' : '') + ((liveCount === 0 && !isSelected) ? ' zero' : '');
+      chip.className = 'vocab-chip facet-' + facet + catCls + (isSelected ? ' selected' : '') + ((liveCount === 0 && !isSelected) ? ' zero' : '');
       const typeBadge = e.typeChip ? `<span class="vocab-type">${e.typeChip}</span>` : '';
       chip.innerHTML = `${typeBadge}<span class="vocab-label">${escapeHtml(e.displayName)}</span> <span class="count">${liveCount}</span>`;
       if (e.description) chip.title = e.description;
@@ -665,9 +690,61 @@
         else state.vocabFilters[facet].add(e.uuid);
         render();
       });
-      options.appendChild(chip);
+      return chip;
+    };
+
+    if (!supportsCategories) {
+      const options = document.createElement('div');
+      options.className = 'vocab-options';
+      for (const e of visible) options.appendChild(buildChip(e));
+      group.appendChild(options);
+    } else {
+      // Group entries by category, then render in the taxonomy's display order.
+      const order = (facet === 'kpi') ? KPI_CATEGORY_ORDER : REQUIREMENT_CATEGORY_ORDER;
+      const labels = (facet === 'kpi') ? KPI_CATEGORY_LABELS : REQUIREMENT_CATEGORY_LABELS;
+      const byCat = new Map();
+      for (const e of visible) {
+        const cat = e.category || '_other';
+        if (!byCat.has(cat)) byCat.set(cat, []);
+        byCat.get(cat).push(e);
+      }
+      // Emit sections in declared order; any unrecognized categories trail at the end.
+      const cats = [
+        ...order.filter(c => byCat.has(c)),
+        ...[...byCat.keys()].filter(c => !order.includes(c) && c !== '_other'),
+        ...(byCat.has('_other') ? ['_other'] : []),
+      ];
+      for (const cat of cats) {
+        const entries = byCat.get(cat);
+        const collapsed = state.collapsedVocabCats[facet].has(cat);
+        const section = document.createElement('div');
+        section.className = 'facet-group vocab-cat-group vocab-cat-' + cat;
+
+        const header = document.createElement('button');
+        header.className = 'facet-header' + (collapsed ? ' collapsed' : '');
+        header.type = 'button';
+        const catLabel = cat === '_other' ? 'Uncategorized' : (labels[cat] || cat);
+        const selectedInCat = entries.filter(e => state.vocabFilters[facet].has(e.uuid)).length;
+        header.innerHTML =
+          `<span class="facet-header-label">${escapeHtml(catLabel)}</span>` +
+          `<span class="chevron-row">` +
+            `<span class="vocab-count">${selectedInCat ? selectedInCat + '/' : ''}${entries.length}</span>` +
+            `<span class="chevron">▾</span>` +
+          `</span>`;
+        header.addEventListener('click', () => {
+          if (collapsed) state.collapsedVocabCats[facet].delete(cat);
+          else state.collapsedVocabCats[facet].add(cat);
+          renderFilters();
+        });
+        section.appendChild(header);
+
+        const options = document.createElement('div');
+        options.className = 'facet-options' + (collapsed ? ' collapsed' : '');
+        for (const e of entries) options.appendChild(buildChip(e));
+        section.appendChild(options);
+        group.appendChild(section);
+      }
     }
-    group.appendChild(options);
 
     if (!showAll && filtered.length > visible.length) {
       const more = document.createElement('button');
@@ -747,14 +824,13 @@
       return (a.label || '').localeCompare(b.label || '');
     });
 
-    const opts = document.createElement('div');
-    opts.className = 'facet-options';
-    for (const v of filtered) {
+    const buildChipBtn = (v) => {
       const isSel = selected.has(v.uuid);
       const count = counts.get(v.uuid) || 0;
+      const catCls = v.category ? ` vocab-cat-${v.category}` : '';
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'tag-chip facet-picker' + (isSel ? ' selected' : '');
+      btn.className = 'tag-chip facet-picker' + catCls + (isSel ? ' selected' : '');
       if (v.description) btn.title = v.description;
       btn.textContent = v.label;
       if (count) {
@@ -768,9 +844,70 @@
         else selected.add(v.uuid);
         render();
       });
-      opts.appendChild(btn);
+      return btn;
+    };
+
+    // When the entries carry a category (T1.1 KPIs, T-cat requirements),
+    // group them under collapsible section headers. Otherwise fall back
+    // to a flat list. Both branches share buildChipBtn so styling matches.
+    const supportsCats = (facet === 'kpi' || facet === 'requirement') &&
+                         filtered.some(v => v.category);
+    if (!supportsCats) {
+      const opts = document.createElement('div');
+      opts.className = 'facet-options';
+      for (const v of filtered) opts.appendChild(buildChipBtn(v));
+      wrap.appendChild(opts);
+      return wrap;
     }
-    wrap.appendChild(opts);
+
+    const order  = (facet === 'kpi') ? KPI_CATEGORY_ORDER  : REQUIREMENT_CATEGORY_ORDER;
+    const labels = (facet === 'kpi') ? KPI_CATEGORY_LABELS : REQUIREMENT_CATEGORY_LABELS;
+    const byCat = new Map();
+    for (const v of filtered) {
+      const c = v.category || '_other';
+      if (!byCat.has(c)) byCat.set(c, []);
+      byCat.get(c).push(v);
+    }
+    const cats = [
+      ...order.filter(c => byCat.has(c)),
+      ...[...byCat.keys()].filter(c => !order.includes(c) && c !== '_other'),
+      ...(byCat.has('_other') ? ['_other'] : []),
+    ];
+    // Mirror the existing .facet-group / .facet-header / .facet-options
+     // pattern from the Ideas / Plans sidebars so the look and the wrap
+     // behavior are identical. Each category becomes its own facet-group;
+     // its left-stripe color is conveyed by the vocab-cat-<slug> class
+     // (a one-line CSS rule per category, already in styles.css).
+    for (const cat of cats) {
+      const entries = byCat.get(cat);
+      const collapsed = state.collapsedVocabCats[facet].has(cat);
+      const section = document.createElement('div');
+      section.className = 'facet-group vocab-cat-group vocab-cat-' + cat;
+
+      const head = document.createElement('button');
+      head.className = 'facet-header' + (collapsed ? ' collapsed' : '');
+      head.type = 'button';
+      const catLabel = cat === '_other' ? 'Uncategorized' : (labels[cat] || cat);
+      const selectedInCat = entries.filter(v => selected.has(v.uuid)).length;
+      head.innerHTML =
+        `<span class="facet-header-label">${escapeHtml(catLabel)}</span>` +
+        `<span class="chevron-row">` +
+          `<span class="vocab-count">${selectedInCat ? selectedInCat + '/' : ''}${entries.length}</span>` +
+          `<span class="chevron">▾</span>` +
+        `</span>`;
+      head.addEventListener('click', () => {
+        if (collapsed) state.collapsedVocabCats[facet].delete(cat);
+        else state.collapsedVocabCats[facet].add(cat);
+        renderFilters();
+      });
+      section.appendChild(head);
+
+      const opts = document.createElement('div');
+      opts.className = 'facet-options' + (collapsed ? ' collapsed' : '');
+      for (const v of entries) opts.appendChild(buildChipBtn(v));
+      section.appendChild(opts);
+      wrap.appendChild(section);
+    }
     return wrap;
   }
 
@@ -939,11 +1076,39 @@
 
     if (filtered.length === 0) { root.innerHTML = emptyState(); return; }
 
+    // T5.2 — match-score against the currently-selected requirements + KPIs.
+    // When the user has any vocab filter on, compute how many of their
+    // selected items the idea hits, then sort matched ideas within each
+    // section by that score (descending). renderIdeaCard renders a badge.
+    const selectedReqs = state.vocabFilters.requirement;
+    const selectedKpis = state.vocabFilters.kpi;
+    const totalSelected = selectedReqs.size + selectedKpis.size;
+    const ideaMatchScore = new Map();
+    if (totalSelected > 0) {
+      for (const idea of filtered) {
+        let hits = 0;
+        for (const u of idea.requirementUuids) if (selectedReqs.has(u)) hits++;
+        for (const u of idea.kpiUuids) if (selectedKpis.has(u)) hits++;
+        if (hits > 0) ideaMatchScore.set(idea.uuid, { hits, total: totalSelected });
+      }
+    }
+
     const bySection = new Map();
     for (const idea of filtered) {
       const key = `${idea.sectionNo}|${idea.sectionName}`;
       if (!bySection.has(key)) bySection.set(key, { sectionNo: idea.sectionNo, sectionName: idea.sectionName, items: [] });
       bySection.get(key).items.push(idea);
+    }
+    if (totalSelected > 0) {
+      // Sort each section's items by match score descending; unmatched
+      // ideas keep their original order at the bottom of the section.
+      for (const bucket of bySection.values()) {
+        bucket.items.sort((a, b) => {
+          const sa = (ideaMatchScore.get(a.uuid) || { hits: 0 }).hits;
+          const sb = (ideaMatchScore.get(b.uuid) || { hits: 0 }).hits;
+          return sb - sa;
+        });
+      }
     }
     const ordered = [...bySection.values()].sort((a, b) => a.sectionNo - b.sectionNo);
 
@@ -955,14 +1120,14 @@
           <h2 class="section-title">${escapeHtml(sectionName || '')}</h2>
           <span class="section-count">${items.length}</span>
         </div>
-        ${items.map(idea => renderIdeaCard(idea, q)).join('')}
+        ${items.map(idea => renderIdeaCard(idea, q, ideaMatchScore.get(idea.uuid))).join('')}
       </section>`).join('');
 
     root.innerHTML = html;
     wireIdeaCardEvents(root);
   }
 
-  function renderIdeaCard(idea, query) {
+  function renderIdeaCard(idea, query, matchScore) {
     const titleHtml = highlight(escapeHtml(idea.title), query);
     const descHtml = highlight(inlineMd(idea.descriptionMd), query);
     const sourceHtml = idea.sourceMd
@@ -971,6 +1136,13 @@
 
     const kindBadge = idea.kind === 'pattern'
       ? `<span class="kind-badge kind-pattern" title="Cross-cutting capability / framework">pattern</span>`
+      : '';
+
+    // T5.2 — match badge: shows "hits / total" against the currently-selected
+    // requirement + KPI filters. Only present when the user has at least one
+    // vocab filter on and this idea actually matches some of them.
+    const matchBadge = (matchScore && matchScore.hits > 0)
+      ? `<span class="kind-badge match-badge" title="${matchScore.hits} of ${matchScore.total} selected pains/KPIs addressed">${matchScore.hits}/${matchScore.total} match</span>`
       : '';
 
     const tagsHtml = idea.tags.map(t => {
@@ -1023,7 +1195,7 @@
 
     return `
       <article class="idea-card${idea.isSub ? ' sub' : ''}${idea.kind === 'pattern' ? ' is-pattern' : ''}" data-uuid="${idea.uuid}">
-        <h3 class="idea-title">${kindBadge}${titleHtml}</h3>
+        <h3 class="idea-title">${kindBadge}${matchBadge}${titleHtml}</h3>
         <div class="idea-desc">${descHtml}</div>
         ${sourceHtml}
         <div class="idea-tags">${tagsHtml}</div>
@@ -1486,139 +1658,6 @@
       </article>`;
   }
 
-  // ====================================================================
-  //  Requirements & KPIs views
-  // ====================================================================
-
-  function renderRequirements() {
-    renderVocabCardsView({
-      items: state.requirements,
-      itemsLabel: 'requirements',
-      countMap: state.ideaCountByRequirementUuid,
-      matches: matchesRequirement,
-      cardClass: 'requirement-card',
-      cardKind: 'requirement',
-      verb: 'Solves',
-      countLabel: (n) => `${n} idea${n === 1 ? '' : 's'} address${n === 1 ? 'es' : ''} this pain`,
-      onJump: jumpToIdeasForRequirement,
-    });
-  }
-
-  function renderKpis() {
-    renderVocabCardsView({
-      items: state.kpis,
-      itemsLabel: 'KPIs',
-      countMap: state.ideaCountByKpiUuid,
-      matches: matchesKpi,
-      cardClass: 'kpi-card',
-      cardKind: 'kpi',
-      verb: 'Moves',
-      countLabel: (n) => `${n} idea${n === 1 ? '' : 's'} move${n === 1 ? 's' : ''} this KPI`,
-      onJump: jumpToIdeasForKpi,
-    });
-  }
-
-  function renderVocabCardsView({ items, itemsLabel, countMap, matches, cardClass, cardKind, verb, countLabel, onJump }) {
-    const root = document.getElementById('ideasContainer');
-    const filtered = items.filter(matches);
-    // Sort: items with ideas first, then by count desc, then alpha.
-    filtered.sort((a, b) => {
-      const ca = countMap.get(a.uuid) || 0;
-      const cb = countMap.get(b.uuid) || 0;
-      if (ca !== cb) return cb - ca;
-      return (a.label || '').localeCompare(b.label || '');
-    });
-
-    document.getElementById('resultCount').textContent =
-      filtered.length === items.length
-        ? `${items.length} ${itemsLabel}`
-        : `${filtered.length} of ${items.length} ${itemsLabel}`;
-
-    if (filtered.length === 0) { root.innerHTML = emptyState(); return; }
-
-    const withIdeas = filtered.filter(v => (countMap.get(v.uuid) || 0) > 0);
-    const orphans   = filtered.filter(v => (countMap.get(v.uuid) || 0) === 0);
-
-    const q = state.query;
-    const sections = [];
-
-    if (withIdeas.length > 0) {
-      sections.push(`
-        <section>
-          <div class="section-header">
-            <span class="section-number">${verb}</span>
-            <h2 class="section-title">In use across the catalog</h2>
-            <span class="section-count">${withIdeas.length}</span>
-          </div>
-          ${withIdeas.map(v => renderVocabCard(v, { countMap, cardClass, cardKind, countLabel, q })).join('')}
-        </section>`);
-    }
-    if (orphans.length > 0) {
-      sections.push(`
-        <section>
-          <div class="section-header">
-            <span class="section-number">—</span>
-            <h2 class="section-title">Reserved vocabulary (no ideas yet)</h2>
-            <span class="section-count">${orphans.length}</span>
-          </div>
-          ${orphans.map(v => renderVocabCard(v, { countMap, cardClass, cardKind, countLabel, q })).join('')}
-        </section>`);
-    }
-
-    root.innerHTML = sections.join('');
-
-    root.querySelectorAll(`.${cardClass} .vocab-card-jump`).forEach(btn => {
-      btn.addEventListener('click', () => {
-        const uuid = btn.dataset.uuid;
-        if (uuid) onJump(uuid);
-      });
-    });
-  }
-
-  function renderVocabCard(v, { countMap, cardClass, cardKind, countLabel, q }) {
-    const n = countMap.get(v.uuid) || 0;
-    const titleHtml = highlight(escapeHtml(v.label), q);
-    const descHtml = v.description
-      ? `<p class="vocab-card-desc">${highlight(escapeHtml(v.description), q)}</p>`
-      : '';
-    const slugHtml = v.slug
-      ? `<span class="vocab-card-slug">${escapeHtml(v.slug)}</span>`
-      : '';
-    const jump = n > 0
-      ? `<button type="button" class="vocab-card-jump" data-uuid="${v.uuid}">${countLabel(n)} →</button>`
-      : `<span class="vocab-card-jump disabled">${countLabel(n)}</span>`;
-    return `
-      <article class="${cardClass}" data-kind="${cardKind}" data-uuid="${v.uuid}">
-        <h3 class="vocab-card-title">${titleHtml}</h3>
-        ${descHtml}
-        <div class="vocab-card-foot">${slugHtml}${jump}</div>
-      </article>`;
-  }
-
-  function jumpToIdeasForRequirement(uuid) {
-    resetIdeaFilters();
-    state.vocabFilters.requirement.add(uuid);
-    state.query = '';
-    state.searchHits = null;
-    document.getElementById('search').value = '';
-    setView('ideas');
-  }
-
-  function jumpToIdeasForKpi(uuid) {
-    resetIdeaFilters();
-    state.vocabFilters.kpi.add(uuid);
-    state.query = '';
-    state.searchHits = null;
-    document.getElementById('search').value = '';
-    setView('ideas');
-  }
-
-  function resetIdeaFilters() {
-    for (const f of FACETS) state.filters[f].clear();
-    for (const f of VOCAB_FACETS) state.vocabFilters[f].clear();
-    state.kindFilter = 'all';
-  }
-
   function jumpToRelatedIdeas(plan) {
     for (const f of FACETS) state.filters[f].clear();
     for (const f of VOCAB_FACETS) state.vocabFilters[f].clear();
@@ -1758,22 +1797,11 @@
       el.classList.toggle('active', view === k);
       el.setAttribute('aria-selected', view === k ? 'true' : 'false');
     }
-    // Each tab represents one filtering perspective — clear the others' state
-    // when switching, so the sidebar is the single source of "what's filtering".
-    if (view === 'requirements') {
-      for (const f of FACETS) state.filters[f].clear();
-      state.vocabFilters.kpi.clear();
-      state.vocabFilters.entity.clear();
-      state.kindFilter = 'all';
-    } else if (view === 'kpis') {
-      for (const f of FACETS) state.filters[f].clear();
-      state.vocabFilters.requirement.clear();
-      state.vocabFilters.entity.clear();
-      state.kindFilter = 'all';
-    } else if (view === 'models' || view === 'datasets') {
-      // Models / Datasets have their own filter dimensions; ideas filters
-      // don't apply. Keep them in state so switching back to Ideas restores.
-    }
+    // Filters persist across view changes — selecting "marketing" in Ideas,
+    // then switching to Requirements/KPIs/Plans, keeps "marketing" sticky.
+    // Each view applies the subset of filters it understands; the others
+    // stay in state and re-engage when you switch back. To drop a filter,
+    // use the chip's × in the filter strip or "Clear all".
     // Toggle visibility of the two top-level containers. Ideas/Plans/Requirements/
     // KPIs/Models/Datasets all render into #ideasContainer; the Graph view owns
     // its own pane (#graphContainer) with a Three.js canvas inside.
@@ -1822,9 +1850,42 @@
           settingsPanel:    document.getElementById('graphSettingsPanel'),
         });
       }
+      // Scope the graph to the user's current sidebar filters so the
+      // initial view reflects what they were exploring before switching.
+      if (window.idealabGraph?.scopeTo) {
+        window.idealabGraph.scopeTo(computeGraphSeedFromFilters());
+      }
     })();
     return _graphLoaded;
   }
+  // Build the seed set the Graph view starts with — derived from the
+  // current sidebar filters so switching to Graph reflects "show me the
+  // graph for what I have selected". Empty result → graph falls back to
+  // its generic overview.
+  function computeGraphSeedFromFilters() {
+    const seed = new Set();
+    // Selected ideas: any idea passing the current tag + kind + vocab predicates.
+    for (const idea of state.ideas) {
+      if (matchesIdea(idea)) seed.add('idea:' + idea.uuid);
+    }
+    // Selected vocab items themselves (so the user can SEE the
+    // pain/KPI/entity they filtered on, plus its 1-hop neighborhood).
+    for (const u of state.vocabFilters.requirement) seed.add('requirement:' + u);
+    for (const u of state.vocabFilters.kpi)         seed.add('kpi:'         + u);
+    for (const u of state.vocabFilters.entity)      seed.add('entity:'      + u);
+    // If the user had NO ideas-side filters at all (just looking around),
+    // the loop above added every idea (~300) which would dominate the
+    // graph. In that case clear the seed and let scopeTo fall back to
+    // the curated overview.
+    const anyFilter =
+      Object.values(state.filters).some(s => s.size > 0) ||
+      Object.values(state.vocabFilters).some(s => s.size > 0) ||
+      state.kindFilter !== 'all' ||
+      (state.query && state.query.trim());
+    if (!anyFilter) return new Set();
+    return seed;
+  }
+
   function loadScript(src) {
     return new Promise((resolve, reject) => {
       const s = document.createElement('script');
@@ -1833,6 +1894,321 @@
       s.onload  = () => resolve();
       s.onerror = () => reject(new Error('failed to load ' + src));
       document.head.appendChild(s);
+    });
+  }
+
+  // ====================================================================
+  //  Mini graph preview (sits above the main list in non-Graph views)
+  // ====================================================================
+  // A small, simplified ForceGraph3D instance scoped to the current filter
+  // selection. Collapsed by default; expand state persists per session.
+  // Click any node → switch to the full Graph tab. No DOI / legend / etc.
+  let _miniFg = null;
+  let _miniGraphData = null;        // raw {nodes, links} from public/graph.json
+  let _miniNodeById = null;
+  // Mirrors graph.js ENTITY_STYLES — color + shape + relative size per type.
+  const _miniStyles = {
+    idea:          { color: '#2e7d32', size: 4, shape: 'sphere',      label: 'Idea' },
+    plan:          { color: '#7b1fa2', size: 6, shape: 'cone',        label: 'Plan' },
+    requirement:   { color: '#c2185b', size: 4, shape: 'octahedron',  label: 'Requirement' },
+    kpi:           { color: '#1565c0', size: 4, shape: 'cylinder',    label: 'KPI' },
+    kpi_category:  { color: '#0d47a1', size: 6, shape: 'cylinder',    label: 'KPI category' },
+    entity:        { color: '#ef6c00', size: 4, shape: 'box',         label: 'Entity' },
+    task:          { color: '#6a1b9a', size: 4, shape: 'tetrahedron', label: 'Task' },
+    task_category: { color: '#4a148c', size: 6, shape: 'tetrahedron', label: 'Task category' },
+    model:         { color: '#00695c', size: 3, shape: 'torus',       label: 'Model' },
+    dataset:       { color: '#004d40', size: 3, shape: 'box',         label: 'Dataset' },
+    modality:      { color: '#455a64', size: 5, shape: 'octahedron',  label: 'Modality' },
+    format:        { color: '#37474f', size: 5, shape: 'octahedron',  label: 'Format' },
+    _default:      { color: '#616161', size: 3, shape: 'sphere',      label: 'Node' },
+  };
+  const _miniGeomCache = new Map();
+  const _miniNodeSpriteByNode = new WeakMap();
+  const _miniSettings = {
+    showNodeLabels: true,
+    showEdgeLabels: false,
+    showLegend: true,
+  };
+  function loadMiniSettings() {
+    try {
+      const s = JSON.parse(localStorage.getItem('idealab.miniGraph.settings') || '{}');
+      Object.assign(_miniSettings, s);
+    } catch {}
+  }
+  function persistMiniSettings() {
+    try { localStorage.setItem('idealab.miniGraph.settings', JSON.stringify(_miniSettings)); } catch {}
+  }
+  function miniGeometry(shape, size) {
+    const key = shape + ':' + size;
+    if (_miniGeomCache.has(key)) return _miniGeomCache.get(key);
+    const T = window.THREE;
+    let g;
+    switch (shape) {
+      case 'box':         g = new T.BoxGeometry(size * 1.6, size * 1.6, size * 1.6); break;
+      case 'cone':        g = new T.ConeGeometry(size, size * 2, 14); break;
+      case 'cylinder':    g = new T.CylinderGeometry(size, size, size * 1.6, 14); break;
+      case 'octahedron':  g = new T.OctahedronGeometry(size); break;
+      case 'tetrahedron': g = new T.TetrahedronGeometry(size * 1.1); break;
+      case 'torus':       g = new T.TorusGeometry(size, size * 0.38, 8, 14); break;
+      case 'sphere':
+      default:            g = new T.SphereGeometry(size, 14, 10); break;
+    }
+    _miniGeomCache.set(key, g);
+    return g;
+  }
+  function buildMiniNode(node) {
+    const style = _miniStyles[node.type] || _miniStyles._default;
+    const T = window.THREE;
+    const group = new T.Group();
+    const mesh = new T.Mesh(
+      miniGeometry(style.shape, style.size),
+      new T.MeshLambertMaterial({ color: style.color, transparent: true, opacity: 0.95 }),
+    );
+    group.add(mesh);
+    if (typeof window.SpriteText === 'function') {
+      const sprite = new window.SpriteText((node.label || node.id).slice(0, 50));
+      sprite.color = '#1a202c';
+      sprite.backgroundColor = 'rgba(255, 255, 255, 0.82)';
+      sprite.borderColor = style.color;
+      sprite.borderWidth = 0.25;
+      sprite.borderRadius = 1.5;
+      sprite.padding = [1.5, 0.8];
+      sprite.textHeight = 2;
+      sprite.position.y = style.size + 2;
+      sprite.material.depthTest = false;
+      sprite.material.depthWrite = false;
+      sprite.renderOrder = 999;
+      sprite.visible = _miniSettings.showNodeLabels;
+      _miniNodeSpriteByNode.set(node, sprite);
+      group.add(sprite);
+    }
+    return group;
+  }
+  function buildMiniEdgeLabel(link) {
+    const verb = link.relation || link.label;
+    if (!verb || verb === 'in category') return null;
+    if (typeof window.SpriteText !== 'function') return null;
+    const sprite = new window.SpriteText(verb);
+    sprite.color = '#475569';
+    sprite.backgroundColor = 'rgba(255, 255, 255, 0.78)';
+    sprite.textHeight = 1.5;
+    sprite.padding = [0.8, 0.4];
+    sprite.material.depthTest = false;
+    sprite.material.depthWrite = false;
+    sprite.renderOrder = 998;
+    sprite.visible = _miniSettings.showEdgeLabels;
+    sprite.userData.__isMiniEdgeLabel = true;
+    return sprite;
+  }
+  function applyMiniNodeLabelVisibility() {
+    if (!_miniFg) return;
+    const { nodes } = _miniFg.graphData();
+    for (const n of nodes) {
+      const s = _miniNodeSpriteByNode.get(n);
+      if (s) s.visible = _miniSettings.showNodeLabels;
+    }
+  }
+  function applyMiniEdgeLabelVisibility() {
+    if (!_miniFg) return;
+    const scene = _miniFg.scene && _miniFg.scene();
+    if (!scene) return;
+    scene.traverse(obj => {
+      if (obj.userData && obj.userData.__isMiniEdgeLabel) obj.visible = _miniSettings.showEdgeLabels;
+    });
+  }
+  function renderMiniLegend() {
+    const el = document.getElementById('miniGraphLegend');
+    if (!el) return;
+    el.hidden = !_miniSettings.showLegend;
+    if (el.hidden) return;
+    const rows = Object.entries(_miniStyles)
+      .filter(([k]) => k !== '_default')
+      .map(([_, s]) =>
+        `<div class="mini-graph-legend-row">` +
+          `<span class="mini-graph-legend-swatch" style="background:${s.color}"></span>` +
+          `<span>${escapeHtml(s.label)}</span>` +
+        `</div>`
+      ).join('');
+    el.innerHTML = `<div class="mini-graph-legend-title">Legend</div>${rows}`;
+  }
+
+  function isMiniGraphExpanded() {
+    try { return localStorage.getItem('idealab.miniGraph.expanded') === '1'; }
+    catch { return false; }
+  }
+  function setMiniGraphExpanded(v) {
+    try { localStorage.setItem('idealab.miniGraph.expanded', v ? '1' : '0'); } catch {}
+  }
+
+  async function ensureMiniGraphLoaded(stage) {
+    if (_miniFg) return _miniFg;
+    loadMiniSettings();
+    // Reuse the same vendor chain as the full graph view.
+    if (!window.THREE) {
+      const THREE = await import('./vendor/three/three.module.min.js');
+      window.THREE = THREE;
+    }
+    if (typeof window.SpriteText !== 'function') {
+      await loadScript('vendor/three-spritetext/three-spritetext.min.js');
+    }
+    if (typeof window.ForceGraph3D !== 'function') {
+      await loadScript('vendor/3d-force-graph/3d-force-graph.min.js');
+    }
+    if (!_miniGraphData) {
+      const r = await fetch('public/graph.json', { cache: 'force-cache' });
+      _miniGraphData = await r.json();
+      _miniNodeById = new Map(_miniGraphData.nodes.map(n => [n.id, n]));
+    }
+    _miniFg = window.ForceGraph3D()(stage)
+      .backgroundColor('#ffffff')
+      .nodeThreeObjectExtend(false)
+      .nodeThreeObject(buildMiniNode)
+      .nodeLabel(n => `<div style="font-family:sans-serif;font-size:11px;color:#1a202c;background:#fff;padding:3px 6px;border:1px solid #e3e6eb;border-radius:4px">${escapeHtml(n.label || n.id)}</div>`)
+      .linkColor(() => 'rgba(108, 117, 125, 0.45)')
+      .linkOpacity(0.6)
+      .linkWidth(l => (l.relation ? 1.0 : 0.5))
+      .linkThreeObjectExtend(true)
+      .linkThreeObject(buildMiniEdgeLabel)
+      .linkPositionUpdate((sprite, { start, end }) => {
+        if (!sprite) return;
+        sprite.position.set(
+          (start.x + end.x) / 2,
+          (start.y + end.y) / 2,
+          ((start.z || 0) + (end.z || 0)) / 2,
+        );
+      })
+      .cooldownTicks(40)
+      .warmupTicks(20);
+    // Resize with container.
+    const ro = new ResizeObserver(() => {
+      if (!_miniFg) return;
+      const r = stage.getBoundingClientRect();
+      _miniFg.width(r.width).height(r.height);
+    });
+    ro.observe(stage);
+    renderMiniLegend();
+    return _miniFg;
+  }
+
+  function applyMiniGraphScope() {
+    if (!_miniFg || !_miniGraphData) return;
+    let seed = computeGraphSeedFromFilters();
+    const empty = (seed.size === 0);
+    const stage = document.getElementById('miniGraphStage');
+    let emptyHint = stage && stage.querySelector('.mini-graph-empty');
+    if (empty) {
+      // No filters → render an empty graph and surface a hint in the stage.
+      // We intentionally do NOT show a "curated overview" here because the
+      // widget's purpose is "graph of CURRENT selection" — showing 80+ nodes
+      // when nothing's selected is misleading.
+      _miniFg.graphData({ nodes: [], links: [] });
+      if (stage && !emptyHint) {
+        emptyHint = document.createElement('div');
+        emptyHint.className = 'mini-graph-empty';
+        emptyHint.textContent = 'Pick a filter in the sidebar to preview its graph here.';
+        stage.appendChild(emptyHint);
+      }
+      const hint = document.getElementById('miniGraphHint');
+      if (hint) hint.textContent = '';
+      return;
+    }
+    if (emptyHint) emptyHint.remove();
+    // Expand each seed by 1 hop so the user sees what their selection connects to.
+    const expanded = new Set(seed);
+    for (const l of _miniGraphData.links) {
+      const s = (typeof l.source === 'object') ? l.source.id : l.source;
+      const t = (typeof l.target === 'object') ? l.target.id : l.target;
+      if (seed.has(s)) expanded.add(t);
+      if (seed.has(t)) expanded.add(s);
+    }
+    seed = expanded;
+    const nodes = [];
+    for (const id of seed) {
+      const n = _miniNodeById.get(id);
+      if (n) nodes.push(n);
+    }
+    const links = _miniGraphData.links.filter(l => {
+      const s = (typeof l.source === 'object') ? l.source.id : l.source;
+      const t = (typeof l.target === 'object') ? l.target.id : l.target;
+      return seed.has(s) && seed.has(t);
+    });
+    _miniFg.graphData({ nodes, links });
+    const hint = document.getElementById('miniGraphHint');
+    if (hint) hint.textContent = ` · ${nodes.length} nodes, ${links.length} edges`;
+  }
+
+  function attachMiniGraphHandlers() {
+    const widget = document.getElementById('miniGraph');
+    const toggle = document.getElementById('miniGraphToggle');
+    const stage  = document.getElementById('miniGraphStage');
+    const open   = document.getElementById('miniGraphOpenFull');
+    const gear   = document.getElementById('miniGraphSettingsBtn');
+    const panel  = document.getElementById('miniGraphSettingsPanel');
+    const cbNL   = document.getElementById('miniGraphShowNodeLabels');
+    const cbEL   = document.getElementById('miniGraphShowEdgeLabels');
+    const cbLG   = document.getElementById('miniGraphShowLegend');
+    if (!widget || !toggle || !stage) return;
+
+    // Sync the panel checkboxes to persisted settings before any handler fires.
+    loadMiniSettings();
+    if (cbNL) cbNL.checked = !!_miniSettings.showNodeLabels;
+    if (cbEL) cbEL.checked = !!_miniSettings.showEdgeLabels;
+    if (cbLG) cbLG.checked = !!_miniSettings.showLegend;
+
+    // Restore prior expand state.
+    if (isMiniGraphExpanded()) {
+      widget.classList.remove('collapsed');
+      toggle.setAttribute('aria-expanded', 'true');
+      requestAnimationFrame(() => ensureMiniGraphLoaded(stage).then(applyMiniGraphScope));
+    }
+    toggle.addEventListener('click', async () => {
+      const willOpen = widget.classList.contains('collapsed');
+      widget.classList.toggle('collapsed', !willOpen);
+      toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      setMiniGraphExpanded(willOpen);
+      if (willOpen) {
+        await ensureMiniGraphLoaded(stage);
+        applyMiniGraphScope();
+      }
+    });
+    if (open) {
+      open.addEventListener('click', (e) => {
+        e.preventDefault();
+        setView('graph');
+      });
+    }
+
+    // Settings popover — click gear to toggle, click outside to close.
+    if (gear && panel) {
+      const toggleSettings = (forceOpen) => {
+        const willOpen = forceOpen === undefined ? panel.hidden : forceOpen;
+        panel.hidden = !willOpen;
+        gear.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      };
+      gear.addEventListener('click', (e) => { e.stopPropagation(); toggleSettings(); });
+      document.addEventListener('click', (e) => {
+        if (panel.hidden) return;
+        if (panel.contains(e.target) || gear.contains(e.target)) return;
+        toggleSettings(false);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !panel.hidden) toggleSettings(false);
+      });
+    }
+    if (cbNL) cbNL.addEventListener('change', () => {
+      _miniSettings.showNodeLabels = !!cbNL.checked;
+      persistMiniSettings();
+      applyMiniNodeLabelVisibility();
+    });
+    if (cbEL) cbEL.addEventListener('change', () => {
+      _miniSettings.showEdgeLabels = !!cbEL.checked;
+      persistMiniSettings();
+      applyMiniEdgeLabelVisibility();
+    });
+    if (cbLG) cbLG.addEventListener('change', () => {
+      _miniSettings.showLegend = !!cbLG.checked;
+      persistMiniSettings();
+      renderMiniLegend();
     });
   }
 
@@ -1845,11 +2221,22 @@
     else if (state.view === 'models') renderModels();
     else if (state.view === 'datasets') renderDatasets();
     else if (state.view === 'graph') {
-      ensureGraphLoaded().catch(err => {
+      ensureGraphLoaded().then(() => {
+        // Re-scope every time the user enters Graph — they may have
+        // changed filters in another view since the last activation.
+        if (window.idealabGraph?.scopeTo) {
+          window.idealabGraph.scopeTo(computeGraphSeedFromFilters());
+        }
+      }).catch(err => {
         console.error('Graph view failed to load:', err);
         const hud = document.getElementById('graphHudStatus');
         if (hud) hud.textContent = 'Failed to load Graph view: ' + err.message;
       });
+    }
+    // If the mini graph is open, re-scope it to the current filters too.
+    // Cheap when no filter changed (force-graph dedups by node identity).
+    if (state.view !== 'graph' && _miniFg && isMiniGraphExpanded()) {
+      applyMiniGraphScope();
     }
   }
 
@@ -2009,6 +2396,7 @@
       state.modalities = modalities;
       loading.hidden = true;
       attachEvents();
+      attachMiniGraphHandlers();
       render();
     } catch (err) {
       loading.hidden = true;

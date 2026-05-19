@@ -128,6 +128,12 @@
     // at very low opacity so the topology stays visible but the type
     // visually steps back. Clicking the legend row toggles membership.
     hiddenTypes: new Set(),
+    // Pinned nodes — kept visible across navigations. Right-click a node to
+    // toggle. Persisted to localStorage so it survives reload.
+    pinnedIds: new Set(),
+    focusHaloMesh: null,
+    suppressHashSync: false,         // re-entrance guard during hashchange restore
+    inspectedId: null,               // single-click target (details panel only, no navigation)
     // Auto-fit cooperation with the user — set when the view changes; cleared
     // the moment the user starts interacting (mouse, wheel, drag). The
     // post-settle fit only runs while this flag is still true.
@@ -184,6 +190,7 @@
       .backgroundColor(BACKGROUND)
       .nodeThreeObjectExtend(false)                  // replace default sphere
       .nodeThreeObject(buildNode)
+      .nodeVisibility(nodeVisible)                   // hide nodes of toggled-off types (pinned always visible)
       .linkColor(linkColor)
       .linkVisibility(linkVisible)                   // hide edges touching hidden types
       .linkOpacity(0.75)
@@ -194,13 +201,37 @@
       .linkLabel(linkTooltipHtml)
       .nodeLabel(nodeTooltipHtml)
       .onNodeClick(onNodeClick)
+      .onNodeRightClick(onNodeRightClick)            // right-click → pin toggle
       .onEngineStop(onEngineStop)
       .cooldownTicks(80)
       .warmupTicks(40);
 
+    // Radial confinement — pulls every non-pinned node toward origin with
+    // strength proportional to its distance. Without this, d3-force's
+    // default `charge` + `center` combo leaves isolated nodes (zero edges,
+    // or one weak edge) drifting far outside the main cluster: charge
+    // repels them, the default center force only translates the whole
+    // layout (it doesn't spring individual nodes inward), so equilibrium
+    // ends up with peripheral nodes far from center. A weak radial pull
+    // keeps the bounding box bounded without distorting the topology.
+    if (S.fg.d3Force) {
+      S.fg.d3Force('radial-confine', makeRadialConfineForce(0.06));
+    }
+
+    loadPersistedPins();
     renderInitialOverview();
-    drawBreadcrumb(breadcrumb);
-    setStatus(hudStatus, formatStatus());
+    // Try to restore the focus stack from the URL hash; if it matches a
+    // valid path, that overrides the default overview.
+    queueMicrotask(() => {
+      if (!restoreFromUrlHash()) {
+        drawBreadcrumb(breadcrumb);
+        setStatus(hudStatus, formatStatus());
+      }
+    });
+    // Back / forward button → re-parse the hash and re-render.
+    window.addEventListener('hashchange', () => {
+      restoreFromUrlHash();
+    });
 
     // Make sure orbit controls don't clamp zoom — far nodes need to be
     // approachable, and on-canvas labels need to be readable up close.
@@ -279,6 +310,13 @@
     }
 
     S.handlers = { breadcrumb, hudStatus };
+
+    // Make the legend + recommendations panels draggable around the canvas.
+    // The legend has its own header (.graph-legend-head) which is the drag
+    // handle. The recs panel uses its head (.graph-recs-head) the same way.
+    if (legendBox) makePanelDraggable(legendBox, '.graph-legend-head', 'idealab.graph.legendPos');
+    const recsBox = document.getElementById('graphRecs');
+    if (recsBox)   makePanelDraggable(recsBox,   '.graph-recs-head',   'idealab.graph.recsPos');
 
     // Any user interaction on the canvas cancels a pending auto-fit so we
     // don't yank the camera mid-gesture.
@@ -411,6 +449,228 @@
     );
   }
 
+  // -------- Recommendations panel (T5.3) --------
+  // For the currently-focused node, surface the top-K most-related nodes
+  // grouped by adjacent entity type — "Top ideas that move this KPI", etc.
+  // "Most related" = highest edge weight or first-encountered; we sort by
+  // a simple score: 1 per structural edge, +confidence for semantically
+  // refined edges so curated relations rank above generic ones.
+  const RECS_PER_TYPE = 3;
+  const RECS_SUGGEST_TYPES = {
+    // For each focus type, the adjacent types we want to surface (in display order).
+    idea:          ['kpi', 'requirement', 'entity', 'plan', 'idea'],
+    plan:          ['idea', 'kpi', 'requirement', 'model'],
+    requirement:   ['idea', 'plan'],
+    kpi:           ['idea', 'plan'],
+    kpi_category:  ['kpi'],
+    entity:        ['idea', 'model', 'dataset', 'task'],
+    task:          ['idea', 'model', 'dataset', 'entity'],
+    task_category: ['task'],
+    model:         ['idea', 'plan', 'task', 'entity', 'dataset'],
+    dataset:       ['idea', 'plan', 'task', 'entity', 'model'],
+    modality:      ['dataset'],
+    format:        ['dataset'],
+  };
+
+  function updateRecommendations(inspectedId) {
+    const el = document.getElementById('graphRecs');
+    if (!el) return;
+    // Prefer the explicitly-inspected node (set by a single click);
+    // otherwise show recs for the current focus.
+    const focusId = inspectedId || S.inspectedId || S.focusStack[S.focusStack.length - 1];
+    if (!focusId) { el.hidden = true; el.innerHTML = ''; return; }
+    const focus = S.nodeById.get(focusId);
+    if (!focus) { el.hidden = true; return; }
+
+    const adjacency = S.adjacency.get(focusId) || new Set();
+    if (adjacency.size === 0) { el.hidden = true; return; }
+
+    // Group adjacent nodes by type, score each.
+    const buckets = new Map();
+    for (const nid of adjacency) {
+      const n = S.nodeById.get(nid);
+      if (!n) continue;
+      // Skip hidden types — recs shouldn't suggest things the user has toggled off.
+      if (S.hiddenTypes.has(n.type)) continue;
+      const edge = S.edgesByPair.get(focusId + '→' + nid) || S.edgesByPair.get(nid + '→' + focusId);
+      let score = 1;
+      if (edge) {
+        if (edge.weight)     score += Number(edge.weight) * 0.2;
+        if (edge.confidence) score += Number(edge.confidence);
+      }
+      if (!buckets.has(n.type)) buckets.set(n.type, []);
+      buckets.get(n.type).push({ node: n, score, edge });
+    }
+    const wantedTypes = RECS_SUGGEST_TYPES[focus.type] || [...buckets.keys()];
+    const sections = [];
+    for (const t of wantedTypes) {
+      const items = buckets.get(t);
+      if (!items || !items.length) continue;
+      items.sort((a, b) => b.score - a.score);
+      const top = items.slice(0, RECS_PER_TYPE);
+      const style = ENTITY_STYLES[t] || ENTITY_STYLES._default;
+      const rows = top.map(({ node, edge }) => {
+        const label = escapeHtml(node.label || node.id);
+        const verb  = edge && (edge.relation || (edge.label && edge.label !== 'related to' ? edge.label : ''));
+        const verbTag = verb ? `<span class="graph-recs-verb">${escapeHtml(verb)}</span>` : '';
+        return `<div class="graph-recs-item" data-id="${escapeHtml(node.id)}" role="button" tabindex="0">${verbTag}${label}</div>`;
+      }).join('');
+      sections.push(
+        `<div class="graph-recs-section">` +
+          `<div class="graph-recs-section-head" style="color:${style.color}">${escapeHtml(suggestionVerbFor(focus.type, t, style))}</div>` +
+          `<div class="graph-recs-section-body">${rows}</div>` +
+        `</div>`
+      );
+    }
+    if (!sections.length) { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML =
+      `<div class="graph-recs-head">` +
+        `<span class="graph-recs-title">Related</span>` +
+        `<span class="graph-recs-focus">${escapeHtml(focus.label || focus.id)}</span>` +
+      `</div>` +
+      `<div class="graph-recs-body">${sections.join('')}</div>`;
+    // Wire clicks to navigate to that node.
+    el.querySelectorAll('.graph-recs-item').forEach(row => {
+      const go = () => {
+        const node = S.nodeById.get(row.dataset.id);
+        if (node) onNodeClick(node);
+      };
+      row.addEventListener('click', go);
+      row.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+      });
+    });
+  }
+  // Cute headers — same verb the breadcrumb might use, but phrased as a
+  // "Top X..." section header.
+  const REC_HEADERS = {
+    'idea→kpi':           'Moves these KPIs',
+    'idea→requirement':   'Addresses these pains',
+    'idea→entity':        'Cited at',
+    'idea→plan':          'Featured in plans',
+    'idea→idea':          'Similar / complementary ideas',
+    'idea→model':         'Implemented with',
+    'idea→dataset':       'Trains on',
+    'idea→task':          'Uses tasks',
+    'plan→idea':          'Includes ideas',
+    'plan→kpi':           'Moves these KPIs',
+    'plan→requirement':   'Addresses these pains',
+    'plan→model':         'Recommends models',
+    'plan→dataset':       'Recommends datasets',
+    'requirement→idea':   'Ideas that address this',
+    'requirement→plan':   'Plans that address this',
+    'kpi→idea':           'Ideas that move this',
+    'kpi→plan':           'Plans that move this',
+    'kpi→kpi_category':   'In category',
+    'kpi_category→kpi':   'KPIs in this category',
+    'entity→idea':        'Ideas cited at',
+    'entity→model':       'Models published',
+    'entity→dataset':     'Datasets published',
+    'entity→task':        'Active in tasks',
+    'task→idea':          'Ideas that use this task',
+    'task→model':         'Top models',
+    'task→dataset':       'Top datasets',
+    'task→entity':        'Top publishers',
+    'task→task_category': 'In category',
+    'task_category→task': 'Tasks in this category',
+    'model→idea':         'Ideas that use this model',
+    'model→plan':         'Plans that recommend this',
+    'model→task':         'Performs',
+    'model→entity':       'Published by',
+    'model→dataset':      'Trained on',
+    'dataset→idea':       'Ideas that train on this',
+    'dataset→plan':       'Plans that recommend this',
+    'dataset→task':       'Supports',
+    'dataset→entity':     'Published by',
+    'dataset→modality':   'Modality',
+    'dataset→format':     'Format',
+    'modality→dataset':   'Datasets with this modality',
+    'format→dataset':     'Datasets in this format',
+  };
+  function suggestionVerbFor(srcType, dstType, dstStyle) {
+    return REC_HEADERS[`${srcType}→${dstType}`] || `Top ${dstStyle.label.toLowerCase()}s`;
+  }
+
+  // -------- Focus halo (T4.5b) --------
+  // Highlights the current focus node with a billboarded gold ring. The
+  // mesh is parented to the focus node's __threeObj so it follows the
+  // node automatically as the simulation ticks.
+  function updateFocusHalo() {
+    if (!S.fg || !window.THREE) return;
+    // Detach from previous parent (if any) — focus changed.
+    if (S.focusHaloMesh && S.focusHaloMesh.parent) {
+      S.focusHaloMesh.parent.remove(S.focusHaloMesh);
+    }
+    const focusId = S.focusStack[S.focusStack.length - 1];
+    if (!focusId) return;
+    const node = S.nodeById.get(focusId);
+    if (!node || !node.__threeObj) return;
+    if (!S.focusHaloMesh) {
+      const T = window.THREE;
+      const geom = new T.RingGeometry(10, 12.5, 36);
+      const mat  = new T.MeshBasicMaterial({
+        color: 0xff5722, transparent: true, opacity: 0.85, side: T.DoubleSide,
+      });
+      mat.depthTest = false;
+      mat.depthWrite = false;
+      S.focusHaloMesh = new T.Mesh(geom, mat);
+      S.focusHaloMesh.renderOrder = 200;
+      // Billboard: rotate to face camera each frame.
+      S.focusHaloMesh.onBeforeRender = function (renderer, scene, camera) {
+        this.lookAt(camera.position);
+      };
+    }
+    node.__threeObj.add(S.focusHaloMesh);
+  }
+
+  // -------- URL hash deeplinking (T4.6b) --------
+  // The hash mirrors the focus stack as `#/<type>:<slug>/<type>:<slug>/...`.
+  // Shareable; restored on page load + on `hashchange` (back/forward button).
+  function syncUrlHash() {
+    if (S.suppressHashSync) return;
+    const path = S.focusStack.map(id => {
+      const node = S.nodeById.get(id);
+      if (!node) return '';
+      const inner = (id.split(':', 2)[1] || '');
+      const slug = node.slug || inner;
+      return `${node.type}:${slug}`;
+    }).filter(Boolean);
+    const newHash = path.length ? `#/${path.join('/')}` : '';
+    if (window.location.hash !== newHash) {
+      // replaceState: don't pollute browser history on every node click.
+      // (Use pushState if you want back-button = step-back through the stack.)
+      try { history.replaceState(null, '', newHash || ' '); } catch { /* ignore */ }
+    }
+  }
+  function restoreFromUrlHash() {
+    const h = window.location.hash.replace(/^#\/?/, '');
+    if (!h) return false;
+    const want = h.split('/').filter(Boolean);
+    const newStack = [];
+    // Build a quick lookup: (type, slug) → node.id. Slug fallback to the
+    // raw inner ID so HF model/dataset IDs (which don't have a `slug`
+    // field) round-trip through the hash too.
+    const ix = new Map();
+    for (const n of S.raw.nodes) {
+      const inner = n.id.split(':', 2)[1] || '';
+      ix.set(`${n.type}:${n.slug || inner}`, n.id);
+    }
+    for (const seg of want) {
+      const id = ix.get(seg);
+      if (id) newStack.push(id);
+    }
+    if (!newStack.length) return false;
+    S.suppressHashSync = true;
+    S.focusStack = newStack;
+    expandFocus(newStack[newStack.length - 1]);
+    drawBreadcrumb(S.handlers.breadcrumb);
+    setStatus(S.handlers.hudStatus, formatStatus());
+    updateFocusHalo();
+    S.suppressHashSync = false;
+    return true;
+  }
+
   function nodeLabelShouldShow(n) {
     return S.showNodeLabels && !S.hiddenTypes.has(n.type);
   }
@@ -454,6 +714,25 @@
       .sort((a, b) => (deg.get(b.id) || 0) - (deg.get(a.id) || 0))
       .slice(0, 40);
     for (const n of ideas) keepIds.add(n.id);
+    applyVisible(keepIds);
+  }
+
+  // Render a "scoped" view seeded by IDs the host app derived from its
+  // current filter state. We expand each seed to its 1-hop neighborhood
+  // so the user sees not only the matching items but also what they
+  // connect to. Empty seed set falls back to the generic overview.
+  function renderScopedView(seedIds) {
+    if (!seedIds || seedIds.size === 0) {
+      renderInitialOverview();
+      return;
+    }
+    const keepIds = new Set(seedIds);
+    for (const id of seedIds) {
+      const neighbors = S.adjacency.get(id);
+      if (!neighbors) continue;
+      for (const nid of neighbors) keepIds.add(nid);
+    }
+    for (const id of S.pinnedIds) keepIds.add(id);
     applyVisible(keepIds);
   }
 
@@ -586,6 +865,8 @@
     // them while we hand-animate. Idempotent if already pinned from a prior
     // boost release.
     pinAllNodesAtCurrentPosition();
+    // Auto-fit shouldn't fight the user's gesture.
+    cancelPendingFit();
     _boostStartTs = performance.now();
     if (_boostRafId !== null) cancelAnimationFrame(_boostRafId);
     _boostRafId = requestAnimationFrame(rampStep);
@@ -639,6 +920,25 @@
     // reheat) so the user's hand-animated layout persists as-is.
   }
 
+  // d3-force compatible custom force — a spring pulling each non-pinned
+  // node toward (0,0,0) with magnitude ∝ distance × strength × alpha.
+  // Returned function follows the d3-force `force(alpha)` / `initialize(nodes)`
+  // contract so the layout includes it on every tick.
+  function makeRadialConfineForce(strength) {
+    let nodes = [];
+    function force(alpha) {
+      const k = strength * alpha;
+      for (const n of nodes) {
+        if (n.fx != null) continue;          // pinned — d3 will ignore vx anyway
+        n.vx = (n.vx || 0) - (n.x || 0) * k;
+        n.vy = (n.vy || 0) - (n.y || 0) * k;
+        n.vz = (n.vz || 0) - (n.z || 0) * k;
+      }
+    }
+    force.initialize = (ns) => { nodes = ns; };
+    return force;
+  }
+
   function unpinAllNodes() {
     if (!S.fg) return;
     const data = S.fg.graphData();
@@ -669,12 +969,148 @@
   //  Degree-of-interest navigation
   // ============================================================================
 
+  // Click semantics:
+  //   single click  → show the bottom-right details panel for that node
+  //                   (no focus push, no DOI expand)
+  //   double click  → navigate (push focus stack, expand 1-hop, refit camera)
+  // We distinguish single vs double using a small dwell timer; 350 ms is
+  // long enough to feel forgiving without making singles feel laggy.
+  const DOUBLE_CLICK_MS = 350;
+  let _pendingClick = null;   // { id, timer } — pending single-click
+
   function onNodeClick(node) {
     if (!node) return;
+    if (_pendingClick && _pendingClick.id === node.id) {
+      // Second click of a double — cancel the pending single, navigate instead.
+      clearTimeout(_pendingClick.timer);
+      _pendingClick = null;
+      navigateToNode(node);
+      return;
+    }
+    // First click — start a dwell timer; if no second click lands in time,
+    // treat as single and show details only.
+    if (_pendingClick) clearTimeout(_pendingClick.timer);
+    _pendingClick = {
+      id: node.id,
+      timer: setTimeout(() => {
+        _pendingClick = null;
+        inspectNode(node);
+      }, DOUBLE_CLICK_MS),
+    };
+  }
+
+  function inspectNode(node) {
+    S.inspectedId = node.id;
+    updateRecommendations(node.id);
+  }
+
+  function navigateToNode(node) {
+    S.inspectedId = null;
     if (S.focusStack[S.focusStack.length - 1] !== node.id) S.focusStack.push(node.id);
-    expandFocus(node.id);                  // scheduleFit() runs inside applyVisible()
+    expandFocus(node.id);
     drawBreadcrumb(S.handlers.breadcrumb);
     setStatus(S.handlers.hudStatus, formatStatus());
+    updateFocusHalo();
+    updateRecommendations();
+    syncUrlHash();
+  }
+
+  function onNodeRightClick(node) {
+    if (!node) return;
+    togglePin(node.id);
+  }
+
+  function togglePin(id) {
+    if (S.pinnedIds.has(id)) S.pinnedIds.delete(id);
+    else                     S.pinnedIds.add(id);
+    persistPins();
+    // The node might be currently hidden by type-toggle; re-apply visibility
+    // so pinned nodes stay visible everywhere.
+    applyTypeVisibility();
+    // Make sure pinned nodes are in the visible set (added by expandFocus
+    // & friends on subsequent navigations). For the current view we
+    // re-emit graph data so newly-pinned nodes show even if they weren't
+    // in the prior keep-set.
+    if (S.focusStack.length > 0) {
+      expandFocus(S.focusStack[S.focusStack.length - 1]);
+    } else if (!S.showAll) {
+      renderInitialOverview();
+    }
+  }
+
+  // Generic drag-to-reposition for an absolutely-positioned panel inside the
+  // graph container. Position is stored in localStorage under `storageKey`
+  // and restored on next init so panels persist where the user put them.
+  function makePanelDraggable(panel, handleSelector, storageKey) {
+    // Apply any persisted position right away.
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      if (saved && Number.isFinite(saved.left) && Number.isFinite(saved.top)) {
+        panel.style.left = saved.left + 'px';
+        panel.style.top  = saved.top  + 'px';
+        panel.style.right = 'auto';
+        panel.style.bottom = 'auto';
+      }
+    } catch { /* ignore */ }
+
+    // Attach the drag handler lazily — it must rebind every time the panel
+    // re-renders (head innerHTML changes invalidate the listener).
+    const onMouseDown = (e) => {
+      const handle = e.target.closest(handleSelector);
+      if (!handle) return;
+      // The close × inside the head should not start a drag.
+      if (e.target.closest('button')) return;
+      e.preventDefault();
+      const rect = panel.getBoundingClientRect();
+      const parent = panel.offsetParent || panel.parentElement;
+      const parentRect = parent.getBoundingClientRect();
+      const offsetX = e.clientX - rect.left;
+      const offsetY = e.clientY - rect.top;
+      // Switch to left/top positioning so movement is straightforward.
+      panel.style.left   = (rect.left - parentRect.left) + 'px';
+      panel.style.top    = (rect.top  - parentRect.top)  + 'px';
+      panel.style.right  = 'auto';
+      panel.style.bottom = 'auto';
+      panel.classList.add('is-dragging');
+
+      const onMove = (ev) => {
+        let nx = ev.clientX - parentRect.left - offsetX;
+        let ny = ev.clientY - parentRect.top  - offsetY;
+        // Keep at least a small bit of the panel on-screen.
+        const w = panel.offsetWidth, h = panel.offsetHeight;
+        nx = Math.max(-w + 32, Math.min(parentRect.width  - 32, nx));
+        ny = Math.max(0,         Math.min(parentRect.height - 32, ny));
+        panel.style.left = nx + 'px';
+        panel.style.top  = ny + 'px';
+      };
+      const onUp = () => {
+        panel.classList.remove('is-dragging');
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup',   onUp);
+        // Persist.
+        try {
+          localStorage.setItem(storageKey, JSON.stringify({
+            left: parseFloat(panel.style.left) || 0,
+            top:  parseFloat(panel.style.top)  || 0,
+          }));
+        } catch { /* ignore */ }
+      };
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup',   onUp);
+    };
+    // Re-fire on panel — the head is a descendant.
+    panel.addEventListener('mousedown', onMouseDown);
+  }
+
+  function persistPins() {
+    try { localStorage.setItem('idealab.graph.pinned', JSON.stringify([...S.pinnedIds])); }
+    catch { /* private-mode browsers etc. — ignore */ }
+  }
+  function loadPersistedPins() {
+    try {
+      const arr = JSON.parse(localStorage.getItem('idealab.graph.pinned') || '[]');
+      if (Array.isArray(arr)) for (const id of arr) S.pinnedIds.add(id);
+    } catch { /* ignore */ }
   }
 
   function expandFocus(focusId) {
@@ -682,6 +1118,7 @@
     const neighbors = S.adjacency.get(focusId) || new Set();
     for (const nid of neighbors) keep.add(nid);
     for (const id of S.focusStack) keep.add(id);
+    for (const id of S.pinnedIds) keep.add(id);   // pinned nodes follow the user
     applyVisible(keep);
   }
 
@@ -725,6 +1162,9 @@
         expandFocus(S.focusStack[S.focusStack.length - 1]);
         drawBreadcrumb(el);
         setStatus(S.handlers.hudStatus, formatStatus());
+        updateFocusHalo();
+        updateRecommendations();
+        syncUrlHash();
       });
     });
 
@@ -743,6 +1183,9 @@
         }
         drawBreadcrumb(el);
         setStatus(S.handlers.hudStatus, formatStatus());
+        updateFocusHalo();
+        updateRecommendations();
+        syncUrlHash();
       });
     });
   }
@@ -865,31 +1308,20 @@
   // unaffected — only the visual emphasis changes.
   const VISIBLE_OPACITY = 0.95;
   const HIDDEN_OPACITY  = 0.08;
+  function nodeVisible(n) {
+    // Pinned nodes stay visible regardless of type toggles.
+    if (S.pinnedIds.has(n.id)) return true;
+    return !S.hiddenTypes.has(n.type);
+  }
   function applyTypeVisibility() {
     if (!S.fg) return;
-    const data = S.fg.graphData();
-    // Node shapes: fade opacity of the mesh; the label sprite is handled
-    // separately by applyNodeLabelVisibility (hidden outright, not faded).
-    for (const n of data.nodes) {
-      const obj = n.__threeObj;
-      if (!obj) continue;
-      const labelSprite = S.nodeSpritesByNode.get(n);
-      const op = S.hiddenTypes.has(n.type) ? HIDDEN_OPACITY : VISIBLE_OPACITY;
-      obj.traverse(child => {
-        if (child === labelSprite) return;          // label visibility handled below
-        if (!child.material) return;
-        const mats = Array.isArray(child.material) ? child.material : [child.material];
-        for (const m of mats) {
-          m.transparent = true;
-          m.opacity = op;
-        }
-      });
-    }
-    applyNodeLabelVisibility();                     // hides labels of faded types
-    applyEdgeLabelVisibility();                     // hides verbs of faded edges
-    // Tell the lib to re-evaluate the per-link visibility predicate so
-    // edges touching faded nodes disappear entirely (not just fade).
+    // The library re-evaluates each callback when re-set with a function
+    // ref — this is how we trigger a fresh visibility pass after a legend
+    // toggle without rebuilding any meshes.
+    S.fg.nodeVisibility(nodeVisible);
     S.fg.linkVisibility(linkVisible);
+    applyNodeLabelVisibility();
+    applyEdgeLabelVisibility();
   }
 
   function setStatus(el, text) {
@@ -912,5 +1344,15 @@
     }[ch]));
   }
 
-  window.idealabGraph = { init };
+  // Public method to scope the graph to a host-app-derived seed set.
+  // app.js calls this whenever the user enters the Graph tab so the
+  // initial view reflects the current sidebar filters (sticky across
+  // view changes since the recent setView refactor).
+  function scopeTo(seedIds) {
+    if (!S.fg) return;             // not initialized yet
+    if (S.focusStack.length > 0) return;   // user is mid-navigation; don't yank
+    renderScopedView(seedIds);
+  }
+
+  window.idealabGraph = { init, scopeTo };
 })();

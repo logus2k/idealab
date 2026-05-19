@@ -367,6 +367,7 @@ body.graph-view .active-filters-bar {
   border-radius: 10px;
   padding: 0px 5px;
   background-color: #ffbd00b3;
+  margin-left: 5px;
 }
 .section-title {
   font-size: 15px;
@@ -926,6 +927,11 @@ mark {
   color: #5a30c0;
   border-color: #d8c8ff;
 }
+.kind-badge.match-badge {
+  background: #e6f7ec;
+  color: #1f7a3c;
+  border-color: #b8e2c6;
+}
 .idea-card.is-pattern {
   background: linear-gradient(to right, #fbfaff 0%, var(--surface) 60%);
 }
@@ -1039,6 +1045,134 @@ mark {
   color: #3a3f4b;
   border-color: #d8dae0;
 }
+/* ----- Category-grouped vocab sections (requirements + KPIs) -----
+ * These reuse the existing .facet-group / .facet-header / .facet-options
+ * classes from the Ideas / Plans sidebar so chips wrap the same way and
+ * the visual identity is shared. The only additions are a colored stripe
+ * in each header (matching the chip stripe) and a tighter top-border
+ * pattern so adjacent category sections don't read as separate facets. */
+.vocab-cat-group { padding: 6px 0 8px; }
+.vocab-cat-group + .vocab-cat-group { border-top: 1px dashed var(--border); }
+/* Header right-side count chip — same style as the existing vocab-count
+ * pill we already use on the Requirements / KPIs facet header. */
+.chevron-row { display: inline-flex; align-items: center; gap: 6px; }
+.facet-header-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* KPI category accents (from T1.1 taxonomy). Layered on top of the base
+ * .vocab-chip.facet-kpi rule above so the chip's general color identity
+ * stays the same, but a left-edge stripe + category-tinted label make
+ * the bucket obvious at a glance. Each `vocab-cat-<slug>` class
+ * corresponds to one entry in the closed KPI category taxonomy. */
+.vocab-chip[class*="vocab-cat-"] {
+  padding-left: 6px;            /* tighten left padding; the stripe is the visual cue */
+  border-left-width: 3px;
+  border-left-style: solid;
+}
+/* Category-tinted chips — mirrors the Ideas-view facet chips (light bg in
+ * the category's hue, darker fg, full-color when selected). One rule per
+ * (chip-class × state). The 14 categories collapse into 8 unique color
+ * pairs because the requirement + KPI taxonomies share several themes.
+ *   blue   = decision-support / operational-efficiency
+ *   green  = scaling-and-throughput / revenue-and-growth
+ *   purple = accuracy-and-quality / customer-experience
+ *   orange = workflow-friction / cost-and-margin
+ *   indigo = coverage-gap / quality-and-accuracy
+ *   red    = compliance-and-risk / risk-and-compliance
+ *   teal-1 = customer-experience-friction
+ *   teal-2 = talent-and-productivity
+ */
+/* Every selector here MUST include the `.facet-picker` class on .tag-chip
+ * (specificity 3) so it beats the later `.tag-chip.facet-picker` reset.
+ * For .vocab-chip the 2-class selector already wins because its base
+ * rules are defined earlier in the file. */
+.tag-chip.facet-picker.vocab-cat-revenue-and-growth,
+.vocab-chip.vocab-cat-revenue-and-growth                       { background: #e6f4ea; color: #1b5e20; border-color: #c4e3cf; }
+.tag-chip.facet-picker.vocab-cat-revenue-and-growth.selected,
+.vocab-chip.vocab-cat-revenue-and-growth.selected              { background: #2e7d32; color: white; border-color: #2e7d32; }
+
+.tag-chip.facet-picker.vocab-cat-operational-efficiency,
+.vocab-chip.vocab-cat-operational-efficiency                   { background: #e3edf8; color: #0d3a72; border-color: #c4d8ee; }
+.tag-chip.facet-picker.vocab-cat-operational-efficiency.selected,
+.vocab-chip.vocab-cat-operational-efficiency.selected          { background: #1565c0; color: white; border-color: #1565c0; }
+
+.tag-chip.facet-picker.vocab-cat-customer-experience,
+.vocab-chip.vocab-cat-customer-experience                      { background: #f3e6f7; color: #4a116e; border-color: #dec4ea; }
+.tag-chip.facet-picker.vocab-cat-customer-experience.selected,
+.vocab-chip.vocab-cat-customer-experience.selected             { background: #7b1fa2; color: white; border-color: #7b1fa2; }
+
+.tag-chip.facet-picker.vocab-cat-cost-and-margin,
+.vocab-chip.vocab-cat-cost-and-margin                          { background: #fce6d0; color: #8a3d00; border-color: #f3c89f; }
+.tag-chip.facet-picker.vocab-cat-cost-and-margin.selected,
+.vocab-chip.vocab-cat-cost-and-margin.selected                 { background: #ef6c00; color: white; border-color: #ef6c00; }
+
+.tag-chip.facet-picker.vocab-cat-risk-and-compliance,
+.vocab-chip.vocab-cat-risk-and-compliance                      { background: #fbe2e2; color: #7a1414; border-color: #f1bdbd; }
+.tag-chip.facet-picker.vocab-cat-risk-and-compliance.selected,
+.vocab-chip.vocab-cat-risk-and-compliance.selected             { background: #c62828; color: white; border-color: #c62828; }
+
+.tag-chip.facet-picker.vocab-cat-talent-and-productivity,
+.vocab-chip.vocab-cat-talent-and-productivity                  { background: #d9eae8; color: #00352e; border-color: #b0d2cd; }
+.tag-chip.facet-picker.vocab-cat-talent-and-productivity.selected,
+.vocab-chip.vocab-cat-talent-and-productivity.selected         { background: #00695c; color: white; border-color: #00695c; }
+
+.tag-chip.facet-picker.vocab-cat-quality-and-accuracy,
+.vocab-chip.vocab-cat-quality-and-accuracy                     { background: #e9e2f3; color: #28145c; border-color: #c8b8e2; }
+.tag-chip.facet-picker.vocab-cat-quality-and-accuracy.selected,
+.vocab-chip.vocab-cat-quality-and-accuracy.selected            { background: #4527a0; color: white; border-color: #4527a0; }
+
+/* Requirement categories — share themes with KPIs (orange/purple/blue/red/green). */
+.tag-chip.facet-picker.vocab-cat-workflow-friction,
+.vocab-chip.vocab-cat-workflow-friction                        { background: #fce6d0; color: #8a3d00; border-color: #f3c89f; }
+.tag-chip.facet-picker.vocab-cat-workflow-friction.selected,
+.vocab-chip.vocab-cat-workflow-friction.selected               { background: #ef6c00; color: white; border-color: #ef6c00; }
+
+.tag-chip.facet-picker.vocab-cat-coverage-gap,
+.vocab-chip.vocab-cat-coverage-gap                             { background: #e5e8f5; color: #1c2168; border-color: #c1c7e5; }
+.tag-chip.facet-picker.vocab-cat-coverage-gap.selected,
+.vocab-chip.vocab-cat-coverage-gap.selected                    { background: #3949ab; color: white; border-color: #3949ab; }
+
+.tag-chip.facet-picker.vocab-cat-accuracy-and-quality,
+.vocab-chip.vocab-cat-accuracy-and-quality                     { background: #f3e6f7; color: #4a116e; border-color: #dec4ea; }
+.tag-chip.facet-picker.vocab-cat-accuracy-and-quality.selected,
+.vocab-chip.vocab-cat-accuracy-and-quality.selected            { background: #7b1fa2; color: white; border-color: #7b1fa2; }
+
+.tag-chip.facet-picker.vocab-cat-decision-support,
+.vocab-chip.vocab-cat-decision-support                         { background: #e3edf8; color: #0d3a72; border-color: #c4d8ee; }
+.tag-chip.facet-picker.vocab-cat-decision-support.selected,
+.vocab-chip.vocab-cat-decision-support.selected                { background: #1565c0; color: white; border-color: #1565c0; }
+
+.tag-chip.facet-picker.vocab-cat-compliance-and-risk,
+.vocab-chip.vocab-cat-compliance-and-risk                      { background: #fbe2e2; color: #7a1414; border-color: #f1bdbd; }
+.tag-chip.facet-picker.vocab-cat-compliance-and-risk.selected,
+.vocab-chip.vocab-cat-compliance-and-risk.selected             { background: #c62828; color: white; border-color: #c62828; }
+
+.tag-chip.facet-picker.vocab-cat-customer-experience-friction,
+.vocab-chip.vocab-cat-customer-experience-friction             { background: #d6ecee; color: #003c41; border-color: #aacfd4; }
+.tag-chip.facet-picker.vocab-cat-customer-experience-friction.selected,
+.vocab-chip.vocab-cat-customer-experience-friction.selected    { background: #00838f; color: white; border-color: #00838f; }
+
+.tag-chip.facet-picker.vocab-cat-scaling-and-throughput,
+.vocab-chip.vocab-cat-scaling-and-throughput                   { background: #e6f4ea; color: #1b5e20; border-color: #c4e3cf; }
+.tag-chip.facet-picker.vocab-cat-scaling-and-throughput.selected,
+.vocab-chip.vocab-cat-scaling-and-throughput.selected          { background: #2e7d32; color: white; border-color: #2e7d32; }
+
+/* The count badge on selected chips needs a white-on-translucent treatment
+ * so it stays legible against the saturated selected-state background. */
+.tag-chip.facet-picker.selected[class*="vocab-cat-"] .count,
+.vocab-chip.selected[class*="vocab-cat-"] .count        { color: rgba(255, 255, 255, 0.85); }
+/* Same category color is used in the legend's category-marker — keep
+ * exposed as CSS custom properties so the Graph view can reuse them if
+ * it later groups KPIs by category. */
+:root {
+  --kpi-cat-revenue-and-growth:      #2e7d32;
+  --kpi-cat-operational-efficiency:  #1565c0;
+  --kpi-cat-customer-experience:     #7b1fa2;
+  --kpi-cat-cost-and-margin:         #ef6c00;
+  --kpi-cat-risk-and-compliance:     #c62828;
+  --kpi-cat-talent-and-productivity: #00695c;
+  --kpi-cat-quality-and-accuracy:    #4527a0;
+}
+
 .vocab-chip.facet-entity.selected {
   background: #4a4f5c;
   color: white;
@@ -1400,110 +1534,6 @@ mark {
  *  Sidebar task / modality picker (Models + Datasets views)
  * ===================================================================== */
 
-.sidebar-tasks .task-cat-group + .task-cat-group {
-  margin-top: 6px;
-}
-.task-cat-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 6px 2px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  text-align: left;
-}
-.task-cat-header.collapsed .chevron {
-  transform: rotate(-90deg);
-}
-.task-cat-header .chevron {
-  margin-left: auto;
-  transition: transform 0.18s;
-  color: var(--text-faint);
-  font-size: 10px;
-}
-.task-cat-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex: 0 0 8px;
-}
-.task-cat-label {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.task-tile-column {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding-left: 14px;          /* indent below the category header */
-}
-.task-chip {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 6px;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 12px;
-  color: var(--text);
-  text-align: left;
-  transition: background 0.1s, border-color 0.1s;
-}
-.task-chip:hover {
-  background: var(--surface-2);
-  border-color: var(--border);
-}
-.task-chip.selected {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  color: var(--text);
-}
-.task-chip-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-  flex: 0 0 22px;
-  font-size: 12px;
-}
-.task-chip-icon svg {
-  width: 14px;
-  height: 14px;
-}
-.task-chip-label {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-height: 1.2;
-}
-.task-chip .count {
-  font-size: 10.5px;
-  color: var(--text-faint);
-  font-variant-numeric: tabular-nums;
-}
-.task-chip.selected .count {
-  color: var(--accent);
-  font-weight: 600;
-}
-
 /* Dataset card adds an optional description block */
 .dataset-desc {
   margin: 4px 0 2px;
@@ -1577,6 +1607,176 @@ mark {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* ====== Mini graph preview (Ideas/Plans/etc. views) ====== */
+.mini-graph {
+  margin: 0 0 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  position: relative;          /* containing block for the absolute-positioned settings panel + legend */
+}
+.mini-graph-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.12s;
+}
+.mini-graph:not(.collapsed) .mini-graph-header { border-bottom-color: var(--border); }
+.mini-graph-toggle {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+}
+.mini-graph-toggle:hover { color: var(--accent); }
+.mini-graph-toggle-chevron {
+  display: inline-block;
+  width: 14px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  transition: transform 0.18s;
+}
+.mini-graph:not(.collapsed) .mini-graph-toggle-chevron {
+  transform: rotate(90deg);
+}
+.mini-graph-toggle-label { flex: 1; }
+.mini-graph-toggle-hint {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.mini-graph-toggle-link {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.mini-graph-toggle-link:hover { background: var(--accent-soft); text-decoration: none; }
+.mini-graph-stage {
+  height: 480px;                /* +50% from the previous 320px */
+  background: #ffffff;
+  position: relative;
+}
+/* Settings gear sits at the right edge of the toggle row. */
+.mini-graph-settings-btn {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 26px;
+  height: 26px;
+  margin-left: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.mini-graph-settings-btn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--text-muted);
+}
+.mini-graph-settings-btn[aria-expanded="true"] {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.mini-graph-settings-panel {
+  position: absolute;
+  top: 46px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text);
+  font-size: 12px;
+  min-width: 170px;
+}
+.mini-graph-settings-panel[hidden] { display: none; }
+.mini-graph-legend {
+  position: absolute;
+  left: 12px;
+  top: 56px;                  /* clears the ~43px header above */
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  font-size: 11px;
+  color: var(--text);
+  max-width: 200px;
+  max-height: calc(100% - 80px);
+  overflow-y: auto;
+  box-shadow: var(--shadow-sm);
+}
+.mini-graph-legend[hidden] { display: none; }
+.mini-graph-legend-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.mini-graph-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 0;
+}
+.mini-graph-legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 10px;
+}
+.mini-graph.collapsed .mini-graph-stage,
+.mini-graph.collapsed .mini-graph-legend,
+.mini-graph.collapsed .mini-graph-settings-panel { display: none; }
+.mini-graph-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  padding: 0 24px;
+}
+/* Hide the whole widget when we're actually on the Graph tab (which has its own canvas). */
+body.graph-view .mini-graph { display: none; }
+
 /* ====== Graph view ====== */
 /* The Graph tab gets the entire viewport width — sidebar collapses, the
  * page-level max-width / horizontal padding go away, and the content area
@@ -1605,6 +1805,11 @@ body.graph-view .content {
   border-radius: var(--radius);
   overflow: hidden;
 }
+/* The id-selector `display: flex` above wins specificity over the UA's
+ * `[hidden]{display:none}` rule, so the container would leak into Ideas /
+ * Plans / etc. (showing as a mini empty graph below the results) unless we
+ * re-assert hidden semantics with matching specificity. */
+#graphContainer[hidden] { display: none; }
 .graph-topbar {
   display: flex;
   align-items: center;
@@ -1729,9 +1934,11 @@ body.graph-view .content {
 
 /* Override 3d-force-graph's built-in hover tooltip — it ships with a
  * dark-on-light theme inside an injected `<style>` block; our scene is
- * light so we flip the contrast. Higher specificity guarantees we win
- * even though the library's stylesheet is appended after ours. */
-body.graph-view .float-tooltip-kap {
+ * light so we flip the contrast. Unscoped (no body.graph-view prefix)
+ * because the lib appends its tooltip element to <body> on init and it
+ * persists across view changes; we want the light theme to apply
+ * everywhere the element might be visible. */
+.float-tooltip-kap {
   background: rgba(255, 255, 255, 0.97) !important;
   color: #1a202c !important;
   border: 1px solid var(--border) !important;
@@ -1766,7 +1973,13 @@ body.graph-view .float-tooltip-kap {
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 6px;
+  cursor: grab;
+  user-select: none;
 }
+.graph-legend.is-dragging,
+.graph-recs.is-dragging { cursor: grabbing; opacity: 0.92; }
+.graph-legend.is-dragging .graph-legend-head,
+.graph-recs.is-dragging   .graph-recs-head { cursor: grabbing; }
 .graph-legend-title {
   font-weight: 600;
   flex: 1 1 auto;
@@ -1840,3 +2053,73 @@ body.graph-view .float-tooltip-kap {
 }
 .graph-legend-icon svg { width: 22px; height: 22px; }
 .graph-legend-label { color: var(--text); }
+
+/* Recommendations panel — bottom-right "Related" surfacer for the focus node. */
+.graph-recs {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 8px 10px 10px;
+  color: var(--text);
+  font-size: 12px;
+  max-width: 280px;
+  min-width: 220px;
+}
+.graph-recs[hidden] { display: none; }
+.graph-recs-head {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+  cursor: grab;
+  user-select: none;
+}
+.graph-recs-title {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.graph-recs-focus {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 13px;
+  word-wrap: break-word;
+}
+.graph-recs-section { margin-top: 8px; }
+.graph-recs-section:first-child { margin-top: 0; }
+.graph-recs-section-head {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+.graph-recs-item {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.12s;
+  word-break: break-word;
+}
+.graph-recs-item:hover { background: var(--surface-2); }
+.graph-recs-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.graph-recs-verb {
+  display: inline-block;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  margin-right: 4px;
+}

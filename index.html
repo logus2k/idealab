@@ -43,6 +43,42 @@
     <main class="content" id="content">
       <div id="loadingMsg" class="info-msg">Loading catalog…</div>
       <div id="errorMsg" class="error-msg" hidden></div>
+      <!-- Mini graph preview — collapsible widget at the top of the
+           Ideas / Plans / Requirements / KPIs / Models / Datasets views,
+           scoped to current filters. Collapsed by default. Hidden entirely
+           when the dedicated Graph tab is active. -->
+      <section id="miniGraph" class="mini-graph collapsed">
+        <div class="mini-graph-header">
+          <button id="miniGraphToggle" type="button" class="mini-graph-toggle" aria-expanded="false">
+            <span class="mini-graph-toggle-chevron">▸</span>
+            <span class="mini-graph-toggle-label">Graph of current selection</span>
+            <span id="miniGraphHint" class="mini-graph-toggle-hint"></span>
+          </button>
+          <a id="miniGraphOpenFull" href="#" class="mini-graph-toggle-link" title="Open the full Graph view">Open full graph →</a>
+          <button id="miniGraphSettingsBtn" type="button" class="mini-graph-settings-btn" aria-label="Mini-graph settings" aria-expanded="false" title="Settings">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </button>
+        </div>
+        <div id="miniGraphSettingsPanel" class="mini-graph-settings-panel" hidden>
+          <label class="graph-hud-control">
+            <input id="miniGraphShowNodeLabels" type="checkbox" checked />
+            <span>Show node labels</span>
+          </label>
+          <label class="graph-hud-control">
+            <input id="miniGraphShowEdgeLabels" type="checkbox" />
+            <span>Show edge labels</span>
+          </label>
+          <label class="graph-hud-control">
+            <input id="miniGraphShowLegend" type="checkbox" checked />
+            <span>Show legend</span>
+          </label>
+        </div>
+        <div id="miniGraphStage" class="mini-graph-stage"></div>
+        <div id="miniGraphLegend" class="mini-graph-legend"></div>
+      </section>
       <div id="ideasContainer"></div>
       <div id="graphContainer" hidden>
         <div class="graph-topbar">
@@ -77,6 +113,9 @@
         </div>
         <div id="graphStage" class="graph-stage"></div>
         <div id="graphLegend" class="graph-legend" hidden></div>
+        <!-- Recommendation widget (T5.3): top-3 neighbors of the focused
+             node, grouped by adjacent entity type. Hidden when no focus. -->
+        <div id="graphRecs" class="graph-recs" hidden></div>
       </div>
     </main>
   </div>

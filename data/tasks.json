@@ -362,7 +362,9 @@
     "category": "natural-language-processing",
     "applies_to": [
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"9\" r=\"2\"/><path d=\"M14 8h12v2H14z\"/><circle cx=\"8\" cy=\"16\" r=\"2\"/><path d=\"M14 15h12v2H14z\"/><path d=\"M22 22l-3 3-1.5-1.5L16 25l3 3 5-5z\"/><path d=\"M14 22h2v2h-2zm-6-1c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm0 4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z\"/></svg>",
+    "icon_color": "red-400"
   },
   {
     "uuid": "ed221a89-cc25-4a74-8455-c60eb87c7458",
@@ -419,7 +421,9 @@
     "category": "natural-language-processing",
     "applies_to": [
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3 6v14h11v-2H5v-3h9v-2H5v-3h9V8H5V6z\"/><path d=\"M5 6h9v2H5zm9 0h2v14h-2z\"/><path d=\"M19 11h10v2H19zm0 4h10v2H19zm0 4h7v2h-7z\"/><path d=\"M16 14l3 3-3 3v-1.5h-1v-3h1z\"/></svg>",
+    "icon_color": "indigo-400"
   },
   {
     "uuid": "0fcde2d7-2882-4f5b-8e17-0c3a68cbdbb9",
@@ -464,7 +468,9 @@
     "category": "natural-language-processing",
     "applies_to": [
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 6h12v2H4zm0 4h12v2H4zm0 4h8v2H4zm0 4h6v2H4z\"/><path d=\"M22 13c-3.3 0-6 2.7-6 6s2.7 6 6 6c1.3 0 2.5-.4 3.5-1.1l3.3 3.3 1.4-1.4-3.3-3.3c.7-1 1.1-2.2 1.1-3.5 0-3.3-2.7-6-6-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z\"/></svg>",
+    "icon_color": "red-400"
   },
   {
     "uuid": "55825831-5a1b-4e60-8ca0-9368b675d2c0",
@@ -546,7 +552,9 @@
     "applies_to": [
       "models",
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3 6h12v2H3zm0 4h12v2H3zm0 4h8v2H3z\"/><path d=\"M19 9v14l6-4h4V13h-4z\" /><path d=\"M27 11c1.7 1 2.5 2.7 2.5 5s-.8 4-2.5 5l1 1.8c2.3-1.3 3.5-3.7 3.5-6.8s-1.2-5.5-3.5-6.8z\" transform=\"translate(-2 0)\"/></svg>",
+    "icon_color": "green-400"
   },
   {
     "uuid": "723c1ee7-2fcf-4660-9224-84add46b4192",
@@ -568,7 +576,9 @@
     "applies_to": [
       "models",
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M16 4c-2.2 0-4 1.8-4 4v8c0 2.2 1.8 4 4 4s4-1.8 4-4V8c0-2.2-1.8-4-4-4z\"/><path d=\"M22 14h2c0 4.4-3.6 8-8 8s-8-3.6-8-8h2c0 3.3 2.7 6 6 6s6-2.7 6-6z\"/><path d=\"M15 22h2v6h-2z\"/><path d=\"M11 28h10v2H11z\"/><path d=\"M2 12l2 2 2-3 2 4 2-2 2 3v2H2z\" opacity=\"0.7\"/><path d=\"M22 12l2 3 2-4 2 3 2-2v2h-8z\" opacity=\"0.7\"/></svg>",
+    "icon_color": "green-400"
   },
   {
     "uuid": "df56ab48-db93-48bd-9953-66c088e75a3b",
@@ -601,7 +611,9 @@
     "category": "tabular",
     "applies_to": [
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3 6v18h11v-2H5v-4h9v-2H5v-4h9v-2H5V8h9V6z\"/><path d=\"M5 6h9v2H5zm9 0h2v18h-2z\"/><path d=\"M19 10h10v2H19zm0 4h10v2H19zm0 4h7v2h-7zm0 4h9v2h-9z\"/></svg>",
+    "icon_color": "indigo-400"
   },
   {
     "uuid": "459870b0-5e48-497b-b3f7-7468a65c64e8",
@@ -611,7 +623,9 @@
     "applies_to": [
       "models",
       "datasets"
-    ]
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3 26h26v2H3z\"/><path d=\"M3 5v22h2V5z\"/><path d=\"M5 22l5-7 4 3 5-9 4 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M19 11l4 3 6-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"2 2\" stroke-linejoin=\"round\"/><path d=\"M28 9l3 1-1 3z\"/></svg>",
+    "icon_color": "indigo-400"
   },
   {
     "uuid": "d3bddc0e-1261-4212-a484-46ed0640958a",
