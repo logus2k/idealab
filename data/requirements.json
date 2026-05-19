@@ -1030,5 +1030,95 @@
     "slug": "smart-city-retail-twin-need",
     "label": "Physical-space digital-twin need (retail / smart city)",
     "description": "Retailers and city planners need real-time digital twins of physical spaces (stores, streets) for ops automation, planning, and customer-experience design."
+  },
+  {
+    "uuid": "9bdfb266-e011-4483-8499-4adf766b0567",
+    "slug": "supplier-negotiation-overhead",
+    "label": "Supplier negotiation overhead",
+    "description": "Procurement teams negotiate manually with hundreds / thousands of suppliers on price, terms, and renewals; capacity caps savings capture."
+  },
+  {
+    "uuid": "fd061df8-57fe-4296-a40c-5de13a324408",
+    "slug": "government-doc-redaction-overhead",
+    "label": "Government document redaction overhead",
+    "description": "Sensitive PII / classified content in government documents must be redacted before release; manual review is slow and error-prone."
+  },
+  {
+    "uuid": "7535aa90-5c51-42ef-8970-3586d7facad9",
+    "slug": "language-preservation-need",
+    "label": "Endangered / low-resource language preservation need",
+    "description": "Native and endangered languages risk loss as fluent-speaker populations shrink; corpora, grammar, and cultural-context tools are needed to keep them alive."
+  },
+  {
+    "uuid": "78a8731c-417e-4d46-a7a6-9a8518be8229",
+    "slug": "food-formulation-overhead",
+    "label": "Food / flavor formulation overhead",
+    "description": "Designing new food formulations across regional taste, dietary, and supply constraints is slow; benchwork can't enumerate the design space."
+  },
+  {
+    "uuid": "bd1c0502-0f73-4b21-94d3-effebc3c6101",
+    "slug": "telco-billing-leakage",
+    "label": "Telecom billing leakage / error risk",
+    "description": "Telco billing systems leak revenue through complex rating, promotion stacks, and error-prone billing flows that human audits can't fully cover."
+  },
+  {
+    "uuid": "664a5960-9d95-4863-a422-f8bb3237f870",
+    "slug": "adaptive-content-delivery-gap",
+    "label": "Adaptive content / device delivery gap",
+    "description": "Edge devices and bandwidth constraints vary; serving the right content quality per device per session is manual or coarse."
+  },
+  {
+    "uuid": "83d10d10-cf98-4c0a-bc33-6624b894cfa6",
+    "slug": "domain-llm-customization-need",
+    "label": "Domain-specific LLM customization need",
+    "description": "Off-the-shelf LLMs lack specialist domain knowledge (legal, medical, engineering); fine-tuning / RAG / domain adapters are needed for production use."
+  },
+  {
+    "uuid": "f0b6a210-e106-4c24-9fd7-ed1c12371d09",
+    "slug": "phishing-email-risk",
+    "label": "Phishing / spam-email risk",
+    "description": "Inbound mail carries phishing, BEC, and credential-theft attempts that signature filters miss; users click through and credentials leak."
+  },
+  {
+    "uuid": "d0a11d9e-1d3f-4559-884e-1d1504277514",
+    "slug": "seismic-risk-prediction-gap",
+    "label": "Seismic / earthquake risk prediction gap",
+    "description": "Infrastructure investment and emergency preparedness need probabilistic seismic forecasts at finer resolution than historical catalogs provide."
+  },
+  {
+    "uuid": "c508d183-04e9-45ea-ade6-cfbb6bc66d9b",
+    "slug": "drug-interaction-safety-gap",
+    "label": "Drug interaction / Rx safety gap",
+    "description": "Polypharmacy patients risk harmful drug interactions that human prescribers can't fully track; adverse events follow."
+  },
+  {
+    "uuid": "584ad148-36ab-4933-9d9d-a7eb438d4305",
+    "slug": "disaster-impact-assessment-gap",
+    "label": "Disaster impact assessment gap",
+    "description": "After a natural disaster, damage and resource-need assessment depends on slow site visits; relief lags by days."
+  },
+  {
+    "uuid": "a2c95135-6cbc-4b42-94b9-a1f72c1b0d8c",
+    "slug": "disaster-relief-allocation-overhead",
+    "label": "Disaster relief resource-allocation overhead",
+    "description": "Relief supplies, personnel, and equipment must be routed to dynamic needs across affected areas; humans can't optimize in real time."
+  },
+  {
+    "uuid": "a8add478-c00a-4a49-a01e-0b8d74c64b3b",
+    "slug": "wildlife-monitoring-gap",
+    "label": "Wildlife / biodiversity monitoring gap",
+    "description": "Conservation programs can't scale species monitoring across camera-trap and satellite imagery without automated classification."
+  },
+  {
+    "uuid": "5b09c0ae-c4f5-4fe4-8a4f-1ca89703fd10",
+    "slug": "hospital-operational-bottleneck",
+    "label": "Hospital operational bottleneck blind-spot",
+    "description": "Hospitals can't see which workflow bottlenecks (patient flow, staffing, OR scheduling, discharge) drive the longest wait and cost \u2014 without AI process mining."
+  },
+  {
+    "uuid": "5b19346e-4896-4ef3-a413-1142fd11ecfe",
+    "slug": "realestate-workflow-fragmentation",
+    "label": "Real-estate workflow fragmentation",
+    "description": "Real-estate transactions span listing, due-diligence, document handling, marketing, and close \u2014 fragmented across vendors; agents and brokers carry the orchestration tax."
   }
 ]

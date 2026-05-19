@@ -791,5 +791,17 @@
     "slug": "first-call-resolution-fs",
     "label": "Field-service first-call resolution",
     "description": "Share of dispatches resolved on the first technician visit."
+  },
+  {
+    "uuid": "d2e7cd3e-0edd-4d5b-9843-1db82269b097",
+    "slug": "phishing-block-rate",
+    "label": "Phishing-attempt block rate",
+    "description": "Share of inbound phishing / BEC attempts blocked or quarantined before user interaction."
+  },
+  {
+    "uuid": "8292da65-6b04-4fc2-a768-d902c6356b89",
+    "slug": "disaster-response-time",
+    "label": "Disaster response / first-relief time",
+    "description": "Elapsed time from incident detection to first relief / assessment activity."
   }
 ]

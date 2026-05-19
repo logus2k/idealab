@@ -7270,5 +7270,101 @@
     "slug": "mayo-clinic",
     "name": "Mayo Clinic",
     "type": "company"
+  },
+  {
+    "uuid": "babdb90f-4af1-4022-ba5f-af606b3002e7",
+    "slug": "nvidia-drive",
+    "name": "NVIDIA Drive",
+    "type": "vendor"
+  },
+  {
+    "uuid": "100ac308-472d-4293-8037-89ec90130704",
+    "slug": "bluedot",
+    "name": "BlueDot",
+    "type": "vendor"
+  },
+  {
+    "uuid": "78990cfb-fedd-4cdc-9a19-2cc91e0bf4c1",
+    "slug": "motif-foodworks",
+    "name": "Motif FoodWorks",
+    "type": "company"
+  },
+  {
+    "uuid": "2927ad13-0919-4459-b764-7980819e3d57",
+    "slug": "amazon-bedrock",
+    "name": "Amazon Bedrock",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f7176574-44c3-48e1-baf7-652db22ca7af",
+    "slug": "aws-codewhisperer",
+    "name": "AWS CodeWhisperer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a777fbf3-21e9-443b-a1f1-7fd732351dc6",
+    "slug": "jasper",
+    "name": "Jasper",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d9aecbaf-70b2-48b8-ab2f-30b526acdda3",
+    "slug": "juro",
+    "name": "Juro",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d2350cc8-f05e-4b30-b779-e60b382d9a13",
+    "slug": "hirevue",
+    "name": "HireVue",
+    "type": "vendor"
+  },
+  {
+    "uuid": "14c641ca-2ef6-49c7-af9d-b10ddb459cd2",
+    "slug": "beamery",
+    "name": "Beamery",
+    "type": "vendor"
+  },
+  {
+    "uuid": "33f2826d-e784-442b-be67-f696c469f256",
+    "slug": "thomson-reuters",
+    "name": "Thomson Reuters",
+    "type": "vendor"
+  },
+  {
+    "uuid": "71fc80c8-734f-40c2-8188-8a9aed250336",
+    "slug": "ksat-tv",
+    "name": "KSAT-TV",
+    "type": "company"
+  },
+  {
+    "uuid": "370cd1eb-8cd2-4f0c-a254-2867c546af50",
+    "slug": "schibsted",
+    "name": "Schibsted",
+    "type": "company"
+  },
+  {
+    "uuid": "d49a2c5f-2917-4218-9e50-d4249606f043",
+    "slug": "news-corp-australia",
+    "name": "News Corp Australia",
+    "type": "company"
+  },
+  {
+    "uuid": "2aed9bd0-2dba-4d4f-b446-87b9acc9abae",
+    "slug": "washington-post",
+    "name": "The Washington Post",
+    "type": "company"
+  },
+  {
+    "uuid": "1f2c5f30-c5dd-417f-9e7e-cc7b834f4c8d",
+    "slug": "die-presse",
+    "name": "Die Presse",
+    "type": "company"
+  },
+  {
+    "uuid": "035032e4-5c03-4431-9900-33a5e7399cad",
+    "slug": "google-shopping",
+    "name": "Google Shopping",
+    "type": "vendor"
   }
 ]

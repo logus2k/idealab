@@ -2210,5 +2210,208 @@
     "title": "Continuous patient IoT-stream monitoring",
     "section": "33. Healthcare & Life Sciences",
     "kind": "idea"
+  },
+  {
+    "uuid": "5c008465-afe6-4e38-b305-201197cd1aba",
+    "slug": "retail-floor-employee-ai-assistant",
+    "title": "Retail floor employee AI assistant (Ask-Sam pattern)",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "00b2ad88-caa5-4644-b9d4-20f84046fabb",
+    "slug": "ai-supplier-negotiation-agent",
+    "title": "AI supplier-negotiation agent",
+    "section": "2. Procurement & Operations Support",
+    "kind": "idea"
+  },
+  {
+    "uuid": "322dd848-5a68-4b06-be19-ee85de82fbbb",
+    "slug": "ai-local-news-story-production",
+    "title": "AI-generated local news story production",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c70b1ec3-56c0-4068-90cc-3db673a44d43",
+    "slug": "endangered-language-preservation-ai",
+    "title": "Endangered-language preservation & generation",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c27dc6a1-d3aa-47e8-adc0-a436fdeb98d4",
+    "slug": "government-document-redaction-automation",
+    "title": "Government document redaction automation",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "de871698-2aee-4e3f-8eae-021f221ff2d8",
+    "slug": "government-speech-comms-drafting",
+    "title": "Government speech / briefing drafting AI",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "bd23737b-caea-4f95-bb56-f16f49b275a9",
+    "slug": "plant-based-food-design-ai",
+    "title": "Plant-based food design & flavor generation",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "53399d31-bab4-4549-bc9b-47933151416e",
+    "slug": "ai-crop-breed-customization",
+    "title": "AI crop breed / genetic customization",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2342a165-5d98-4eaa-a3ab-db8a6395d480",
+    "slug": "sustainable-farming-practice-simulator",
+    "title": "Sustainable farming-practice simulator",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f6c3c435-1084-4bbe-8d17-15984849c31e",
+    "slug": "vertical-farming-system-design",
+    "title": "Vertical-farming system design AI",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d1fdab18-5a26-4e13-9c4b-1ef45693cc24",
+    "slug": "wildlife-species-identification-camera-trap",
+    "title": "Wildlife species identification (camera-trap CV)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "510f7db8-4d82-4749-a8d8-6a0b0a60a542",
+    "slug": "hospital-process-mining",
+    "title": "Hospital operational process mining",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4df68fa2-e4c6-4583-84c8-f9b68b31cf3b",
+    "slug": "diabetic-retinopathy-mobile-screening",
+    "title": "Diabetic retinopathy mobile screening",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7c9b0830-c168-4635-b79f-d4d0af75de7d",
+    "slug": "ai-drug-interaction-safety-check",
+    "title": "AI drug-interaction safety check",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "05cbf660-77cd-49b1-824d-033b63bba922",
+    "slug": "telco-billing-error-detection",
+    "title": "Telecom billing error & leakage detection",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ad8d0c09-5610-4535-82ad-d06286bd51fe",
+    "slug": "adaptive-content-device-delivery",
+    "title": "Adaptive content / device-aware delivery",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "9ace24fc-cf39-4ddc-bcef-c34c650ee868",
+    "slug": "iot-field-intelligence-energy-assets",
+    "title": "IoT-native field intelligence for energy assets",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c7c1e811-4606-4bfd-a501-1bd0083014ef",
+    "slug": "knowledge-graph-construction-rag",
+    "title": "Knowledge-graph construction for RAG",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f6c7476c-9514-466c-82af-3a6006baf68d",
+    "slug": "domain-llm-fine-tuning-service",
+    "title": "Domain-specific LLM fine-tuning service",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c564d376-82b1-402e-b52a-e98836dc3651",
+    "slug": "phishing-spam-email-detection",
+    "title": "Phishing & spam email detection AI",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c24f5b73-40e0-4f37-b587-b104a612aedf",
+    "slug": "ai-cyber-threat-intelligence-agent",
+    "title": "AI cybersecurity threat-intelligence agent",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b6739174-dac5-434c-bef9-afac94e8dde3",
+    "slug": "adaptive-behavioral-biometric-auth",
+    "title": "Adaptive behavioral-biometric authentication",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a81d915a-3f13-4e72-8f7d-178eb070835c",
+    "slug": "touchless-gesture-ui",
+    "title": "Touchless gesture interface (CV)",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "61783cb0-09a4-4afb-8038-943b074a1eb9",
+    "slug": "real-time-disaster-impact-assessment",
+    "title": "Real-time disaster impact assessment",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "8ddf72c3-3e26-4932-b2c8-a8a80bfe027e",
+    "slug": "disaster-relief-resource-allocation",
+    "title": "Disaster relief resource allocation AI",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "66dec89c-60bd-489b-8157-31f35358df3b",
+    "slug": "seismic-risk-prediction",
+    "title": "Seismic / earthquake risk prediction",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a23454ac-64f3-447b-b4df-54b58708ba4b",
+    "slug": "ai-audiobook-narration",
+    "title": "AI audiobook narration",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "bc76fb0b-e7e5-434f-941f-cea9c7a80f74",
+    "slug": "ai-native-real-estate-workflow-os",
+    "title": "AI-native real-estate workflow OS",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "86eaac8e-cdbb-4813-97a1-adffc604d769",
+    "slug": "real-estate-listing-content-generation",
+    "title": "Real-estate listing content generation",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
   }
 ]
