@@ -65,7 +65,7 @@ a:hover {
 .topbar-inner {
   max-width: 1480px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 14px 40px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -113,7 +113,7 @@ a:hover {
   max-width: 1480px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 290px 1fr;
+  grid-template-columns: 406px 1fr;          /* 40% wider sidebar (was 290px) */
   gap: 24px;
   padding: 24px;
   align-items: start;
@@ -218,8 +218,8 @@ a:hover {
 .tag-chip {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 0px 6px 3px 6px;
+  gap: 6px;
+  padding: 2px 6px 5px 6px;
   border-radius: 12px;
   font-size: 11.5px;
   font-weight: 500;
@@ -1027,3 +1027,498 @@ mark {
   border-radius: 999px;
   font-size: 11px;
 }
+
+/* =====================================================================
+ *  Requirements / KPIs as top-level views
+ * ===================================================================== */
+
+.sidebar-note {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  line-height: 1.45;
+}
+.sidebar-note strong {
+  color: var(--text);
+}
+
+.requirement-card,
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.12s, border-color 0.12s;
+}
+.requirement-card:hover,
+.kpi-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+.requirement-card {
+  border-left: 3px solid var(--facet-value-fg);
+}
+.kpi-card {
+  border-left: 3px solid var(--facet-function-fg);
+}
+.vocab-card-title {
+  margin: 0 0 4px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+.vocab-card-desc {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.45;
+}
+.vocab-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border);
+}
+.vocab-card-slug {
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  color: var(--text-faint);
+  background: var(--surface-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.vocab-card-jump {
+  border: none;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.06s;
+}
+.vocab-card-jump:hover {
+  background: var(--accent);
+  color: white;
+}
+.vocab-card-jump:active {
+  transform: translateY(1px);
+}
+.vocab-card-jump.disabled {
+  background: var(--surface-2);
+  color: var(--text-faint);
+  cursor: default;
+}
+
+/* =====================================================================
+ *  Models view: task picker (tile grid) + per-task model list
+ * ===================================================================== */
+
+/* --- Task picker --- */
+.task-category {
+  margin-top: 22px;
+}
+.task-category:first-of-type {
+  margin-top: 0;
+}
+.task-category-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px;
+  padding-left: 2px;
+}
+.task-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+.task-tile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13.5px;
+  text-align: left;
+  color: var(--text);
+  transition: border-color 0.12s, background 0.12s, transform 0.06s, box-shadow 0.12s;
+}
+.task-tile:hover {
+  border-color: var(--border-strong);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+.task-tile:active {
+  transform: translateY(1px);
+}
+.task-tile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  flex: 0 0 28px;
+}
+.task-tile-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.task-tile-icon-fallback {
+  font-size: 18px;
+  opacity: 0.7;
+}
+.task-tile-label {
+  font-weight: 500;
+  line-height: 1.2;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Per-task model list header --- */
+.models-task-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.models-task-header .task-tile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex: 0 0 40px;
+}
+.models-task-header .task-tile-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.models-task-titles h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.models-task-meta {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 2px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.snapshot-meta {
+  font-variant-numeric: tabular-nums;
+}
+.back-btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.back-btn:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --- Model cards --- */
+.model-list {
+  display: grid;
+  gap: 8px;
+}
+.model-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.12s, border-color 0.12s;
+}
+.model-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+.model-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.model-id {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+}
+.model-id:hover {
+  text-decoration: underline;
+}
+.model-author {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.model-slash {
+  color: var(--text-faint);
+  margin: 0 1px;
+}
+.model-name {
+  color: var(--text);
+  font-weight: 600;
+}
+.model-extlink {
+  text-decoration: none;
+  color: var(--text-faint);
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.12s, color 0.12s;
+}
+.model-extlink:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.model-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.model-lib {
+  background: var(--surface-2);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--text-faint);
+}
+.model-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+.model-tag {
+  font-size: 10.5px;
+  color: var(--text-faint);
+  background: var(--surface-2);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+@media (max-width: 600px) {
+  .task-tile-grid { grid-template-columns: 1fr; }
+}
+
+/* =====================================================================
+ *  Sidebar task / modality picker (Models + Datasets views)
+ * ===================================================================== */
+
+.sidebar-tasks .task-cat-group + .task-cat-group {
+  margin-top: 6px;
+}
+.task-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 6px 2px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-align: left;
+}
+.task-cat-header.collapsed .chevron {
+  transform: rotate(-90deg);
+}
+.task-cat-header .chevron {
+  margin-left: auto;
+  transition: transform 0.18s;
+  color: var(--text-faint);
+  font-size: 10px;
+}
+.task-cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 8px;
+}
+.task-cat-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task-tile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 14px;          /* indent below the category header */
+}
+.task-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--text);
+  text-align: left;
+  transition: background 0.1s, border-color 0.1s;
+}
+.task-chip:hover {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+.task-chip.selected {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text);
+}
+.task-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex: 0 0 22px;
+  font-size: 12px;
+}
+.task-chip-icon svg {
+  width: 14px;
+  height: 14px;
+}
+.task-chip-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.task-chip .count {
+  font-size: 10.5px;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.task-chip.selected .count {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Dataset card adds an optional description block */
+.dataset-desc {
+  margin: 4px 0 2px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* =====================================================================
+ *  Unified picker style for Models / Datasets / Requirements / KPIs
+ *  — same .tag-chip pill that Ideas / Plans use, with optional icon.
+ * ===================================================================== */
+
+/* Category sub-header inside a single facet-group (e.g. Multimodal /
+   Computer Vision under the "Tasks" group) */
+.facet-subheader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 4px;
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+.facet-subheader-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 8px;
+}
+
+/* Small icon prefix inside a tag-chip pill (used by Models / Datasets task
+   chips). Sits flush with the label and inherits the pill's text color
+   override via inline style on the icon span itself. */
+.tag-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin-right: 2px;
+}
+.tag-chip-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* The "picker" tag-chip variant — used by Tasks (Models/Datasets),
+   Modality, Requirements, and KPIs. Keeps the tag-chip pill base but
+   uses neutral background with a colored dot/icon for category cues. */
+.tag-chip.facet-picker {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: transparent;
+}
+.tag-chip.facet-picker:hover {
+  background: var(--border);
+}
+.tag-chip.facet-picker.selected {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.tag-chip.facet-picker.selected .tag-chip-icon {
+  color: white !important;        /* override the inline per-task color */
+}
+.tag-chip.facet-picker.selected .count {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Dataset card adds an optional description block */

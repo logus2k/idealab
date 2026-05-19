@@ -1,0 +1,652 @@
+[
+  {
+    "uuid": "5713ddda-63d7-42a4-b2b3-aeb285e90ab5",
+    "slug": "any-to-any",
+    "label": "Any-to-Any",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M10 15h12v2H10zM8.7 6.285A3 3 0 0 0 9 5a3 3 0 1 0-3 3a2.96 2.96 0 0 0 1.285-.3L10 10.413V13h2V9.586zM6 6a1 1 0 1 1 1-1a1 1 0 0 1-1 1m13-1a3 3 0 1 0-4 2.815V13h2V7.816A3 3 0 0 0 19 5m-3 1a1 1 0 1 1 1-1a1 1 0 0 1-1 1m10-4a3.003 3.003 0 0 0-3 3a3 3 0 0 0 .3 1.285l-3.3 3.3V13h2v-2.586L24.715 7.7A2.96 2.96 0 0 0 26 8a3 3 0 0 0 0-6m0 4a1 1 0 1 1 1-1a1 1 0 0 1-1 1M12 19h-2v2.586L7.285 24.3A2.96 2.96 0 0 0 6 24a3 3 0 1 0 3 3a3 3 0 0 0-.3-1.285l3.3-3.3zm-6 9a1 1 0 1 1 1-1a1 1 0 0 1-1 1m11-3.816V19h-2v5.184a3 3 0 1 0 2 0M16 28a1 1 0 1 1 1-1a1 1 0 0 1-1 1m10-4a2.96 2.96 0 0 0-1.285.3L22 21.587V19h-2v3.414l3.3 3.3A3 3 0 0 0 23 27a3 3 0 1 0 3-3m0 4a1 1 0 1 1 1-1a1 1 0 0 1-1 1\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "6c1ba557-5ef7-43b0-80b4-31af0c86ecf8",
+    "slug": "audio-text-to-text",
+    "label": "Audio-Text-to-Text",
+    "category": "multimodal",
+    "applies_to": [
+      "models"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.5 11.12H5C5.26513 11.1203 5.51933 11.2257 5.70681 11.4132C5.89429 11.6007 5.99973 11.8549 6 12.12V13.12C5.99973 13.3851 5.89429 13.6393 5.70681 13.8268C5.51933 14.0143 5.26513 14.1197 5 14.12H4.5V16.12H3.5V14.12H3C2.73486 14.1197 2.48066 14.0143 2.29319 13.8268C2.10571 13.6393 2.00026 13.3851 2 13.12V12.12C2.00026 11.8549 2.10571 11.6007 2.29319 11.4132C2.48066 11.2257 2.73486 11.1203 3 11.12H3.5V2.12H4.5V11.12ZM3 13.12H5V12.12H3V13.12ZM10 4.12H9.5V2.12H8.5V4.12H8C7.73487 4.12027 7.48067 4.22571 7.29319 4.41319C7.10571 4.60067 7.00027 4.85487 7 5.12V6.12C7.00027 6.38514 7.10571 6.63934 7.29319 6.82682C7.48067 7.01429 7.73487 7.11974 8 7.12H8.5V16.12H9.5V7.12H10C10.2651 7.11974 10.5193 7.01429 10.7068 6.82682C10.8943 6.63934 10.9997 6.38514 11 6.12V5.12C10.9997 4.85487 10.8943 4.60067 10.7068 4.41319C10.5193 4.22571 10.2651 4.12027 10 4.12ZM10 6.12H8V5.12H10V6.12ZM15 8.12H14.5V2.12H13.5V8.12H13C12.7349 8.12027 12.4807 8.22571 12.2932 8.41319C12.1057 8.60067 12.0003 8.85486 12 9.12V10.12C12.0003 10.3851 12.1057 10.6393 12.2932 10.8268C12.4807 11.0143 12.7349 11.1197 13 11.12H13.5V16.12H14.5V11.12H15C15.2651 11.1196 15.5192 11.0141 15.7067 10.8267C15.8941 10.6392 15.9996 10.3851 16 10.12V9.12C15.9997 8.85486 15.8943 8.60067 15.7068 8.41319C15.5193 8.22571 15.2651 8.12027 15 8.12ZM15 10.12H13V9.12H15V10.12Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "15178e27-e056-419f-a44a-225cc2f743cc",
+    "slug": "document-question-answering",
+    "label": "Document Question Answering",
+    "category": "multimodal",
+    "applies_to": [
+      "models"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M24 30a6 6 0 1 1 6-6a6.007 6.007 0 0 1-6 6zm0-10a4 4 0 1 0 4 4a4.005 4.005 0 0 0-4-4zM8 22h8v2H8zm0-6h10v2H8z\"></path><path fill=\"currentColor\" d=\"M16 28H6V4h8v6a2.006 2.006 0 0 0 2 2h6v3h2v-5a.91.91 0 0 0-.3-.7l-7-7A.909.909 0 0 0 16 2H6a2.006 2.006 0 0 0-2 2v24a2.006 2.006 0 0 0 2 2h10Zm0-23.6l5.6 5.6H16Z\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "8de7c9be-a81e-422c-98aa-55e4cba2df9a",
+    "slug": "image-text-to-image",
+    "label": "Image-Text-to-Image",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 12 12\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M10.095 6.788a.7.7 0 0 1 .7.7V9.99a.7.7 0 0 1-.7.7h-3.52a.7.7 0 0 1-.7-.7v-2.5a.7.7 0 0 1 .7-.7h3.52Zm-3.52 2.608v.593h3.248l-.972-.786-.255.256-.228.227-1.073-1.019-.72.73Zm0-.9.52-.48a.3.3 0 0 1 .41.004l.781.74a.1.1 0 0 0 .139-.001l.2-.198a.3.3 0 0 1 .402-.019l1.068.882V7.488h-3.52v1.008ZM9.061 1.2a.7.7 0 0 1 .7.7v4.377h-.7V1.9H2.43v3.55l.9-.9a.7.7 0 0 1 .99 0l1.74 1.74a.791.791 0 0 0-.51.47L3.82 5.04l-1.4 1.4v2.09H5.5v.7H2.43a.7.7 0 0 1-.7-.7V1.9a.7.7 0 0 1 .7-.7h6.63Zm.324 6.542a.35.35 0 1 1 0 .701.35.35 0 0 1 0-.7Zm-2.07-2.007a.7.7 0 0 1 .496.205H7.8l.32.32H6.5l.32-.32a.703.703 0 0 1 .495-.205Zm.55-3.044v.75h-.95v1.892h-.75V3.441h-.911v-.75h2.611Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "5a7328e1-cec3-4d6a-878d-24e6d3d05de5",
+    "slug": "image-text-to-text",
+    "label": "Image-Text-to-Text",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M29.707 19.293l-3-3a1 1 0 0 0-1.414 0L16 25.586V30h4.414l9.293-9.293a1 1 0 0 0 0-1.414zM19.586 28H18v-1.586l5-5L24.586 23zM26 21.586L24.414 20L26 18.414L27.586 20z\" fill=\"currentColor\"></path><path d=\"M20 13v-2h-2.142a3.94 3.94 0 0 0-.425-1.019l1.517-1.517l-1.414-1.414l-1.517 1.517A3.944 3.944 0 0 0 15 8.142V6h-2v2.142a3.944 3.944 0 0 0-1.019.425L10.464 7.05L9.05 8.464l1.517 1.517A3.94 3.94 0 0 0 10.142 11H8v2h2.142a3.94 3.94 0 0 0 .425 1.019L9.05 15.536l1.414 1.414l1.517-1.517a3.944 3.944 0 0 0 1.019.425V18h2v-2.142a3.944 3.944 0 0 0 1.019-.425l1.517 1.517l1.414-1.414l-1.517-1.517A3.94 3.94 0 0 0 17.858 13zm-6 1a2 2 0 1 1 2-2a2.002 2.002 0 0 1-2 2z\" fill=\"currentColor\"></path><path d=\"M12 30H6a2.002 2.002 0 0 1-2-2V4a2.002 2.002 0 0 1 2-2h16a2.002 2.002 0 0 1 2 2v10h-2V4H6v24h6z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "00aa51ea-f8bb-4247-bce9-217a4695811f",
+    "slug": "image-text-to-video",
+    "label": "Image-Text-to-Video",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 12 12\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M9.9 6.87a.791.791 0 0 1 .79.78v.87h.01l1.57-1.26v3.14L10.7 9.15V10a.79.79 0 0 1-.79.79H6.77a.79.79 0 0 1-.79-.79V7.65a.792.792 0 0 1 .79-.78H9.9Zm-3.13 3.14H9.9V7.65H6.77v2.36ZM9.06 1.2a.7.7 0 0 1 .7.7v4.44a.791.791 0 0 0-.34-.08h-.36V1.9H2.43v3.55l.9-.9a.7.7 0 0 1 .99 0l1.74 1.74a.791.791 0 0 0-.51.47L3.82 5.04l-1.4 1.4v2.09H5.5v.7H2.43a.7.7 0 0 1-.7-.7V1.9a.7.7 0 0 1 .7-.7h6.63ZM7.316 5.735a.7.7 0 0 1 .496.205H7.8l.32.32H6.5l.32-.32a.703.703 0 0 1 .495-.205Zm.55-3.044v.75h-.95v1.892h-.75V3.441h-.911v-.75h2.611Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "2a3a6937-79fe-48c5-b8cc-623a226ac1a5",
+    "slug": "video-text-to-text",
+    "label": "Video-Text-to-Text",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"m30 19l-4 3.2V20a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2.2l4 3.2Zm-14 7v-6h8l.002 6Z\"></path><path fill=\"currentColor\" d=\"M12 28H8V4h8v6a2.006 2.006 0 0 0 2 2h6v3h2v-5a.91.91 0 0 0-.3-.7l-7-7A.9.9 0 0 0 18 2H8a2.006 2.006 0 0 0-2 2v24a2.006 2.006 0 0 0 2 2h4Zm6-23.6l5.6 5.6H18Z\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "c5e9f29b-b403-42f3-8bd7-aabc35fcb365",
+    "slug": "visual-document-retrieval",
+    "label": "Visual Document Retrieval",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 19\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.3625 13.85H10.1875V12.7625H12.3625V10.5875H13.45V12.7625C13.4497 13.0508 13.335 13.3272 13.1312 13.5311C12.9273 13.735 12.6508 13.8497 12.3625 13.85V13.85Z\"></path><path d=\"M5.8375 8.41246H4.75V6.23746C4.75029 5.94913 4.86496 5.67269 5.06884 5.4688C5.27272 5.26492 5.54917 5.15025 5.8375 5.14996H8.0125V6.23746H5.8375V8.41246Z\"></path><path d=\"M15.625 5.14998H13.45V2.97498C13.4497 2.68665 13.335 2.4102 13.1312 2.20632C12.9273 2.00244 12.6508 1.88777 12.3625 1.88748H2.575C2.28666 1.88777 2.01022 2.00244 1.80633 2.20632C1.60245 2.4102 1.48778 2.68665 1.4875 2.97498V12.7625C1.48778 13.0508 1.60245 13.3273 1.80633 13.5311C2.01022 13.735 2.28666 13.8497 2.575 13.85H4.75V16.025C4.75028 16.3133 4.86495 16.5898 5.06883 16.7936C5.27272 16.9975 5.54916 17.1122 5.8375 17.1125H15.625C15.9133 17.1122 16.1898 16.9975 16.3937 16.7936C16.5975 16.5898 16.7122 16.3133 16.7125 16.025V6.23748C16.7122 5.94915 16.5975 5.6727 16.3937 5.46882C16.1898 5.26494 15.9133 5.15027 15.625 5.14998V5.14998ZM15.625 16.025H5.8375V13.85H8.0125V12.7625H5.8375V10.5875H4.75V12.7625H2.575V2.97498H12.3625V5.14998H10.1875V6.23748H12.3625V8.41248H13.45V6.23748H15.625V16.025Z\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "0d6863d8-5282-490c-99d8-bff097898e19",
+    "slug": "visual-question-answering",
+    "label": "Visual Question Answering",
+    "category": "multimodal",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M10 16a5.99 5.99 0 0 0 9.471 4.885L24.586 26L26 24.586l-5.115-5.115A5.997 5.997 0 1 0 10 16m2 0a4 4 0 1 1 4 4a4.005 4.005 0 0 1-4-4\"></path><path fill=\"currentColor\" d=\"M29 7h-6.46l-1.71-2.55A1 1 0 0 0 20 4h-8a1 1 0 0 0-.83.45L9.46 7H3a1.003 1.003 0 0 0-1 1v17a1.003 1.003 0 0 0 1 1h9v-2H4V9h6a1 1 0 0 0 .83-.45L12.54 6h6.92l1.71 2.55A1 1 0 0 0 22 9h6v12h2V8a1.003 1.003 0 0 0-1-1\"></path></svg>",
+    "icon_color": "orange-400"
+  },
+  {
+    "uuid": "18bbe8ca-f4cd-4ce8-ad96-4c85e9e56475",
+    "slug": "depth-estimation",
+    "label": "Depth Estimation",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M29.474 19.12L23.681 16l5.793-3.12a1 1 0 0 0 0-1.76l-13-7a.998.998 0 0 0-.948 0l-13 7a1 1 0 0 0 0 1.76L8.319 16l-5.793 3.12a1 1 0 0 0 0 1.76l13 7a1 1 0 0 0 .948 0l13-7a1 1 0 0 0 0-1.76zM16 6.136L26.89 12L16 17.864L5.11 12zm0 19.728L5.11 20l5.319-2.864l5.097 2.744a1 1 0 0 0 .948 0l5.097-2.745L26.891 20z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "ceb744f2-8a00-42ba-b18f-bd7aed04fbc1",
+    "slug": "image-classification",
+    "label": "Image Classification",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><polygon points=\"4 20 4 22 8.586 22 2 28.586 3.414 30 10 23.414 10 28 12 28 12 20 4 20\"></polygon><path d=\"M19,14a3,3,0,1,0-3-3A3,3,0,0,0,19,14Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,19,10Z\"></path><path d=\"M26,4H6A2,2,0,0,0,4,6V16H6V6H26V21.17l-3.59-3.59a2,2,0,0,0-2.82,0L18,19.17,11.8308,13l-1.4151,1.4155L14,18l2.59,2.59a2,2,0,0,0,2.82,0L21,19l5,5v2H16v2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "d1a27c55-6c8d-4e05-a5d0-f1690cf2341a",
+    "slug": "image-feature-extraction",
+    "label": "Image Feature Extraction",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h5v2H5v14h14v-5.35l2 2V19q0 .825-.587 1.413T19 21H5Zm1-4l3-4l2.25 3l3-4L18 17H6Zm15.55-3.6l-3.1-3.1q-.525.35-1.125.525T16.05 11q-1.85 0-3.15-1.312T11.6 6.5q0-1.875 1.313-3.187T16.1 2q1.875 0 3.188 1.313T20.6 6.5q0 .675-.2 1.3t-.5 1.15L22.95 12l-1.4 1.4ZM16.1 9q1.05 0 1.775-.725T18.6 6.5q0-1.05-.725-1.775T16.1 4q-1.05 0-1.775.725T13.6 6.5q0 1.05.725 1.775T16.1 9Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "03fb533c-0d72-4770-8675-ae6abe7b4c00",
+    "slug": "image-segmentation",
+    "label": "Image Segmentation",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M30,3.4141,28.5859,2,2,28.5859,3.4141,30l2-2H26a2.0027,2.0027,0,0,0,2-2V5.4141ZM26,26H7.4141l7.7929-7.793,2.3788,2.3787a2,2,0,0,0,2.8284,0L22,19l4,3.9973Zm0-5.8318-2.5858-2.5859a2,2,0,0,0-2.8284,0L19,19.1682l-2.377-2.3771L26,7.4141Z\"></path><path d=\"M6,22V19l5-4.9966,1.3733,1.3733,1.4159-1.416-1.375-1.375a2,2,0,0,0-2.8284,0L6,16.1716V6H22V4H6A2.002,2.002,0,0,0,4,6V22Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "66d2d180-e7cb-49b0-8101-b109a9faed81",
+    "slug": "image-to-3d",
+    "label": "Image-to-3D",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M11 2H2v9h2V4h7V2z\" fill=\"currentColor\"></path><path d=\"M2 21v9h9v-2H4v-7H2z\" fill=\"currentColor\"></path><path d=\"M30 11V2h-9v2h7v7h2z\" fill=\"currentColor\"></path><path d=\"M21 30h9v-9h-2v7h-7v2z\" fill=\"currentColor\"></path><path d=\"M25.49 10.13l-9-5a1 1 0 0 0-1 0l-9 5A1 1 0 0 0 6 11v10a1 1 0 0 0 .51.87l9 5a1 1 0 0 0 1 0l9-5A1 1 0 0 0 26 21V11a1 1 0 0 0-.51-.87zM16 7.14L22.94 11L16 14.86L9.06 11zM8 12.7l7 3.89v7.71l-7-3.89zm9 11.6v-7.71l7-3.89v7.71z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "b46a60a2-6a13-47ba-a59d-773111aef68c",
+    "slug": "image-to-image",
+    "label": "Image-to-Image",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M4 22H2V4a2.002 2.002 0 0 1 2-2h18v2H4zm17-5a3 3 0 1 0-3-3a3.003 3.003 0 0 0 3 3zm0-4a1 1 0 1 1-1 1a1 1 0 0 1 1-1z\"></path><path fill=\"currentColor\" d=\"M28 7H9a2.002 2.002 0 0 0-2 2v19a2.002 2.002 0 0 0 2 2h19a2.002 2.002 0 0 0 2-2V9a2.002 2.002 0 0 0-2-2Zm0 21H9v-6l4-3.997l5.586 5.586a2 2 0 0 0 2.828 0L23 22.003L28 27Zm0-3.828l-3.586-3.586a2 2 0 0 0-2.828 0L20 22.172l-5.586-5.586a2 2 0 0 0-2.828 0L9 19.172V9h19Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "3ae85e2b-3a1f-44f4-a420-ee7229a284cc",
+    "slug": "image-to-text",
+    "label": "Image-to-Text",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M29.707 19.293l-3-3a1 1 0 0 0-1.414 0L16 25.586V30h4.414l9.293-9.293a1 1 0 0 0 0-1.414zM19.586 28H18v-1.586l5-5L24.586 23zM26 21.586L24.414 20L26 18.414L27.586 20z\" fill=\"currentColor\"></path><path d=\"M20 13v-2h-2.142a3.94 3.94 0 0 0-.425-1.019l1.517-1.517l-1.414-1.414l-1.517 1.517A3.944 3.944 0 0 0 15 8.142V6h-2v2.142a3.944 3.944 0 0 0-1.019.425L10.464 7.05L9.05 8.464l1.517 1.517A3.94 3.94 0 0 0 10.142 11H8v2h2.142a3.94 3.94 0 0 0 .425 1.019L9.05 15.536l1.414 1.414l1.517-1.517a3.944 3.944 0 0 0 1.019.425V18h2v-2.142a3.944 3.944 0 0 0 1.019-.425l1.517 1.517l1.414-1.414l-1.517-1.517A3.94 3.94 0 0 0 17.858 13zm-6 1a2 2 0 1 1 2-2a2.002 2.002 0 0 1-2 2z\" fill=\"currentColor\"></path><path d=\"M12 30H6a2.002 2.002 0 0 1-2-2V4a2.002 2.002 0 0 1 2-2h16a2.002 2.002 0 0 1 2 2v10h-2V4H6v24h6z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "22ab7d33-8e77-478d-a67f-ba1bfa5d7fd3",
+    "slug": "image-to-video",
+    "label": "Image-to-Video",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 10 12\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M1.43 1.2h6.63a.7.7 0 0 1 .7.7v4.44a.79.79 0 0 0-.34-.08h-.36V1.9H1.43v3.55l.9-.9a.7.7 0 0 1 .99 0l1.74 1.74a.79.79 0 0 0-.51.47L2.82 5.04l-1.4 1.4v2.09H4.5v.7H1.43a.7.7 0 0 1-.7-.7V1.9a.7.7 0 0 1 .7-.7ZM6.8 5.94l.32.32H5.5l.32-.32a.7.7 0 0 1 .99 0ZM6.2 4.52a1.05 1.05 0 1 1-1.17-1.75A1.05 1.05 0 0 1 6.2 4.52Zm-.4-1.16a.35.35 0 1 0-.38.58.35.35 0 0 0 .39-.58Zm3.9 5.16 1.57-1.26v3.14L9.7 9.15V10a.79.79 0 0 1-.79.79H5.77a.79.79 0 0 1-.79-.79V7.65a.79.79 0 0 1 .79-.78H8.9a.79.79 0 0 1 .79.78v.87Zm-3.93-.87v2.36H8.9V7.65H5.77Z\" clip-rule=\"evenodd\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "559d7c25-9a4c-48ae-ae97-073ae225b088",
+    "slug": "keypoint-detection",
+    "label": "Keypoint Detection",
+    "category": "computer-vision",
+    "applies_to": [
+      "models"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"m28.316 13.949l-.632-1.898L17 15.612V4h-2v11.612L4.316 12.051l-.632 1.898l10.684 3.561L7.2 27.066l1.6 1.201l7.2-9.6l7.2 9.6l1.6-1.201l-7.168-9.556z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "b16f9042-6ff0-40fa-9984-cd07b813e05d",
+    "slug": "mask-generation",
+    "label": "Mask Generation",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 12 12\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M1.84.73h6.63a.7.7 0 0 1 .7.7v4.36h-.7V1.43H1.84v3.54l.9-.9a.7.7 0 0 1 1 0l1.74 1.75a.79.79 0 0 0-.52.47L3.24 4.57l-1.4 1.4v2.08h3.07v.7H1.84a.7.7 0 0 1-.7-.7V1.43a.7.7 0 0 1 .7-.7Zm5.38 4.74.32.32H5.91l.32-.32a.7.7 0 0 1 .99 0Zm-.61-1.43A1.05 1.05 0 1 1 5.45 2.3 1.05 1.05 0 0 1 6.6 4.04Zm-.39-1.16a.35.35 0 1 0-.39.58.35.35 0 0 0 .4-.58Zm3.99 8.43a.65.65 0 0 0 .56-.64v-1.3h-.65.65v1.3a.65.65 0 0 1-.56.64Zm-.09-.64h-1.3 1.3Zm-1.33.68h1.33a.68.68 0 0 0 .68-.68V9.34h-.7v1.3H8.8v.71ZM6.22 8.43v-1.3 1.3Zm1.3-1.3v-.66h-1.3 1.3v.65ZM5.54 8.45h.7v-1.3h1.3v-.72H6.23a.68.68 0 0 0-.68.68v1.34Zm1.98 2.86v-.65h-1.3v-1.3h-.65.65v1.3h1.3v.65ZM5.54 9.34v1.33a.68.68 0 0 0 .68.68h1.33v-.71h-1.3v-1.3h-.71Zm5.23-.91v-1.3a.65.65 0 0 0-.65-.66h-1.3 1.3a.65.65 0 0 1 .65.65v1.3ZM8.8 6.44v.71h1.3v1.3h.71V7.13a.68.68 0 0 0-.68-.68H8.8Z\" clip-rule=\"evenodd\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "950a2462-f3fc-4e78-936f-2882bbdb3171",
+    "slug": "object-detection",
+    "label": "Object Detection",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M24,14a5.99,5.99,0,0,0-4.885,9.4712L14,28.5859,15.4141,30l5.1147-5.1147A5.9971,5.9971,0,1,0,24,14Zm0,10a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,24,24Z\"></path><path d=\"M17,12a3,3,0,1,0-3-3A3.0033,3.0033,0,0,0,17,12Zm0-4a1,1,0,1,1-1,1A1.0009,1.0009,0,0,1,17,8Z\"></path><path d=\"M12,24H4V17.9966L9,13l5.5859,5.5859L16,17.168l-5.5859-5.5855a2,2,0,0,0-2.8282,0L4,15.168V4H24v6h2V4a2.0023,2.0023,0,0,0-2-2H4A2.002,2.002,0,0,0,2,4V24a2.0023,2.0023,0,0,0,2,2h8Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "7a0d0030-d131-4cc5-932e-6181ef01dc9d",
+    "slug": "text-to-3d",
+    "label": "Text-to-3D",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M21.49 13.115l-9-5a1 1 0 0 0-1 0l-9 5A1.008 1.008 0 0 0 2 14v9.995a1 1 0 0 0 .52.87l9 5A1.004 1.004 0 0 0 12 30a1.056 1.056 0 0 0 .49-.135l9-5A.992.992 0 0 0 22 24V14a1.008 1.008 0 0 0-.51-.885zM11 27.295l-7-3.89v-7.72l7 3.89zm1-9.45L5.06 14L12 10.135l6.94 3.86zm8 5.56l-7 3.89v-7.72l7-3.89z\" fill=\"currentColor\"></path><path d=\"M30 6h-4V2h-2v4h-4v2h4v4h2V8h4V6z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "c1d12072-4173-438c-a5d6-204835b940ec",
+    "slug": "text-to-image",
+    "label": "Text-to-Image",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M29.537 13.76l-3.297-3.297a1.586 1.586 0 0 0-2.24 0L10 24.467V30h5.533l14.004-14a1.586 1.586 0 0 0 0-2.24zM14.704 28H12v-2.704l9.44-9.441l2.705 2.704zM25.56 17.145l-2.704-2.704l2.267-2.267l2.704 2.704z\" fill=\"currentColor\"></path><path d=\"M11 17h2v-7h3V8H8v2h3v7z\" fill=\"currentColor\"></path><path d=\"M8 20H4V4h16v4h2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "0915aa36-841f-4a4c-a9b7-ac78f1bfede1",
+    "slug": "text-to-video",
+    "label": "Text-to-Video",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3.91 7.49v13.77h6.78v2H3.9c-1.1 0-2-.9-2-2V7.5c0-1.11.9-2.01 2-2.01h13.93c1.11 0 2.02.9 2.02 2.01v3.56h-2V7.5l-.02-.01H3.91Zm5.97 4.65H7.53v-2h6.7v2h-2.35v6.52h-2v-6.52Zm6.82 1.24a2.6 2.6 0 0 0-2.6 2.59v7.95a2.6 2.6 0 0 0 2.6 2.6h7.63a2.6 2.6 0 0 0 2.59-2.6v-.51l1.54 1.28a1 1 0 0 0 1.64-.77v-7.95a1 1 0 0 0-1.64-.77l-1.54 1.28v-.51a2.6 2.6 0 0 0-2.6-2.6H16.7Zm-.6 2.59a.6.6 0 0 1 .6-.6h7.63a.6.6 0 0 1 .59.6v2.65a1 1 0 0 0 1.64.77l1.54-1.29v3.69l-1.54-1.29a1 1 0 0 0-1.64.77v2.65a.6.6 0 0 1-.6.6H16.7a.6.6 0 0 1-.6-.6v-7.95Z\" clip-rule=\"evenodd\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "8464a54f-5abd-4631-b62b-42d63f8f77b1",
+    "slug": "unconditional-image-generation",
+    "label": "Unconditional Image Generation",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M19 14a3 3 0 1 0-3-3a3 3 0 0 0 3 3Zm0-4a1 1 0 1 1-1 1a1 1 0 0 1 1-1Z\"></path><path fill=\"currentColor\" d=\"M26 4H6a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 22H6v-6l5-5l5.59 5.59a2 2 0 0 0 2.82 0L21 19l5 5Zm0-4.83l-3.59-3.59a2 2 0 0 0-2.82 0L18 19.17l-5.59-5.59a2 2 0 0 0-2.82 0L6 17.17V6h20Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "0a588930-f05b-4a5d-8d7d-62fdc2d36e9a",
+    "slug": "video-classification",
+    "label": "Video Classification",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21 26H16V24H21V18C21.0008 17.8168 21.052 17.6373 21.1479 17.4812C21.2438 17.3251 21.3807 17.1983 21.5438 17.1147C21.7068 17.0311 21.8897 16.994 22.0724 17.0072C22.2552 17.0205 22.4307 17.0837 22.58 17.19L28 21.06V10.94L22.58 14.81C22.4307 14.9163 22.2552 14.9795 22.0724 14.9928C21.8897 15.006 21.7068 14.9689 21.5438 14.8853C21.3807 14.8017 21.2438 14.6749 21.1479 14.5188C21.052 14.3627 21.0008 14.1832 21 14V8H4V16H2V8C2 7.46957 2.21071 6.96086 2.58579 6.58579C2.96086 6.21071 3.46957 6 4 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V12.06L28.42 8.19C28.5693 8.08373 28.7448 8.02051 28.9276 8.00724C29.1103 7.99396 29.2932 8.03115 29.4562 8.11473C29.6193 8.19832 29.7562 8.32509 29.8521 8.48121C29.948 8.63732 29.9992 8.81678 30 9V23C29.9992 23.1832 29.948 23.3627 29.8521 23.5188C29.7562 23.6749 29.6193 23.8017 29.4562 23.8853C29.2932 23.9689 29.1103 24.006 28.9276 23.9928C28.7448 23.9795 28.5693 23.9163 28.42 23.81L23 19.94V24C23 24.5304 22.7893 25.0391 22.4142 25.4142C22.0391 25.7893 21.5304 26 21 26ZM4.66667 19.3333V17.3333H12.6667V25.3333H10.6667V20.7473L4.08067 27.3333L2.66667 25.9193L9.25267 19.3333H4.66667Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "bd2ad9a7-aac7-4851-af70-64052950f6e6",
+    "slug": "video-to-video",
+    "label": "Video-to-Video",
+    "category": "computer-vision",
+    "applies_to": [
+      "models"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M21 26H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h17a2 2 0 0 1 2 2v4.06l5.42-3.87A1 1 0 0 1 30 9v14a1 1 0 0 1-1.58.81L23 19.94V24a2 2 0 0 1-2 2M4 8v16h17v-6a1 1 0 0 1 1.58-.81L28 21.06V10.94l-5.42 3.87A1 1 0 0 1 21 14V8Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "1db691ab-3d57-49a0-92ac-bfe1afc28448",
+    "slug": "zero-shot-image-classification",
+    "label": "Zero-Shot Image Classification",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 19\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.3625 13.85H10.1875V12.7625H12.3625V10.5875H13.45V12.7625C13.4497 13.0508 13.335 13.3272 13.1312 13.5311C12.9273 13.735 12.6508 13.8497 12.3625 13.85V13.85Z\"></path><path d=\"M5.8375 8.41246H4.75V6.23746C4.75029 5.94913 4.86496 5.67269 5.06884 5.4688C5.27272 5.26492 5.54917 5.15025 5.8375 5.14996H8.0125V6.23746H5.8375V8.41246Z\"></path><path d=\"M15.625 5.14998H13.45V2.97498C13.4497 2.68665 13.335 2.4102 13.1312 2.20632C12.9273 2.00244 12.6508 1.88777 12.3625 1.88748H2.575C2.28666 1.88777 2.01022 2.00244 1.80633 2.20632C1.60245 2.4102 1.48778 2.68665 1.4875 2.97498V12.7625C1.48778 13.0508 1.60245 13.3273 1.80633 13.5311C2.01022 13.735 2.28666 13.8497 2.575 13.85H4.75V16.025C4.75028 16.3133 4.86495 16.5898 5.06883 16.7936C5.27272 16.9975 5.54916 17.1122 5.8375 17.1125H15.625C15.9133 17.1122 16.1898 16.9975 16.3937 16.7936C16.5975 16.5898 16.7122 16.3133 16.7125 16.025V6.23748C16.7122 5.94915 16.5975 5.6727 16.3937 5.46882C16.1898 5.26494 15.9133 5.15027 15.625 5.14998V5.14998ZM15.625 16.025H5.8375V13.85H8.0125V12.7625H5.8375V10.5875H4.75V12.7625H2.575V2.97498H12.3625V5.14998H10.1875V6.23748H12.3625V8.41248H13.45V6.23748H15.625V16.025Z\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "c5e8ab6f-e4de-4e21-89ed-94928b01edce",
+    "slug": "zero-shot-object-detection",
+    "label": "Zero-Shot Object Detection",
+    "category": "computer-vision",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 12 12\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M1.84.73h6.63a.7.7 0 0 1 .7.7v4.36h-.7V1.43H1.84v3.54l.9-.9a.7.7 0 0 1 1 0l1.74 1.75a.79.79 0 0 0-.52.47L3.24 4.57l-1.4 1.4v2.08h3.07v.7H1.84a.7.7 0 0 1-.7-.7V1.43a.7.7 0 0 1 .7-.7Zm5.38 4.74.32.32H5.91l.32-.32a.7.7 0 0 1 .99 0Zm-.61-1.43A1.05 1.05 0 1 1 5.45 2.3 1.05 1.05 0 0 1 6.6 4.04Zm-.39-1.16a.35.35 0 1 0-.39.58.35.35 0 0 0 .4-.58Z\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7.77 7.07h-1.6v1.42h1.6V7.07Zm-2.2-.6v2.62h2.8V6.47h-2.8ZM8.53 10.17H6.17v.43h2.36v-.43Zm-2.96-.6v1.63h3.55V9.57H5.58ZM10.16 7.07h-.72v1.42h.72V7.07Zm-1.32-.6v2.62h1.92V6.47H8.84Z\" clip-rule=\"evenodd\"></path></svg>",
+    "icon_color": "blue-400"
+  },
+  {
+    "uuid": "ca006e66-e1d6-41b6-9de9-0bd7ab63c6b3",
+    "slug": "feature-extraction",
+    "label": "Feature Extraction",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M27 3H5a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 2v4H5V5zm-10 6h10v7H17zm-2 7H5v-7h10zM5 20h10v7H5zm12 7v-7h10v7z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "e7fd2dbe-1d56-4b22-aeb2-6692089be07e",
+    "slug": "fill-mask",
+    "label": "Fill-Mask",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 19\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.3625 13.85H10.1875V12.7625H12.3625V10.5875H13.45V12.7625C13.4497 13.0508 13.335 13.3272 13.1312 13.5311C12.9273 13.735 12.6508 13.8497 12.3625 13.85V13.85Z\"></path><path d=\"M5.8375 8.41246H4.75V6.23746C4.75029 5.94913 4.86496 5.67269 5.06884 5.4688C5.27272 5.26492 5.54917 5.15025 5.8375 5.14996H8.0125V6.23746H5.8375V8.41246Z\"></path><path d=\"M15.625 5.14998H13.45V2.97498C13.4497 2.68665 13.335 2.4102 13.1312 2.20632C12.9273 2.00244 12.6508 1.88777 12.3625 1.88748H2.575C2.28666 1.88777 2.01022 2.00244 1.80633 2.20632C1.60245 2.4102 1.48778 2.68665 1.4875 2.97498V12.7625C1.48778 13.0508 1.60245 13.3273 1.80633 13.5311C2.01022 13.735 2.28666 13.8497 2.575 13.85H4.75V16.025C4.75028 16.3133 4.86495 16.5898 5.06883 16.7936C5.27272 16.9975 5.54916 17.1122 5.8375 17.1125H15.625C15.9133 17.1122 16.1898 16.9975 16.3937 16.7936C16.5975 16.5898 16.7122 16.3133 16.7125 16.025V6.23748C16.7122 5.94915 16.5975 5.6727 16.3937 5.46882C16.1898 5.26494 15.9133 5.15027 15.625 5.14998V5.14998ZM15.625 16.025H5.8375V13.85H8.0125V12.7625H5.8375V10.5875H4.75V12.7625H2.575V2.97498H12.3625V5.14998H10.1875V6.23748H12.3625V8.41248H13.45V6.23748H15.625V16.025Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "008e1251-f08f-4e7b-9dd3-64ca93bc88a2",
+    "slug": "multiple-choice",
+    "label": "Multiple Choice",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "ed221a89-cc25-4a74-8455-c60eb87c7458",
+    "slug": "question-answering",
+    "label": "Question Answering",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M2 9h9V2H2zm2-5h5v3H4z\" fill=\"currentColor\"></path><path d=\"M2 19h9v-7H2zm2-5h5v3H4z\" fill=\"currentColor\"></path><path d=\"M2 29h9v-7H2zm2-5h5v3H4z\" fill=\"currentColor\"></path><path d=\"M27 9h-9l3.41-3.59L20 4l-6 6l6 6l1.41-1.41L18 11h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H15v2h12a3 3 0 0 0 3-3V12a3 3 0 0 0-3-3z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "24a065e9-9b0c-4f61-acdb-03bb5c787329",
+    "slug": "sentence-similarity",
+    "label": "Sentence Similarity",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M30 15H17V2h-2v13H2v2h13v13h2V17h13v-2z\"></path><path d=\"M25.586 20L27 21.414L23.414 25L27 28.586L25.586 30l-5-5l5-5z\"></path><path d=\"M11 30H3a1 1 0 0 1-.894-1.447l4-8a1.041 1.041 0 0 1 1.789 0l4 8A1 1 0 0 1 11 30zm-6.382-2h4.764L7 23.236z\"></path><path d=\"M28 12h-6a2.002 2.002 0 0 1-2-2V4a2.002 2.002 0 0 1 2-2h6a2.002 2.002 0 0 1 2 2v6a2.002 2.002 0 0 1-2 2zm-6-8v6h6.001L28 4z\"></path><path d=\"M7 12a5 5 0 1 1 5-5a5.006 5.006 0 0 1-5 5zm0-8a3 3 0 1 0 3 3a3.003 3.003 0 0 0-3-3z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "01e5d6e5-53db-4afe-b167-a5235f50bce2",
+    "slug": "summarization",
+    "label": "Summarization",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 19\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M15.4988 8.79309L12.1819 5.47621C12.0188 5.25871 11.7469 5.14996 11.475 5.14996H7.12501C6.52688 5.14996 6.03751 5.63934 6.03751 6.23746V16.025C6.03751 16.6231 6.52688 17.1125 7.12501 17.1125H14.7375C15.3356 17.1125 15.825 16.6231 15.825 16.025V9.55434C15.825 9.28246 15.7163 9.01059 15.4988 8.79309V8.79309ZM11.475 6.23746L14.6831 9.49996H11.475V6.23746ZM7.12501 16.025V6.23746H10.3875V9.49996C10.3875 10.0981 10.8769 10.5875 11.475 10.5875H14.7375V16.025H7.12501Z\"></path><path d=\"M3.8625 10.5875H2.775V2.97498C2.775 2.37686 3.26438 1.88748 3.8625 1.88748H11.475V2.97498H3.8625V10.5875Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "c0eb4fa1-eb65-4d1a-a698-139772bac35c",
+    "slug": "table-question-answering",
+    "label": "Table Question Answering",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 19\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M15.825 1.88748H6.0375C5.74917 1.88777 5.47272 2.00244 5.26884 2.20632C5.06496 2.4102 4.95029 2.68665 4.95 2.97498V4.60623H2.775C2.48667 4.60652 2.21022 4.72119 2.00634 4.92507C1.80246 5.12895 1.68779 5.4054 1.6875 5.69373V16.025C1.68779 16.3133 1.80246 16.5898 2.00634 16.7936C2.21022 16.9975 2.48667 17.1122 2.775 17.1125H15.825C16.1133 17.1122 16.3898 16.9975 16.5937 16.7936C16.7975 16.5898 16.9122 16.3133 16.9125 16.025V2.97498C16.9122 2.68665 16.7975 2.4102 16.5937 2.20632C16.3898 2.00244 16.1133 1.88777 15.825 1.88748ZM6.0375 2.97498H15.825V4.60623H6.0375V2.97498ZM15.825 8.41248H11.475V5.69373H15.825V8.41248ZM6.0375 12.2187V9.49998H10.3875V12.2187H6.0375ZM10.3875 13.3062V16.025H6.0375V13.3062H10.3875ZM4.95 12.2187H2.775V9.49998H4.95V12.2187ZM10.3875 5.69373V8.41248H6.0375V5.69373H10.3875ZM11.475 9.49998H15.825V12.2187H11.475V9.49998ZM4.95 5.69373V8.41248H2.775V5.69373H4.95ZM2.775 13.3062H4.95V16.025H2.775V13.3062ZM11.475 16.025V13.3062H15.825V16.025H11.475Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "7a613552-eda0-47fb-b1b3-bcdb1c9baa7f",
+    "slug": "table-to-text",
+    "label": "Table-to-Text",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "0fcde2d7-2882-4f5b-8e17-0c3a68cbdbb9",
+    "slug": "text-classification",
+    "label": "Text Classification",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"20\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"10\" cy=\"14\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"28\" cy=\"4\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"22\" cy=\"6\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"28\" cy=\"10\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"20\" cy=\"12\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"28\" cy=\"22\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"26\" cy=\"28\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"20\" cy=\"26\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"22\" cy=\"20\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"16\" cy=\"4\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"4\" cy=\"24\" r=\"2\" fill=\"currentColor\"></circle><circle cx=\"4\" cy=\"16\" r=\"2\" fill=\"currentColor\"></circle></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "f79e7948-c089-4d57-8f5e-35aa2f26053e",
+    "slug": "text-generation",
+    "label": "Text Generation",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M16.2607 8.08202L14.468 6.28928C14.3063 6.12804 14.0873 6.03749 13.859 6.03749C13.6307 6.03749 13.4117 6.12804 13.25 6.28928L5.6375 13.904V16.9125H8.64607L16.2607 9.30002C16.422 9.13836 16.5125 8.91935 16.5125 8.69102C16.5125 8.4627 16.422 8.24369 16.2607 8.08202V8.08202ZM8.1953 15.825H6.725V14.3547L11.858 9.22118L13.3288 10.6915L8.1953 15.825ZM14.0982 9.92262L12.6279 8.45232L13.8606 7.21964L15.3309 8.68994L14.0982 9.92262Z\"></path><path d=\"M6.18125 9.84373H7.26875V6.03748H8.9V4.94998H4.55V6.03748H6.18125V9.84373Z\"></path><path d=\"M4.55 11.475H2.375V2.775H11.075V4.95H12.1625V2.775C12.1625 2.48658 12.0479 2.20997 11.844 2.00602C11.64 1.80208 11.3634 1.6875 11.075 1.6875H2.375C2.08658 1.6875 1.80997 1.80208 1.60602 2.00602C1.40207 2.20997 1.2875 2.48658 1.2875 2.775V11.475C1.2875 11.7634 1.40207 12.04 1.60602 12.244C1.80997 12.4479 2.08658 12.5625 2.375 12.5625H4.55V11.475Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "4c5035cf-3123-4b1c-86c9-af8a1997dda0",
+    "slug": "text-ranking",
+    "label": "Text Ranking",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M2 9h9V2H2zm2-5h5v3H4z\" fill=\"currentColor\"></path><path d=\"M2 19h9v-7H2zm2-5h5v3H4z\" fill=\"currentColor\"></path><path d=\"M2 29h9v-7H2zm2-5h5v3H4z\" fill=\"currentColor\"></path><path d=\"M27 9h-9l3.41-3.59L20 4l-6 6l6 6l1.41-1.41L18 11h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H15v2h12a3 3 0 0 0 3-3V12a3 3 0 0 0-3-3z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "2cfd614f-6594-4544-9bb2-0b21641a31fb",
+    "slug": "text-retrieval",
+    "label": "Text Retrieval",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "55825831-5a1b-4e60-8ca0-9368b675d2c0",
+    "slug": "token-classification",
+    "label": "Token Classification",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M11.075 10.1875H12.1625V11.275H11.075V10.1875Z\"></path><path d=\"M15.425 9.10004H16.5125V10.1875H15.425V9.10004Z\"></path><path d=\"M7.8125 3.66254H8.9V4.75004H7.8125V3.66254Z\"></path><path d=\"M8.90001 12.3625H6.72501V9.09998C6.72472 8.81165 6.61005 8.5352 6.40617 8.33132C6.20228 8.12744 5.92584 8.01277 5.63751 8.01248H2.37501C2.08667 8.01277 1.81023 8.12744 1.60635 8.33132C1.40246 8.5352 1.28779 8.81165 1.28751 9.09998V12.3625C1.28779 12.6508 1.40246 12.9273 1.60635 13.1311C1.81023 13.335 2.08667 13.4497 2.37501 13.45H5.63751V15.625C5.63779 15.9133 5.75246 16.1898 5.95635 16.3936C6.16023 16.5975 6.43667 16.7122 6.72501 16.7125H8.90001C9.18834 16.7122 9.46478 16.5975 9.66867 16.3936C9.87255 16.1898 9.98722 15.9133 9.98751 15.625V13.45C9.98722 13.1616 9.87255 12.8852 9.66867 12.6813C9.46478 12.4774 9.18834 12.3628 8.90001 12.3625V12.3625ZM2.37501 12.3625V9.09998H5.63751V12.3625H2.37501ZM6.72501 15.625V13.45H8.90001V15.625H6.72501Z\"></path><path d=\"M15.425 16.7125H13.25C12.9617 16.7122 12.6852 16.5976 12.4813 16.3937C12.2775 16.1898 12.1628 15.9134 12.1625 15.625V13.45C12.1628 13.1617 12.2775 12.8852 12.4813 12.6814C12.6852 12.4775 12.9617 12.3628 13.25 12.3625H15.425C15.7133 12.3628 15.9898 12.4775 16.1937 12.6814C16.3976 12.8852 16.5122 13.1617 16.5125 13.45V15.625C16.5122 15.9134 16.3976 16.1898 16.1937 16.3937C15.9898 16.5976 15.7133 16.7122 15.425 16.7125ZM13.25 13.45V15.625H15.425V13.45H13.25Z\"></path><path d=\"M15.425 1.48752H12.1625C11.8742 1.48781 11.5977 1.60247 11.3938 1.80636C11.19 2.01024 11.0753 2.28668 11.075 2.57502V5.83752H9.98751C9.69917 5.83781 9.42273 5.95247 9.21885 6.15636C9.01496 6.36024 8.9003 6.63668 8.90001 6.92502V8.01252C8.9003 8.30085 9.01496 8.5773 9.21885 8.78118C9.42273 8.98506 9.69917 9.09973 9.98751 9.10002H11.075C11.3633 9.09973 11.6398 8.98506 11.8437 8.78118C12.0476 8.5773 12.1622 8.30085 12.1625 8.01252V6.92502H15.425C15.7133 6.92473 15.9898 6.81006 16.1937 6.60618C16.3976 6.4023 16.5122 6.12585 16.5125 5.83752V2.57502C16.5122 2.28668 16.3976 2.01024 16.1937 1.80636C15.9898 1.60247 15.7133 1.48781 15.425 1.48752ZM9.98751 8.01252V6.92502H11.075V8.01252H9.98751ZM12.1625 5.83752V2.57502H15.425V5.83752H12.1625Z\"></path><path d=\"M4.55001 5.83752H2.37501C2.08667 5.83723 1.81023 5.72256 1.60635 5.51868C1.40246 5.3148 1.28779 5.03835 1.28751 4.75002V2.57502C1.28779 2.28668 1.40246 2.01024 1.60635 1.80636C1.81023 1.60247 2.08667 1.48781 2.37501 1.48752H4.55001C4.83834 1.48781 5.11478 1.60247 5.31867 1.80636C5.52255 2.01024 5.63722 2.28668 5.63751 2.57502V4.75002C5.63722 5.03835 5.52255 5.3148 5.31867 5.51868C5.11478 5.72256 4.83834 5.83723 4.55001 5.83752V5.83752ZM2.37501 2.57502V4.75002H4.55001V2.57502H2.37501Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "311c5c5a-b1df-43a8-b587-cb9ecedebb66",
+    "slug": "translation",
+    "label": "Translation",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M15.7435 16.3688H16.9125L13.65 8.21251H12.3722L9.1097 16.3688H10.2788L11.1488 14.1938H14.8735L15.7435 16.3688ZM11.5838 13.1063L13.0084 9.53926L14.4385 13.1063H11.5838Z\"></path><path d=\"M10.3875 4.40625V3.31875H6.58125V1.6875H5.49375V3.31875H1.6875V4.40625H7.52737C7.2261 5.64892 6.63129 6.80125 5.79281 7.76663C5.24624 7.08884 4.8246 6.31923 4.54763 5.49375H3.40575C3.74803 6.60116 4.30202 7.63159 5.037 8.52787C4.2247 9.3158 3.27338 9.94633 2.23125 10.3875L2.63906 11.3989C3.81007 10.9044 4.87658 10.1922 5.78194 9.3C6.67088 10.2044 7.73719 10.9153 8.91394 11.388L9.3 10.3875C8.25187 9.98235 7.3026 9.35754 6.516 8.55506C7.55705 7.36858 8.2892 5.94351 8.6475 4.40625H10.3875Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "465aa72a-e124-4ee3-8f31-81b9ba95a522",
+    "slug": "zero-shot-classification",
+    "label": "Zero-Shot Classification",
+    "category": "natural-language-processing",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M16.7125 8.75625H9.64375V1.6875H8.55625V8.75625H1.4875V9.84375H8.55625V16.9125H9.64375V9.84375H16.7125V8.75625Z\"></path><path d=\"M3.11875 16.9125C2.79612 16.9125 2.48073 16.8168 2.21247 16.6376C1.94421 16.4584 1.73513 16.2036 1.61167 15.9055C1.4882 15.6074 1.4559 15.2794 1.51884 14.963C1.58178 14.6466 1.73714 14.3559 1.96528 14.1278C2.19341 13.8997 2.48407 13.7443 2.8005 13.6814C3.11694 13.6184 3.44493 13.6507 3.743 13.7742C4.04107 13.8976 4.29584 14.1067 4.47508 14.375C4.65432 14.6432 4.75 14.9586 4.75 15.2813C4.74956 15.7138 4.57756 16.1284 4.27174 16.4343C3.96591 16.7401 3.55125 16.9121 3.11875 16.9125V16.9125ZM3.11875 14.7375C3.0112 14.7375 2.90607 14.7694 2.81665 14.8291C2.72724 14.8889 2.65754 14.9738 2.61639 15.0732C2.57523 15.1725 2.56446 15.2819 2.58544 15.3873C2.60642 15.4928 2.65821 15.5897 2.73426 15.6657C2.8103 15.7418 2.90719 15.7936 3.01267 15.8146C3.11814 15.8355 3.22747 15.8248 3.32683 15.7836C3.42619 15.7425 3.51111 15.6728 3.57086 15.5834C3.63061 15.4939 3.6625 15.3888 3.6625 15.2813C3.66235 15.1371 3.60502 14.9989 3.50308 14.8969C3.40113 14.795 3.26291 14.7377 3.11875 14.7375Z\"></path><path d=\"M4.75 4.95C4.42737 4.95 4.11198 4.85433 3.84372 4.67509C3.57547 4.49584 3.36639 4.24107 3.24292 3.943C3.11945 3.64493 3.08715 3.31694 3.15009 3.00051C3.21303 2.68408 3.3684 2.39342 3.59653 2.16528C3.82466 1.93715 4.11533 1.78179 4.43176 1.71884C4.74819 1.6559 5.07618 1.68821 5.37425 1.81167C5.67232 1.93514 5.92709 2.14422 6.10633 2.41248C6.28558 2.68073 6.38125 2.99612 6.38125 3.31875C6.38082 3.75125 6.20881 4.16592 5.90299 4.47174C5.59716 4.77757 5.1825 4.94957 4.75 4.95ZM4.75 2.775C4.64245 2.775 4.53733 2.80689 4.44791 2.86664C4.35849 2.92639 4.28879 3.01131 4.24764 3.11067C4.20648 3.21002 4.19572 3.31935 4.2167 3.42483C4.23768 3.53031 4.28946 3.62719 4.36551 3.70324C4.44155 3.77928 4.53844 3.83107 4.64392 3.85205C4.7494 3.87303 4.85873 3.86227 4.95808 3.82111C5.05744 3.77995 5.14236 3.71026 5.20211 3.62084C5.26186 3.53142 5.29375 3.42629 5.29375 3.31875C5.2936 3.17458 5.23627 3.03636 5.13433 2.93442C5.03239 2.83248 4.89417 2.77514 4.75 2.775Z\"></path><path d=\"M12.3625 7.66875C12.0399 7.66875 11.7245 7.57308 11.4562 7.39384C11.188 7.21459 10.9789 6.95982 10.8554 6.66175C10.732 6.36368 10.6996 6.03569 10.7626 5.71926C10.8255 5.40283 10.9809 5.11217 11.209 4.88403C11.4372 4.6559 11.7278 4.50054 12.0443 4.43759C12.3607 4.37465 12.6887 4.40696 12.9867 4.53042C13.2848 4.65389 13.5396 4.86297 13.7188 5.13123C13.8981 5.39948 13.9937 5.71487 13.9937 6.0375C13.9933 6.47 13.8213 6.88467 13.5155 7.19049C13.2097 7.49632 12.795 7.66832 12.3625 7.66875ZM12.3625 5.49375C12.255 5.49375 12.1498 5.52564 12.0604 5.58539C11.971 5.64514 11.9013 5.73006 11.8601 5.82942C11.819 5.92877 11.8082 6.0381 11.8292 6.14358C11.8502 6.24906 11.902 6.34595 11.978 6.42199C12.0541 6.49803 12.1509 6.54982 12.2564 6.5708C12.3619 6.59178 12.4712 6.58102 12.5706 6.53986C12.6699 6.4987 12.7549 6.42901 12.8146 6.33959C12.8744 6.25017 12.9062 6.14504 12.9062 6.0375C12.9061 5.89333 12.8488 5.75511 12.7468 5.65317C12.6449 5.55123 12.5067 5.49389 12.3625 5.49375Z\"></path><path d=\"M6.38125 7.66876C6.98186 7.66876 7.46875 7.18187 7.46875 6.58126C7.46875 5.98065 6.98186 5.49376 6.38125 5.49376C5.78064 5.49376 5.29375 5.98065 5.29375 6.58126C5.29375 7.18187 5.78064 7.66876 6.38125 7.66876Z\"></path><path d=\"M6.38125 13.1063C6.98186 13.1063 7.46875 12.6194 7.46875 12.0188C7.46875 11.4181 6.98186 10.9313 6.38125 10.9313C5.78064 10.9313 5.29375 11.4181 5.29375 12.0188C5.29375 12.6194 5.78064 13.1063 6.38125 13.1063Z\"></path><path d=\"M11.8187 13.1063C12.4194 13.1063 12.9062 12.6194 12.9062 12.0188C12.9062 11.4181 12.4194 10.9313 11.8187 10.9313C11.2181 10.9313 10.7312 11.4181 10.7312 12.0188C10.7312 12.6194 11.2181 13.1063 11.8187 13.1063Z\"></path><path d=\"M12.3625 16.9125C12.9631 16.9125 13.45 16.4256 13.45 15.825C13.45 15.2244 12.9631 14.7375 12.3625 14.7375C11.7619 14.7375 11.275 15.2244 11.275 15.825C11.275 16.4256 11.7619 16.9125 12.3625 16.9125Z\"></path><path d=\"M15.625 14.7375C16.2256 14.7375 16.7125 14.2506 16.7125 13.65C16.7125 13.0494 16.2256 12.5625 15.625 12.5625C15.0244 12.5625 14.5375 13.0494 14.5375 13.65C14.5375 14.2506 15.0244 14.7375 15.625 14.7375Z\"></path><path d=\"M2.575 7.66876C3.17561 7.66876 3.6625 7.18187 3.6625 6.58126C3.6625 5.98065 3.17561 5.49376 2.575 5.49376C1.97439 5.49376 1.4875 5.98065 1.4875 6.58126C1.4875 7.18187 1.97439 7.66876 2.575 7.66876Z\"></path><path d=\"M15.625 3.8625C16.2256 3.8625 16.7125 3.37561 16.7125 2.775C16.7125 2.17439 16.2256 1.6875 15.625 1.6875C15.0244 1.6875 14.5375 2.17439 14.5375 2.775C14.5375 3.37561 15.0244 3.8625 15.625 3.8625Z\"></path></svg>",
+    "icon_color": "red-400"
+  },
+  {
+    "uuid": "085dcfe4-0543-4bc5-a6c9-a92baeb33eb1",
+    "slug": "audio-classification",
+    "label": "Audio Classification",
+    "category": "audio",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M25 4H10a2.002 2.002 0 0 0-2 2v14.556A3.955 3.955 0 0 0 6 20a4 4 0 1 0 4 4V12h15v8.556A3.954 3.954 0 0 0 23 20a4 4 0 1 0 4 4V6a2.002 2.002 0 0 0-2-2zM6 26a2 2 0 1 1 2-2a2.002 2.002 0 0 1-2 2zm17 0a2 2 0 1 1 2-2a2.003 2.003 0 0 1-2 2zM10 6h15v4H10z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "green-400"
+  },
+  {
+    "uuid": "de6d4159-609f-4146-bf4c-8b98588e8bdf",
+    "slug": "audio-to-audio",
+    "label": "Audio-to-Audio",
+    "category": "audio",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.5 11.12H5C5.26513 11.1203 5.51933 11.2257 5.70681 11.4132C5.89429 11.6007 5.99973 11.8549 6 12.12V13.12C5.99973 13.3851 5.89429 13.6393 5.70681 13.8268C5.51933 14.0143 5.26513 14.1197 5 14.12H4.5V16.12H3.5V14.12H3C2.73486 14.1197 2.48066 14.0143 2.29319 13.8268C2.10571 13.6393 2.00026 13.3851 2 13.12V12.12C2.00026 11.8549 2.10571 11.6007 2.29319 11.4132C2.48066 11.2257 2.73486 11.1203 3 11.12H3.5V2.12H4.5V11.12ZM3 13.12H5V12.12H3V13.12ZM10 4.12H9.5V2.12H8.5V4.12H8C7.73487 4.12027 7.48067 4.22571 7.29319 4.41319C7.10571 4.60067 7.00027 4.85487 7 5.12V6.12C7.00027 6.38514 7.10571 6.63934 7.29319 6.82682C7.48067 7.01429 7.73487 7.11974 8 7.12H8.5V16.12H9.5V7.12H10C10.2651 7.11974 10.5193 7.01429 10.7068 6.82682C10.8943 6.63934 10.9997 6.38514 11 6.12V5.12C10.9997 4.85487 10.8943 4.60067 10.7068 4.41319C10.5193 4.22571 10.2651 4.12027 10 4.12ZM10 6.12H8V5.12H10V6.12ZM15 8.12H14.5V2.12H13.5V8.12H13C12.7349 8.12027 12.4807 8.22571 12.2932 8.41319C12.1057 8.60067 12.0003 8.85486 12 9.12V10.12C12.0003 10.3851 12.1057 10.6393 12.2932 10.8268C12.4807 11.0143 12.7349 11.1197 13 11.12H13.5V16.12H14.5V11.12H15C15.2651 11.1196 15.5192 11.0141 15.7067 10.8267C15.8941 10.6392 15.9996 10.3851 16 10.12V9.12C15.9997 8.85486 15.8943 8.60067 15.7068 8.41319C15.5193 8.22571 15.2651 8.12027 15 8.12ZM15 10.12H13V9.12H15V10.12Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "green-400"
+  },
+  {
+    "uuid": "f0b97e79-c163-41f6-bcde-5ee7fd829dce",
+    "slug": "automatic-speech-recognition",
+    "label": "Automatic Speech Recognition",
+    "category": "audio",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.38893 3.42133C7.9778 3.14662 7.49446 3 7 3C6.33696 3 5.70108 3.26339 5.23223 3.73223C4.76339 4.20107 4.5 4.83696 4.5 5.5C4.5 5.99445 4.64662 6.4778 4.92133 6.88893C5.19603 7.30005 5.58648 7.62048 6.04329 7.8097C6.50011 7.99892 7.00278 8.04843 7.48773 7.95196C7.97268 7.8555 8.41814 7.6174 8.76777 7.26777C9.1174 6.91814 9.3555 6.47268 9.45197 5.98773C9.54843 5.50277 9.49892 5.00011 9.3097 4.54329C9.12048 4.08648 8.80005 3.69603 8.38893 3.42133ZM5.05551 2.58986C5.63108 2.20527 6.30777 2 7 2C7.92826 2 8.8185 2.36875 9.47488 3.02513C10.1313 3.6815 10.5 4.57174 10.5 5.5C10.5 6.19223 10.2947 6.86892 9.91015 7.4445C9.52556 8.02007 8.97894 8.46867 8.33939 8.73358C7.69985 8.99849 6.99612 9.0678 6.31719 8.93275C5.63825 8.7977 5.01461 8.46436 4.52513 7.97487C4.03564 7.48539 3.7023 6.86175 3.56725 6.18282C3.4322 5.50388 3.50152 4.80015 3.76642 4.16061C4.03133 3.52107 4.47993 2.97444 5.05551 2.58986ZM14.85 9.6425L15.7075 10.5C15.8005 10.5927 15.8743 10.7029 15.9245 10.8242C15.9747 10.9456 16.0004 11.0757 16 11.207V16H2V13.5C2.00106 12.5721 2.37015 11.6824 3.0263 11.0263C3.68244 10.3701 4.57207 10.0011 5.5 10H8.5C9.42793 10.0011 10.3176 10.3701 10.9737 11.0263C11.6299 11.6824 11.9989 12.5721 12 13.5V15H15V11.207L14.143 10.35C13.9426 10.4476 13.7229 10.4989 13.5 10.5C13.2033 10.5 12.9133 10.412 12.6666 10.2472C12.42 10.0824 12.2277 9.84811 12.1142 9.57403C12.0006 9.29994 11.9709 8.99834 12.0288 8.70737C12.0867 8.41639 12.2296 8.14912 12.4393 7.93934C12.6491 7.72956 12.9164 7.5867 13.2074 7.52882C13.4983 7.47094 13.7999 7.50065 14.074 7.61418C14.3481 7.72771 14.5824 7.91997 14.7472 8.16665C14.912 8.41332 15 8.70333 15 9C14.9988 9.22271 14.9475 9.44229 14.85 9.6425ZM3.73311 11.7331C3.26444 12.2018 3.00079 12.8372 3 13.5V15H11V13.5C10.9992 12.8372 10.7356 12.2018 10.2669 11.7331C9.79822 11.2644 9.1628 11.0008 8.5 11H5.5C4.8372 11.0008 4.20178 11.2644 3.73311 11.7331Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "green-400"
+  },
+  {
+    "uuid": "16108368-cafd-42df-a594-b12ba7705ec8",
+    "slug": "text-to-audio",
+    "label": "Text-to-Audio",
+    "category": "audio",
+    "applies_to": [
+      "models",
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "723c1ee7-2fcf-4660-9224-84add46b4192",
+    "slug": "text-to-speech",
+    "label": "Text-to-Speech",
+    "category": "audio",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.0625 3.0625L10 3.0625V2H3.0625C2.78071 2 2.51045 2.11194 2.3112 2.3112C2.11194 2.51046 2 2.78071 2 3.0625V11.5625C2 11.8443 2.11194 12.1145 2.3112 12.3138C2.51045 12.5131 2.78071 12.625 3.0625 12.625H7V11.5625H3.0625L3.0625 3.0625ZM5.78125 9.96875H6.84375V6.25H8.4375V5.1875H4.1875V6.25H5.78125V9.96875ZM12.5 13C13.163 13 13.7989 12.7366 14.2678 12.2678C14.7366 11.7989 15 11.163 15 10.5V5.5C15 4.83696 14.7366 4.20107 14.2678 3.73223C13.7989 3.26339 13.163 3 12.5 3C11.837 3 11.2011 3.26339 10.7322 3.73223C10.2634 4.20107 10 4.83696 10 5.5V10.5C10 11.163 10.2634 11.7989 10.7322 12.2678C11.2011 12.7366 11.837 13 12.5 13ZM11 5.5C11 5.10218 11.158 4.72064 11.4393 4.43934C11.7206 4.15804 12.1022 4 12.5 4C12.8978 4 13.2794 4.15804 13.5607 4.43934C13.842 4.72064 14 5.10218 14 5.5V10.5C14 10.8978 13.842 11.2794 13.5607 11.5607C13.2794 11.842 12.8978 12 12.5 12C12.1022 12 11.7206 11.842 11.4393 11.5607C11.158 11.2794 11 10.8978 11 10.5V5.5ZM16 9V10.5C16 11.4283 15.6313 12.3185 14.9749 12.9749C14.3185 13.6313 13.4283 14 12.5 14C11.5717 14 10.6815 13.6313 10.0251 12.9749C9.36875 12.3185 9 11.4283 9 10.5V9H8V10.5C8.00053 11.6065 8.40873 12.6741 9.14661 13.4987C9.88449 14.3232 10.9003 14.8471 12 14.97V16H10V17H15V16H13V14.97C14.0997 14.8471 15.1155 14.3232 15.8534 13.4987C16.5913 12.6741 16.9995 11.6065 17 10.5V9H16Z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "green-400"
+  },
+  {
+    "uuid": "fab49992-8b02-41f0-84b4-879e2d34ca9c",
+    "slug": "voice-activity-detection",
+    "label": "Voice Activity Detection",
+    "category": "audio",
+    "applies_to": [
+      "models",
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "df56ab48-db93-48bd-9953-66c088e75a3b",
+    "slug": "tabular-classification",
+    "label": "Tabular Classification",
+    "category": "tabular",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M29 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2zm-2 0v4H5V5zm0 22H5v-4h22zm0-6H5v-4h22zm0-6H5v-4h22z\" fill=\"currentColor\"></path></svg>",
+    "icon_color": "indigo-400"
+  },
+  {
+    "uuid": "f5a73b2f-dbd7-40f1-9735-4ae3f86dea97",
+    "slug": "tabular-regression",
+    "label": "Tabular Regression",
+    "category": "tabular",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"m4.67 28l6.39-12l7.3 6.49a2 2 0 0 0 1.7.47a2 2 0 0 0 1.42-1.07L27 10.9l-1.82-.9l-5.49 11l-7.3-6.49a2 2 0 0 0-1.68-.51a2 2 0 0 0-1.42 1L4 25V2H2v26a2 2 0 0 0 2 2h26v-2Z\"></path></svg>",
+    "icon_color": "indigo-400"
+  },
+  {
+    "uuid": "f8f92c78-8ca6-409a-9381-b9e12d9d25ff",
+    "slug": "tabular-to-text",
+    "label": "Tabular-to-Text",
+    "category": "tabular",
+    "applies_to": [
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "459870b0-5e48-497b-b3f7-7468a65c64e8",
+    "slug": "time-series-forecasting",
+    "label": "Time Series Forecasting",
+    "category": "tabular",
+    "applies_to": [
+      "models",
+      "datasets"
+    ]
+  },
+  {
+    "uuid": "d3bddc0e-1261-4212-a484-46ed0640958a",
+    "slug": "reinforcement-learning",
+    "label": "Reinforcement Learning",
+    "category": "reinforcement-learning",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M18 10h2v2h-2zm-6 0h2v2h-2z\"></path><path fill=\"currentColor\" d=\"M26 20h-5v-2h1a2.002 2.002 0 0 0 2-2v-4h2v-2h-2V8a2.002 2.002 0 0 0-2-2h-2V2h-2v4h-4V2h-2v4h-2a2.002 2.002 0 0 0-2 2v2H6v2h2v4a2.002 2.002 0 0 0 2 2h1v2H6a2.002 2.002 0 0 0-2 2v8h2v-8h20v8h2v-8a2.002 2.002 0 0 0-2-2ZM10 8h12v8H10Zm3 10h6v2h-6Z\"></path></svg>",
+    "icon_color": "yellow-400"
+  },
+  {
+    "uuid": "4823358f-9ff1-47fc-bf94-33af76b1e9b7",
+    "slug": "robotics",
+    "label": "Robotics",
+    "category": "reinforcement-learning",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M26 12h-4V8h2V6h-8V2h-2v4H6v2h2v4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2zM10 8h12v4H10zm16 20H4V14h22zm-3-9a2 2 0 1 1-2-2 2 2 0 0 1 2 2zM9 19a2 2 0 1 1 2 2 2 2 0 0 1-2-2zm12 5H11v-2h10z\"/></svg>",
+    "icon_color": "purple-400"
+  },
+  {
+    "uuid": "57d0046e-4396-48cf-9ef9-c37652813d88",
+    "slug": "graph-ml",
+    "label": "Graph Machine Learning",
+    "category": "other",
+    "applies_to": [
+      "models",
+      "datasets"
+    ],
+    "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M25 19a3.95 3.95 0 0 0-2.41.84l-3.43-3.43A4 4 0 0 0 20 14h6v-2h-6.13a4 4 0 0 0-7.74 0H6v2h6.13a4 4 0 0 0 .84 1.41l-3.43 3.43A3.95 3.95 0 0 0 7 18a4 4 0 1 0 4 4 3.95 3.95 0 0 0-.84-2.41l3.43-3.43a4 4 0 0 0 4.82 0l3.43 3.43A3.95 3.95 0 0 0 21 22a4 4 0 1 0 4-4zM7 24a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm9-10a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm9 10a2 2 0 1 1 2-2 2 2 0 0 1-2 2z\"/></svg>",
+    "icon_color": "yellow-400"
+  }
+]

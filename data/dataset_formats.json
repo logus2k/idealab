@@ -1,0 +1,52 @@
+[
+  {
+    "uuid": "602c2dfc-17d7-49c2-9922-eee03f41ed36",
+    "slug": "json",
+    "label": "json"
+  },
+  {
+    "uuid": "1fe46b86-b1f9-4e75-a526-ec8dd62903a6",
+    "slug": "csv",
+    "label": "csv"
+  },
+  {
+    "uuid": "1f0bcc20-526d-4831-b4da-2a02c5d32822",
+    "slug": "parquet",
+    "label": "parquet"
+  },
+  {
+    "uuid": "33ef052f-78de-4821-b1be-ef807046221d",
+    "slug": "optimized-parquet",
+    "label": "optimized-parquet"
+  },
+  {
+    "uuid": "c888baea-1700-4b70-bf00-7b914c5d0138",
+    "slug": "agent-traces",
+    "label": "Traces"
+  },
+  {
+    "uuid": "b15eb15c-ed02-44f6-920c-5a4533ad130b",
+    "slug": "imagefolder",
+    "label": "imagefolder"
+  },
+  {
+    "uuid": "04602e4d-8be3-4450-8898-f028c656ecb2",
+    "slug": "audiofolder",
+    "label": "soundfolder"
+  },
+  {
+    "uuid": "905601cc-1d48-4cc0-af49-237f7f96b006",
+    "slug": "webdataset",
+    "label": "webdataset"
+  },
+  {
+    "uuid": "a5e187b1-fc92-4cf3-80e9-75d5fba7f13c",
+    "slug": "text",
+    "label": "text"
+  },
+  {
+    "uuid": "382c15e0-eae6-4edd-beed-4ccd70bd93d6",
+    "slug": "arrow",
+    "label": "arrow"
+  }
+]

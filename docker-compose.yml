@@ -7,6 +7,43 @@ services:
     restart: unless-stopped
     networks:
       - logus2k_network
+    volumes:
+      # Live data the fetcher writes — mounted read-only over the baked-in
+      # data/ copy so the frontend sees today's snapshots without rebuilding
+      # the Caddy image. Sub-path mounts overlay only these directories;
+      # the rest of /srv/data/ (model_tasks etc.) is still served from the image.
+      - ./data/tasks.json:/srv/data/tasks.json:ro
+      - ./data/dataset_modalities.json:/srv/data/dataset_modalities.json:ro
+      - ./data/dataset_formats.json:/srv/data/dataset_formats.json:ro
+      - ./data/fetched:/srv/data/fetched:ro
+
+  # Long-running Hugging Face models poller. Walks data/model_tasks.json,
+  # fetches via Camoufox once per day, writes raw + deduped JSON to ./data/.
+  # First build is slow (~5–10 min: pip + Camoufox-Firefox download); cached
+  # layers make subsequent code-only rebuilds near-instant.
+  hf-fetcher:
+    build:
+      context: ./services/hf-fetcher
+      args:
+        CAMOUFOX_VERSION: "0.4.11"
+    container_name: idealab-hf-fetcher
+    restart: unless-stopped
+    volumes:
+      # Taxonomy inputs (read-only). The fetcher walks every axis in its
+      # ENDPOINTS list; any axis whose vocab file is missing is logged + skipped.
+      # tasks.json is shared across endpoints (applies_to: ["models"|"datasets"]).
+      # dataset_modalities.json drives the modality axis on datasets only.
+      - ./data/tasks.json:/data/tasks.json:ro
+      - ./data/dataset_modalities.json:/data/dataset_modalities.json:ro
+      # Output dirs (read-write).
+      - ./data/raw/hf:/data/raw/hf
+      - ./data/fetched:/data/fetched
+    environment:
+      - INTERVAL_HOURS=24
+      - REQUEST_INTERVAL_SECONDS=3
+      - HF_LIMIT=100
+    # No host port — internal worker. Uses default bridge network for
+    # outbound internet access; no need to join logus2k_network.
 
 networks:
   logus2k_network:

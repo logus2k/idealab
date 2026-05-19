@@ -36,19 +36,66 @@
     entity: 'Company / vendor',
   };
 
+  // ===== Models view ======================================================
+  // Category labels + a stable display order for the task picker.
+  const TASK_CATEGORY_LABELS = {
+    'multimodal':                  'Multimodal',
+    'computer-vision':             'Computer Vision',
+    'natural-language-processing': 'Natural Language Processing',
+    'audio':                       'Audio',
+    'tabular':                     'Tabular',
+    'reinforcement-learning':      'Reinforcement Learning',
+    'other':                       'Other',
+  };
+  const TASK_CATEGORY_ORDER = Object.keys(TASK_CATEGORY_LABELS);
+
+  // HF's per-task Tailwind colors → readable hex for our palette.
+  const ICON_COLOR_MAP = {
+    'orange-400':  '#fb923c',
+    'blue-400':    '#60a5fa',
+    'red-400':     '#f87171',
+    'green-400':   '#4ade80',
+    'indigo-400':  '#818cf8',
+    'yellow-400':  '#facc15',
+    'purple-400':  '#c084fc',
+    'pink-400':    '#f472b6',
+  };
+  // Per-category default (used when a task lacks icon_color, and for category headings).
+  const CATEGORY_COLOR = {
+    'multimodal':                  '#fb923c',
+    'computer-vision':             '#60a5fa',
+    'natural-language-processing': '#f87171',
+    'audio':                       '#4ade80',
+    'tabular':                     '#818cf8',
+    'reinforcement-learning':      '#c084fc',
+    'other':                       '#facc15',
+  };
+
+  function hfUrl(kind, id) {
+    return kind === 'datasets'
+      ? `https://huggingface.co/datasets/${id}`
+      : `https://huggingface.co/${id}`;
+  }
+
   // ====================================================================
   //  State
   // ====================================================================
 
   const state = {
-    view: 'ideas',                 // 'ideas' | 'plans'
+    view: 'ideas',                 // 'ideas' | 'plans' | 'requirements' | 'kpis' | 'models'
     db: null,                      // CatalogDb instance
 
     ideas: [],                     // array of normalized idea objects
     plans: [],                     // parsed from plans/*.md
+    requirements: [],              // ordered array (alpha by label) for cards
+    kpis: [],                      // ordered array (alpha by label) for cards
     requirementsByUuid: new Map(), // uuid → {uuid, slug, label, description}
     kpisByUuid: new Map(),
     entitiesByUuid: new Map(),
+
+    // Pre-computed at load time so card rendering is O(1) per item.
+    ideaCountByRequirementUuid: new Map(),
+    ideaCountByKpiUuid: new Map(),
 
     filters: Object.fromEntries(FACETS.map(f => [f, new Set()])),     // tag facets
     vocabFilters: Object.fromEntries(VOCAB_FACETS.map(f => [f, new Set()])), // req/kpi/entity uuids
@@ -58,6 +105,24 @@
     searchHits: null,              // Set<idea_uuid> from FTS5, or null
     collapsedFacets: new Set(),
     vocabFacetSearch: { requirement: '', kpi: '', entity: '' },
+
+    // Models view
+    tasks: [],                            // /data/tasks.json (eager)
+    tasksByCategory: new Map(),           // category → [task]
+    modelsSnapshot: null,                 // {date, items: [{item, sources}, …]} once fetched
+    modelsLoading: false,
+    selectedTaskSlugs: new Set(),         // task filter — OR within facet, like other filters
+    collapsedTaskCategories: new Set(),   // category names currently collapsed in the sidebar
+    modelsCountByTaskSlug: new Map(),     // task slug → # of models in snapshot
+
+    // Datasets view (mirror of Models, two axes: task + modality)
+    modalities: [],                       // /data/dataset_modalities.json (eager)
+    datasetsSnapshot: null,
+    datasetsLoading: false,
+    selectedDatasetTaskSlugs: new Set(),
+    selectedModalitySlugs: new Set(),
+    datasetsCountByTaskSlug: new Map(),
+    datasetsCountByModalitySlug: new Map(),
   };
 
   // ====================================================================
@@ -247,7 +312,27 @@
   // ====================================================================
 
   function activeItems() {
-    return state.view === 'ideas' ? state.ideas : state.plans;
+    if (state.view === 'ideas') return state.ideas;
+    if (state.view === 'plans') return state.plans;
+    if (state.view === 'requirements') return state.requirements;
+    if (state.view === 'kpis') return state.kpis;
+    return [];
+  }
+
+  function matchesRequirement(r) {
+    if (!state.query) return true;
+    const q = state.query.toLowerCase();
+    return (r.label || '').toLowerCase().includes(q)
+        || (r.description || '').toLowerCase().includes(q)
+        || (r.slug || '').toLowerCase().includes(q);
+  }
+
+  function matchesKpi(k) {
+    if (!state.query) return true;
+    const q = state.query.toLowerCase();
+    return (k.label || '').toLowerCase().includes(q)
+        || (k.description || '').toLowerCase().includes(q)
+        || (k.slug || '').toLowerCase().includes(q);
   }
 
   function matchesTagFilters(item) {
@@ -389,6 +474,29 @@
     const root = document.getElementById('filterFacets');
     root.innerHTML = '';
 
+    // Models view — sidebar = task picker grouped by category, main = model list.
+    if (state.view === 'models') {
+      root.appendChild(renderTasksFacetGroup());
+      renderActiveSummary();
+      return;
+    }
+
+    // Datasets view — sidebar = tasks + modality, main = dataset list.
+    if (state.view === 'datasets') {
+      root.appendChild(renderDatasetsFacetGroups());
+      renderActiveSummary();
+      return;
+    }
+
+    // Requirements / KPIs views — single-vocab picker using the same
+    // compact task-chip pattern as Models / Datasets, for visual consistency.
+    if (state.view === 'requirements' || state.view === 'kpis') {
+      const facet = state.view === 'requirements' ? 'requirement' : 'kpi';
+      root.appendChild(renderSinglePickerFacet(facet));
+      renderActiveSummary();
+      return;
+    }
+
     if (state.view === 'ideas') {
       root.appendChild(renderKindToggle());
     }
@@ -414,7 +522,7 @@
     group.className = 'facet-group kind-group';
     const opts = [
       { v: 'all', label: 'All' },
-      { v: 'idea', label: 'Concrete ideas' },
+      { v: 'idea', label: 'Ideas' },
       { v: 'pattern', label: 'Patterns' },
     ];
     const buttons = opts.map(o => {
@@ -578,6 +686,161 @@
     }
 
     return group;
+  }
+
+  // Sidebar block for Requirements / KPIs views — single picker, same
+  // .tag-chip pill style as Ideas / Plans / Models / Datasets.
+  function renderSinglePickerFacet(facet) {
+    const wrap = document.createElement('div');
+    wrap.className = 'facet-group';
+
+    const items     = facet === 'requirement' ? state.requirements           : state.kpis;
+    const counts    = facet === 'requirement' ? state.ideaCountByRequirementUuid : state.ideaCountByKpiUuid;
+    const selected  = state.vocabFilters[facet];
+    const titleText = facet === 'requirement' ? 'Requirements (pain points)' : 'KPIs moved';
+
+    const header = document.createElement('div');
+    header.className = 'facet-header static';
+    header.innerHTML =
+      `<span>${escapeHtml(titleText)}</span>` +
+      `<span class="vocab-count">${selected.size || ''}</span>`;
+    wrap.appendChild(header);
+
+    // In-sidebar search to narrow the picker when the list is long (149/109).
+    const searchWrap = document.createElement('div');
+    searchWrap.className = 'vocab-search-wrap';
+    const sb = document.createElement('input');
+    sb.type = 'search';
+    sb.className = 'vocab-search';
+    sb.placeholder = `Filter ${facet}s…`;
+    sb.value = state.vocabFacetSearch[facet] || '';
+    sb.dataset.facet = facet;
+    sb.addEventListener('input', (e) => {
+      state.vocabFacetSearch[facet] = e.target.value;
+      renderFilters();
+      const refocused = document.querySelector(
+        `#filterFacets input.vocab-search[data-facet="${facet}"]`
+      );
+      if (refocused) {
+        refocused.focus();
+        refocused.setSelectionRange(refocused.value.length, refocused.value.length);
+      }
+    });
+    searchWrap.appendChild(sb);
+    wrap.appendChild(searchWrap);
+
+    const needle = (state.vocabFacetSearch[facet] || '').trim().toLowerCase();
+    const filtered = items.filter(v =>
+      !needle ||
+      (v.label || '').toLowerCase().includes(needle) ||
+      (v.description || '').toLowerCase().includes(needle) ||
+      (v.slug || '').toLowerCase().includes(needle)
+    );
+    // Selected first, then highest usage count, then alpha.
+    filtered.sort((a, b) => {
+      const aSel = selected.has(a.uuid) ? 1 : 0;
+      const bSel = selected.has(b.uuid) ? 1 : 0;
+      if (aSel !== bSel) return bSel - aSel;
+      const ac = counts.get(a.uuid) || 0;
+      const bc = counts.get(b.uuid) || 0;
+      if (ac !== bc) return bc - ac;
+      return (a.label || '').localeCompare(b.label || '');
+    });
+
+    const opts = document.createElement('div');
+    opts.className = 'facet-options';
+    for (const v of filtered) {
+      const isSel = selected.has(v.uuid);
+      const count = counts.get(v.uuid) || 0;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tag-chip facet-picker' + (isSel ? ' selected' : '');
+      if (v.description) btn.title = v.description;
+      btn.textContent = v.label;
+      if (count) {
+        const c = document.createElement('span');
+        c.className = 'count';
+        c.textContent = String(count);
+        btn.appendChild(c);
+      }
+      btn.addEventListener('click', () => {
+        if (selected.has(v.uuid)) selected.delete(v.uuid);
+        else selected.add(v.uuid);
+        render();
+      });
+      opts.appendChild(btn);
+    }
+    wrap.appendChild(opts);
+    return wrap;
+  }
+
+  // Generic helper: build a sidebar facet that lists tasks grouped by category.
+  // Used by Models view (single axis) and Datasets view (one of two axes).
+  function buildTasksByCategoryGroup({ titleText, applies, selectedSet, countsMap }) {
+    const wrap = document.createElement('div');
+    wrap.className = 'facet-group';
+
+    const header = document.createElement('div');
+    header.className = 'facet-header static';
+    header.innerHTML = `<span>${escapeHtml(titleText)}</span>` +
+                      `<span class="vocab-count">${selectedSet.size || ''}</span>`;
+    wrap.appendChild(header);
+
+    const tasks = state.tasks.filter(t => (t.applies_to || []).includes(applies));
+    const byCat = new Map();
+    for (const c of TASK_CATEGORY_ORDER) byCat.set(c, []);
+    for (const t of tasks) {
+      if (!byCat.has(t.category)) byCat.set(t.category, []);
+      byCat.get(t.category).push(t);
+    }
+
+    for (const cat of TASK_CATEGORY_ORDER) {
+      const items = byCat.get(cat) || [];
+      if (!items.length) continue;
+      const catColor = CATEGORY_COLOR[cat] || '#9ca3af';
+
+      const sub = document.createElement('div');
+      sub.className = 'facet-subheader';
+      sub.innerHTML =
+        `<span class="facet-subheader-dot" style="background:${catColor}"></span>` +
+        `${escapeHtml(TASK_CATEGORY_LABELS[cat] || cat)}`;
+      wrap.appendChild(sub);
+
+      const opts = document.createElement('div');
+      opts.className = 'facet-options';
+      for (const t of items) {
+        const iconColor = ICON_COLOR_MAP[t.icon_color] || catColor;
+        const icon = t.icon_svg || '<span aria-hidden="true">●</span>';
+        const isSel = selectedSet.has(t.slug);
+        const count = countsMap.get(t.slug);
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tag-chip facet-picker' + (isSel ? ' selected' : '');
+        btn.title = t.label;
+        btn.innerHTML =
+          `<span class="tag-chip-icon" style="color:${iconColor}">${icon}</span>` +
+          escapeHtml(t.label) +
+          (count ? `<span class="count">${count}</span>` : '');
+        btn.addEventListener('click', () => {
+          if (selectedSet.has(t.slug)) selectedSet.delete(t.slug);
+          else selectedSet.add(t.slug);
+          render();
+        });
+        opts.appendChild(btn);
+      }
+      wrap.appendChild(opts);
+    }
+    return wrap;
+  }
+
+  // Sidebar block for the Models view — Tasks facet, grouped by category.
+  function renderTasksFacetGroup() {
+    return buildTasksByCategoryGroup({
+      titleText:   'Tasks',
+      applies:     'models',
+      selectedSet: state.selectedTaskSlugs,
+      countsMap:   state.modelsCountByTaskSlug,
+    });
   }
 
   function renderActiveSummary() {
@@ -851,6 +1114,458 @@
     });
   }
 
+  // ====================================================================
+  //  Models view (tile picker + per-task list)
+  // ====================================================================
+
+  function indexModelsSnapshot() {
+    state.modelsCountByTaskSlug.clear();
+    if (!state.modelsSnapshot) return;
+    for (const entry of state.modelsSnapshot.items) {
+      const tag = entry.item && entry.item.pipeline_tag;
+      if (!tag) continue;
+      state.modelsCountByTaskSlug.set(tag, (state.modelsCountByTaskSlug.get(tag) || 0) + 1);
+    }
+  }
+
+  async function ensureModelsSnapshot() {
+    if (state.modelsSnapshot || state.modelsLoading) return;
+    state.modelsLoading = true;
+    render();   // shows the loading state
+    try {
+      const idxRes = await fetch('data/fetched/index.json', { cache: 'no-store' });
+      if (!idxRes.ok) throw new Error(`index.json: HTTP ${idxRes.status}`);
+      const idx = await idxRes.json();
+      if (!idx.models || !idx.models.filename) {
+        throw new Error('No models snapshot in index.json — fetcher may not have run yet.');
+      }
+      const url = `data/fetched/${idx.models.filename}`;
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`);
+      const items = await res.json();
+      state.modelsSnapshot = { date: idx.models.date, filename: idx.models.filename, items };
+      indexModelsSnapshot();
+    } catch (err) {
+      state.modelsSnapshot = { error: err.message };
+    } finally {
+      state.modelsLoading = false;
+      render();
+    }
+  }
+
+  function renderModels() {
+    const root = document.getElementById('ideasContainer');
+
+    // Loading / error states
+    if (state.modelsLoading) {
+      root.innerHTML = `<div class="info-msg">Loading models snapshot…</div>`;
+      return;
+    }
+    if (state.modelsSnapshot && state.modelsSnapshot.error) {
+      root.innerHTML = `<div class="error-msg"><strong>Couldn't load models snapshot.</strong><br>${escapeHtml(state.modelsSnapshot.error)}</div>`;
+      return;
+    }
+    if (!state.modelsSnapshot) {
+      // Kick off the fetch lazily, then re-render once it lands
+      ensureModelsSnapshot();
+      root.innerHTML = `<div class="info-msg">Loading models snapshot…</div>`;
+      return;
+    }
+
+    // Apply task filter (OR within facet, like our other filters)
+    const selected = state.selectedTaskSlugs;
+    const all = state.modelsSnapshot.items;
+    const taskFiltered = selected.size === 0
+      ? all
+      : all.filter(e => e.item && selected.has(e.item.pipeline_tag));
+
+    // Apply text search
+    const q = (state.query || '').trim().toLowerCase();
+    const filtered = !q
+      ? taskFiltered
+      : taskFiltered.filter(e => {
+          const it = e.item;
+          return (it.id || '').toLowerCase().includes(q)
+              || (it.author || '').toLowerCase().includes(q)
+              || (it.library_name || '').toLowerCase().includes(q)
+              || (it.tags || []).some(t => t.toLowerCase().includes(q));
+        });
+
+    document.getElementById('resultCount').textContent =
+      filtered.length === all.length
+        ? `${all.length} models`
+        : `${filtered.length} of ${all.length} models`;
+
+    if (filtered.length === 0) { root.innerHTML = emptyState(); return; }
+
+    // Default sort: trendingScore desc
+    filtered.sort((a, b) => (b.item.trendingScore || 0) - (a.item.trendingScore || 0));
+
+    // Cap the rendered list — 9919 cards on one page would freeze the browser.
+    const RENDER_CAP = 500;
+    const visible = filtered.slice(0, RENDER_CAP);
+    const overflowNotice = filtered.length > RENDER_CAP
+      ? `<div class="info-msg" style="margin-bottom:10px">Showing top ${RENDER_CAP} by trending score. Narrow with a task filter or search to see more specifically.</div>`
+      : '';
+    const cardsHtml = visible.map(e => renderModelCard(e.item)).join('');
+    root.innerHTML = overflowNotice + `<div class="model-list">${cardsHtml}</div>`;
+  }
+
+  // =====================================================================
+  //  Datasets view (mirror of Models: sidebar filters → main list)
+  // =====================================================================
+
+  function indexDatasetsSnapshot() {
+    state.datasetsCountByTaskSlug.clear();
+    state.datasetsCountByModalitySlug.clear();
+    if (!state.datasetsSnapshot) return;
+    for (const entry of state.datasetsSnapshot.items) {
+      const tags = (entry.item && entry.item.tags) || [];
+      for (const tag of tags) {
+        if (tag.startsWith('task_categories:')) {
+          const slug = tag.substring('task_categories:'.length);
+          state.datasetsCountByTaskSlug.set(slug, (state.datasetsCountByTaskSlug.get(slug) || 0) + 1);
+        } else if (tag.startsWith('modality:')) {
+          const slug = tag.substring('modality:'.length);
+          state.datasetsCountByModalitySlug.set(slug, (state.datasetsCountByModalitySlug.get(slug) || 0) + 1);
+        }
+      }
+    }
+  }
+
+  async function ensureDatasetsSnapshot() {
+    if (state.datasetsSnapshot || state.datasetsLoading) return;
+    state.datasetsLoading = true;
+    render();
+    try {
+      const idxRes = await fetch('data/fetched/index.json', { cache: 'no-store' });
+      if (!idxRes.ok) throw new Error(`index.json: HTTP ${idxRes.status}`);
+      const idx = await idxRes.json();
+      if (!idx.datasets || !idx.datasets.filename) {
+        throw new Error('No datasets snapshot in index.json — fetcher may not have run yet.');
+      }
+      const url = `data/fetched/${idx.datasets.filename}`;
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`);
+      const items = await res.json();
+      state.datasetsSnapshot = { date: idx.datasets.date, filename: idx.datasets.filename, items };
+      indexDatasetsSnapshot();
+    } catch (err) {
+      state.datasetsSnapshot = { error: err.message };
+    } finally {
+      state.datasetsLoading = false;
+      render();
+    }
+  }
+
+  function renderDatasets() {
+    const root = document.getElementById('ideasContainer');
+    if (state.datasetsLoading) {
+      root.innerHTML = `<div class="info-msg">Loading datasets snapshot…</div>`;
+      return;
+    }
+    if (state.datasetsSnapshot && state.datasetsSnapshot.error) {
+      root.innerHTML = `<div class="error-msg"><strong>Couldn't load datasets snapshot.</strong><br>${escapeHtml(state.datasetsSnapshot.error)}</div>`;
+      return;
+    }
+    if (!state.datasetsSnapshot) {
+      ensureDatasetsSnapshot();
+      root.innerHTML = `<div class="info-msg">Loading datasets snapshot…</div>`;
+      return;
+    }
+
+    const selTasks = state.selectedDatasetTaskSlugs;
+    const selMods  = state.selectedModalitySlugs;
+    const all = state.datasetsSnapshot.items;
+    // AND across facets, OR within a facet (consistent with our other views)
+    const filtered0 = all.filter(e => {
+      const tags = (e.item && e.item.tags) || [];
+      if (selTasks.size > 0) {
+        const ok = tags.some(t => t.startsWith('task_categories:') && selTasks.has(t.substring('task_categories:'.length)));
+        if (!ok) return false;
+      }
+      if (selMods.size > 0) {
+        const ok = tags.some(t => t.startsWith('modality:') && selMods.has(t.substring('modality:'.length)));
+        if (!ok) return false;
+      }
+      return true;
+    });
+
+    const q = (state.query || '').trim().toLowerCase();
+    const filtered = !q ? filtered0 : filtered0.filter(e => {
+      const it = e.item;
+      return (it.id || '').toLowerCase().includes(q)
+          || (it.author || '').toLowerCase().includes(q)
+          || (it.description || '').toLowerCase().includes(q)
+          || (it.tags || []).some(t => t.toLowerCase().includes(q));
+    });
+
+    document.getElementById('resultCount').textContent =
+      filtered.length === all.length
+        ? `${all.length} datasets`
+        : `${filtered.length} of ${all.length} datasets`;
+
+    if (filtered.length === 0) { root.innerHTML = emptyState(); return; }
+
+    filtered.sort((a, b) => (b.item.trendingScore || 0) - (a.item.trendingScore || 0));
+
+    const RENDER_CAP = 500;
+    const visible = filtered.slice(0, RENDER_CAP);
+    const overflowNotice = filtered.length > RENDER_CAP
+      ? `<div class="info-msg" style="margin-bottom:10px">Showing top ${RENDER_CAP} by trending score. Narrow with a task or modality filter to see more specifically.</div>`
+      : '';
+    const cardsHtml = visible.map(e => renderDatasetCard(e.item)).join('');
+    root.innerHTML = overflowNotice + `<div class="model-list">${cardsHtml}</div>`;
+  }
+
+  function renderDatasetCard(d) {
+    const url = hfUrl('datasets', d.id);
+    const author = d.author || (d.id || '').split('/')[0] || '';
+    const name = (d.id || '').split('/').slice(1).join('/') || d.id || '(unknown)';
+    const fmt = (n) => n == null ? '—' : (n >= 1_000_000 ? (n/1_000_000).toFixed(1)+'M'
+                                       : n >= 1_000 ? (n/1_000).toFixed(1)+'K'
+                                       : String(n));
+    const tagBadges = (d.tags || [])
+      .filter(t => !t.startsWith('region:') && !t.startsWith('license:'))
+      .slice(0, 6)
+      .map(t => `<span class="model-tag">${escapeHtml(t)}</span>`)
+      .join('');
+    const desc = d.description
+      ? `<div class="dataset-desc">${escapeHtml(d.description.slice(0, 240))}${d.description.length > 240 ? '…' : ''}</div>`
+      : '';
+    return `
+      <article class="model-card">
+        <div class="model-card-head">
+          <a class="model-id" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+            <span class="model-author">${escapeHtml(author)}</span><span class="model-slash">/</span><span class="model-name">${escapeHtml(name)}</span>
+          </a>
+          <a class="model-extlink" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" title="Open on Hugging Face">↗</a>
+        </div>
+        ${desc}
+        <div class="model-card-meta">
+          <span title="Trending score">🔥 ${fmt(d.trendingScore)}</span>
+          <span title="Likes">♥ ${fmt(d.likes)}</span>
+          <span title="Downloads">↓ ${fmt(d.downloads)}</span>
+        </div>
+        ${tagBadges ? `<div class="model-tags">${tagBadges}</div>` : ''}
+      </article>`;
+  }
+
+  // Sidebar block for the Datasets view — tasks + modalities, two facet groups.
+  function renderDatasetsFacetGroups() {
+    const frag = document.createDocumentFragment();
+    frag.appendChild(renderTasksForDatasetsFacetGroup());
+    frag.appendChild(renderModalitiesFacetGroup());
+    return frag;
+  }
+
+  function renderTasksForDatasetsFacetGroup() {
+    return buildTasksByCategoryGroup({
+      titleText:   'Tasks',
+      applies:     'datasets',
+      selectedSet: state.selectedDatasetTaskSlugs,
+      countsMap:   state.datasetsCountByTaskSlug,
+    });
+  }
+
+  function renderModalitiesFacetGroup() {
+    const wrap = document.createElement('div');
+    wrap.className = 'facet-group';
+    const header = document.createElement('div');
+    header.className = 'facet-header static';
+    header.innerHTML = `<span>Modality</span><span class="vocab-count">${state.selectedModalitySlugs.size || ''}</span>`;
+    wrap.appendChild(header);
+
+    const opts = document.createElement('div');
+    opts.className = 'facet-options';
+    for (const m of state.modalities) {
+      const isSel = state.selectedModalitySlugs.has(m.slug);
+      const count = state.datasetsCountByModalitySlug.get(m.slug);
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tag-chip facet-picker' + (isSel ? ' selected' : '');
+      btn.title = m.label;
+      btn.textContent = m.label;
+      if (count) {
+        const c = document.createElement('span');
+        c.className = 'count';
+        c.textContent = String(count);
+        btn.appendChild(c);
+      }
+      btn.addEventListener('click', () => {
+        if (state.selectedModalitySlugs.has(m.slug)) state.selectedModalitySlugs.delete(m.slug);
+        else state.selectedModalitySlugs.add(m.slug);
+        render();
+      });
+      opts.appendChild(btn);
+    }
+    wrap.appendChild(opts);
+    return wrap;
+  }
+
+  function renderModelCard(m) {
+    const url = hfUrl('models', m.id);
+    const author = m.author || (m.id || '').split('/')[0] || '';
+    const name = (m.id || '').split('/').slice(1).join('/') || m.id || '(unknown)';
+    const fmt = (n) => n == null ? '—' : (n >= 1_000_000 ? (n/1_000_000).toFixed(1)+'M'
+                                       : n >= 1_000 ? (n/1_000).toFixed(1)+'K'
+                                       : String(n));
+    const tagBadges = (m.tags || [])
+      .filter(t => !t.startsWith('pipeline_tag:') && !t.startsWith('region:') && !t.startsWith('license:'))
+      .slice(0, 6)
+      .map(t => `<span class="model-tag">${escapeHtml(t)}</span>`)
+      .join('');
+    return `
+      <article class="model-card">
+        <div class="model-card-head">
+          <a class="model-id" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+            <span class="model-author">${escapeHtml(author)}</span><span class="model-slash">/</span><span class="model-name">${escapeHtml(name)}</span>
+          </a>
+          <a class="model-extlink" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" title="Open on Hugging Face">↗</a>
+        </div>
+        <div class="model-card-meta">
+          <span title="Trending score">🔥 ${fmt(m.trendingScore)}</span>
+          <span title="Likes">♥ ${fmt(m.likes)}</span>
+          <span title="Downloads">↓ ${fmt(m.downloads)}</span>
+          ${m.library_name ? `<span class="model-lib">${escapeHtml(m.library_name)}</span>` : ''}
+        </div>
+        ${tagBadges ? `<div class="model-tags">${tagBadges}</div>` : ''}
+      </article>`;
+  }
+
+  // ====================================================================
+  //  Requirements & KPIs views
+  // ====================================================================
+
+  function renderRequirements() {
+    renderVocabCardsView({
+      items: state.requirements,
+      itemsLabel: 'requirements',
+      countMap: state.ideaCountByRequirementUuid,
+      matches: matchesRequirement,
+      cardClass: 'requirement-card',
+      cardKind: 'requirement',
+      verb: 'Solves',
+      countLabel: (n) => `${n} idea${n === 1 ? '' : 's'} address${n === 1 ? 'es' : ''} this pain`,
+      onJump: jumpToIdeasForRequirement,
+    });
+  }
+
+  function renderKpis() {
+    renderVocabCardsView({
+      items: state.kpis,
+      itemsLabel: 'KPIs',
+      countMap: state.ideaCountByKpiUuid,
+      matches: matchesKpi,
+      cardClass: 'kpi-card',
+      cardKind: 'kpi',
+      verb: 'Moves',
+      countLabel: (n) => `${n} idea${n === 1 ? '' : 's'} move${n === 1 ? 's' : ''} this KPI`,
+      onJump: jumpToIdeasForKpi,
+    });
+  }
+
+  function renderVocabCardsView({ items, itemsLabel, countMap, matches, cardClass, cardKind, verb, countLabel, onJump }) {
+    const root = document.getElementById('ideasContainer');
+    const filtered = items.filter(matches);
+    // Sort: items with ideas first, then by count desc, then alpha.
+    filtered.sort((a, b) => {
+      const ca = countMap.get(a.uuid) || 0;
+      const cb = countMap.get(b.uuid) || 0;
+      if (ca !== cb) return cb - ca;
+      return (a.label || '').localeCompare(b.label || '');
+    });
+
+    document.getElementById('resultCount').textContent =
+      filtered.length === items.length
+        ? `${items.length} ${itemsLabel}`
+        : `${filtered.length} of ${items.length} ${itemsLabel}`;
+
+    if (filtered.length === 0) { root.innerHTML = emptyState(); return; }
+
+    const withIdeas = filtered.filter(v => (countMap.get(v.uuid) || 0) > 0);
+    const orphans   = filtered.filter(v => (countMap.get(v.uuid) || 0) === 0);
+
+    const q = state.query;
+    const sections = [];
+
+    if (withIdeas.length > 0) {
+      sections.push(`
+        <section>
+          <div class="section-header">
+            <span class="section-number">${verb}</span>
+            <h2 class="section-title">In use across the catalog</h2>
+            <span class="section-count">${withIdeas.length}</span>
+          </div>
+          ${withIdeas.map(v => renderVocabCard(v, { countMap, cardClass, cardKind, countLabel, q })).join('')}
+        </section>`);
+    }
+    if (orphans.length > 0) {
+      sections.push(`
+        <section>
+          <div class="section-header">
+            <span class="section-number">—</span>
+            <h2 class="section-title">Reserved vocabulary (no ideas yet)</h2>
+            <span class="section-count">${orphans.length}</span>
+          </div>
+          ${orphans.map(v => renderVocabCard(v, { countMap, cardClass, cardKind, countLabel, q })).join('')}
+        </section>`);
+    }
+
+    root.innerHTML = sections.join('');
+
+    root.querySelectorAll(`.${cardClass} .vocab-card-jump`).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const uuid = btn.dataset.uuid;
+        if (uuid) onJump(uuid);
+      });
+    });
+  }
+
+  function renderVocabCard(v, { countMap, cardClass, cardKind, countLabel, q }) {
+    const n = countMap.get(v.uuid) || 0;
+    const titleHtml = highlight(escapeHtml(v.label), q);
+    const descHtml = v.description
+      ? `<p class="vocab-card-desc">${highlight(escapeHtml(v.description), q)}</p>`
+      : '';
+    const slugHtml = v.slug
+      ? `<span class="vocab-card-slug">${escapeHtml(v.slug)}</span>`
+      : '';
+    const jump = n > 0
+      ? `<button type="button" class="vocab-card-jump" data-uuid="${v.uuid}">${countLabel(n)} →</button>`
+      : `<span class="vocab-card-jump disabled">${countLabel(n)}</span>`;
+    return `
+      <article class="${cardClass}" data-kind="${cardKind}" data-uuid="${v.uuid}">
+        <h3 class="vocab-card-title">${titleHtml}</h3>
+        ${descHtml}
+        <div class="vocab-card-foot">${slugHtml}${jump}</div>
+      </article>`;
+  }
+
+  function jumpToIdeasForRequirement(uuid) {
+    resetIdeaFilters();
+    state.vocabFilters.requirement.add(uuid);
+    state.query = '';
+    state.searchHits = null;
+    document.getElementById('search').value = '';
+    setView('ideas');
+  }
+
+  function jumpToIdeasForKpi(uuid) {
+    resetIdeaFilters();
+    state.vocabFilters.kpi.add(uuid);
+    state.query = '';
+    state.searchHits = null;
+    document.getElementById('search').value = '';
+    setView('ideas');
+  }
+
+  function resetIdeaFilters() {
+    for (const f of FACETS) state.filters[f].clear();
+    for (const f of VOCAB_FACETS) state.vocabFilters[f].clear();
+    state.kindFilter = 'all';
+  }
+
   function jumpToRelatedIdeas(plan) {
     for (const f of FACETS) state.filters[f].clear();
     for (const f of VOCAB_FACETS) state.vocabFilters[f].clear();
@@ -978,10 +1693,33 @@
   function setView(view) {
     if (state.view === view) return;
     state.view = view;
-    document.getElementById('viewIdeas').classList.toggle('active', view === 'ideas');
-    document.getElementById('viewPlans').classList.toggle('active', view === 'plans');
-    document.getElementById('viewIdeas').setAttribute('aria-selected', view === 'ideas' ? 'true' : 'false');
-    document.getElementById('viewPlans').setAttribute('aria-selected', view === 'plans' ? 'true' : 'false');
+    const ids = {
+      ideas: 'viewIdeas', plans: 'viewPlans',
+      requirements: 'viewRequirements', kpis: 'viewKpis',
+      models: 'viewModels', datasets: 'viewDatasets',
+    };
+    for (const [k, id] of Object.entries(ids)) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      el.classList.toggle('active', view === k);
+      el.setAttribute('aria-selected', view === k ? 'true' : 'false');
+    }
+    // Each tab represents one filtering perspective — clear the others' state
+    // when switching, so the sidebar is the single source of "what's filtering".
+    if (view === 'requirements') {
+      for (const f of FACETS) state.filters[f].clear();
+      state.vocabFilters.kpi.clear();
+      state.vocabFilters.entity.clear();
+      state.kindFilter = 'all';
+    } else if (view === 'kpis') {
+      for (const f of FACETS) state.filters[f].clear();
+      state.vocabFilters.requirement.clear();
+      state.vocabFilters.entity.clear();
+      state.kindFilter = 'all';
+    } else if (view === 'models' || view === 'datasets') {
+      // Models / Datasets have their own filter dimensions; ideas filters
+      // don't apply. Keep them in state so switching back to Ideas restores.
+    }
     render();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -989,7 +1727,11 @@
   function render() {
     renderFilters();
     if (state.view === 'ideas') renderIdeas();
-    else renderPlans();
+    else if (state.view === 'plans') renderPlans();
+    else if (state.view === 'requirements') renderIdeas();  // sidebar filters → main idea list
+    else if (state.view === 'kpis') renderIdeas();
+    else if (state.view === 'models') renderModels();
+    else if (state.view === 'datasets') renderDatasets();
   }
 
   // ====================================================================
@@ -1000,16 +1742,18 @@
   // SQLITE_ENABLE_FTS5 defined). Returns a Set<idea_uuid> that matchesIdea()
   function applySearch(q) {
     state.query = q;
+    // FTS5 only powers the Ideas view; Plans/Requirements/KPIs do substring
+    // matching against their own fields, so we only set state.searchHits
+    // when there's an idea-side query to run.
     if (!q || !q.trim()) {
       state.searchHits = null;
-      render();
-      return;
-    }
-    try {
-      state.searchHits = state.db.searchIdeaUuids(q);
-    } catch (err) {
-      console.warn('FTS5 query failed:', err);
-      state.searchHits = new Set();
+    } else {
+      try {
+        state.searchHits = state.db.searchIdeaUuids(q);
+      } catch (err) {
+        console.warn('FTS5 query failed:', err);
+        state.searchHits = new Set();
+      }
     }
     render();
   }
@@ -1028,6 +1772,9 @@
       state.kindFilter = 'all';
       state.query = '';
       state.searchHits = null;
+      state.selectedTaskSlugs.clear();
+      state.selectedDatasetTaskSlugs.clear();
+      state.selectedModalitySlugs.clear();
       search.value = '';
       render();
     });
@@ -1037,6 +1784,14 @@
 
     document.getElementById('viewIdeas').addEventListener('click', () => setView('ideas'));
     document.getElementById('viewPlans').addEventListener('click', () => setView('plans'));
+    const viewReq = document.getElementById('viewRequirements');
+    const viewKpis = document.getElementById('viewKpis');
+    const viewModels = document.getElementById('viewModels');
+    if (viewReq) viewReq.addEventListener('click', () => setView('requirements'));
+    if (viewKpis) viewKpis.addEventListener('click', () => setView('kpis'));
+    if (viewModels) viewModels.addEventListener('click', () => setView('models'));
+    const viewDatasets = document.getElementById('viewDatasets');
+    if (viewDatasets) viewDatasets.addEventListener('click', () => setView('datasets'));
 
     document.getElementById('planModal').addEventListener('click', e => {
       if (e.target.matches('[data-close]')) closePlanModal();
@@ -1057,11 +1812,53 @@
     const ideaRows = db.allIdeasJoined();
     const ideas = ideaRows.map(normalizeIdeaRow);
 
-    for (const r of db.listRequirements()) state.requirementsByUuid.set(r.uuid, r);
-    for (const k of db.listKpis()) state.kpisByUuid.set(k.uuid, k);
-    for (const e of db.listEntities()) state.entitiesByUuid.set(e.uuid, e);
+    const reqs = db.listRequirements();
+    const kpis = db.listKpis();
+    const ents = db.listEntities();
+    for (const r of reqs) state.requirementsByUuid.set(r.uuid, r);
+    for (const k of kpis) state.kpisByUuid.set(k.uuid, k);
+    for (const e of ents) state.entitiesByUuid.set(e.uuid, e);
+    state.requirements = reqs;
+    state.kpis = kpis;
+
+    // Pre-compute how many ideas address each requirement / move each KPI,
+    // so the Requirements / KPIs views render instantly.
+    for (const idea of ideas) {
+      for (const u of idea.requirementUuids) {
+        state.ideaCountByRequirementUuid.set(u, (state.ideaCountByRequirementUuid.get(u) || 0) + 1);
+      }
+      for (const u of idea.kpiUuids) {
+        state.ideaCountByKpiUuid.set(u, (state.ideaCountByKpiUuid.get(u) || 0) + 1);
+      }
+    }
 
     return ideas;
+  }
+
+  async function loadModalities() {
+    try {
+      const res = await fetch('data/dataset_modalities.json', { cache: 'no-store' });
+      if (!res.ok) return [];
+      return await res.json();
+    } catch (_e) { return []; }
+  }
+
+  async function loadTasks() {
+    try {
+      const res = await fetch('data/tasks.json', { cache: 'no-store' });
+      if (!res.ok) return [];
+      const arr = await res.json();
+      // Pre-bucket by category for the picker; skip Models-irrelevant entries.
+      const byCat = new Map();
+      for (const t of arr) {
+        if (!byCat.has(t.category)) byCat.set(t.category, []);
+        byCat.get(t.category).push(t);
+      }
+      state.tasksByCategory = byCat;
+      return arr;
+    } catch (_e) {
+      return [];
+    }
   }
 
   async function loadPlans() {
@@ -1081,10 +1878,14 @@
     const loading = document.getElementById('loadingMsg');
     const errorBox = document.getElementById('errorMsg');
     try {
-      const [ideas, plans] = await Promise.all([loadIdeasFromDb(), loadPlans()]);
+      const [ideas, plans, tasks, modalities] = await Promise.all([
+        loadIdeasFromDb(), loadPlans(), loadTasks(), loadModalities(),
+      ]);
       if (ideas.length === 0) throw new Error('Catalog database is empty.');
       state.ideas = ideas;
       state.plans = plans;
+      state.tasks = tasks;
+      state.modalities = modalities;
       loading.hidden = true;
       attachEvents();
       render();

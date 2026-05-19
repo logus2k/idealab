@@ -4,6 +4,12 @@ public/catalog.sqlite-journal
 public/catalog.sqlite-wal
 public/catalog.sqlite-shm
 
+# hf-fetcher outputs (regenerated daily; keep tree, not contents)
+data/raw/hf/*
+!data/raw/hf/.gitkeep
+data/fetched/*
+!data/fetched/.gitkeep
+
 # Python
 __pycache__/
 *.pyc

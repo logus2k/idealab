@@ -1,0 +1,47 @@
+[
+  {
+    "uuid": "60c71fa9-81d1-41ec-a827-218e3e731f6a",
+    "slug": "3d",
+    "label": "3D"
+  },
+  {
+    "uuid": "6367baf9-1ca3-4e4b-a42c-53014442d4bb",
+    "slug": "audio",
+    "label": "Audio"
+  },
+  {
+    "uuid": "4f0a151f-35b1-4eb7-8071-5723336d6d8c",
+    "slug": "document",
+    "label": "Document"
+  },
+  {
+    "uuid": "ed99064c-7e40-4b6f-8638-bd46461d30f6",
+    "slug": "geospatial",
+    "label": "Geospatial"
+  },
+  {
+    "uuid": "52471f4f-d221-4646-9f47-8f0e32e23caa",
+    "slug": "image",
+    "label": "Image"
+  },
+  {
+    "uuid": "ec662caf-bf47-4b1d-899d-6e5721821a72",
+    "slug": "tabular",
+    "label": "Tabular"
+  },
+  {
+    "uuid": "98639a65-cdc8-4e32-97ce-f9c8a057e653",
+    "slug": "text",
+    "label": "Text"
+  },
+  {
+    "uuid": "f361a617-00c9-44ec-b1c4-fec069e5e362",
+    "slug": "timeseries",
+    "label": "Time-series"
+  },
+  {
+    "uuid": "f7bc7630-7ce5-4433-b307-fa1ad799638d",
+    "slug": "video",
+    "label": "Video"
+  }
+]
