@@ -17,6 +17,7 @@
         <button id="viewKpis"         class="view-btn"        type="button" role="tab" aria-selected="false">KPIs</button>
         <button id="viewModels"       class="view-btn"        type="button" role="tab" aria-selected="false">Models</button>
         <button id="viewDatasets"     class="view-btn"        type="button" role="tab" aria-selected="false">Datasets</button>
+        <button id="viewGraph"        class="view-btn"        type="button" role="tab" aria-selected="false">Graph</button>
       </div>
       <div class="search-wrap">
         <input type="search" id="search" placeholder="Search title, description, source, or tag…" autocomplete="off" spellcheck="false" />
@@ -39,6 +40,22 @@
       <div id="loadingMsg" class="info-msg">Loading catalog…</div>
       <div id="errorMsg" class="error-msg" hidden></div>
       <div id="ideasContainer"></div>
+      <div id="graphContainer" hidden>
+        <div id="graphBreadcrumb" class="graph-breadcrumb"></div>
+        <div id="graphStage" class="graph-stage"></div>
+        <div id="graphHud" class="graph-hud">
+          <div class="graph-hud-status" id="graphHudStatus">Click a node to expand its neighbors.</div>
+          <label class="graph-hud-control">
+            <span>Edge labels at zoom</span>
+            <input id="graphEdgeLabelZoom" type="range" min="50" max="600" step="10" value="180" />
+            <span class="graph-hud-value" id="graphEdgeLabelZoomVal">180</span>
+          </label>
+          <label class="graph-hud-control">
+            <input id="graphShowAll" type="checkbox" />
+            <span>Show full graph</span>
+          </label>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -54,5 +71,6 @@
 
   <script src="db.js"></script>
   <script src="app.js"></script>
+  <!-- graph.js is loaded on demand by app.js when the Graph tab is first opened. -->
 </body>
 </html>

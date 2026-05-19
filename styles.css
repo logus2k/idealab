@@ -1521,4 +1521,101 @@ mark {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Dataset card adds an optional description block */
+/* ====== Graph view ====== */
+body.graph-view .content {
+  /* Use the full content area for the 3D canvas; suppress card-list padding. */
+  padding: 0;
+}
+#graphContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--topbar-h, 64px));
+  position: relative;
+  background: #ffffff;            /* light backdrop — matches the WebGL canvas */
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.graph-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  z-index: 2;
+}
+.graph-breadcrumb-crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.graph-breadcrumb-crumb:hover {
+  background: var(--border);
+}
+.graph-breadcrumb-crumb.current {
+  background: var(--accent);
+  color: white;
+  cursor: default;
+}
+.graph-breadcrumb-sep {
+  color: var(--text-muted);
+}
+.graph-breadcrumb-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+.graph-stage {
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 0;             /* let the canvas fill remaining space */
+  background: #ffffff;
+}
+.graph-stage canvas {
+  display: block;
+}
+.graph-hud {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  color: var(--text);
+  font-size: 12px;
+  max-width: 360px;
+  box-shadow: var(--shadow-sm);
+}
+.graph-hud-status {
+  color: var(--text-muted);
+  font-style: italic;
+}
+.graph-hud-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.graph-hud-control input[type=range] {
+  width: 140px;
+}
+.graph-hud-value {
+  display: inline-block;
+  min-width: 32px;
+  text-align: right;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}

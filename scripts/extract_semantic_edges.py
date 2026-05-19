@@ -75,19 +75,33 @@ TAXONOMY = {
 
 # ---------- catalog parsing ----------
 
-BULLET_RE = re.compile(r"^- \*\*(?P<title>[^*]+?)\*\*\s*[—-]\s*(?P<body>.*)$", re.MULTILINE)
+# Some bullets carry an extra parenthetical between the bold close and the em-dash,
+# e.g. `- **Proprietary information-agent platform** (à la Bain's "Sage") — body`.
+# Capture the full pre-dash header so we can rebuild the canonical title.
+BULLET_RE = re.compile(
+    r"^- \*\*(?P<bold>[^*]+?)\*\*(?P<extra>[^\n—]*?)\s*[—\-]\s*(?P<body>.*)$",
+    re.MULTILINE,
+)
 
 
 def parse_catalog_bodies() -> dict[str, str]:
-    """Return {normalized_title: body_text} for every top-level bullet."""
+    """Return {normalized_title: body_text} for every top-level bullet.
+
+    Indexed by both the bold-portion-only and the full bold+extra title, so that
+    matching against data/ideas.json works regardless of how the registry chose
+    to spell the title.
+    """
     text = CATALOG_PATH.read_text()
     out: dict[str, str] = {}
     for m in BULLET_RE.finditer(text):
-        title = m.group("title").strip()
+        bold = m.group("bold").strip()
+        extra = (m.group("extra") or "").strip()
         body = m.group("body").strip()
-        # strip the trailing **Tags:** block — keep description + Source if present
         body = re.sub(r"\s*\*\*Tags:\*\*.*$", "", body, flags=re.DOTALL).strip()
-        out[title.lower()] = body
+        out[bold.lower()] = body
+        if extra:
+            full = f"{bold} {extra}".strip()
+            out[full.lower()] = body
     return out
 
 

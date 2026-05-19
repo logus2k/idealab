@@ -1697,6 +1697,7 @@
       ideas: 'viewIdeas', plans: 'viewPlans',
       requirements: 'viewRequirements', kpis: 'viewKpis',
       models: 'viewModels', datasets: 'viewDatasets',
+      graph: 'viewGraph',
     };
     for (const [k, id] of Object.entries(ids)) {
       const el = document.getElementById(id);
@@ -1720,8 +1721,62 @@
       // Models / Datasets have their own filter dimensions; ideas filters
       // don't apply. Keep them in state so switching back to Ideas restores.
     }
+    // Toggle visibility of the two top-level containers. Ideas/Plans/Requirements/
+    // KPIs/Models/Datasets all render into #ideasContainer; the Graph view owns
+    // its own pane (#graphContainer) with a Three.js canvas inside.
+    const ideasC = document.getElementById('ideasContainer');
+    const graphC = document.getElementById('graphContainer');
+    const isGraph = view === 'graph';
+    if (ideasC) ideasC.hidden = isGraph;
+    if (graphC) graphC.hidden = !isGraph;
+    document.body.classList.toggle('graph-view', isGraph);
+
     render();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Lazy-loader for the Graph view — vendored libs are ~1.1 MB total, no
+  // sense in paying that on first paint of the Ideas tab.
+  //
+  // Load order matters:
+  //   1. Three.js (ESM) → set window.THREE so the UMD bundles below find it.
+  //   2. three-spritetext (UMD) → reads window.THREE, exports window.SpriteText.
+  //   3. 3d-force-graph (UMD) → exports window.ForceGraph3D (ships its own
+  //      bundled THREE internally; coexists fine with our window.THREE for
+  //      Sprite rendering).
+  //   4. graph.js → idealab's Graph view; reads window.{THREE, SpriteText,
+  //      ForceGraph3D} and exposes window.idealabGraph.
+  let _graphLoaded = null;
+  function ensureGraphLoaded() {
+    if (_graphLoaded) return _graphLoaded;
+    _graphLoaded = (async () => {
+      const THREE = await import('./vendor/three/three.module.min.js');
+      window.THREE = THREE;
+      await loadScript('vendor/three-spritetext/three-spritetext.min.js');
+      await loadScript('vendor/3d-force-graph/3d-force-graph.min.js');
+      await loadScript('graph.js');
+      if (window.idealabGraph?.init) {
+        await window.idealabGraph.init({
+          stage:        document.getElementById('graphStage'),
+          breadcrumb:   document.getElementById('graphBreadcrumb'),
+          hudStatus:    document.getElementById('graphHudStatus'),
+          edgeLabelZoom: document.getElementById('graphEdgeLabelZoom'),
+          edgeLabelZoomVal: document.getElementById('graphEdgeLabelZoomVal'),
+          showAll:      document.getElementById('graphShowAll'),
+        });
+      }
+    })();
+    return _graphLoaded;
+  }
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.async = false;
+      s.onload  = () => resolve();
+      s.onerror = () => reject(new Error('failed to load ' + src));
+      document.head.appendChild(s);
+    });
   }
 
   function render() {
@@ -1732,6 +1787,13 @@
     else if (state.view === 'kpis') renderIdeas();
     else if (state.view === 'models') renderModels();
     else if (state.view === 'datasets') renderDatasets();
+    else if (state.view === 'graph') {
+      ensureGraphLoaded().catch(err => {
+        console.error('Graph view failed to load:', err);
+        const hud = document.getElementById('graphHudStatus');
+        if (hud) hud.textContent = 'Failed to load Graph view: ' + err.message;
+      });
+    }
   }
 
   // ====================================================================
@@ -1792,6 +1854,8 @@
     if (viewModels) viewModels.addEventListener('click', () => setView('models'));
     const viewDatasets = document.getElementById('viewDatasets');
     if (viewDatasets) viewDatasets.addEventListener('click', () => setView('datasets'));
+    const viewGraph = document.getElementById('viewGraph');
+    if (viewGraph) viewGraph.addEventListener('click', () => setView('graph'));
 
     document.getElementById('planModal').addEventListener('click', e => {
       if (e.target.matches('[data-close]')) closePlanModal();
