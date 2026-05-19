@@ -164,13 +164,69 @@ a:hover {
   background: none;
 }
 
-.active-summary {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-bottom: 8px;
-  min-height: 18px;
+/* Closable filter-chip strip between topbar and main layout. Hidden by the
+ * `hidden` attribute when no filters are active (renderActiveSummary sets it). */
+.active-filters-bar {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 8px 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
 }
-.active-summary:empty {
+.active-filters-bar[hidden] {
+  display: none;
+}
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 4px 3px 10px;
+  font-size: 12px;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  transition: background 0.12s, border-color 0.12s;
+}
+.filter-chip:hover {
+  background: var(--surface-2);
+}
+.filter-chip-label {
+  white-space: nowrap;
+}
+.filter-chip-x {
+  appearance: none;
+  background: transparent;
+  border: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.12s, color 0.12s;
+}
+.filter-chip-x:hover {
+  background: rgba(220, 38, 38, 0.12);
+  color: #b91c1c;
+}
+/* Tint chips by facet so they read at a glance — matches the sidebar tag-chip palette. */
+.filter-chip.facet-function  { border-color: var(--facet-function-fg);  background: var(--facet-function-bg); }
+.filter-chip.facet-industry  { border-color: var(--facet-industry-fg);  background: var(--facet-industry-bg); }
+.filter-chip.facet-tech      { border-color: var(--facet-tech-fg);      background: var(--facet-tech-bg); }
+.filter-chip.facet-audience  { border-color: var(--facet-audience-fg);  background: var(--facet-audience-bg); }
+.filter-chip.facet-value     { border-color: var(--facet-value-fg);     background: var(--facet-value-bg); }
+.filter-chip.facet-maturity  { border-color: var(--facet-maturity-fg);  background: var(--facet-maturity-bg); }
+/* Hide the bar in graph mode — that view has its own breadcrumb-based navigation. */
+body.graph-view .active-filters-bar {
   display: none;
 }
 
@@ -1522,8 +1578,21 @@ mark {
 }
 
 /* ====== Graph view ====== */
+/* The Graph tab gets the entire viewport width — sidebar collapses, the
+ * page-level max-width / horizontal padding go away, and the content area
+ * stretches edge-to-edge so the 3D canvas reads as a full canvas. */
+body.graph-view .layout {
+  display: block;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+body.graph-view .sidebar,
+body.graph-view #sidebarToggle {
+  display: none !important;
+}
 body.graph-view .content {
-  /* Use the full content area for the 3D canvas; suppress card-list padding. */
   padding: 0;
 }
 #graphContainer {
@@ -1531,21 +1600,27 @@ body.graph-view .content {
   flex-direction: column;
   height: calc(100vh - var(--topbar-h, 64px));
   position: relative;
-  background: #ffffff;            /* light backdrop — matches the WebGL canvas */
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
 }
+.graph-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  z-index: 3;
+}
+.graph-topbar-spacer { flex: 1 1 auto; }
 .graph-breadcrumb {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid var(--border);
+  gap: 4px 6px;
   color: var(--text);
-  font-size: 13px;
-  z-index: 2;
 }
 .graph-breadcrumb-crumb {
   display: inline-flex;
@@ -1557,65 +1632,137 @@ body.graph-view .content {
   cursor: pointer;
   transition: background 0.12s;
 }
-.graph-breadcrumb-crumb:hover {
-  background: var(--border);
-}
-.graph-breadcrumb-crumb.current {
-  background: var(--accent);
-  color: white;
-  cursor: default;
-}
-.graph-breadcrumb-sep {
-  color: var(--text-muted);
-}
-.graph-breadcrumb-empty {
-  color: var(--text-muted);
-  font-style: italic;
-}
-.graph-stage {
-  flex: 1 1 auto;
-  position: relative;
-  min-height: 0;             /* let the canvas fill remaining space */
-  background: #ffffff;
-}
-.graph-stage canvas {
-  display: block;
-}
-.graph-hud {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-end;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 10px 12px;
-  color: var(--text);
-  font-size: 12px;
-  max-width: 360px;
-  box-shadow: var(--shadow-sm);
-}
+.graph-breadcrumb-crumb:hover { background: var(--border); }
+.graph-breadcrumb-crumb.current { background: var(--accent); color: white; cursor: default; }
+.graph-breadcrumb-sep { color: var(--text-muted); }
+.graph-breadcrumb-empty { color: var(--text-muted); font-style: italic; }
 .graph-hud-status {
   color: var(--text-muted);
   font-style: italic;
+  font-size: 12px;
 }
+
+/* Gear-button + popover that replaces the old floating HUD. */
+.graph-settings-btn {
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.graph-settings-btn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--text-muted);
+}
+.graph-settings-btn[aria-expanded="true"] {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.graph-settings-panel {
+  position: absolute;
+  top: 54px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text);
+  font-size: 12px;
+  min-width: 180px;
+}
+.graph-settings-panel[hidden] { display: none; }
 .graph-hud-control {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
-.graph-hud-control input[type=range] {
-  width: 140px;
+
+.graph-stage {
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 0;
+  background: #ffffff;
 }
-.graph-hud-value {
-  display: inline-block;
-  min-width: 32px;
-  text-align: right;
+.graph-stage canvas { display: block; }
+
+/* Floating legend, toggled by the Settings → "Show legend" checkbox.
+ * Also closeable from its own × in the panel header. */
+.graph-legend {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 8px 10px 10px;
+  color: var(--text);
+  font-size: 12px;
+  max-width: 220px;
+}
+.graph-legend[hidden] { display: none; }
+.graph-legend-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+}
+.graph-legend-title {
+  font-weight: 600;
+  flex: 1 1 auto;
+}
+.graph-legend-close {
+  appearance: none;
+  background: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  font-size: 14px;
   color: var(--text-muted);
-  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+.graph-legend-close:hover {
+  background: rgba(220, 38, 38, 0.12);
+  color: #b91c1c;
+}
+.graph-legend-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+.graph-legend-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.graph-legend-icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+.graph-legend-icon svg { width: 20px; height: 20px; }
+.graph-legend-label { color: var(--text); }

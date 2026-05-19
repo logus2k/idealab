@@ -845,14 +845,22 @@
 
   function renderActiveSummary() {
     const root = document.getElementById('activeSummary');
-    const parts = [];
+    // Build a flat list of {kind, facet, value, label, classes} so the
+    // close-button handler can act on any one chip without branching.
+    const chips = [];
     for (const facet of FACETS) {
-      if (state.filters[facet].size > 0) {
-        parts.push(`<strong>${FACET_LABELS[facet]}:</strong> ${[...state.filters[facet]].join(', ')}`);
+      for (const value of state.filters[facet]) {
+        chips.push({
+          kind: 'tag',
+          facet,
+          value,
+          label: `${FACET_LABELS[facet]}: ${value}`,
+          classes: `facet-${facet}`,
+        });
       }
     }
     if (state.kindFilter !== 'all') {
-      parts.push(`<strong>Kind:</strong> ${state.kindFilter}`);
+      chips.push({ kind: 'kind', facet: '', value: state.kindFilter, label: `Kind: ${state.kindFilter}`, classes: '' });
     }
     for (const facet of VOCAB_FACETS) {
       const sel = state.vocabFilters[facet];
@@ -860,15 +868,60 @@
       const map = facet === 'requirement' ? state.requirementsByUuid
                 : facet === 'kpi' ? state.kpisByUuid
                 : state.entitiesByUuid;
-      const labels = [...sel].map(u => {
-        const e = map.get(u);
-        return e ? (e.label || e.name) : u;
-      });
-      parts.push(`<strong>${VOCAB_LABELS[facet]}:</strong> ${labels.join(', ')}`);
+      for (const uuid of sel) {
+        const e = map.get(uuid);
+        const text = e ? (e.label || e.name) : uuid;
+        chips.push({
+          kind: 'vocab',
+          facet,
+          value: uuid,
+          label: `${VOCAB_LABELS[facet]}: ${text}`,
+          classes: `vocab-${facet}`,
+        });
+      }
     }
-    root.innerHTML = parts.join(' · ');
-    const hasAny = parts.length > 0 || state.query;
-    document.getElementById('clearFilters').disabled = !hasAny;
+    if (state.query) {
+      chips.push({ kind: 'query', facet: '', value: state.query, label: `Search: ${state.query}`, classes: '' });
+    }
+
+    if (chips.length === 0) {
+      root.hidden = true;
+      root.innerHTML = '';
+    } else {
+      root.hidden = false;
+      root.innerHTML = chips.map(c =>
+        `<span class="filter-chip ${c.classes}" ` +
+              `data-kind="${c.kind}" ` +
+              `data-facet="${escapeHtml(c.facet)}" ` +
+              `data-value="${escapeHtml(String(c.value))}">` +
+          `<span class="filter-chip-label">${escapeHtml(c.label)}</span>` +
+          `<button type="button" class="filter-chip-x" aria-label="Remove filter">×</button>` +
+        `</span>`
+      ).join('');
+      root.querySelectorAll('.filter-chip-x').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const chip = btn.closest('.filter-chip');
+          const kind  = chip.dataset.kind;
+          const facet = chip.dataset.facet;
+          const value = chip.dataset.value;
+          if (kind === 'tag') {
+            state.filters[facet].delete(value);
+          } else if (kind === 'vocab') {
+            state.vocabFilters[facet].delete(value);
+          } else if (kind === 'kind') {
+            state.kindFilter = 'all';
+          } else if (kind === 'query') {
+            state.query = '';
+            state.searchHits = null;
+            const search = document.getElementById('search');
+            if (search) search.value = '';
+          }
+          render();
+        });
+      });
+    }
+
+    document.getElementById('clearFilters').disabled = (chips.length === 0);
   }
 
   // ====================================================================
@@ -1757,12 +1810,15 @@
       await loadScript('graph.js');
       if (window.idealabGraph?.init) {
         await window.idealabGraph.init({
-          stage:        document.getElementById('graphStage'),
-          breadcrumb:   document.getElementById('graphBreadcrumb'),
-          hudStatus:    document.getElementById('graphHudStatus'),
-          edgeLabelZoom: document.getElementById('graphEdgeLabelZoom'),
-          edgeLabelZoomVal: document.getElementById('graphEdgeLabelZoomVal'),
-          showAll:      document.getElementById('graphShowAll'),
+          stage:            document.getElementById('graphStage'),
+          breadcrumb:       document.getElementById('graphBreadcrumb'),
+          hudStatus:        document.getElementById('graphHudStatus'),
+          showEdgeLabels:   document.getElementById('graphShowEdgeLabels'),
+          showAll:          document.getElementById('graphShowAll'),
+          showLegend:       document.getElementById('graphShowLegend'),
+          legend:           document.getElementById('graphLegend'),
+          settingsBtn:      document.getElementById('graphSettingsBtn'),
+          settingsPanel:    document.getElementById('graphSettingsPanel'),
         });
       }
     })();
