@@ -364,5 +364,6911 @@
     "slug": "squirrel-ai",
     "name": "Squirrel Ai Learning",
     "type": "vendor"
+  },
+  {
+    "uuid": "8d714841-1105-4575-8174-39e48a6f1cd8",
+    "slug": "facebook",
+    "name": "facebook",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0162d8d9-95f2-4e69-a798-cdd2f18a8b55",
+    "slug": "nvidia",
+    "name": "nvidia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d1a6f401-039e-46bd-aff0-e5c6a814e9f6",
+    "slug": "google",
+    "name": "google",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d4733f61-20cf-4a3c-a60a-9e34d6bd2389",
+    "slug": "timm",
+    "name": "timm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "df986270-5410-4d3b-aa16-1f55d19af90f",
+    "slug": "helsinki-nlp",
+    "name": "Helsinki-NLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0aa453fd-5908-4662-b8a5-d1f66dd2c112",
+    "slug": "qwen",
+    "name": "Qwen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d27b604b-ef71-478e-bb9a-03282902c08c",
+    "slug": "mteb",
+    "name": "mteb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ce6afc81-3511-474d-89f9-63cc72fa91ab",
+    "slug": "mradermacher",
+    "name": "mradermacher",
+    "type": "vendor"
+  },
+  {
+    "uuid": "19544531-88f6-40aa-aea9-cbc0c425d9e4",
+    "slug": "vidore",
+    "name": "vidore",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e396e1bb-d0e4-4f92-9cf8-1ddd7d1ed6ff",
+    "slug": "allenai",
+    "name": "allenai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b907f129-5ea0-4773-8573-f7c40a77d6fa",
+    "slug": "dbq",
+    "name": "DBQ",
+    "type": "vendor"
+  },
+  {
+    "uuid": "55334ec9-509f-4ee8-8c75-30d4a45aa754",
+    "slug": "sentence-transformers",
+    "name": "sentence-transformers",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9c75c0c7-4c7b-47b7-975c-ea3f0f6503cf",
+    "slug": "openmed",
+    "name": "OpenMed",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0ce4bbb9-b796-46ba-9e8f-20b1b49ac608",
+    "slug": "sebis",
+    "name": "SEBIS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0f2b736f-7d4b-4369-9cef-934edffc2023",
+    "slug": "voxel51",
+    "name": "Voxel51",
+    "type": "vendor"
+  },
+  {
+    "uuid": "72acb031-b30d-4e31-9bc0-b6c54949b6cf",
+    "slug": "uniquedata",
+    "name": "UniqueData",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1191f24a-171a-4632-ab3c-1b73501ae15c",
+    "slug": "xenova",
+    "name": "Xenova",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ad0a21f1-4d30-4bb6-a71c-90f2f4d350c5",
+    "slug": "micpie",
+    "name": "MicPie",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1dd7d3f0-e5a2-478e-8acf-365e3d586427",
+    "slug": "opengvlab",
+    "name": "OpenGVLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "325f60c7-2019-46c0-9636-b1b8dbef09d8",
+    "slug": "lerobot",
+    "name": "lerobot",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e02d7cb9-d9df-4129-be0e-3253267ea077",
+    "slug": "vismatch",
+    "name": "vismatch",
+    "type": "vendor"
+  },
+  {
+    "uuid": "85b92ef1-8dff-4c12-a9e9-014d5b2b81b8",
+    "slug": "tencentarc",
+    "name": "TencentARC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7aa6608a-265b-4637-a2b1-e21d49ffbbff",
+    "slug": "onnx-community",
+    "name": "onnx-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1e9e0df2-449d-4403-a296-848c6f988c08",
+    "slug": "tencent",
+    "name": "tencent",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e438b0fc-73bf-4193-aff0-7a7403344777",
+    "slug": "deepghs",
+    "name": "deepghs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "14560fc7-1fc9-48ec-b43b-f73cab1966ba",
+    "slug": "baai",
+    "name": "BAAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "77d0b026-ed0f-4239-9b3a-1ddaf767e8b6",
+    "slug": "prithivmlmods",
+    "name": "prithivMLmods",
+    "type": "vendor"
+  },
+  {
+    "uuid": "85184fd6-56bb-4243-8bc4-9e287125c7a1",
+    "slug": "rapidata",
+    "name": "Rapidata",
+    "type": "vendor"
+  },
+  {
+    "uuid": "49ea5157-da1d-442d-891f-312800242e81",
+    "slug": "unsloth",
+    "name": "unsloth",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f2da93f-b83e-4992-98d5-0177bdd741df",
+    "slug": "laion",
+    "name": "laion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "101da568-fc05-487e-8d65-c99881a2b313",
+    "slug": "keremberke",
+    "name": "keremberke",
+    "type": "vendor"
+  },
+  {
+    "uuid": "35362a9b-677e-452a-ab21-fffc5e054fac",
+    "slug": "mlx-community",
+    "name": "mlx-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "009e24c1-1ac1-4014-98ce-8bed86868a79",
+    "slug": "adapterhub",
+    "name": "AdapterHub",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1e5fc824-46a9-44f3-9640-895be30eae44",
+    "slug": "pjmixers",
+    "name": "PJMixers",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9bfb8bce-6355-4fe8-b722-430237f803da",
+    "slug": "paddlepaddle",
+    "name": "PaddlePaddle",
+    "type": "vendor"
+  },
+  {
+    "uuid": "028bf769-1748-44b6-9708-ad527a6c4497",
+    "slug": "apple",
+    "name": "apple",
+    "type": "vendor"
+  },
+  {
+    "uuid": "85584d25-29c8-46ee-8fb3-c8f57c1b2563",
+    "slug": "jinaai",
+    "name": "jinaai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4bfb8f32-1192-4c8c-9783-1161f181d9b1",
+    "slug": "openbmb",
+    "name": "openbmb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e81c162a-fac7-4b3e-bf10-1080e3a14c56",
+    "slug": "zai-org",
+    "name": "zai-org",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f1b731ad-5183-4644-8cad-5c5eb07c0b2b",
+    "slug": "nielsr",
+    "name": "nielsr",
+    "type": "vendor"
+  },
+  {
+    "uuid": "09963582-443d-4c6a-835a-a0aba3d92c6e",
+    "slug": "anonymoussub",
+    "name": "AnonymousSub",
+    "type": "vendor"
+  },
+  {
+    "uuid": "31320abb-ebd1-4cf9-b88a-8488084347b4",
+    "slug": "shenmu007",
+    "name": "SHENMU007",
+    "type": "vendor"
+  },
+  {
+    "uuid": "30f492cd-8d72-43a5-8eb2-213651f44c47",
+    "slug": "thomcles",
+    "name": "Thomcles",
+    "type": "vendor"
+  },
+  {
+    "uuid": "553d7e30-7195-4266-8986-aef534550992",
+    "slug": "qualcomm",
+    "name": "qualcomm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f1220f46-1830-488d-92f0-9b642c3c2104",
+    "slug": "cross-encoder",
+    "name": "cross-encoder",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94a5ab04-755d-4080-ace8-791b5d4f5c4c",
+    "slug": "ibm-granite",
+    "name": "ibm-granite",
+    "type": "vendor"
+  },
+  {
+    "uuid": "08a0c7e8-5d46-4d4e-89e8-55ca622d2d3d",
+    "slug": "community-datasets",
+    "name": "community-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6c74bda0-70f2-4e15-90da-0b04f4a4b796",
+    "slug": "openmoss-team",
+    "name": "OpenMOSS-Team",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8860c375-a5ef-47e1-bfd5-6c736b853751",
+    "slug": "tiger-lab",
+    "name": "TIGER-Lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "49486f54-87c6-46e0-b923-9ae238857b66",
+    "slug": "depth-anything",
+    "name": "depth-anything",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3371c5f6-510f-4db7-8e41-3c440a186d2c",
+    "slug": "stabilityai",
+    "name": "stabilityai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9b9f4a4a-d445-4446-a011-4a3f1030eaff",
+    "slug": "sauravmaheshkar",
+    "name": "SauravMaheshkar",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cdc2c4f1-4321-43d5-9ad6-bf1b6faa0e34",
+    "slug": "scikit-fingerprints",
+    "name": "scikit-fingerprints",
+    "type": "vendor"
+  },
+  {
+    "uuid": "567f0091-00c3-4b8b-85eb-e9ae92f17393",
+    "slug": "moritzlaurer",
+    "name": "MoritzLaurer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "59368a7e-81eb-4577-96cc-d898726a5d77",
+    "slug": "speechbrain",
+    "name": "speechbrain",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ae0268a6-7fa5-4f5c-84b5-5e673da0525c",
+    "slug": "knowledgator",
+    "name": "knowledgator",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ae07072a-886a-416c-b546-f3daf37cff18",
+    "slug": "internrobotics",
+    "name": "InternRobotics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "57edaae3-0447-49e0-aade-2dd641dbb9c0",
+    "slug": "nyuuzyou",
+    "name": "nyuuzyou",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ace8115f-7b2f-4ce5-816d-3683df6d8544",
+    "slug": "dylanebert",
+    "name": "dylanebert",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fc4009e1-2c6a-465f-a6b8-96ae34247aa3",
+    "slug": "intel",
+    "name": "Intel",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9cd5e34f-36cd-4d3f-99bf-063651efaa33",
+    "slug": "huggan",
+    "name": "huggan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f7bcd301-5531-4206-8951-609989abd35f",
+    "slug": "espnet",
+    "name": "espnet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2aeec1ac-5319-4704-93af-33dfef4d1787",
+    "slug": "jackrong",
+    "name": "Jackrong",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1f6d5d0d-fd78-481a-886d-1ac34a8177b3",
+    "slug": "nateraw",
+    "name": "nateraw",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2aa138c9-d4d6-4780-88fe-409a69edf7c1",
+    "slug": "videosdk-live",
+    "name": "videosdk-live",
+    "type": "vendor"
+  },
+  {
+    "uuid": "27858450-a168-4e3d-a866-1a6febf95f64",
+    "slug": "lightricks",
+    "name": "Lightricks",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3361ea19-67c0-4cfa-9524-d8edfe3a3a9c",
+    "slug": "skywork",
+    "name": "Skywork",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b4e0f081-2057-47b3-88cd-1f3143d19ea0",
+    "slug": "lmms-lab",
+    "name": "lmms-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "20828222-3967-4d26-a8d1-e810adbd04ff",
+    "slug": "meta-llama",
+    "name": "meta-llama",
+    "type": "vendor"
+  },
+  {
+    "uuid": "29bc86ff-ab50-4274-9e93-aedf830e8bc3",
+    "slug": "deepseek-ai",
+    "name": "deepseek-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eeaf7e30-9187-46d2-8ea3-e5f4a801188c",
+    "slug": "fixie-ai",
+    "name": "fixie-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "abfa8471-bc2f-47ac-b40b-15039881e8c1",
+    "slug": "damo-nlp-sg",
+    "name": "DAMO-NLP-SG",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6b2cc172-79c3-4a4f-b798-c13fce1199a1",
+    "slug": "quantstack",
+    "name": "QuantStack",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eee86b37-804e-46e5-988c-756f52636cca",
+    "slug": "mrm8488",
+    "name": "mrm8488",
+    "type": "vendor"
+  },
+  {
+    "uuid": "393335bb-649e-431c-89c7-7d5b4452f0c5",
+    "slug": "deepset",
+    "name": "deepset",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1fce2f28-1df2-461a-9665-2408f3ff0566",
+    "slug": "gem",
+    "name": "GEM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b90905b0-868e-4e9b-ad79-776ca07ad144",
+    "slug": "graphs-datasets",
+    "name": "graphs-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "db55da60-f584-42e9-b613-1e6369e2ab05",
+    "slug": "ud-synthetic",
+    "name": "ud-synthetic",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0ee4ec63-5e5f-467c-98ac-e2e6025f7f9f",
+    "slug": "lightonai",
+    "name": "lightonai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "247b5fe1-5846-4778-9033-4e1852a24ee8",
+    "slug": "wan-ai",
+    "name": "Wan-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "578dceb3-1749-4a33-bb21-36480da58941",
+    "slug": "image-matching-models",
+    "name": "image-matching-models",
+    "type": "vendor"
+  },
+  {
+    "uuid": "56784ce1-31d3-498c-9fd1-4b081acacb90",
+    "slug": "autogluon",
+    "name": "autogluon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e1de78ae-80e7-4094-964d-232f64bf4c4b",
+    "slug": "ccmusic-database",
+    "name": "ccmusic-database",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1392d54d-f4cb-42f3-bfbd-28ba75cdc102",
+    "slug": "beir",
+    "name": "BeIR",
+    "type": "vendor"
+  },
+  {
+    "uuid": "945a3269-f84f-41b8-878d-c9925eab857c",
+    "slug": "aisha-ai-official",
+    "name": "Aisha-AI-Official",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8eb35521-d5b4-47eb-9ec3-fadfcd25692f",
+    "slug": "keras-io",
+    "name": "keras-io",
+    "type": "vendor"
+  },
+  {
+    "uuid": "14ddd2a0-5bfd-4bb8-b7fc-c8624c2a73f8",
+    "slug": "facebookai",
+    "name": "FacebookAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b0ece1c1-2fe1-420c-8034-f591154bf751",
+    "slug": "anton-l",
+    "name": "anton-l",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f7fc25fe-2714-4b67-8556-5b1d7e8c3092",
+    "slug": "blanchon",
+    "name": "blanchon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "76ee9c23-b9b2-4118-baa8-0d85ba7d0c83",
+    "slug": "racineai",
+    "name": "racineai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7b4a540c-76db-441e-a708-d0fd3e44daec",
+    "slug": "mcg-nju",
+    "name": "MCG-NJU",
+    "type": "vendor"
+  },
+  {
+    "uuid": "44dd7467-f0b8-4ce0-a3cf-ea763671e026",
+    "slug": "google-research-datasets",
+    "name": "google-research-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fbb80a27-3ca8-407c-93a2-a7cf5df783f9",
+    "slug": "electricsheepafrica",
+    "name": "electricsheepafrica",
+    "type": "vendor"
+  },
+  {
+    "uuid": "46330572-0d82-4cd7-9874-5c8504c90592",
+    "slug": "juliensimon",
+    "name": "juliensimon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42433ff1-ca39-4809-a6a7-01c594577a4d",
+    "slug": "ace-step",
+    "name": "ACE-Step",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5fd35d7d-7512-4745-96f2-93deebaca802",
+    "slug": "mispeech",
+    "name": "mispeech",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dfef5f09-7922-4e10-9a24-37625541d31a",
+    "slug": "black-forest-labs",
+    "name": "black-forest-labs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "504d7e8b-a4d5-4fcb-ba27-e33b51cda12c",
+    "slug": "thedenk",
+    "name": "TheDenk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2c84c6d5-32cd-4a87-8594-4dddc401eb5d",
+    "slug": "halflings",
+    "name": "halflings",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1f70d276-73e5-40db-831c-9ad50f063fc5",
+    "slug": "ibm-research",
+    "name": "ibm-research",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9ae30572-f4f7-4913-ba3e-75a6a8b6aa68",
+    "slug": "upci-ntua",
+    "name": "upci-ntua",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1c1b98f1-8248-421c-8ef0-f86b24836bdc",
+    "slug": "drbaph",
+    "name": "drbaph",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a7496615-4c07-4ec4-a66e-bc3ec309a021",
+    "slug": "naver",
+    "name": "naver",
+    "type": "vendor"
+  },
+  {
+    "uuid": "68a71bb9-b7eb-49e9-a2c9-9b77fe8fd989",
+    "slug": "city96",
+    "name": "city96",
+    "type": "vendor"
+  },
+  {
+    "uuid": "05f92886-a1ea-4b02-8c1a-bd8e6d79e2c0",
+    "slug": "huggingnft",
+    "name": "huggingnft",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9d01d213-b9b7-41de-b8cd-8a1c462cd15e",
+    "slug": "cardiffnlp",
+    "name": "cardiffnlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cd249497-2ebd-4e10-8da8-0cfbd5ce061e",
+    "slug": "superb",
+    "name": "superb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1edf867e-630d-42ad-aafa-60d6bc8d9dc0",
+    "slug": "lllyasviel",
+    "name": "lllyasviel",
+    "type": "vendor"
+  },
+  {
+    "uuid": "25e3d731-a406-485c-b98e-4603a4a0ef09",
+    "slug": "jonathan-roberts1",
+    "name": "jonathan-roberts1",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cfe30334-53b1-4084-bb66-30920c218284",
+    "slug": "cyankiwi",
+    "name": "cyankiwi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ce7a30c2-c413-4c9d-b5ac-3bf0f469d97e",
+    "slug": "stepfun-ai",
+    "name": "stepfun-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ab1ce567-deec-45a2-84cd-5491175f20d6",
+    "slug": "freedomintelligence",
+    "name": "FreedomIntelligence",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b7983c53-bcc0-4d73-8d3c-0032255b7a66",
+    "slug": "hidream-ai",
+    "name": "HiDream-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fbb4122d-87b4-46bf-8b32-af01b13ebdc4",
+    "slug": "merve",
+    "name": "merve",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2f40ce81-b537-48bf-abe4-4b2dd0606492",
+    "slug": "bytedance",
+    "name": "ByteDance",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5e484569-cd01-4591-acc8-734cad16e4f7",
+    "slug": "vrgamedevgirl84",
+    "name": "vrgamedevgirl84",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c1d5656e-7407-4c19-b1da-3a6f0d01dc20",
+    "slug": "google-bert",
+    "name": "google-bert",
+    "type": "vendor"
+  },
+  {
+    "uuid": "49805777-acf7-40d4-833c-2d1224d4bb5a",
+    "slug": "jonatasgrosman",
+    "name": "jonatasgrosman",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eb7d5413-c1f6-450b-a622-9396b9be4f6f",
+    "slug": "sb3",
+    "name": "sb3",
+    "type": "vendor"
+  },
+  {
+    "uuid": "06f08591-f984-458e-bfe8-4ea8df7c9a55",
+    "slug": "osanseviero",
+    "name": "osanseviero",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c3ecd495-56da-41e2-af5a-0183d2ac8388",
+    "slug": "thomassimonini",
+    "name": "ThomasSimonini",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d72fdd5d-2a59-4b58-9cb0-1cf40a4b0925",
+    "slug": "francesco",
+    "name": "Francesco",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94651ef4-1188-462c-acf5-e392df5ac29d",
+    "slug": "thegreatrambler",
+    "name": "TheGreatRambler",
+    "type": "vendor"
+  },
+  {
+    "uuid": "72590f82-188c-4b2e-85b2-bf390905b8bc",
+    "slug": "lrgb",
+    "name": "LRGB",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b692afad-8744-418f-ac5f-c89d5c19e9d7",
+    "slug": "michaelmallari",
+    "name": "michaelmallari",
+    "type": "vendor"
+  },
+  {
+    "uuid": "32b2db00-6e19-418c-9690-7edc65d8fe63",
+    "slug": "nomic-ai",
+    "name": "nomic-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d5a8c9c3-c655-4a7b-943c-3c3bfec241e2",
+    "slug": "bytedance-seed",
+    "name": "ByteDance-Seed",
+    "type": "vendor"
+  },
+  {
+    "uuid": "054ef3b4-5222-4e44-b235-e0c899a8d737",
+    "slug": "imageomics",
+    "name": "imageomics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "84e61698-0e76-4d93-9ce2-66d67c9d9851",
+    "slug": "ai4bharat",
+    "name": "ai4bharat",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f4d70fd8-ae2c-4d8b-9ef1-e046e0b24fc1",
+    "slug": "pku-alignment",
+    "name": "PKU-Alignment",
+    "type": "vendor"
+  },
+  {
+    "uuid": "95f23307-a317-4757-9ef4-ca6b50fc55be",
+    "slug": "benjamin-paine",
+    "name": "benjamin-paine",
+    "type": "vendor"
+  },
+  {
+    "uuid": "66d6435c-fa44-417b-a591-cb31bd868f3d",
+    "slug": "emrecan",
+    "name": "emrecan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fe9c6556-1878-491d-93b1-c0df09f32c26",
+    "slug": "ipec-community",
+    "name": "IPEC-COMMUNITY",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6c85f274-e5c2-4c64-9f15-67f38b3d0164",
+    "slug": "mlfoundations",
+    "name": "mlfoundations",
+    "type": "vendor"
+  },
+  {
+    "uuid": "47bfd908-6880-4488-9b52-7d5bec671552",
+    "slug": "isaacus",
+    "name": "isaacus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "26be2be8-7b15-4c69-869e-337021bd62b3",
+    "slug": "major-tom",
+    "name": "Major-TOM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9e3d2313-4bbd-4b5b-930f-89a675b969fc",
+    "slug": "llmfan46",
+    "name": "llmfan46",
+    "type": "vendor"
+  },
+  {
+    "uuid": "64af3216-f82c-4d46-bd69-cfb3f7b05bcf",
+    "slug": "tomaarsen",
+    "name": "tomaarsen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2dba04e6-06f1-426b-9287-39dfacd7b10b",
+    "slug": "joriscos",
+    "name": "JorisCos",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fd6b77c4-5ef0-4997-9f74-5c67d4ec8562",
+    "slug": "edbeeching",
+    "name": "edbeeching",
+    "type": "vendor"
+  },
+  {
+    "uuid": "68dd7b59-8d75-4696-8915-ceab95539d02",
+    "slug": "epfl-vilab",
+    "name": "EPFL-VILAB",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c6d15af6-ace6-4360-ac04-28845b4e6794",
+    "slug": "calcuis",
+    "name": "calcuis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4050daba-6dce-48eb-9e99-506b1ba7acfa",
+    "slug": "anchovy",
+    "name": "anchovy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4f9b35ac-1e6f-458e-bdd0-53d7ecef0853",
+    "slug": "huggingfacetb",
+    "name": "HuggingFaceTB",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5033d1db-68be-4b9d-87cf-d6be67b1efb0",
+    "slug": "onegafer",
+    "name": "Onegafer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b37a0c5-d9d1-4e67-9150-cb9f4d85e88e",
+    "slug": "paperswithbacktest",
+    "name": "paperswithbacktest",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fa280d5e-3313-4ffb-ac48-ede2cd9f6e33",
+    "slug": "clarusc64",
+    "name": "ClarusC64",
+    "type": "vendor"
+  },
+  {
+    "uuid": "35bfe547-8c64-4b6d-84ce-18bb773ea05c",
+    "slug": "zeta-alpha-ai",
+    "name": "zeta-alpha-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "afd37592-7438-4f40-9455-5679600955c1",
+    "slug": "dx8152",
+    "name": "dx8152",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5257ccd2-5de0-4127-8844-ad4c2831deb9",
+    "slug": "catie-aq",
+    "name": "CATIE-AQ",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f3cd603f-679b-4ad9-ad70-13de37c25344",
+    "slug": "fcakyon",
+    "name": "fcakyon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b59c5f04-0d10-4fed-ae05-2b5e7aee5c5f",
+    "slug": "intfloat",
+    "name": "intfloat",
+    "type": "vendor"
+  },
+  {
+    "uuid": "31b7010c-c9da-40a1-aca2-e94e26f35870",
+    "slug": "neulab",
+    "name": "neulab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7a1d4bc9-041b-407b-bb60-188cc68cf0ca",
+    "slug": "vaishali",
+    "name": "vaishali",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5d8e8c9d-608d-406d-a388-d676be8015a9",
+    "slug": "alibaba-nlp",
+    "name": "Alibaba-NLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b4c597a7-7c93-413a-a529-cbe8d8464167",
+    "slug": "declare-lab",
+    "name": "declare-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f87895a0-f6a4-43ac-9d7a-3a0c06516d26",
+    "slug": "amazon",
+    "name": "amazon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bfcefb18-859e-472e-8d15-871b237849ae",
+    "slug": "bingsu",
+    "name": "Bingsu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0714a27d-8a94-496e-ab3a-488daa3adb10",
+    "slug": "internlm",
+    "name": "internlm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0712e8d0-1028-4abe-ac8e-740fea89000e",
+    "slug": "docling-project",
+    "name": "docling-project",
+    "type": "vendor"
+  },
+  {
+    "uuid": "59fd2fb0-9f58-47e0-90ac-cd719e971b40",
+    "slug": "optimum-intel-internal-testing",
+    "name": "optimum-intel-internal-testing",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dc5e847b-a48f-4c54-b97e-114f444646b7",
+    "slug": "john6666",
+    "name": "John6666",
+    "type": "vendor"
+  },
+  {
+    "uuid": "366cbf20-833f-44b9-9fc3-82edff6b5af2",
+    "slug": "huggingfacefw",
+    "name": "HuggingFaceFW",
+    "type": "vendor"
+  },
+  {
+    "uuid": "88e7b14d-e647-4cf8-b653-869e42d55c8d",
+    "slug": "mstz",
+    "name": "mstz",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3f26fa22-6073-45a5-bf47-bf97df29cc57",
+    "slug": "inclusionai",
+    "name": "inclusionAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ba4e33b2-4d3a-479b-b3d4-4db6784c31ef",
+    "slug": "wavecut",
+    "name": "WaveCut",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0b5fee61-a968-48e8-b7fd-258e9619330d",
+    "slug": "vantagewithai",
+    "name": "vantagewithai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dbb797c6-da0d-4e4d-9d19-127e58776ba3",
+    "slug": "menoviar28",
+    "name": "Menoviar28",
+    "type": "vendor"
+  },
+  {
+    "uuid": "10136e85-d171-448e-a10a-7fdc990e6dda",
+    "slug": "lightx2v",
+    "name": "lightx2v",
+    "type": "vendor"
+  },
+  {
+    "uuid": "39dd74ec-fe27-4103-b0b7-71cb27f07b35",
+    "slug": "oumoumad",
+    "name": "oumoumad",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d6e11ac5-f814-4b92-8ff3-c7826097d38e",
+    "slug": "aimagelab",
+    "name": "aimagelab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e2f63063-27eb-4463-90c4-294eb1bc6df1",
+    "slug": "jadechoghari",
+    "name": "jadechoghari",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4ce51942-c115-4cde-91e8-a182f3887d7a",
+    "slug": "tiiuae",
+    "name": "tiiuae",
+    "type": "vendor"
+  },
+  {
+    "uuid": "186b70c0-0796-4d91-a0fc-57baa19582d6",
+    "slug": "alibaba-pai",
+    "name": "alibaba-pai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a93ce9b8-52b5-4bfa-8e40-26f6b2f29b85",
+    "slug": "ai-forever",
+    "name": "ai-forever",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1f345e8a-cc79-43c0-afe9-e4e671be5c4d",
+    "slug": "sshleifer",
+    "name": "sshleifer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2feaf772-9ddd-46bf-aed6-0fcf020ebb0e",
+    "slug": "tasksource",
+    "name": "tasksource",
+    "type": "vendor"
+  },
+  {
+    "uuid": "29bdbd95-22a4-42fc-b9f5-c8802fff667c",
+    "slug": "pyannote",
+    "name": "pyannote",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f3d86b6-4858-41b6-a398-ff30de743775",
+    "slug": "philschmid",
+    "name": "philschmid",
+    "type": "vendor"
+  },
+  {
+    "uuid": "854dfeab-f39f-4ca2-be5c-fd9b5498e8fa",
+    "slug": "julien-c",
+    "name": "julien-c",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8b6ad236-b68e-4e37-92dc-2f389fd2ae44",
+    "slug": "abiray",
+    "name": "Abiray",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fbb80121-690d-4d47-a31f-bfda3f7d773e",
+    "slug": "minimaxai",
+    "name": "MiniMaxAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "16917ce1-0a5c-4c47-a810-e2b82223c185",
+    "slug": "aufklarer",
+    "name": "aufklarer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "909b343f-d60c-45c3-8e04-59afc51120e5",
+    "slug": "pnnbao-ump",
+    "name": "pnnbao-ump",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5a859f6c-b6a8-41bf-b3b7-160993bf994e",
+    "slug": "parler-tts",
+    "name": "parler-tts",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e1eb9df0-4230-4381-bc14-0edc4e97b8a0",
+    "slug": "unslothai",
+    "name": "unslothai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3dbbbccb-1e8c-40c0-afef-ae192405b21f",
+    "slug": "bigcode",
+    "name": "bigcode",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6829f251-b40c-4f53-919d-a7de429033ce",
+    "slug": "ivrit-ai",
+    "name": "ivrit-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e18d0829-aaa0-44b7-a39c-5c9fdba14dc9",
+    "slug": "ggfox00000",
+    "name": "ggfox00000",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9c692348-53d5-4b66-8c9d-d9bd7f59e3c0",
+    "slug": "naver-clova-ix",
+    "name": "naver-clova-ix",
+    "type": "vendor"
+  },
+  {
+    "uuid": "53a44acb-0ac3-459c-bfb7-f564bad29569",
+    "slug": "moonshotai",
+    "name": "moonshotai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "74439d46-7651-4cb6-abc5-95d9f890d097",
+    "slug": "nickmuchi",
+    "name": "nickmuchi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c60cc076-ce7f-44cc-a059-fa4c3eebf93a",
+    "slug": "jameslahm",
+    "name": "jameslahm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6a7b24f8-3f7c-4e5d-8e54-fd8671e3bd58",
+    "slug": "kyutai",
+    "name": "kyutai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "abfc9c2b-9ced-4c34-ac14-de3597ffbb7b",
+    "slug": "mixedbread-ai",
+    "name": "mixedbread-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a8bdf873-16a3-4522-b6fb-07b65d6bd9d8",
+    "slug": "hotchpotch",
+    "name": "hotchpotch",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2d09787d-6c22-4de5-9e25-55d0c32e46b2",
+    "slug": "unbabel",
+    "name": "Unbabel",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a5845d04-983c-4416-bb84-badb9847aea9",
+    "slug": "m-a-p",
+    "name": "m-a-p",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d7fc656f-adef-45a6-9c8f-b507ef19b7b1",
+    "slug": "coherelabs",
+    "name": "CohereLabs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "33d3105c-734f-47b6-b0fb-b7bac532761f",
+    "slug": "huggingface",
+    "name": "huggingface",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ca9a46f4-0e4c-426c-b8db-abe59a1b610e",
+    "slug": "liuganghuggingface",
+    "name": "liuganghuggingface",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5d79b53f-4ab5-4a95-9913-91380b2ce741",
+    "slug": "menlo",
+    "name": "Menlo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2bfec8be-add7-4793-b54c-854c23ee6a7c",
+    "slug": "mohamedrashad",
+    "name": "MohamedRashad",
+    "type": "vendor"
+  },
+  {
+    "uuid": "857f66fd-eaa0-434b-8c15-1c2c2ce22486",
+    "slug": "idea-ccnl",
+    "name": "IDEA-CCNL",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e6cc1b4b-cacc-471b-affd-e75c952ae0b6",
+    "slug": "weihao1115",
+    "name": "weihao1115",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7eca8f7b-bd6b-4137-836c-f310976f50fe",
+    "slug": "artelab",
+    "name": "ARTeLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "21484460-dee4-4490-a29c-25976cb2cf0e",
+    "slug": "d0rj",
+    "name": "d0rj",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4c8fd20a-f936-4bb9-a071-5bbf98ac7b15",
+    "slug": "neuphonic",
+    "name": "neuphonic",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3afb361c-9317-4c1c-89bb-7b07d4c264ac",
+    "slug": "hkustaudio",
+    "name": "HKUSTAudio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dc807606-dd2c-4bed-a800-13168532d6d5",
+    "slug": "aratako",
+    "name": "Aratako",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1faead04-7901-443a-95c5-19e485055a1d",
+    "slug": "nousresearch",
+    "name": "NousResearch",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0d1fc67d-3418-4cac-962b-28fc8bac1d3f",
+    "slug": "huggingfacem4",
+    "name": "HuggingFaceM4",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8e9b4e00-b5b4-4d47-96bd-cb3ff0691b72",
+    "slug": "lmazzon70",
+    "name": "lmazzon70",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5ac67fe9-0619-46bc-8649-215d0686e14f",
+    "slug": "huggingfaceh4",
+    "name": "HuggingFaceH4",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a5d35c81-e969-4720-a3fc-a3ef67920475",
+    "slug": "biglam",
+    "name": "biglam",
+    "type": "vendor"
+  },
+  {
+    "uuid": "940cce0b-1760-408a-a45a-470a5e88d7e2",
+    "slug": "ustc-community",
+    "name": "ustc-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4cb716b8-6793-4d3e-8f7e-b8c5d9c827e9",
+    "slug": "gpl",
+    "name": "GPL",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dfa857c0-f076-4683-b4e4-5e12f3f19299",
+    "slug": "qdrant",
+    "name": "Qdrant",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e600a612-c18a-4586-8e79-618b5814b54d",
+    "slug": "ndugar",
+    "name": "NDugar",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5671c34e-8c57-40ca-bd56-8adcd26849fa",
+    "slug": "amphion",
+    "name": "amphion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e48bf638-8ae7-4afa-88fe-7357400a34ed",
+    "slug": "flax",
+    "name": "flax",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e2b78d96-c94c-48b5-a066-50eb9dec237e",
+    "slug": "fintext",
+    "name": "FinText",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ed6ac54d-e7b6-4e08-acec-83739ca3b5bb",
+    "slug": "unitreerobotics",
+    "name": "unitreerobotics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fb03bbee-b444-4c82-9af5-2272ddc57431",
+    "slug": "open-index",
+    "name": "open-index",
+    "type": "vendor"
+  },
+  {
+    "uuid": "71c586ec-9cc2-449c-8c29-8fcac63f798a",
+    "slug": "fhrozen",
+    "name": "Fhrozen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "60750648-3c1e-4705-813a-e5ab1084b3d8",
+    "slug": "ronantakizawa",
+    "name": "ronantakizawa",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d3864d74-cc75-4580-8cc3-4e033f597d77",
+    "slug": "hf-tiny-model-private",
+    "name": "hf-tiny-model-private",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ff1fffa1-4b40-4578-a7c6-5ff37cdc9bf5",
+    "slug": "starkeater",
+    "name": "StarkEater",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e09e54a3-855c-47e5-bf9b-296d09fe33cb",
+    "slug": "5cd-ai",
+    "name": "5CD-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a5531595-12d9-49cf-889c-79c815dfbcd4",
+    "slug": "prs-eth",
+    "name": "prs-eth",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bba1caaf-7f2e-4d03-aa2f-e6c8168af60b",
+    "slug": "dima806",
+    "name": "dima806",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ec3dd921-6c3c-493d-99c7-33c70ebc0be8",
+    "slug": "zxhezexin",
+    "name": "zxhezexin",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c7b2f303-a3b7-4f66-86c9-e22f6c6ef42f",
+    "slug": "fireredteam",
+    "name": "FireRedTeam",
+    "type": "vendor"
+  },
+  {
+    "uuid": "54ff5cc2-8974-48b5-b161-555632538528",
+    "slug": "opendatalab",
+    "name": "opendatalab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42cbcace-1a25-4486-b0da-3955d118a6b7",
+    "slug": "foduucom",
+    "name": "foduucom",
+    "type": "vendor"
+  },
+  {
+    "uuid": "585ee57c-b282-4335-8aad-1af2b52b4440",
+    "slug": "bestwishysh",
+    "name": "BestWishYsh",
+    "type": "vendor"
+  },
+  {
+    "uuid": "628a46e0-b8cb-4f10-b968-a41c2faa15f1",
+    "slug": "distilbert",
+    "name": "distilbert",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2c51f2a0-9c3d-4636-bcdb-fd05260b6121",
+    "slug": "hfl",
+    "name": "hfl",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9937cb1d-ed6e-47d7-ba2d-78ead3256e8a",
+    "slug": "snowflake",
+    "name": "Snowflake",
+    "type": "vendor"
+  },
+  {
+    "uuid": "14263e16-a872-4eb5-883f-7119f738a29a",
+    "slug": "cointegrated",
+    "name": "cointegrated",
+    "type": "vendor"
+  },
+  {
+    "uuid": "34d9f49a-d349-471e-abb5-fbabc38e8e78",
+    "slug": "alexandrainst",
+    "name": "alexandrainst",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ac3d2491-adf9-487b-a210-30d35603bcc9",
+    "slug": "scikit-learn",
+    "name": "scikit-learn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "50671335-923a-4798-a247-a1588625a354",
+    "slug": "datadog",
+    "name": "Datadog",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0aad5e07-ecba-467f-b0b4-e1dd3de3b08d",
+    "slug": "aidc-ai",
+    "name": "AIDC-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "78df1024-e5ab-47ba-84f8-820c57b15b3f",
+    "slug": "openmmlab",
+    "name": "openmmlab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "95779912-0bda-4fab-ad0a-b4fd516a0e50",
+    "slug": "pekingu",
+    "name": "PekingU",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94d66419-0796-4b89-ace2-1cc3ffe2c18a",
+    "slug": "pszemraj",
+    "name": "pszemraj",
+    "type": "vendor"
+  },
+  {
+    "uuid": "74155515-fa19-47a3-8b7f-360788202a34",
+    "slug": "davidau",
+    "name": "DavidAU",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4cb9e56d-2a19-4b20-aa9e-c37e22be44a5",
+    "slug": "robbyant",
+    "name": "robbyant",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0de0ee2e-a7f6-491b-bd26-a0c0af7a6771",
+    "slug": "nyu-visionx",
+    "name": "nyu-visionx",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8bce2632-8a47-4a64-9343-fe3ba90047c4",
+    "slug": "mcgill-nlp",
+    "name": "McGill-NLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c6476a3c-34d7-4266-87fa-97a133fc2c16",
+    "slug": "nutonic",
+    "name": "NuTonic",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d2c7141b-e4c7-4440-911d-e7eafaca96ac",
+    "slug": "haosulab",
+    "name": "haosulab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "83a12d27-da1a-445e-8b62-f3aa3e762150",
+    "slug": "orionweller",
+    "name": "orionweller",
+    "type": "vendor"
+  },
+  {
+    "uuid": "114b4ca1-1a3d-44f7-82b3-67501b8eb01d",
+    "slug": "pglearn",
+    "name": "PGLearn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f979e661-0eea-413e-9ed1-246e9d47ebb2",
+    "slug": "plaid-datasets",
+    "name": "PLAID-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f5ea2c70-a54f-4600-bfc1-3ed4f6c59bf3",
+    "slug": "axondata",
+    "name": "AxonData",
+    "type": "vendor"
+  },
+  {
+    "uuid": "debdc82e-6f99-4825-84ab-2bee47bb4337",
+    "slug": "eugenetanjc",
+    "name": "eugenetanjc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "098881fb-9387-478e-be37-374e81eba7bd",
+    "slug": "huihui-ai",
+    "name": "huihui-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fe56b365-a56e-4fcf-8d9d-6b7ac4e3336c",
+    "slug": "mahmoodlab",
+    "name": "MahmoodLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e3bd655f-525b-4bbe-9ac7-4608b06b15e8",
+    "slug": "zhengpeng7",
+    "name": "ZhengPeng7",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b6e0a07a-a6b1-462e-8efb-ec92c01ac2bf",
+    "slug": "klingteam",
+    "name": "KlingTeam",
+    "type": "vendor"
+  },
+  {
+    "uuid": "abc1c0e0-10f6-490f-9fc8-a7dcbc0ce8af",
+    "slug": "ali-vilab",
+    "name": "ali-vilab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "055ceb7a-3538-4d07-88bb-7c33492f7c5f",
+    "slug": "fushh7",
+    "name": "fushh7",
+    "type": "vendor"
+  },
+  {
+    "uuid": "729e9974-6d85-4caa-9d78-d176df01f503",
+    "slug": "openmmlab-community",
+    "name": "openmmlab-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "59a8808e-8dda-49ee-97cc-d19d3adab05d",
+    "slug": "albert",
+    "name": "albert",
+    "type": "vendor"
+  },
+  {
+    "uuid": "29f117bc-7a60-466e-a353-377854199d3a",
+    "slug": "almanach",
+    "name": "almanach",
+    "type": "vendor"
+  },
+  {
+    "uuid": "86c175cf-a1cf-45bf-b864-a573d8e2f0af",
+    "slug": "shibing624",
+    "name": "shibing624",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5fde370c-27fd-4efa-998a-20257ed6cf14",
+    "slug": "ilyagusev",
+    "name": "IlyaGusev",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c8f00965-0225-4582-9f41-2414e72a0a55",
+    "slug": "antoinelouis",
+    "name": "antoinelouis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c2776ab5-8a49-4eb5-bf6b-83046267fb3f",
+    "slug": "nbailab",
+    "name": "NbAiLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d59c8e53-7d3c-46cb-87f1-8aa26357f647",
+    "slug": "cmarkea",
+    "name": "cmarkea",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cc942149-bf01-4de6-8cf8-f05ec42d3103",
+    "slug": "systran",
+    "name": "Systran",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bd8bcd90-c2d3-4663-8e7a-dcb02494fd35",
+    "slug": "myshell-ai",
+    "name": "myshell-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bf8a3eb8-588d-4d4c-b1b2-3fc5d5b4389d",
+    "slug": "rajistics",
+    "name": "rajistics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9d5e9f56-3869-4638-a64f-063937efbbe3",
+    "slug": "pcoloc",
+    "name": "pcoloc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d36cdff7-a1ff-4513-a4e5-7c9cf6ede1c6",
+    "slug": "second-state",
+    "name": "second-state",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d5c56f8c-3069-4ed0-aa03-df258039ac40",
+    "slug": "guoyww",
+    "name": "guoyww",
+    "type": "vendor"
+  },
+  {
+    "uuid": "053c01d9-89df-459b-80bc-4cf5f60d6fec",
+    "slug": "jhu-clsp",
+    "name": "jhu-clsp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "df4f6075-1253-4c0e-a923-04df70be8a58",
+    "slug": "dccuchile",
+    "name": "dccuchile",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9997f7b4-33f6-4f72-a0db-31849aedd7b4",
+    "slug": "morit",
+    "name": "morit",
+    "type": "vendor"
+  },
+  {
+    "uuid": "02bd6f5f-1914-41a3-9e42-a152b84f2ab6",
+    "slug": "cstr",
+    "name": "cstr",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a1039c4f-751b-4f51-a9d9-ab1137bc377f",
+    "slug": "ramos-ramos",
+    "name": "Ramos-Ramos",
+    "type": "vendor"
+  },
+  {
+    "uuid": "62c4e4b0-0319-4f78-90d2-0711ef2d5f67",
+    "slug": "polymathic-ai",
+    "name": "polymathic-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "362f22d0-e564-402a-bfab-4de4b2308cfd",
+    "slug": "davanstrien",
+    "name": "davanstrien",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bea40b7c-e8b8-486f-b2c6-4ff527ce37ca",
+    "slug": "felix92",
+    "name": "Felix92",
+    "type": "vendor"
+  },
+  {
+    "uuid": "56bea77f-95a7-4186-b2c2-1de74beca493",
+    "slug": "baudm",
+    "name": "baudm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f677558d-3a94-42ea-a420-a16f9aff4903",
+    "slug": "eleutherai",
+    "name": "EleutherAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "61caf08c-748b-4113-845b-cf555ca62d94",
+    "slug": "windstormlabs",
+    "name": "WindstormLabs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3ad6b814-be94-4098-ab8e-35bab40f1343",
+    "slug": "litagin",
+    "name": "litagin",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b9edc5f8-3601-419b-b3f9-a20ca5488e98",
+    "slug": "ylacombe",
+    "name": "ylacombe",
+    "type": "vendor"
+  },
+  {
+    "uuid": "990ce56e-8fcc-491f-976e-31f86de2fd44",
+    "slug": "dbbun",
+    "name": "DBbun",
+    "type": "vendor"
+  },
+  {
+    "uuid": "80a5da0c-e6f6-4e57-99a5-bd597b079258",
+    "slug": "longmaodata",
+    "name": "longmaodata",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0f2f1b13-a81b-48b2-a439-bfb4c262e359",
+    "slug": "hayden-donnelly",
+    "name": "hayden-donnelly",
+    "type": "vendor"
+  },
+  {
+    "uuid": "77ed4fbd-448c-4789-a0aa-7029116d6403",
+    "slug": "webxos",
+    "name": "webxos",
+    "type": "vendor"
+  },
+  {
+    "uuid": "173b53fc-1461-48b5-9861-ff8cecfba372",
+    "slug": "argilla",
+    "name": "argilla",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0227ed4d-0898-48e7-a97d-38d4131cf40b",
+    "slug": "embedding-data",
+    "name": "embedding-data",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9eb78c7e-f4d6-4ce6-92b5-839a52082629",
+    "slug": "maomlab",
+    "name": "maomlab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c6cc5e77-29df-4ab9-b669-9fbca7935b58",
+    "slug": "nwu-ctext",
+    "name": "nwu-ctext",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8d69ca23-8876-4291-880c-bbcaadd1b9f8",
+    "slug": "aixblock",
+    "name": "AIxBlock",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cfd551a3-b76f-46cb-93eb-b52fad8906eb",
+    "slug": "hauhaucs",
+    "name": "HauhauCS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e29ba591-57d8-463c-96eb-ceccdd09e431",
+    "slug": "usyd-community",
+    "name": "usyd-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "148161d6-9f1b-4f7c-8260-07b510481390",
+    "slug": "ahishamm",
+    "name": "ahishamm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "51da279f-00d7-4f01-be11-61c391491d0c",
+    "slug": "openvision",
+    "name": "openvision",
+    "type": "vendor"
+  },
+  {
+    "uuid": "934e1e6e-daeb-4105-9a96-1bfe7c9dcf65",
+    "slug": "yatharths",
+    "name": "YatharthS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "11218cdb-caf6-4d81-bf4c-53e6ec0b0380",
+    "slug": "valuefx9507",
+    "name": "ValueFX9507",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b6237ee7-0de3-4021-9cef-9e7a0000bda0",
+    "slug": "bytedance-research",
+    "name": "bytedance-research",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4e3ce951-d36e-4642-b9d7-fe3794a17fd8",
+    "slug": "lmstudio-community",
+    "name": "lmstudio-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8c59ced0-5d2e-4a5b-929a-83f19ecae733",
+    "slug": "sharka",
+    "name": "Sharka",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d76b7d0c-3334-4d26-b890-c2ed0199f1d4",
+    "slug": "mutonix",
+    "name": "Mutonix",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cfeda1e8-54d7-4821-b19d-02b327bc4380",
+    "slug": "athrael-soju",
+    "name": "athrael-soju",
+    "type": "vendor"
+  },
+  {
+    "uuid": "41a79b65-1519-4139-8560-130ed50fbc7f",
+    "slug": "mbzuai",
+    "name": "MBZUAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bc501759-9148-4b19-b642-9d22b23ee1d7",
+    "slug": "opendataarena",
+    "name": "OpenDataArena",
+    "type": "vendor"
+  },
+  {
+    "uuid": "547fa106-c7f5-4842-8d77-f139f5241689",
+    "slug": "jingheya",
+    "name": "jingheya",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0185bbb4-c98e-4b68-8682-827f9cbf6762",
+    "slug": "lodestones",
+    "name": "lodestones",
+    "type": "vendor"
+  },
+  {
+    "uuid": "118f8512-ee82-43f9-99c8-16da2b275588",
+    "slug": "tue-mps",
+    "name": "tue-mps",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d1bbe0ec-0b2d-4f7f-8c31-f20a8f878aaa",
+    "slug": "vast-ai",
+    "name": "VAST-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5a6627d5-4ab0-42c1-97e3-4a8e7e0b794e",
+    "slug": "soul-ailab",
+    "name": "Soul-AILab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c8873152-3ca0-44ff-a366-6245257f9ec0",
+    "slug": "mwmathis",
+    "name": "mwmathis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f228aa68-68f7-4964-a382-8f8f1684805c",
+    "slug": "amazonscience",
+    "name": "AmazonScience",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b9e42589-671c-4f64-b86e-45368889956a",
+    "slug": "vietai",
+    "name": "VietAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e1bd6c57-4f7e-45e2-83fe-93285e252408",
+    "slug": "ucsc-vlaa",
+    "name": "UCSC-VLAA",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f18e6e54-c973-413a-bb63-fc18b16c5a1a",
+    "slug": "deepvk",
+    "name": "deepvk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4c0650bb-9693-44a6-970e-06a999a97949",
+    "slug": "urchade",
+    "name": "urchade",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b4b5d0ed-37be-4cb9-8f9c-32a9961fc8ba",
+    "slug": "bookbot",
+    "name": "bookbot",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eb8e94f1-17d2-4903-959a-93f8f7ea8e1a",
+    "slug": "somosnlp-hackathon-2022",
+    "name": "somosnlp-hackathon-2022",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e80af03a-d728-4a0d-b350-8ba1572eb333",
+    "slug": "outeai",
+    "name": "OuteAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "25d32f30-9f56-4b1a-964e-252468147c7d",
+    "slug": "fudan-fuxi",
+    "name": "Fudan-FUXI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bc3f4829-1032-422f-9af5-60372eeae0d5",
+    "slug": "unum-cloud",
+    "name": "unum-cloud",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e8279f7e-6468-499b-a0af-0b37f1da227c",
+    "slug": "qihoo360",
+    "name": "qihoo360",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8aef0a90-c862-41c7-8aa7-9cf26fa5ca33",
+    "slug": "matthijs",
+    "name": "Matthijs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d6b51b6e-076f-4cba-b7f1-b7b8d9905ebd",
+    "slug": "nimaboscarino",
+    "name": "NimaBoscarino",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f674fa40-11a2-4ddf-ac2b-424de21d0a20",
+    "slug": "gd-ml",
+    "name": "GD-ML",
+    "type": "vendor"
+  },
+  {
+    "uuid": "43e51fee-328e-4627-8814-6fc8600f5645",
+    "slug": "video-reason",
+    "name": "Video-Reason",
+    "type": "vendor"
+  },
+  {
+    "uuid": "68bb6493-e482-4208-a812-d1fa0c656cb9",
+    "slug": "genius-society",
+    "name": "Genius-Society",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b2d49b69-c68b-46f6-93df-122e5d978619",
+    "slug": "tempofunk",
+    "name": "TempoFunk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "caf793c7-8bc7-4729-b9e0-8eab13c1f139",
+    "slug": "lewtun",
+    "name": "lewtun",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e60cb2d6-d92a-4e22-8480-4b737c4679e6",
+    "slug": "ayushpj",
+    "name": "AyushPJ",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f900431a-fba1-46c7-a6ec-396086324df5",
+    "slug": "flagalpha",
+    "name": "FlagAlpha",
+    "type": "vendor"
+  },
+  {
+    "uuid": "44377b27-be96-4518-8eba-35e418d696e6",
+    "slug": "aleksandar",
+    "name": "Aleksandar",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0900dea9-d342-413f-87ec-fe6f5185abbf",
+    "slug": "hitz",
+    "name": "HiTZ",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2ca5dcbb-3daa-4fca-8afb-8746586fd539",
+    "slug": "ayoubchlin",
+    "name": "AyoubChLin",
+    "type": "vendor"
+  },
+  {
+    "uuid": "09244a4d-5005-4910-9436-d3814facfe01",
+    "slug": "matlok",
+    "name": "matlok",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ac495aa5-3eb1-4d58-81b0-1b0a37714867",
+    "slug": "legacy-datasets",
+    "name": "legacy-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f3d4fd29-b392-469c-9a8f-1b02c74e8523",
+    "slug": "norod78",
+    "name": "Norod78",
+    "type": "vendor"
+  },
+  {
+    "uuid": "faa067a8-f701-44e1-8b3e-220846c0b91a",
+    "slug": "stanfordnlp",
+    "name": "stanfordnlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a82e0636-2008-4209-9226-4a04ef6c030e",
+    "slug": "wmt",
+    "name": "wmt",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e561de9a-5110-4633-b61b-d80f847209de",
+    "slug": "adaptllm",
+    "name": "AdaptLLM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c2c86813-c909-45a0-9fcf-83521c7fbae5",
+    "slug": "tarekmasryo",
+    "name": "tarekmasryo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "689a80be-b75b-4194-b8a8-f6ee1f34557c",
+    "slug": "whybe-choi",
+    "name": "whybe-choi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f23f8bce-42ef-47e0-b2e3-3b9d2a252147",
+    "slug": "mwalmsley",
+    "name": "mwalmsley",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b1b57ab2-a534-480b-9a89-c0f8d7faa176",
+    "slug": "unidatapro",
+    "name": "UniDataPro",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8e519668-6c8f-4870-9358-ccf3844db463",
+    "slug": "linxy",
+    "name": "linxy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5fc8ee72-7df6-42a3-9818-08e48926e7d1",
+    "slug": "projecte-aina",
+    "name": "projecte-aina",
+    "type": "vendor"
+  },
+  {
+    "uuid": "46131ce6-23d1-48dc-bcb3-24bba68d20ff",
+    "slug": "gaussianworld",
+    "name": "GaussianWorld",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c0de3101-97af-438a-a2c0-c26905b1e6ca",
+    "slug": "sensenova",
+    "name": "sensenova",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3edf6068-8e56-4ad0-954d-90b0f939e1e7",
+    "slug": "meituan-longcat",
+    "name": "meituan-longcat",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94e5553f-5a1e-42a9-8838-d1df87403016",
+    "slug": "mistralai",
+    "name": "mistralai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3df6d9b6-28f1-403b-a3b3-9279b47fc7d7",
+    "slug": "ggml-org",
+    "name": "ggml-org",
+    "type": "vendor"
+  },
+  {
+    "uuid": "923e34b4-f694-4a5c-9d26-9a8ea22fa1dc",
+    "slug": "mingyi456",
+    "name": "mingyi456",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1e239615-150f-4fdc-a790-c7b24e8229e0",
+    "slug": "llava-hf",
+    "name": "llava-hf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2af4944a-607a-4c80-a6ff-ee09590fd01b",
+    "slug": "modernvbert",
+    "name": "ModernVBERT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "23c45e77-a206-42fa-9f27-14196f0f308b",
+    "slug": "tsystems",
+    "name": "tsystems",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9233a261-d814-4fcd-9d24-b8b4bf3e92b0",
+    "slug": "liheyoung",
+    "name": "LiheYoung",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ed63466d-546c-458e-ac04-7b16eb182d61",
+    "slug": "fal",
+    "name": "fal",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d7803d30-1456-4556-b4a4-fc00202d24fd",
+    "slug": "thoddnn",
+    "name": "thoddnn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a19cf7f9-e002-4393-ab6a-e2afb1b96bd1",
+    "slug": "babelscape",
+    "name": "Babelscape",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9f5a5682-18c6-4417-92af-378cdb5a286a",
+    "slug": "valhalla",
+    "name": "valhalla",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8ad0f18c-4efa-46c3-8bd8-29d05a8a0029",
+    "slug": "liquidai",
+    "name": "LiquidAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b72abc59-7282-4364-ad7e-ad1cb98aea95",
+    "slug": "fishaudio",
+    "name": "fishaudio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "400f9741-f964-44aa-af90-dc31575a0dc4",
+    "slug": "jwan2021",
+    "name": "jwan2021",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e03de701-b94d-4afc-a18c-08ac11c9a886",
+    "slug": "chengsenwang",
+    "name": "ChengsenWang",
+    "type": "vendor"
+  },
+  {
+    "uuid": "46cf0cb5-89f8-4d7b-83b8-8ef803702bad",
+    "slug": "ecmwf",
+    "name": "ecmwf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "feb0e960-7bcc-4db1-ab64-a97cf9e0076e",
+    "slug": "gaianet",
+    "name": "gaianet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a5797cd3-d5ca-4ab9-9985-5150d0355bd1",
+    "slug": "omartificial-intelligence-space",
+    "name": "Omartificial-Intelligence-Space",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3681919b-661a-4bbd-9fa0-cff47354f331",
+    "slug": "vdo",
+    "name": "vdo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "95172230-0040-47c1-bc27-ad9373151fa9",
+    "slug": "lin-chen",
+    "name": "Lin-Chen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d662c5dd-497f-4eba-9d77-5925ed405a6a",
+    "slug": "erax-ai",
+    "name": "erax-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42c756f5-f225-4f98-a538-0e64321363f9",
+    "slug": "manycore-research",
+    "name": "manycore-research",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a07af694-d943-4deb-9d54-4062f6e89c8d",
+    "slug": "sbintuitions",
+    "name": "sbintuitions",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5ba0f24f-ac19-416e-a165-52ae53ddd28d",
+    "slug": "numind",
+    "name": "numind",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a36f0f32-7fbb-43f5-afdb-52f3d1796030",
+    "slug": "cyberagent",
+    "name": "cyberagent",
+    "type": "vendor"
+  },
+  {
+    "uuid": "787e817c-90f8-4b99-81d2-3f55a686f3d3",
+    "slug": "pair",
+    "name": "PAIR",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6ce6a7c6-56bf-4058-8959-83fe8612c621",
+    "slug": "knkarthick",
+    "name": "knkarthick",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a8fdd74d-5fea-450e-80d3-de753ce36bed",
+    "slug": "deutsche-telekom",
+    "name": "deutsche-telekom",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7ce2bb7a-2396-4feb-bc83-400472a85f61",
+    "slug": "ml6team",
+    "name": "ml6team",
+    "type": "vendor"
+  },
+  {
+    "uuid": "28b05bf6-ff70-4bcb-89f3-e1051e6b8a5e",
+    "slug": "sdadas",
+    "name": "sdadas",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e8ac979e-a846-4366-8183-e5b6aa019f62",
+    "slug": "flair",
+    "name": "flair",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94070143-871f-4570-a824-e543c14b6863",
+    "slug": "nandemoghs",
+    "name": "NandemoGHS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9704b5c1-f4fc-4366-bb43-dca9b7bf9090",
+    "slug": "distil-whisper",
+    "name": "distil-whisper",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fa031cad-d606-4b58-8e7d-42464e5275af",
+    "slug": "zhang199",
+    "name": "Zhang199",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ad6fa5c2-d903-4587-97ab-aad00233d9a4",
+    "slug": "sakanaai",
+    "name": "SakanaAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0a64f1c5-6b0e-4286-a5de-2bad3cf9142a",
+    "slug": "ignf",
+    "name": "IGNF",
+    "type": "vendor"
+  },
+  {
+    "uuid": "22c5d348-5a3a-46e9-8339-a65345e4305d",
+    "slug": "shareai",
+    "name": "shareAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5fd75c9a-6862-4a32-acbe-8745dbb34e5f",
+    "slug": "dataikunlp",
+    "name": "DataikuNLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "730d849e-d96c-48ac-af37-1badfe6347f2",
+    "slug": "bee-spoke-data",
+    "name": "BEE-spoke-data",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ce350c01-021f-4fc7-ac4f-5da4658e5529",
+    "slug": "leocordoba",
+    "name": "LeoCordoba",
+    "type": "vendor"
+  },
+  {
+    "uuid": "62fad763-4e57-4346-9184-dd3e6e57ba9a",
+    "slug": "liuwenhan",
+    "name": "liuwenhan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9ef9e510-9cf7-44be-8960-537e0fbbbe40",
+    "slug": "qcri",
+    "name": "QCRI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2dbe24c0-f4aa-46b2-bfb3-56633fa309ed",
+    "slug": "lucadellalib",
+    "name": "lucadellalib",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a98d85fa-a9de-4316-945e-2ff0a93d4ac4",
+    "slug": "forkjoin-ai",
+    "name": "forkjoin-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "86832c6b-3860-4f18-8c53-cda6c2c1bc6c",
+    "slug": "sil-ai",
+    "name": "sil-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5a60d49d-202d-447f-af55-edf0399f1464",
+    "slug": "ogutsevda",
+    "name": "ogutsevda",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7ac50999-8c20-4668-931c-e1f36a258496",
+    "slug": "ai4privacy",
+    "name": "ai4privacy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e044c917-581f-4234-8048-9850956d77f6",
+    "slug": "friedrichor",
+    "name": "friedrichor",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0376a09e-18ad-4488-ace8-7c6fe1f6a1c1",
+    "slug": "defunct-datasets",
+    "name": "defunct-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "22d2b1e4-9216-4a88-8630-4517b8bfab68",
+    "slug": "tanganke",
+    "name": "tanganke",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b2f99ef4-a2f6-43be-a2d9-da0a1aec2931",
+    "slug": "chungimungi",
+    "name": "chungimungi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "496b6e8f-72a3-400b-b92c-40907592155d",
+    "slug": "tts-agi",
+    "name": "TTS-AGI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "808b5af5-e3b7-482e-a6b7-8bd9579beabd",
+    "slug": "datapointai",
+    "name": "datapointai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b259cd07-9a3d-4a74-917f-8afcc011af29",
+    "slug": "oscar-corpus",
+    "name": "oscar-corpus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2264aed0-bd29-4887-a1aa-59a19e80e759",
+    "slug": "yoshitomo-matsubara",
+    "name": "yoshitomo-matsubara",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9888685c-d232-40cd-80a9-1f989102eee8",
+    "slug": "common-canvas",
+    "name": "common-canvas",
+    "type": "vendor"
+  },
+  {
+    "uuid": "59bec19f-311a-4a88-918e-2ae3a8c34ca0",
+    "slug": "llukas22",
+    "name": "LLukas22",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e47474d7-d821-4a44-8f2d-bfd96f414f2f",
+    "slug": "tfnn",
+    "name": "tfnn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2121a8a7-e078-4763-a5ad-3f1865a21af7",
+    "slug": "danaroth",
+    "name": "danaroth",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c6759b74-0930-41d6-9dbd-ae5b16ccc261",
+    "slug": "yangwang825",
+    "name": "yangwang825",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6233e9c0-3179-4fbb-a369-f045904271b4",
+    "slug": "hf-internal-testing",
+    "name": "hf-internal-testing",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7c849e85-2c09-488a-b241-9175c3e354b4",
+    "slug": "tiennvcs",
+    "name": "tiennvcs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f1adf1eb-722b-4693-aaf6-6777e32e0987",
+    "slug": "tevatron",
+    "name": "Tevatron",
+    "type": "vendor"
+  },
+  {
+    "uuid": "38f72672-2235-4bac-9079-8fe206e2f564",
+    "slug": "mungert",
+    "name": "Mungert",
+    "type": "vendor"
+  },
+  {
+    "uuid": "789c6cc3-07f2-4266-a42b-aac045c44849",
+    "slug": "lovis93",
+    "name": "lovis93",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b326acb-9c1d-465d-bad8-2e4408c2c3fb",
+    "slug": "xlabs-ai",
+    "name": "XLabs-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2a6f2d5e-5d04-4c2e-8aa5-86a5ed11fc6b",
+    "slug": "joyfox",
+    "name": "joyfox",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6f139695-cb74-4e5b-8988-fd390d407b42",
+    "slug": "sensetime",
+    "name": "SenseTime",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ad8a5735-f034-41be-b773-1cdaada3b1f9",
+    "slug": "hustvl",
+    "name": "hustvl",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9934a21b-6ba9-4b7a-9878-be90b8daf4e4",
+    "slug": "bartowski",
+    "name": "bartowski",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3dfb1871-b21e-42c4-a872-797b95a5a71e",
+    "slug": "alexgusevski",
+    "name": "alexgusevski",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7c8628a5-93d9-401e-9bb3-49adec361068",
+    "slug": "gqk",
+    "name": "gqk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "46ff179e-3318-4827-946a-45fe30d72726",
+    "slug": "compvis",
+    "name": "CompVis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "29af34a5-740a-4d23-875e-cd88a277a0ee",
+    "slug": "thomasboosinger",
+    "name": "Thomasboosinger",
+    "type": "vendor"
+  },
+  {
+    "uuid": "223c87f9-dccc-48d8-9fb2-9093a1846ca4",
+    "slug": "omlab",
+    "name": "omlab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1d99f678-7265-4e65-9c19-b490fa1fdafb",
+    "slug": "cl-nagoya",
+    "name": "cl-nagoya",
+    "type": "vendor"
+  },
+  {
+    "uuid": "118f5af3-dbf6-452d-b37e-d80380e71463",
+    "slug": "yale-lily",
+    "name": "Yale-LILY",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b0d6d95-f5a7-479f-9217-590407dfbd68",
+    "slug": "davlan",
+    "name": "Davlan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a283fc13-f210-4fae-9380-cf04c1256fb3",
+    "slug": "google-t5",
+    "name": "google-t5",
+    "type": "vendor"
+  },
+  {
+    "uuid": "57b90c91-122b-40be-9514-a62c6f62324b",
+    "slug": "sileod",
+    "name": "sileod",
+    "type": "vendor"
+  },
+  {
+    "uuid": "76b82cac-f7a2-43e0-a640-9f858621f36a",
+    "slug": "mit",
+    "name": "MIT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1096b69a-bf1c-4d18-b92b-cd843619f88e",
+    "slug": "argmaxinc",
+    "name": "argmaxinc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8f9f4aae-324c-4a44-b5b3-461c95c5f26d",
+    "slug": "resembleai",
+    "name": "ResembleAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d644e0d5-962d-41c0-af1f-ec4011314ed3",
+    "slug": "prior-labs",
+    "name": "Prior-Labs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9d71da66-1132-4d1e-aaf1-114af10c69d3",
+    "slug": "vyver7952",
+    "name": "vyver7952",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c83af658-6f23-44a1-99bb-370aa121dd80",
+    "slug": "neoquasar",
+    "name": "NeoQuasar",
+    "type": "vendor"
+  },
+  {
+    "uuid": "414bf5c4-9d27-4826-83a5-14edbdb990b1",
+    "slug": "thuml",
+    "name": "thuml",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cdc7c9a7-51f1-483c-a1d3-15630626f7ca",
+    "slug": "rail-berkeley",
+    "name": "rail-berkeley",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c591a2c7-eff1-42ba-94bd-ad9340d3317c",
+    "slug": "daizedong",
+    "name": "DaizeDong",
+    "type": "vendor"
+  },
+  {
+    "uuid": "328f3faf-2e8a-4494-9d53-4c90f660b416",
+    "slug": "leduckhai",
+    "name": "leduckhai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "84445c20-8786-414a-8489-6ea0c3561b42",
+    "slug": "slprl",
+    "name": "slprl",
+    "type": "vendor"
+  },
+  {
+    "uuid": "22b3a77e-5a2f-4883-bf27-de5b0becfebc",
+    "slug": "zibajoon",
+    "name": "zibajoon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "91b62f90-8e5e-4248-a722-253937b715e7",
+    "slug": "wchai",
+    "name": "wchai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "58fe7999-3729-45b4-be7e-74b0d8ca879d",
+    "slug": "thudyh",
+    "name": "THUdyh",
+    "type": "vendor"
+  },
+  {
+    "uuid": "afdc0fd9-4911-4427-aeef-d711d35f006d",
+    "slug": "unity",
+    "name": "unity",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1b8ed22d-d084-4ca1-b070-3515646b5794",
+    "slug": "phanerozoic",
+    "name": "phanerozoic",
+    "type": "vendor"
+  },
+  {
+    "uuid": "738f45c1-6404-4f27-90b5-fc9f467921e5",
+    "slug": "shi-labs",
+    "name": "shi-labs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "05bd5abe-5c4c-4d7f-bb5c-774783dc28e4",
+    "slug": "3daigc",
+    "name": "3DAIGC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "621742b0-300c-4d9b-99ac-869a71a65c88",
+    "slug": "jasperai",
+    "name": "jasperai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0f5f9a58-e8f0-4af8-a76b-dc7fe7c7b9a9",
+    "slug": "openface-cqupt",
+    "name": "OpenFace-CQUPT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5fa84623-7632-4e05-847d-2f3528138b7b",
+    "slug": "jayn7",
+    "name": "jayn7",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5e3a063b-0557-4991-b6d2-53fbb909f036",
+    "slug": "stmicroelectronics",
+    "name": "STMicroelectronics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4535d3b6-e766-444a-95cf-3dbb7c1d4a76",
+    "slug": "sg161222",
+    "name": "SG161222",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5a7ed67b-28c1-4326-963c-63792eeb4e37",
+    "slug": "diffusers",
+    "name": "diffusers",
+    "type": "vendor"
+  },
+  {
+    "uuid": "67aba10f-441a-49e1-b0e2-59fb2f0b1293",
+    "slug": "1aurent",
+    "name": "1aurent",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2584da06-674d-469b-8649-62b828e50229",
+    "slug": "ncbi",
+    "name": "ncbi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8f7a8601-9019-4573-89f0-5773855d5b97",
+    "slug": "airesearch",
+    "name": "airesearch",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a4c11bf4-21a9-4f11-a91f-97f0dcad75d0",
+    "slug": "uer",
+    "name": "uer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4987b2ad-1d07-44fe-b879-be2fdb1d1f16",
+    "slug": "pierreguillou",
+    "name": "pierreguillou",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fd989e09-ba71-48d4-a8c5-ab0a37065d1c",
+    "slug": "csarron",
+    "name": "csarron",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d7ee3eba-5246-4ec8-9568-cd393aab3bc2",
+    "slug": "csebuetnlp",
+    "name": "csebuetnlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2de4f0c0-8197-4b84-a029-14798b5e09ab",
+    "slug": "quantfactory",
+    "name": "QuantFactory",
+    "type": "vendor"
+  },
+  {
+    "uuid": "52b65189-704d-4b95-8ae1-f30c5c6dbd69",
+    "slug": "michigannlp",
+    "name": "MichiganNLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4177a291-d119-4ad6-9ff1-2f8625f9eba7",
+    "slug": "thebajajra",
+    "name": "thebajajra",
+    "type": "vendor"
+  },
+  {
+    "uuid": "24248fa2-a739-41e0-8848-b3f348ae38b6",
+    "slug": "utrobinmv",
+    "name": "utrobinmv",
+    "type": "vendor"
+  },
+  {
+    "uuid": "96dd3d71-da88-46d6-a3aa-1ff5bfbd5083",
+    "slug": "aniemore",
+    "name": "Aniemore",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3cd6fc71-7f15-4a82-b213-9a1893380312",
+    "slug": "jusperlee",
+    "name": "JusperLee",
+    "type": "vendor"
+  },
+  {
+    "uuid": "039b2c90-8eeb-429d-9ecd-58724d7af9dd",
+    "slug": "maitrix-org",
+    "name": "maitrix-org",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ad867b23-039e-4e22-9b77-5211658f06a1",
+    "slug": "marvis-ai",
+    "name": "Marvis-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "574020a6-10ea-4788-b971-cd70ff777be4",
+    "slug": "zyphra",
+    "name": "Zyphra",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8dc67282-9a17-476f-995f-63358b3c07e9",
+    "slug": "faroukfaiz",
+    "name": "FaroukFaiz",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9e259ab0-b4b7-4a77-9e03-46b6d598bd68",
+    "slug": "cisco-ai",
+    "name": "cisco-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c63391b4-7f96-407e-a12a-bdd7a6fa396a",
+    "slug": "lerobot-data-collection",
+    "name": "lerobot-data-collection",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4a10e277-8f1a-496c-bdec-a63c94ad068e",
+    "slug": "moojink",
+    "name": "moojink",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5ff8a5b6-8301-404a-b426-cf0dca166391",
+    "slug": "2toinf",
+    "name": "2toINF",
+    "type": "vendor"
+  },
+  {
+    "uuid": "41264cf3-1de0-47b3-891e-9572f60a95e1",
+    "slug": "hit-tmg",
+    "name": "HIT-TMG",
+    "type": "vendor"
+  },
+  {
+    "uuid": "87e49e99-0274-428e-a0a5-2c3c929dd17d",
+    "slug": "antonioth",
+    "name": "AntonioTH",
+    "type": "vendor"
+  },
+  {
+    "uuid": "47214080-da4e-457c-967a-d716ffbadc1a",
+    "slug": "liuhaotian",
+    "name": "liuhaotian",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0e67c211-d11b-460c-9bff-4767d1ee2b3c",
+    "slug": "yaolily",
+    "name": "yaolily",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f837af8e-ed9b-48d4-a91a-53d232314eae",
+    "slug": "darthreca",
+    "name": "DarthReca",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9652b511-40fc-4ab9-ab68-a8c950e14bc8",
+    "slug": "akshatsurolia",
+    "name": "AkshatSurolia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "af6eb6c3-fb26-4af0-958c-60d57f0d7ead",
+    "slug": "peteromallet",
+    "name": "peteromallet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5f847f0f-9ff0-40b5-bde8-630d0d533b05",
+    "slug": "dunnbc22",
+    "name": "DunnBC22",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fc8c3fc3-020b-4684-bace-7980e5aeceb7",
+    "slug": "efficient-large-model",
+    "name": "Efficient-Large-Model",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8a26ae15-8e4c-484a-998f-7150fa279936",
+    "slug": "vchitect",
+    "name": "Vchitect",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9043edb8-ee49-47fe-9044-3e652ec5f9d3",
+    "slug": "disco-eth",
+    "name": "disco-eth",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3f2dd28d-acb4-407f-bb13-955d7ba52aea",
+    "slug": "nroggendorff",
+    "name": "nroggendorff",
+    "type": "vendor"
+  },
+  {
+    "uuid": "31bf4756-cca5-48ce-91f7-e9d06978836d",
+    "slug": "visheratin",
+    "name": "visheratin",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eaf64bdf-1473-434d-a55d-18a186de870e",
+    "slug": "princeton-nlp",
+    "name": "princeton-nlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ab988d23-19c9-4d2c-9e6c-84c61a8dcefc",
+    "slug": "mahdin70",
+    "name": "mahdin70",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c2df2b81-c944-43d8-9cad-76533f22bd6f",
+    "slug": "codefuse-ai",
+    "name": "codefuse-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "205204c4-9d9e-4f24-bb33-b305654806e0",
+    "slug": "mesolitica",
+    "name": "mesolitica",
+    "type": "vendor"
+  },
+  {
+    "uuid": "037ddb14-a6d8-45a0-a458-a8bdbb9421cb",
+    "slug": "tau",
+    "name": "tau",
+    "type": "vendor"
+  },
+  {
+    "uuid": "52615e0f-f0b7-4bf3-a927-037ad06c4f93",
+    "slug": "groovy-123",
+    "name": "Groovy-123",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d740f77e-55db-4e66-90cd-821139e81f1f",
+    "slug": "rizki-syazali",
+    "name": "rizki-syazali",
+    "type": "vendor"
+  },
+  {
+    "uuid": "84c483fe-8887-4ca5-ac18-97edea26497f",
+    "slug": "iaar-shanghai",
+    "name": "IAAR-Shanghai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a45189a2-2807-431b-8918-d23babe14822",
+    "slug": "frontiersmind",
+    "name": "FrontiersMind",
+    "type": "vendor"
+  },
+  {
+    "uuid": "aaf8fd7c-9343-459b-bfc3-4844876979f3",
+    "slug": "tner",
+    "name": "tner",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1f44669b-b8f3-4d6a-85d9-0fe658498932",
+    "slug": "clack",
+    "name": "CLAck",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3116edb1-51fa-4ad3-9e3c-81f3c8084e89",
+    "slug": "jacoblincool",
+    "name": "JacobLinCool",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f090d38e-5cd9-4ec5-b2f4-d2b3b11f021d",
+    "slug": "cadene",
+    "name": "cadene",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e1498fc0-9d05-4ab3-8752-ad94532fa5db",
+    "slug": "mathllms",
+    "name": "MathLLMs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5964a838-359f-4e5d-bcfb-7111e01c5bfd",
+    "slug": "yatin-superintelligence",
+    "name": "yatin-superintelligence",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8be6428e-cda6-4b76-a167-4c1f41dfca07",
+    "slug": "torchgeo",
+    "name": "torchgeo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "920e19d8-3daf-48e9-a509-8af140860ee7",
+    "slug": "wenhaowang",
+    "name": "WenhaoWang",
+    "type": "vendor"
+  },
+  {
+    "uuid": "11484896-a15f-4342-a48e-bb03708f94c5",
+    "slug": "sellopale",
+    "name": "Sellopale",
+    "type": "vendor"
+  },
+  {
+    "uuid": "77b5c68b-3774-4bc1-a03c-17259c2e4dab",
+    "slug": "huanngzh",
+    "name": "huanngzh",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b9bab6b0-2a77-4567-ae97-b8c767167b3e",
+    "slug": "fbk-mt",
+    "name": "FBK-MT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ea852823-d4f5-41bd-8321-13ab5c368630",
+    "slug": "mythicinfinity",
+    "name": "mythicinfinity",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b8d7a119-7707-41e2-8cb7-6b27c59f2cde",
+    "slug": "criteo",
+    "name": "criteo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "65ad1e7a-9eaa-46d7-932d-5b7578e0c3c6",
+    "slug": "agentlans",
+    "name": "agentlans",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8d2d49d0-a738-4268-a079-981719c6b00f",
+    "slug": "louisbrulenaudet",
+    "name": "louisbrulenaudet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "57113e17-9e49-49c1-b4d7-2a3b916ddc12",
+    "slug": "weichow",
+    "name": "WeiChow",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d75b64f0-3f83-486f-b23a-f0e46f87e302",
+    "slug": "tandevllc",
+    "name": "tandevllc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d877a74f-de63-40a4-9797-aa099c1bbbce",
+    "slug": "servicenow",
+    "name": "ServiceNow",
+    "type": "vendor"
+  },
+  {
+    "uuid": "92e6fdda-52f1-45b3-b1a0-7f856afe65b8",
+    "slug": "hanamizuki-ai",
+    "name": "hanamizuki-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "01349eaf-594f-41da-9bd3-0988e8f6090f",
+    "slug": "csu-jpg",
+    "name": "CSU-JPG",
+    "type": "vendor"
+  },
+  {
+    "uuid": "305c878c-e188-43d0-b5d1-65f9718e9ea1",
+    "slug": "rishitdagli",
+    "name": "rishitdagli",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b50c0a45-b6f4-4f99-b418-2c3d345fa7e8",
+    "slug": "trojblue",
+    "name": "trojblue",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e33d30fb-9b05-406c-ab42-15005c1ef177",
+    "slug": "freococo",
+    "name": "freococo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "69032f8a-9e78-4a3c-8b18-5cd7468c9545",
+    "slug": "molssiai-hub",
+    "name": "molssiai-hub",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7401ddcd-cdb6-49de-b881-0cf8b225f743",
+    "slug": "stdkonjac",
+    "name": "stdKonjac",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c91ba270-a340-4e2a-9ef2-7ab13a210897",
+    "slug": "teticio",
+    "name": "teticio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3f3d5879-e7c3-4d5e-b94b-b290c5464cc4",
+    "slug": "joelniklaus",
+    "name": "joelniklaus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "01cb466c-e133-455b-b2d0-c765cb403c99",
+    "slug": "fsicoli",
+    "name": "fsicoli",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1c3a9162-28e3-4aa2-a3bc-ef4f63a35509",
+    "slug": "wwydmanski",
+    "name": "wwydmanski",
+    "type": "vendor"
+  },
+  {
+    "uuid": "db7f7823-6959-4728-b7bc-5d093361e86f",
+    "slug": "toloka",
+    "name": "toloka",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c02c5d33-4287-4c0e-84f0-a163b678ccb6",
+    "slug": "hfwang01",
+    "name": "hfwang01",
+    "type": "vendor"
+  },
+  {
+    "uuid": "caf911d9-2c3e-4ed6-adcf-2564aece6150",
+    "slug": "urukhan",
+    "name": "UrukHan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5d6a08d4-35fb-49e9-b4de-d7fb40f76237",
+    "slug": "nexaai",
+    "name": "NexaAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c8b182ed-1315-43cb-b6d1-26495c9bbcf1",
+    "slug": "dhineshk",
+    "name": "Dhineshk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8cc73b5c-bcdd-4168-b2cc-4add616e7ba3",
+    "slug": "phr00t",
+    "name": "Phr00t",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42db1075-fee4-46f5-846f-c0e7dfc8dd92",
+    "slug": "vision-cair",
+    "name": "Vision-CAIR",
+    "type": "vendor"
+  },
+  {
+    "uuid": "331a7a51-acca-479f-bf82-ddf387fb181b",
+    "slug": "metric-ai",
+    "name": "Metric-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "53230cea-1d6c-4410-8b1d-abc23452f741",
+    "slug": "falconsai",
+    "name": "Falconsai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b2e47169-a223-4dcf-ab43-15fceb9dd758",
+    "slug": "alissonerdx",
+    "name": "Alissonerdx",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a36d2f39-9270-41df-a552-d8e3954fed5f",
+    "slug": "adskailab",
+    "name": "ADSKAILab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a83dc724-b5c0-4168-9464-a9d98d2a6cdf",
+    "slug": "bullerwins",
+    "name": "bullerwins",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c45851aa-1c23-4b09-8621-f78cf960f4ee",
+    "slug": "wanglab",
+    "name": "wanglab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d67334b5-a06b-4884-913e-86260b6bd80b",
+    "slug": "flaviagiammarino",
+    "name": "flaviagiammarino",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e86b1bc5-8ddb-4ce6-a249-a65aad1773e0",
+    "slug": "3dtopia",
+    "name": "3DTopia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fcc02190-e459-4796-9ddb-f7e01a8acf88",
+    "slug": "gzzyyxy",
+    "name": "gzzyyxy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3814e49b-d8b9-4bb8-92db-bc129eb9b5e6",
+    "slug": "kevinhuang",
+    "name": "KevinHuang",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b7f2bfc6-121f-437b-82f4-b93200e64868",
+    "slug": "jobs-git",
+    "name": "jobs-git",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b74c413e-0f2d-4f2f-b366-d8b612f83357",
+    "slug": "yejunliang23",
+    "name": "yejunliang23",
+    "type": "vendor"
+  },
+  {
+    "uuid": "807de595-5e73-4820-9559-5321bafec5c2",
+    "slug": "manojb",
+    "name": "Manojb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4cf4aca4-731f-4ff5-98c7-853b7ce52d40",
+    "slug": "zer0int",
+    "name": "zer0int",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2ecdb7c6-de6a-495b-abba-d975e4ef1462",
+    "slug": "ofa-sys",
+    "name": "OFA-Sys",
+    "type": "vendor"
+  },
+  {
+    "uuid": "794633d8-a9b8-49b9-be0a-37af7ff9f33a",
+    "slug": "idea-research",
+    "name": "IDEA-Research",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d073743f-26f7-4b5f-bcf3-732b8b24b4b4",
+    "slug": "jtatman",
+    "name": "jtatman",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a789508f-e7a4-4683-bfd2-77a98dd2e0d5",
+    "slug": "thenlper",
+    "name": "thenlper",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e8d1993d-84a5-4b1e-b30c-6441963f3d35",
+    "slug": "neuml",
+    "name": "NeuML",
+    "type": "vendor"
+  },
+  {
+    "uuid": "409f6a9c-26cc-4d53-8910-b5321ae55e00",
+    "slug": "lysandre",
+    "name": "lysandre",
+    "type": "vendor"
+  },
+  {
+    "uuid": "68a00dcd-eabf-4019-9ee4-8a9cf184f117",
+    "slug": "navteca",
+    "name": "navteca",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2e28cf1a-995a-4671-af30-62c53e1fca56",
+    "slug": "lberndsen",
+    "name": "LBerndsen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f5ba3fae-4619-470f-8c7c-4a9ed6d18124",
+    "slug": "zeroentropy",
+    "name": "zeroentropy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e60ef834-25eb-4cf6-91b6-92d08a99d487",
+    "slug": "aq-medai",
+    "name": "AQ-MedAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cc671dcf-66f1-4db6-9d61-4c66aab73bad",
+    "slug": "dslim",
+    "name": "dslim",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5c5ec0d7-ff08-485d-9112-d580ec0fa617",
+    "slug": "hivetrace",
+    "name": "hivetrace",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a447968e-1922-480b-9a98-b4bdc3acf361",
+    "slug": "narsil",
+    "name": "Narsil",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e07d0614-6544-40c7-bf7e-14a318e09e30",
+    "slug": "typeform",
+    "name": "typeform",
+    "type": "vendor"
+  },
+  {
+    "uuid": "934a91d6-8828-4ac4-b95b-e0e4727cdd61",
+    "slug": "kblab",
+    "name": "KBLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fa0313a0-d164-404e-9ee9-8f90ca223eff",
+    "slug": "but-fit",
+    "name": "BUT-FIT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a7a195eb-7e44-4b36-b6a4-16d4a6208692",
+    "slug": "cactus-compute",
+    "name": "Cactus-Compute",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d8be1bf1-8d90-43c2-98c5-493021bc06df",
+    "slug": "imodels",
+    "name": "imodels",
+    "type": "vendor"
+  },
+  {
+    "uuid": "784fffa9-105a-4751-be63-97433e560960",
+    "slug": "autonlab",
+    "name": "AutonLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fb89be9a-6cb0-4343-8917-69fa35f9f09e",
+    "slug": "robotics-diffusion-transformer",
+    "name": "robotics-diffusion-transformer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b007d947-6856-4f06-8d61-feb4641fb560",
+    "slug": "hrishivish23",
+    "name": "hrishivish23",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4914f11e-2f81-46cb-9e6a-5aad8a2fbfb0",
+    "slug": "alpha-vllm",
+    "name": "Alpha-VLLM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "51e8f6f0-c38c-4589-b29a-10768cbde063",
+    "slug": "xiaomimimo",
+    "name": "XiaomiMiMo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d2335dea-8687-47e9-a41d-5b78ba425de6",
+    "slug": "krafton",
+    "name": "KRAFTON",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f681444c-ebe9-4964-b3cf-5fa9902a84e7",
+    "slug": "friendliai",
+    "name": "FriendliAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f85524ad-2390-4d02-9a80-bbd59b0aee82",
+    "slug": "colorfulai",
+    "name": "ColorfulAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a6321eb7-b6bf-4375-8e46-243e3d2b2d99",
+    "slug": "tomoroai",
+    "name": "TomoroAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6d89f7e3-a940-4311-98bb-695e1be67155",
+    "slug": "goodman2001",
+    "name": "goodman2001",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1571fc9c-7c01-47a5-a9cb-3f93bac63f84",
+    "slug": "camenduru",
+    "name": "camenduru",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6f37955a-59c0-494b-9ff8-7a3a5b9ac995",
+    "slug": "skytnt",
+    "name": "skytnt",
+    "type": "vendor"
+  },
+  {
+    "uuid": "40ead3e4-bfb0-4cd7-b218-9f90ceb2ff52",
+    "slug": "mattmdjaga",
+    "name": "mattmdjaga",
+    "type": "vendor"
+  },
+  {
+    "uuid": "478b240f-876c-4234-8515-348375475d28",
+    "slug": "sayeed99",
+    "name": "sayeed99",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f1df2149-612e-4eff-b81a-36f7d01356eb",
+    "slug": "instantx",
+    "name": "InstantX",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cd21ec45-a051-4173-b11b-492399c99be2",
+    "slug": "starsfriday",
+    "name": "starsfriday",
+    "type": "vendor"
+  },
+  {
+    "uuid": "97b0e082-5c65-4780-a16d-d3c306baba54",
+    "slug": "mit-han-lab",
+    "name": "mit-han-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d8be3113-fb1b-4fb5-8f51-d0edfa02de1f",
+    "slug": "noctrex",
+    "name": "noctrex",
+    "type": "vendor"
+  },
+  {
+    "uuid": "308f5567-d13e-47eb-92ab-f51148fa2f86",
+    "slug": "obsxrver",
+    "name": "obsxrver",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7448d111-bf63-4476-9df8-803dfa35a9b7",
+    "slug": "baidu",
+    "name": "baidu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4981efd9-5345-4cac-a31a-248457ec16d7",
+    "slug": "sayakpaul",
+    "name": "sayakpaul",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2fc4b9a9-529e-4fb1-bed2-981f2f018e54",
+    "slug": "shuhuairen",
+    "name": "ShuhuaiRen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "17841aa9-ef1a-4b87-9469-ad651ae70b13",
+    "slug": "flax-community",
+    "name": "flax-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "afd54a18-26c0-40d9-afe1-b32f4e79aa44",
+    "slug": "dmis-lab",
+    "name": "dmis-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "985a4667-d5c7-45a9-81bd-845a7ffd6aa7",
+    "slug": "cambridgeltl",
+    "name": "cambridgeltl",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2e888554-1ceb-4931-9cd7-1aa73b2feac7",
+    "slug": "tohoku-nlp",
+    "name": "tohoku-nlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6510fcd6-351b-4c04-98ce-60ac1b2a4202",
+    "slug": "klue",
+    "name": "klue",
+    "type": "vendor"
+  },
+  {
+    "uuid": "698c3215-53f7-4214-8d65-92edcd4eafa1",
+    "slug": "hpai-bsc",
+    "name": "HPAI-BSC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d281a76e-9965-480c-a62f-aa7b0b615e1b",
+    "slug": "namaa-space",
+    "name": "NAMAA-Space",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b4d5b8ff-ad72-4aff-bb21-6454c3a89ef7",
+    "slug": "cahya",
+    "name": "cahya",
+    "type": "vendor"
+  },
+  {
+    "uuid": "344b32ce-0e34-44e9-90da-f07bfb093c57",
+    "slug": "tiantiaf",
+    "name": "tiantiaf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "77d96e6b-199b-4100-bc93-5021fde08bad",
+    "slug": "open-reasoner-zero",
+    "name": "Open-Reasoner-Zero",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7fba7357-ef92-43e9-963a-5971ed0f0634",
+    "slug": "huggingfacevla",
+    "name": "HuggingFaceVLA",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ff5a7357-f7c8-4f33-bc13-c51f254ac349",
+    "slug": "fabiencasenave",
+    "name": "fabiencasenave",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d88269de-ea88-4893-adda-589dc01a8134",
+    "slug": "sunbird",
+    "name": "Sunbird",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2c6fbf0a-976d-4a7a-bfc3-3f1ca7a1cee4",
+    "slug": "primwong",
+    "name": "PrimWong",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8b52a86f-2c85-4ab4-a1d2-f37affc9de41",
+    "slug": "quanttrio",
+    "name": "QuantTrio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "223ba69f-e92f-44f7-820d-029825932e61",
+    "slug": "inst-it",
+    "name": "Inst-IT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5243c994-ece2-4848-b478-7e0ebb8173d3",
+    "slug": "fr0zencr4ne",
+    "name": "Fr0zencr4nE",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ada3a350-41bd-40c1-adf3-0a3a1be8d810",
+    "slug": "utter-project",
+    "name": "utter-project",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9a873d8e-d13d-4e98-a387-5ffc3d652f80",
+    "slug": "longvideotool",
+    "name": "longvideotool",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f153696c-7917-4d04-8c2a-d16fcbc792e2",
+    "slug": "dineshcr7",
+    "name": "dineshcr7",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bc51473e-ce64-4ae5-b4e8-e7afb0a4475c",
+    "slug": "yoon6173",
+    "name": "yoon6173",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c9cd4fea-39c5-473c-a9c4-ea992f41eab9",
+    "slug": "nectec",
+    "name": "nectec",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0dc05259-38e6-47c4-9fd1-3442b3ec1a92",
+    "slug": "visual-attention-network",
+    "name": "Visual-Attention-Network",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f2204623-0c05-42ba-8cad-6a27ec0504c4",
+    "slug": "gagan3012",
+    "name": "gagan3012",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1e3bbeb3-0c67-4773-a3d2-54ae24e6e9db",
+    "slug": "ibm-nasa-geospatial",
+    "name": "ibm-nasa-geospatial",
+    "type": "vendor"
+  },
+  {
+    "uuid": "25c7dd19-a6a7-4f3f-bbc7-84105e4bc47c",
+    "slug": "siyan824",
+    "name": "siyan824",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fd1069d2-60b3-472a-a8c5-86c4c42f20ea",
+    "slug": "isp-uv-es",
+    "name": "isp-uv-es",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e7a272e6-0732-4849-a759-9130f90c72ac",
+    "slug": "wanabmeya",
+    "name": "wanabmeya",
+    "type": "vendor"
+  },
+  {
+    "uuid": "93f2bb8d-8dd7-42ac-9537-8c4cc0a2890a",
+    "slug": "hunyuanvideo-community",
+    "name": "hunyuanvideo-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "67fdad9f-076b-4b5a-9f4a-1298d7bb05b1",
+    "slug": "makiai",
+    "name": "MakiAi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "96b64460-b5b9-41cd-a730-809e67fe987b",
+    "slug": "condadosai",
+    "name": "CondadosAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c1fabd54-79d0-4b33-932f-6ed478ae1296",
+    "slug": "jparedesds",
+    "name": "jparedesDS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "188eec61-3639-4b44-9281-eaad21b601f3",
+    "slug": "gsdf",
+    "name": "gsdf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "90fb3ed3-7aba-49f2-a345-a0e2f419de77",
+    "slug": "nitrosocke",
+    "name": "nitrosocke",
+    "type": "vendor"
+  },
+  {
+    "uuid": "01b3c791-bb12-478b-9cb4-80436df01306",
+    "slug": "shakker-labs",
+    "name": "Shakker-Labs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6c98d9cf-0bb6-4739-814a-22363fb75c0e",
+    "slug": "mvp-lab",
+    "name": "mvp-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b73cd667-c3ae-4dbf-a42d-a840fc614d84",
+    "slug": "hp-l33",
+    "name": "hp-l33",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8dade0a2-2a42-414f-be84-460c19f66edd",
+    "slug": "novaia",
+    "name": "novaia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ea0529a4-6937-4db4-bb76-85a4f44760ed",
+    "slug": "frankccccc",
+    "name": "FrankCCCCC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42144317-4419-4b1a-8fe8-0ff234e98fc1",
+    "slug": "sharoonarshad",
+    "name": "SharoonArshad",
+    "type": "vendor"
+  },
+  {
+    "uuid": "87c5ff3c-2319-4190-beea-19700da689c2",
+    "slug": "steveice",
+    "name": "steveice",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4d29390f-dff1-4001-a93f-3475f7ab79ca",
+    "slug": "nikeytas",
+    "name": "Nikeytas",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c308f654-7fa2-4efb-b5d6-46fd37eedd55",
+    "slug": "d2o2ji",
+    "name": "d2o2ji",
+    "type": "vendor"
+  },
+  {
+    "uuid": "de5d0470-54aa-4e7e-8f55-a3a05f5244a6",
+    "slug": "adams-story",
+    "name": "adams-story",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c436b253-dc1f-4ef5-81fa-4dd2a3776d45",
+    "slug": "lco-embedding",
+    "name": "LCO-Embedding",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1d07104f-e0ec-43ad-922e-cc2fb9f6ace5",
+    "slug": "line-corporation",
+    "name": "line-corporation",
+    "type": "vendor"
+  },
+  {
+    "uuid": "200b02f2-dfc2-4fa6-a4c6-0838f1792f26",
+    "slug": "farbodtavakkoli",
+    "name": "farbodtavakkoli",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fe7ecddd-9356-4c1b-a776-473365299797",
+    "slug": "aethiqs-max",
+    "name": "AethiQs-Max",
+    "type": "vendor"
+  },
+  {
+    "uuid": "587fc383-3b53-44c5-b6d3-0b8a096769c3",
+    "slug": "ubc-nlp",
+    "name": "UBC-NLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "53d234c7-9d01-4c91-b816-8873413e5cbb",
+    "slug": "rikkabotan",
+    "name": "RikkaBotan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2998b70a-be91-419a-9882-bbbce8195ab7",
+    "slug": "bidirlm",
+    "name": "BidirLM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "83e6eff5-d5b0-4618-b30b-a84693bf140a",
+    "slug": "aida-upm",
+    "name": "AIDA-UPM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b2af86f9-c89b-40b3-b672-4c748ca5feb7",
+    "slug": "stephanakkerman",
+    "name": "StephanAkkerman",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e5b29cb0-9d19-4ec1-9891-c1bc87789219",
+    "slug": "hq-bench",
+    "name": "hq-bench",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d49ecd71-baed-4a9c-a8c6-c71e1a0a907f",
+    "slug": "verm1ion",
+    "name": "Verm1ion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bdbe467a-da83-4370-9292-f65bd16c7e7a",
+    "slug": "final-bench",
+    "name": "FINAL-Bench",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b249261-5524-450d-9756-90bb7d67f2be",
+    "slug": "redhatai",
+    "name": "RedHatAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "170cd382-0427-4489-a714-fef713644b5f",
+    "slug": "oblix",
+    "name": "Oblix",
+    "type": "vendor"
+  },
+  {
+    "uuid": "57adfed9-0e0e-4d8e-86d0-1bca235490c1",
+    "slug": "webis",
+    "name": "webis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1d9560ce-f114-4bd4-ab38-cbebcb03c948",
+    "slug": "cross-encoder-testing",
+    "name": "cross-encoder-testing",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1fa1e518-88c2-45c5-b3a5-5fa073cecae8",
+    "slug": "hplt",
+    "name": "HPLT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "899f90cd-06fe-44f6-80d1-fe4fd5c42c59",
+    "slug": "yanolja",
+    "name": "yanolja",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2ffeb1b1-467c-4bd2-8c20-fffe232044f9",
+    "slug": "lab260",
+    "name": "lab260",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8ff6e6c9-9e77-4cf0-8d35-3210a8f6404b",
+    "slug": "drishtisharma",
+    "name": "DrishtiSharma",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ff98e4af-7de2-4b05-a289-bca41ff56191",
+    "slug": "awsaf49",
+    "name": "awsaf49",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3179aa0f-4130-40b4-8955-5178ca15a85c",
+    "slug": "plachta",
+    "name": "Plachta",
+    "type": "vendor"
+  },
+  {
+    "uuid": "78bda775-80b0-4b49-817b-84e1e26abbe8",
+    "slug": "atlasia",
+    "name": "atlasia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8277f1b8-ce41-428f-9c52-daaa8e2322bd",
+    "slug": "lisanneh",
+    "name": "LisanneH",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5487b620-f48f-44c7-8544-8f09f9eea316",
+    "slug": "sabermolaei",
+    "name": "SaberMolaei",
+    "type": "vendor"
+  },
+  {
+    "uuid": "047d4676-29f5-4adf-bde7-dcca1cc422fe",
+    "slug": "ozziey",
+    "name": "Ozziey",
+    "type": "vendor"
+  },
+  {
+    "uuid": "545decef-0d50-4dea-8a7a-8b70839328a6",
+    "slug": "mateuszgrzyb",
+    "name": "mateuszgrzyb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b97157e2-16ce-4da8-b0d8-21d2e8a164f8",
+    "slug": "usc-psi-lab",
+    "name": "USC-PSI-Lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "51aa8b3f-82be-4af8-9663-b42026aea119",
+    "slug": "forithmus",
+    "name": "Forithmus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7c0775f1-bcd4-4a7a-9ed4-65c5887d141a",
+    "slug": "fomo-mri",
+    "name": "FOMO-MRI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "64227530-a444-438e-b991-84b749ad36d2",
+    "slug": "mushanw",
+    "name": "MushanW",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2ed1ac07-e0a9-49e5-8b8b-eaa1ea454670",
+    "slug": "kblueleaf",
+    "name": "KBlueLeaf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bf204ebc-84c6-4c81-9abd-a74d1792142d",
+    "slug": "anthropic",
+    "name": "Anthropic",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e492ee81-3ea2-4afb-81a7-0c8926bb9d1a",
+    "slug": "pleias",
+    "name": "PleIAs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3c09a951-6fd5-493f-b530-fbe5d4147737",
+    "slug": "vlm2vec",
+    "name": "VLM2Vec",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f4ba1669-96dd-451e-9cf3-b7801423bf07",
+    "slug": "algorithmicresearchgroup",
+    "name": "AlgorithmicResearchGroup",
+    "type": "vendor"
+  },
+  {
+    "uuid": "df4fa33d-3393-4d33-af46-7b0410f803d2",
+    "slug": "aniket-curlscape",
+    "name": "aniket-curlscape",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c72720de-4667-4a58-b23e-cbc7e98cef62",
+    "slug": "turingenterprises",
+    "name": "TuringEnterprises",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f3e51dca-67ff-4504-b963-426ffe2ef1f3",
+    "slug": "data-is-better-together",
+    "name": "data-is-better-together",
+    "type": "vendor"
+  },
+  {
+    "uuid": "13570c54-175e-45bf-9c6c-f4271b97109a",
+    "slug": "earthspeciesproject",
+    "name": "EarthSpeciesProject",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8d12a1c1-0cf5-4aa3-904f-428940fe128e",
+    "slug": "abdomenatlas",
+    "name": "AbdomenAtlas",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a94f8874-3c2c-4e30-b3d6-cc718b95a154",
+    "slug": "captionemporium",
+    "name": "CaptionEmporium",
+    "type": "vendor"
+  },
+  {
+    "uuid": "18cbc950-e988-4d38-9b2d-5152dc811a2a",
+    "slug": "mminstruction",
+    "name": "MMInstruction",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cdb29246-ff62-42ca-a8f0-da9f6678f6c0",
+    "slug": "ibm-esa-geospatial",
+    "name": "ibm-esa-geospatial",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5907e536-ef93-4e1b-84af-25fb1278e6d0",
+    "slug": "ccdv",
+    "name": "ccdv",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c70269da-233d-47ca-9dc5-b73aad018fe0",
+    "slug": "lmsys",
+    "name": "lmsys",
+    "type": "vendor"
+  },
+  {
+    "uuid": "acf10939-8da4-4a72-a3c8-8f5b239de80f",
+    "slug": "thinkmorph",
+    "name": "ThinkMorph",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ed18336b-8911-4df3-910f-3f2ac630bbe8",
+    "slug": "huzican",
+    "name": "huzican",
+    "type": "vendor"
+  },
+  {
+    "uuid": "04a70cd1-8ff3-4d47-af13-7d1c886474a4",
+    "slug": "nju-link",
+    "name": "NJU-LINK",
+    "type": "vendor"
+  },
+  {
+    "uuid": "74583a81-c511-4348-8c2c-a1f3943add6d",
+    "slug": "lainmn",
+    "name": "lainmn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3a5f3b1b-4bcc-424f-9e5a-1fc72fbee73b",
+    "slug": "svjack",
+    "name": "svjack",
+    "type": "vendor"
+  },
+  {
+    "uuid": "413714bf-ff0b-4153-a245-c6727f15204e",
+    "slug": "derify",
+    "name": "Derify",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5c83e98e-9600-4190-99bd-cd0078d838b3",
+    "slug": "umcu",
+    "name": "UMCU",
+    "type": "vendor"
+  },
+  {
+    "uuid": "83a7a256-dc9b-48a6-bfe7-eaf6c2b29912",
+    "slug": "lance-format",
+    "name": "lance-format",
+    "type": "vendor"
+  },
+  {
+    "uuid": "27f18746-0335-4544-bcfc-34d8c91cd0ab",
+    "slug": "thebirdlegacy",
+    "name": "TheBirdLegacy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "48d8a75b-1cc0-4ba8-a3a2-30c5a8e05908",
+    "slug": "mihaipopa-1",
+    "name": "MihaiPopa-1",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fb87afb4-893f-46be-b4ee-654a0f6c7672",
+    "slug": "unpredictable",
+    "name": "unpredictable",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0bd176fc-2bff-448f-aa7e-d2a5f98046b7",
+    "slug": "fancyzhx",
+    "name": "fancyzhx",
+    "type": "vendor"
+  },
+  {
+    "uuid": "41b9d8d2-7111-40c7-a479-3aff9b7635b6",
+    "slug": "gaotang",
+    "name": "gaotang",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9d9a7fe6-8811-4113-9f01-2ef14a234f46",
+    "slug": "jql-ai",
+    "name": "JQL-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "486dd769-72a0-4523-9c59-37dc359f1cac",
+    "slug": "redis",
+    "name": "redis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b6100e25-20d1-4250-a927-132a10fe5099",
+    "slug": "gauss314",
+    "name": "gauss314",
+    "type": "vendor"
+  },
+  {
+    "uuid": "47870234-bafb-4b77-a4e0-8db30497e772",
+    "slug": "ogb",
+    "name": "OGB",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b5eb1160-fb4a-4e0e-ae51-be65214fbd2f",
+    "slug": "zjunlp",
+    "name": "zjunlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "89193df8-6247-465f-8405-ec6fd6ac84d2",
+    "slug": "scaleinvariant",
+    "name": "scaleinvariant",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ddc95bc7-fe93-42d9-92f5-bc991a3a6dc7",
+    "slug": "links-ads",
+    "name": "links-ads",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3d541ceb-3a99-45d9-9377-18d93280da86",
+    "slug": "bglab",
+    "name": "BGLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6868091f-e556-4b22-b3ca-facc42962277",
+    "slug": "pixparse",
+    "name": "pixparse",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4d5d7917-0cd6-4659-afbb-adc5ce3c6f4c",
+    "slug": "vivym",
+    "name": "vivym",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b6bc9d38-fd02-493d-bc91-4bad99d4db0d",
+    "slug": "birdsql",
+    "name": "birdsql",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b8be2c77-9b1e-4f29-91a2-7454936a9904",
+    "slug": "masakhane",
+    "name": "masakhane",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f9dae7c-3d47-4f77-abce-ac01fc682f77",
+    "slug": "none1145",
+    "name": "None1145",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f4610f7a-7bee-467b-b7f6-e22e73a0d1b7",
+    "slug": "worldboss",
+    "name": "worldboss",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2814592c-9d9a-4d37-a67b-fd28584f69c4",
+    "slug": "lemma-rca-nec",
+    "name": "Lemma-RCA-NEC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "25e4d125-2cf9-4832-aba7-60f837a8eca4",
+    "slug": "jjr1007",
+    "name": "jjr1007",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bb5807b0-30d2-457e-ad52-2e3c41690aac",
+    "slug": "turing-motors",
+    "name": "turing-motors",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9f35fe37-02f4-4e64-b13f-3299f74b7243",
+    "slug": "vla-arena",
+    "name": "VLA-Arena",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1bae0126-10a8-4b51-9854-84fe925689da",
+    "slug": "cvc-mmu",
+    "name": "cvc-mmu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "136bc760-b4e5-4f91-9bf6-47680c325b90",
+    "slug": "cleverthis",
+    "name": "CleverThis",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5b2c929e-585a-42cd-aaba-c47fb69454d3",
+    "slug": "qgyd2021",
+    "name": "qgyd2021",
+    "type": "vendor"
+  },
+  {
+    "uuid": "78729130-e60c-480e-86da-82e4544e445e",
+    "slug": "fyaronskiy",
+    "name": "fyaronskiy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3e0f086d-55c0-49ea-82bb-ed1acf9d3d34",
+    "slug": "open-r1",
+    "name": "open-r1",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8f3abf50-0904-4440-bea4-f5010c1ccddb",
+    "slug": "josefheidler",
+    "name": "josefheidler",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e5039d14-434f-4080-ac17-5463eef50cf9",
+    "slug": "abhi1505",
+    "name": "abhi1505",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6ec49c6a-f5a2-47ea-9c81-c432e83a6dfe",
+    "slug": "omnigen2",
+    "name": "OmniGen2",
+    "type": "vendor"
+  },
+  {
+    "uuid": "30dc56b1-39ec-4c75-a702-1f860f93d31e",
+    "slug": "gen-verse",
+    "name": "Gen-Verse",
+    "type": "vendor"
+  },
+  {
+    "uuid": "73c05a44-b829-4c5d-a0c2-48514f6219a2",
+    "slug": "vikhrmodels",
+    "name": "Vikhrmodels",
+    "type": "vendor"
+  },
+  {
+    "uuid": "15ff38d6-2c97-44b0-94fa-8359584658e9",
+    "slug": "sarvamai",
+    "name": "sarvamai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fbdfec34-6fbd-4941-bf5a-5116c8a60921",
+    "slug": "amaai-lab",
+    "name": "amaai-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "20123476-8402-4fd1-bab7-bed05fbb901a",
+    "slug": "mariak",
+    "name": "MariaK",
+    "type": "vendor"
+  },
+  {
+    "uuid": "62e405fc-15bb-48f7-80b3-def0bc2baa88",
+    "slug": "fxmarty",
+    "name": "fxmarty",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d5c38e4f-a5f4-490f-959f-e03d2f6c28fe",
+    "slug": "am-infoweb",
+    "name": "am-infoweb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d334a3bc-ec6c-4fe0-8d69-2369791efd6f",
+    "slug": "tushargoel",
+    "name": "TusharGoel",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a2c81ad7-8eb5-4dd8-8491-521e93cf7071",
+    "slug": "novice25",
+    "name": "Novice25",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d9fc4a1c-b96a-4da0-bd01-9b1e3e808c6d",
+    "slug": "benjiaiplayground",
+    "name": "benjiaiplayground",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6d2a2ff4-4275-40c6-8d99-73ab07ed80d9",
+    "slug": "gitmylo",
+    "name": "GitMylo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "de7b26f2-3717-47e2-88f0-ac88f173c61e",
+    "slug": "chat-univi",
+    "name": "Chat-UniVi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2d435e43-1832-4ca7-b672-2763a7ac26db",
+    "slug": "chenjoya",
+    "name": "chenjoya",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eaa15874-7852-4bbe-a61f-39359ca7f8fa",
+    "slug": "haon-chen",
+    "name": "Haon-Chen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "13c5107e-20b5-404c-9e38-f6a377762a78",
+    "slug": "rogerferrod",
+    "name": "RogerFerrod",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6fb421fe-b961-4e60-97c6-4cf270a34c3f",
+    "slug": "julienkay",
+    "name": "julienkay",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ab393e8b-0e48-47c6-988e-25ed66b3354a",
+    "slug": "marqo",
+    "name": "Marqo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f9effce2-47de-487c-a470-8f5dba1a6c52",
+    "slug": "owkin",
+    "name": "owkin",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9f3136c6-913e-4885-b2b2-644ec80ae99b",
+    "slug": "bioptimus",
+    "name": "bioptimus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2a96a743-d2b3-464f-bf84-cd644caa7129",
+    "slug": "jonathandinu",
+    "name": "jonathandinu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "17695b81-6f10-483c-bcf0-03b28edc1b7e",
+    "slug": "yiwen-ntu",
+    "name": "Yiwen-ntu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c2f6947e-104a-452d-8e37-3ebb92fac802",
+    "slug": "stanfordmimi",
+    "name": "stanfordmimi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e5ac83c7-9a9d-4282-aa1b-801e6c375097",
+    "slug": "tech4humans",
+    "name": "tech4humans",
+    "type": "vendor"
+  },
+  {
+    "uuid": "493f19bc-4ca3-4110-9f22-2450899a15d4",
+    "slug": "model-hub",
+    "name": "model-hub",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c94ef931-8e94-40c5-ac4e-d3c5f5d6cdd0",
+    "slug": "hzxie",
+    "name": "hzxie",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8ae41584-5ec5-464c-a557-ce35aea3b27f",
+    "slug": "zery",
+    "name": "Zery",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ce01a852-067f-4f5c-abb1-2419f868588a",
+    "slug": "jetx",
+    "name": "jetx",
+    "type": "vendor"
+  },
+  {
+    "uuid": "71d98f03-4e82-4f5d-8452-39992ea8ad5b",
+    "slug": "chaitnya26",
+    "name": "chaitnya26",
+    "type": "vendor"
+  },
+  {
+    "uuid": "70536c38-3246-4704-9c7b-3b1377766cb5",
+    "slug": "xinsir",
+    "name": "xinsir",
+    "type": "vendor"
+  },
+  {
+    "uuid": "32c5d74d-d9ce-424b-86cc-758ce95d37c6",
+    "slug": "nappa114514",
+    "name": "nappa114514",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2662daa0-24a4-4714-9f89-1002b6d17339",
+    "slug": "linoyts",
+    "name": "linoyts",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b50b04f6-57b5-482b-b03a-b6259b24e585",
+    "slug": "krahets",
+    "name": "krahets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "41ba17e9-3144-413c-ba83-c9b59fc04d2d",
+    "slug": "davian-robotics",
+    "name": "DAVIAN-Robotics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fe702872-8b57-4bbd-8f94-690c7d6cd5d0",
+    "slug": "kakaobrain",
+    "name": "kakaobrain",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eec18b4d-0c4b-4e78-bdab-4f466134a31c",
+    "slug": "isee-laboratory",
+    "name": "iSEE-Laboratory",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6eadfc1c-a95c-4da8-b26d-89fdc4999f89",
+    "slug": "axera-tech",
+    "name": "AXERA-TECH",
+    "type": "vendor"
+  },
+  {
+    "uuid": "91357893-611c-4442-8c68-e7139fb3c4d3",
+    "slug": "openai-community",
+    "name": "openai-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "456bafc8-65ce-4dcd-b351-29c82586b037",
+    "slug": "oliverguhr",
+    "name": "oliverguhr",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6ca16a1d-6aaa-4e61-9995-d1bf6ebd66a4",
+    "slug": "angelslim",
+    "name": "AngelSlim",
+    "type": "vendor"
+  },
+  {
+    "uuid": "75547544-4d76-4c38-bd5f-0be0bb3cf124",
+    "slug": "joeddav",
+    "name": "joeddav",
+    "type": "vendor"
+  },
+  {
+    "uuid": "91ee3767-6c1d-4b39-9a2e-ef46a6e2cbd3",
+    "slug": "recognai",
+    "name": "Recognai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9aa543fd-343a-4609-8254-302ea443234a",
+    "slug": "symanto",
+    "name": "symanto",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dbf844c4-cb9d-4540-a703-4bf322b7fc28",
+    "slug": "vicgalle",
+    "name": "vicgalle",
+    "type": "vendor"
+  },
+  {
+    "uuid": "64c4a7cc-8327-4f47-90c3-1e3efd9032c5",
+    "slug": "audeering",
+    "name": "audeering",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fbcd9f46-4197-4a20-92dd-589619f79d79",
+    "slug": "roblox",
+    "name": "Roblox",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9ea139ad-ef84-4fe0-af5d-d5a472661be6",
+    "slug": "taltechnlp",
+    "name": "TalTechNLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "12ee45f1-0087-4a55-89d6-24862e87d3e6",
+    "slug": "mpariente",
+    "name": "mpariente",
+    "type": "vendor"
+  },
+  {
+    "uuid": "33b932e5-4882-4aaa-b27b-da9204d8bb37",
+    "slug": "deepdml",
+    "name": "deepdml",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2eeb9e58-e747-4977-b879-a56054506bef",
+    "slug": "primeline",
+    "name": "primeline",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e8b9b33c-4524-4720-aefe-b97b6ac23131",
+    "slug": "supertone",
+    "name": "Supertone",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2ad9ad02-5bf0-42eb-9c0f-60296442755d",
+    "slug": "funaudiollm",
+    "name": "FunAudioLLM",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ea7d3935-9c81-4e04-8e47-e900503520f4",
+    "slug": "nari-labs",
+    "name": "nari-labs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4f5fe64c-b189-48c0-b1af-f67204d52507",
+    "slug": "bricksdisplay",
+    "name": "BricksDisplay",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94db0c17-455a-4e65-9fa0-958ee5ac5c07",
+    "slug": "popcornell",
+    "name": "popcornell",
+    "type": "vendor"
+  },
+  {
+    "uuid": "48722087-89a7-4668-8ab0-0c202f0b7e68",
+    "slug": "funasr",
+    "name": "funasr",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2f487062-668d-4959-858e-f0381070e366",
+    "slug": "kamilakesbi",
+    "name": "kamilakesbi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1660febe-ef47-46b8-8666-6fce5116559e",
+    "slug": "salmanshahid",
+    "name": "salmanshahid",
+    "type": "vendor"
+  },
+  {
+    "uuid": "93a7c765-2863-4704-92fc-27fe0694160c",
+    "slug": "fluidinference",
+    "name": "FluidInference",
+    "type": "vendor"
+  },
+  {
+    "uuid": "72eda7b1-fbd3-492d-9907-0d1968ce13d5",
+    "slug": "omarques",
+    "name": "omarques",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c6392def-f053-4e6d-ae53-9295d1d1d066",
+    "slug": "maple728",
+    "name": "Maple728",
+    "type": "vendor"
+  },
+  {
+    "uuid": "55b88b98-27cf-4791-a838-506d28e55661",
+    "slug": "xiaomirobotics",
+    "name": "XiaomiRobotics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2b16a502-59e0-459e-b5b1-2be9ba6c2dfe",
+    "slug": "mgalkin",
+    "name": "mgalkin",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a9557034-8de4-465a-b854-1e0a8ddd24db",
+    "slug": "shermansiu",
+    "name": "shermansiu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "845c0b84-ba98-49ef-b8ec-1856d8b48195",
+    "slug": "aethronphantom",
+    "name": "AethronPhantom",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c1bca814-66aa-47fa-93fe-d3f282f4a15f",
+    "slug": "wemake",
+    "name": "WeMake",
+    "type": "vendor"
+  },
+  {
+    "uuid": "abd58e99-5b06-46d2-8fad-7589df0a54be",
+    "slug": "infobayai",
+    "name": "InfoBayAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7b92122c-bcdf-46aa-9abe-2b081da0f3f9",
+    "slug": "bezzam",
+    "name": "bezzam",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d0036f22-253d-4300-8e81-bc3200505485",
+    "slug": "alinakozyreva",
+    "name": "AlinaKozyreva",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7fc2e951-b5b0-41da-9d9b-a72d4b6bdcbe",
+    "slug": "vikhyatk",
+    "name": "vikhyatk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3d466821-1a3c-462c-ac99-142959449e0f",
+    "slug": "goodieshere",
+    "name": "GoodiesHere",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2f93bfdd-dd77-4e78-a8de-864aaa40c566",
+    "slug": "ruili0",
+    "name": "ruili0",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2cb8ae31-0992-4bcd-8b4b-7beb82b9709a",
+    "slug": "kwai-keye",
+    "name": "Kwai-Keye",
+    "type": "vendor"
+  },
+  {
+    "uuid": "470d2155-1f3b-4eb9-a9ab-8b5789b95265",
+    "slug": "chancharikm",
+    "name": "chancharikm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0743939f-4f15-4aa4-a382-7170c08f392f",
+    "slug": "video-r1",
+    "name": "Video-R1",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5bc03083-31ef-420b-bc30-f2999d846dc6",
+    "slug": "qiwang98",
+    "name": "QiWang98",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b947cd40-9755-4169-8998-5ea43cd685c5",
+    "slug": "yanghaoir",
+    "name": "yanghaoir",
+    "type": "vendor"
+  },
+  {
+    "uuid": "36b9c014-45fa-4d06-a105-227b7ebc0acc",
+    "slug": "josephuscheung",
+    "name": "JosephusCheung",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f8e45e40-d965-46b4-83e9-86b6660b6b74",
+    "slug": "xingyang1",
+    "name": "xingyang1",
+    "type": "vendor"
+  },
+  {
+    "uuid": "df65529f-c31d-4579-8854-38eb15060af5",
+    "slug": "camais03",
+    "name": "Camais03",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b7b31232-293a-4bbd-ac15-c0641c627276",
+    "slug": "adamcodd",
+    "name": "AdamCodd",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6d37fb86-7f17-49e8-b368-b30bb916ce58",
+    "slug": "birder-project",
+    "name": "birder-project",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c81ae47f-f6a4-442a-828e-192b449100f6",
+    "slug": "fashn-ai",
+    "name": "fashn-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "feb35ebb-40ee-4495-ab5c-0a6bc8dd9760",
+    "slug": "stable-x",
+    "name": "Stable-X",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cd1c6fea-4c88-4272-bcb2-018eea32124f",
+    "slug": "jdopensource",
+    "name": "jdopensource",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d8c83137-1f85-4799-a7e7-6a30943d73cd",
+    "slug": "kim2091",
+    "name": "Kim2091",
+    "type": "vendor"
+  },
+  {
+    "uuid": "23101046-0d2e-4d8e-bed2-2fe8880001ac",
+    "slug": "xtuner",
+    "name": "xtuner",
+    "type": "vendor"
+  },
+  {
+    "uuid": "17ede12c-66fa-4075-a54b-61aa0f010857",
+    "slug": "wangfuyun",
+    "name": "wangfuyun",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f0252523-97ff-4cea-8356-556a964e59ea",
+    "slug": "stevenbucaille",
+    "name": "stevenbucaille",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c66ae9b3-3140-4e56-a544-5bdc764a2090",
+    "slug": "teemosliang",
+    "name": "teemosliang",
+    "type": "vendor"
+  },
+  {
+    "uuid": "663ef7ed-bb0b-481e-a654-fbae32cc773c",
+    "slug": "vil-uob",
+    "name": "vil-uob",
+    "type": "vendor"
+  },
+  {
+    "uuid": "54885761-65fe-464e-9588-d3991b26934e",
+    "slug": "syscv-community",
+    "name": "syscv-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e76be497-a1aa-4476-be3d-1603c04c48f6",
+    "slug": "iitolstykh",
+    "name": "iitolstykh",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5696df02-f85b-4698-84fd-f3c2142015de",
+    "slug": "rundiffusion",
+    "name": "RunDiffusion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fd4b7540-cb27-48c3-abea-9b36f037cc82",
+    "slug": "cagliostrolab",
+    "name": "cagliostrolab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0816e93b-ea28-42bb-b999-a8bed1b29396",
+    "slug": "playgroundai",
+    "name": "playgroundai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f68c48b2-af11-4ed4-ba7d-d422973828a6",
+    "slug": "ostris",
+    "name": "ostris",
+    "type": "vendor"
+  },
+  {
+    "uuid": "14fb26fe-9169-4dc2-8cee-9a06c4b5f660",
+    "slug": "civitai",
+    "name": "Civitai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2e2fb07f-2bc2-4d2e-b32f-ca4d64a90969",
+    "slug": "fastvideo",
+    "name": "FastVideo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f2c585e4-06f5-482d-8aef-26f5a0587dee",
+    "slug": "chainyo",
+    "name": "chainyo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7d5e5eba-0fb8-4e12-8de1-954730180a0f",
+    "slug": "svector-corporation",
+    "name": "SVECTOR-CORPORATION",
+    "type": "vendor"
+  },
+  {
+    "uuid": "64e12362-ae26-4cae-ad80-805bb2382ee7",
+    "slug": "sassydiffusion",
+    "name": "SassyDiffusion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "097d634b-4fca-42d8-a304-9f87d38f123e",
+    "slug": "caiovicentino1",
+    "name": "caiovicentino1",
+    "type": "vendor"
+  },
+  {
+    "uuid": "76a1309b-60e3-4676-8cc5-50b53aece2ec",
+    "slug": "higherhu",
+    "name": "HigherHu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1f44b8a9-9eab-4e73-9bd4-6f7a81170d9a",
+    "slug": "languagebind",
+    "name": "LanguageBind",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a2dfaa28-1721-4914-acf0-5fa8c1717e7a",
+    "slug": "perplexity-ai",
+    "name": "perplexity-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9c1010e6-e003-4a3c-ae10-175a0d20bd24",
+    "slug": "rostlab",
+    "name": "Rostlab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "38126c33-3889-44c5-8a4f-854a17489e7b",
+    "slug": "vinai",
+    "name": "vinai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d1837e2f-c451-40e1-a779-7436c7ccad74",
+    "slug": "litert-community",
+    "name": "litert-community",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e1571828-0c31-4f24-958c-58257f4f8077",
+    "slug": "octen",
+    "name": "Octen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3cf42adc-8ec7-44a3-87e5-f1b9703bebc3",
+    "slug": "hkunlp",
+    "name": "hkunlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "064dfe48-85b5-4b23-8095-6e15e7f8b0db",
+    "slug": "yuvrajsingh9886",
+    "name": "YuvrajSingh9886",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c0012c46-14ae-4993-8bc7-788cd2ca4010",
+    "slug": "russiannlp",
+    "name": "RussianNLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "781c28c4-272d-408d-a574-255b47201a96",
+    "slug": "yiyanghkust",
+    "name": "yiyanghkust",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4b09c373-87e9-4367-9358-ddf1224ac24c",
+    "slug": "tabularisai",
+    "name": "tabularisai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4dfebd4e-3bab-488b-bd63-434f1e70a0c1",
+    "slug": "protectai",
+    "name": "protectai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6aa10974-8e83-41c3-8339-5541c3851f46",
+    "slug": "pysentimiento",
+    "name": "pysentimiento",
+    "type": "vendor"
+  },
+  {
+    "uuid": "40c9be87-b5a2-4756-b942-41f4832c5874",
+    "slug": "camel-lab",
+    "name": "CAMeL-Lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9a7cd7de-73e9-447e-be6c-258a37fcac4c",
+    "slug": "dangvantuan",
+    "name": "dangvantuan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "84ab0167-cc70-44ce-b89b-305bd1dc7f30",
+    "slug": "deepmount00",
+    "name": "DeepMount00",
+    "type": "vendor"
+  },
+  {
+    "uuid": "40eff057-8766-4d31-b396-c871597c4c6d",
+    "slug": "d4data",
+    "name": "d4data",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f941f77-5bb9-48e2-8373-2bccbc5e8949",
+    "slug": "stanfordaimi",
+    "name": "StanfordAIMI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4e42c75c-452d-4bd7-bc32-c97350356a00",
+    "slug": "jean-baptiste",
+    "name": "Jean-Baptiste",
+    "type": "vendor"
+  },
+  {
+    "uuid": "90a8b2c5-236e-4ec5-85f8-81c5a40267a3",
+    "slug": "xmj2002",
+    "name": "xmj2002",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b1c8de3b-37b0-4b29-98bc-028e223e9976",
+    "slug": "jzuluaga",
+    "name": "Jzuluaga",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1047ee96-d62c-41eb-87c9-3245cef9acbc",
+    "slug": "3loi",
+    "name": "3loi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "52342dbd-03c7-4cd4-9864-82087ee98e1d",
+    "slug": "belle-2",
+    "name": "BELLE-2",
+    "type": "vendor"
+  },
+  {
+    "uuid": "781cc4d5-3a9a-4e03-9f69-cf13f40f641d",
+    "slug": "kotoba-tech",
+    "name": "kotoba-tech",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1fe28f9e-0509-4dcf-915a-005536b22784",
+    "slug": "heartmula",
+    "name": "HeartMuLa",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8183f2a0-aea9-4122-86e5-f23f8f54bb23",
+    "slug": "gpt-omni",
+    "name": "gpt-omni",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c8cc9033-7014-44b3-98b8-c2b04355dfbb",
+    "slug": "canopylabs",
+    "name": "canopylabs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c22b9507-e269-4b84-a498-ee1417ee652e",
+    "slug": "bosonai",
+    "name": "bosonai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9f953ccb-593f-478d-94e8-b4919b5ae412",
+    "slug": "infly",
+    "name": "infly",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cb1af477-1604-42d6-81e0-c256250527db",
+    "slug": "vendorabc",
+    "name": "vendorabc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f9bc703-12b9-4ccb-b5dc-fe11427e787e",
+    "slug": "tejas23",
+    "name": "tejas23",
+    "type": "vendor"
+  },
+  {
+    "uuid": "000f09db-8f5e-42d6-9a99-c982e10f3fac",
+    "slug": "gxcsoccer",
+    "name": "gxcsoccer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "894123c6-2024-4008-85d3-80cf3188caaf",
+    "slug": "mldi-lab",
+    "name": "mldi-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "efe288ae-8469-4fe4-8204-5354deb16df7",
+    "slug": "shiwk24",
+    "name": "shiwk24",
+    "type": "vendor"
+  },
+  {
+    "uuid": "98d94dee-360b-446a-9b96-8c578aef0c86",
+    "slug": "sishuiliunianfrweffe",
+    "name": "sishuiliunianfrweffe",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0ec63923-6369-42e4-942e-205e617e841d",
+    "slug": "rhymes-ai",
+    "name": "rhymes-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "582b408a-dc8f-4d80-82c7-3c80b097c16f",
+    "slug": "servicenow-ai",
+    "name": "ServiceNow-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5b94a6cb-6390-4e85-b427-6446a0ecdc82",
+    "slug": "trl-internal-testing",
+    "name": "trl-internal-testing",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1cd230b9-4824-4934-a64c-e8c862c36409",
+    "slug": "paravt",
+    "name": "ParaVT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "63b34fef-51a7-4462-a9be-b40e9c9ace82",
+    "slug": "polyu-chenlab",
+    "name": "PolyU-ChenLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "53f29091-86ef-4b40-a2c8-b39bdc8b251b",
+    "slug": "neurazum",
+    "name": "Neurazum",
+    "type": "vendor"
+  },
+  {
+    "uuid": "af26983d-c81e-46fd-8e83-e73f58cbdf6b",
+    "slug": "xjtupanda",
+    "name": "xjtupanda",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3f9a75e6-67f7-4b5d-b50c-bb6f8aac8524",
+    "slug": "sri-vigneshwar-dj",
+    "name": "Sri-Vigneshwar-DJ",
+    "type": "vendor"
+  },
+  {
+    "uuid": "49be6828-4106-4521-8f74-854b162c8a0b",
+    "slug": "zechengli19",
+    "name": "ZechengLi19",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8e4bb470-3fc6-4f2d-9470-0e628cc94505",
+    "slug": "buaadreamer",
+    "name": "BUAADreamer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "39e334d7-01a0-4956-9c68-93436a924528",
+    "slug": "springwang08",
+    "name": "SpringWang08",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f1808300-8feb-4f55-8abb-7ca697ae87d7",
+    "slug": "ibaigorordo",
+    "name": "ibaiGorordo",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f6dcb498-cd9d-4edb-8337-1b16c9dc473f",
+    "slug": "halimb",
+    "name": "halimb",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bfbc6887-f686-454e-abe8-128387a29f18",
+    "slug": "nagayama0706",
+    "name": "nagayama0706",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d20a083b-6b01-4a70-8ba7-9fc7fb875442",
+    "slug": "haodongli",
+    "name": "haodongli",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5297180c-d14f-4550-894a-aba0e093f2da",
+    "slug": "lc700x",
+    "name": "lc700x",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cc2982f7-3904-4cb4-836b-3010d0c1c3dc",
+    "slug": "brusnicki",
+    "name": "Brusnicki",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c60bc016-3fa5-4f8d-8086-d5d011d06d15",
+    "slug": "p1atdev",
+    "name": "p1atdev",
+    "type": "vendor"
+  },
+  {
+    "uuid": "88b4f248-8b70-440e-9d2b-ba689b14e631",
+    "slug": "adhisetiawan",
+    "name": "adhisetiawan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d43433ac-1802-47fb-b543-e3c853812a71",
+    "slug": "yujiepan",
+    "name": "yujiepan",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9cd95057-cb7c-4418-bd8a-721c8661e155",
+    "slug": "hyz317",
+    "name": "hyz317",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1a363997-2d1d-440d-b03d-672d0a2ce9a9",
+    "slug": "lhmd",
+    "name": "lhmd",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ff2217f2-2951-444e-9709-c5cf73d7d6b0",
+    "slug": "caoza",
+    "name": "Caoza",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bad52af9-2770-44d5-863b-1bb82f2a7261",
+    "slug": "shinoharahare",
+    "name": "ShinoharaHare",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c8267b05-31f8-480c-89b4-557146d68aaf",
+    "slug": "lambda",
+    "name": "lambda",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ad67f7b2-7a0d-4e6d-b479-55af21b1cff3",
+    "slug": "showlab",
+    "name": "showlab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "84e95566-0b9d-4d90-8aa7-830ae8ddc7a0",
+    "slug": "napatswift",
+    "name": "napatswift",
+    "type": "vendor"
+  },
+  {
+    "uuid": "04e044fe-72a3-40d7-88e8-b0037dbffd60",
+    "slug": "daekeun-ml",
+    "name": "daekeun-ml",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bd0e2a6f-cf3f-4299-8a69-8c3929273680",
+    "slug": "macpaw-research",
+    "name": "macpaw-research",
+    "type": "vendor"
+  },
+  {
+    "uuid": "636488f0-26e9-4af3-b3fc-15baa74202a4",
+    "slug": "iamjb",
+    "name": "IAMJB",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e0024dbd-bd9f-45d4-b21e-daad9cbfdd2c",
+    "slug": "gair",
+    "name": "GAIR",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f30eaba-5161-409f-b518-e9260d1e17bc",
+    "slug": "raphaelliu",
+    "name": "RaphaelLiu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "75fc1b94-a6c3-4634-bdc7-dfb7dc07316a",
+    "slug": "hanzhizhang",
+    "name": "HanzhiZhang",
+    "type": "vendor"
+  },
+  {
+    "uuid": "318459c8-2ca3-4f1f-980a-4d85acbb1e22",
+    "slug": "gary109",
+    "name": "gary109",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4df365fe-bc3f-41bb-98f3-2bdc3eb6eb92",
+    "slug": "atalaydenknalbant",
+    "name": "atalaydenknalbant",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5f3a1c9a-ff5c-4044-952e-5655c16ffb5a",
+    "slug": "seesee21",
+    "name": "SeeSee21",
+    "type": "vendor"
+  },
+  {
+    "uuid": "586acb5e-a343-4f5d-aa60-c190165138d8",
+    "slug": "artificialguybr",
+    "name": "artificialguybr",
+    "type": "vendor"
+  },
+  {
+    "uuid": "042bfa9f-ef10-447f-9993-97e9a42dd607",
+    "slug": "hakurei",
+    "name": "hakurei",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c51bd233-755c-4263-8cd4-4161c8b02559",
+    "slug": "tune-a-video-library",
+    "name": "Tune-A-Video-library",
+    "type": "vendor"
+  },
+  {
+    "uuid": "32d777d2-06ee-427c-930a-cf51a2e26fa9",
+    "slug": "brownvc",
+    "name": "brownvc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "07b41c54-ff8b-451c-8150-d79bdd0c5e91",
+    "slug": "lh-tech-ai",
+    "name": "LH-Tech-AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b7ae4b8b-2f84-41f2-954c-d3c180c08433",
+    "slug": "sergio-sanz-rodriguez",
+    "name": "sergio-sanz-rodriguez",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1a7f127c-9f6b-4452-8a92-832c7afdb34d",
+    "slug": "cgnannan19821128",
+    "name": "cgnannan19821128",
+    "type": "vendor"
+  },
+  {
+    "uuid": "01596d74-7775-4de2-b07d-ecae431f851e",
+    "slug": "ljc-1222",
+    "name": "ljc-1222",
+    "type": "vendor"
+  },
+  {
+    "uuid": "af776c97-71f2-4a75-9400-17a699d1f162",
+    "slug": "cair-hkisi",
+    "name": "CAIR-HKISI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "81ebc27d-a981-45c6-9c41-33e058ed9d13",
+    "slug": "innat",
+    "name": "innat",
+    "type": "vendor"
+  },
+  {
+    "uuid": "98436e51-22cb-4938-8420-128984033bee",
+    "slug": "sander-wood",
+    "name": "sander-wood",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f060151c-6928-4142-930a-229131cbed8f",
+    "slug": "shunk031",
+    "name": "shunk031",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b0b206cf-cdf5-43ee-86d1-4d640d845b15",
+    "slug": "jxm",
+    "name": "jxm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b25b6d71-4672-4c12-b8aa-90dc8976bd32",
+    "slug": "kalm-embedding",
+    "name": "KaLM-Embedding",
+    "type": "vendor"
+  },
+  {
+    "uuid": "149bb368-c20d-44f7-9c6b-1d440738a71c",
+    "slug": "quixiai",
+    "name": "QuixiAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2f597f0d-bab5-42be-aeaa-77e724746293",
+    "slug": "hooshvarelab",
+    "name": "HooshvareLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d06a820d-a0ef-410a-ab64-76b370a3bf54",
+    "slug": "monologg",
+    "name": "monologg",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5968854a-91aa-4bb6-b3c3-8440ca28c501",
+    "slug": "alexander-learn",
+    "name": "Alexander-Learn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "532d9f36-b94a-4b4b-a5a9-d44ecf017839",
+    "slug": "aybars",
+    "name": "Aybars",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e875a089-62b4-4e6e-b40a-48226f690368",
+    "slug": "nguyenvulebinh",
+    "name": "nguyenvulebinh",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c1dc4451-af57-48b3-a6e2-67a11a015009",
+    "slug": "kaushik-harsh-99",
+    "name": "kaushik-harsh-99",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ff0f1d36-191f-46d3-a48e-f385cfed8ef9",
+    "slug": "uclanlp",
+    "name": "uclanlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b24d3f50-0d7b-4464-ae03-911834a5f01f",
+    "slug": "togethercomputer",
+    "name": "togethercomputer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f7eed696-e6c7-4430-9b64-1f771658a8da",
+    "slug": "upskyy",
+    "name": "upskyy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "73c1755c-ceff-4ea9-a2d7-cf481029e1ce",
+    "slug": "nytk",
+    "name": "NYTK",
+    "type": "vendor"
+  },
+  {
+    "uuid": "570e0521-e8b9-4f64-9301-1e87fdcb4b0e",
+    "slug": "dislab",
+    "name": "DISLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "36cc893f-fd90-44d9-a8ed-a33b02285d2e",
+    "slug": "gsarti",
+    "name": "gsarti",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4d3e6857-3dde-4e4f-86e0-627f4043daae",
+    "slug": "yale-nlp",
+    "name": "yale-nlp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "da334872-b6dd-4b32-a3af-0cc110f6e8aa",
+    "slug": "openassistant",
+    "name": "OpenAssistant",
+    "type": "vendor"
+  },
+  {
+    "uuid": "31c1fa81-a8cf-42d1-ad62-f3b1de4cf195",
+    "slug": "futurema",
+    "name": "FutureMa",
+    "type": "vendor"
+  },
+  {
+    "uuid": "839ef009-3097-4f57-8c9b-bd8f82e45503",
+    "slug": "hello-simpleai",
+    "name": "Hello-SimpleAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "58ce2461-6d92-4d6b-bc7b-eb28d4471c9a",
+    "slug": "circulus",
+    "name": "circulus",
+    "type": "vendor"
+  },
+  {
+    "uuid": "266123f8-99aa-4200-97f8-3665685b98fa",
+    "slug": "z-lab",
+    "name": "z-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d6b70ec0-8a36-4616-8008-89c7959d8a2e",
+    "slug": "chiennv",
+    "name": "chiennv",
+    "type": "vendor"
+  },
+  {
+    "uuid": "fa89e3b3-dad3-4828-bbf7-79fc02c5c6b5",
+    "slug": "lordx64",
+    "name": "lordx64",
+    "type": "vendor"
+  },
+  {
+    "uuid": "909518dd-da12-438b-9beb-2e40e43377ab",
+    "slug": "trevorjs",
+    "name": "TrevorJS",
+    "type": "vendor"
+  },
+  {
+    "uuid": "188a3330-bd07-4f13-beab-2eff0eb66ac0",
+    "slug": "nanbeige",
+    "name": "Nanbeige",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4466b29b-1e07-4aa2-9369-d0d990cac022",
+    "slug": "llamafactory",
+    "name": "llamafactory",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5feb810e-0df5-42c0-9900-697151c646c1",
+    "slug": "surpem",
+    "name": "Surpem",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0221c56a-220e-43cb-bcaa-79fc3fc55f22",
+    "slug": "contextualai",
+    "name": "ContextualAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "aaad0230-7a59-4238-a5c1-15e120a224ad",
+    "slug": "ai4sec",
+    "name": "AI4Sec",
+    "type": "vendor"
+  },
+  {
+    "uuid": "61c0271f-2490-4f6f-8913-5a951eeb32e9",
+    "slug": "spacy",
+    "name": "spacy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d915fcf5-c63a-44c2-aa36-0681257c4449",
+    "slug": "alvaroalon2",
+    "name": "alvaroalon2",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d04b176a-4e83-4586-86d7-5f29a37a5b91",
+    "slug": "gretelai",
+    "name": "gretelai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "90468051-63d0-46b0-a953-bebd730cc3fc",
+    "slug": "raynardj",
+    "name": "raynardj",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bc6bbbf8-c473-4f6f-a3b7-1ef69c2939c8",
+    "slug": "niutrans",
+    "name": "NiuTrans",
+    "type": "vendor"
+  },
+  {
+    "uuid": "555f3f2f-c6b2-4b6f-9a06-a063c7145811",
+    "slug": "mtg-upf",
+    "name": "mtg-upf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "10e11e9d-b456-4f97-89cc-a003bd8c6bec",
+    "slug": "anantoj",
+    "name": "anantoj",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8f896071-e416-4d89-83ea-f1881e83a59b",
+    "slug": "mattyb95",
+    "name": "MattyB95",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5d93dd6c-ded6-4921-8fd5-0a148bfe2605",
+    "slug": "lichenda",
+    "name": "lichenda",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0b05a69f-186c-45c6-bf1c-6d51e131f9ab",
+    "slug": "yulinfeng",
+    "name": "Yulinfeng",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bd687926-14c3-438e-bedd-a71236ca00fc",
+    "slug": "aslp-lab",
+    "name": "ASLP-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2fa5249f-ddac-416a-972e-bf047dbf23c4",
+    "slug": "hi-paris",
+    "name": "hi-paris",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b3652d3a-cbf9-4b92-8a87-2a8b27867692",
+    "slug": "scragnog",
+    "name": "scragnog",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7237b23c-8861-497a-93e8-96f9d7e83a57",
+    "slug": "alvanlii",
+    "name": "alvanlii",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3d223d6b-6ff9-45dd-afcb-f130cabecdaf",
+    "slug": "yehor",
+    "name": "Yehor",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a73af391-5142-44e2-aafd-264506baa780",
+    "slug": "gigant",
+    "name": "gigant",
+    "type": "vendor"
+  },
+  {
+    "uuid": "938bc419-6a0b-4926-979f-c5df141026b8",
+    "slug": "software-mansion",
+    "name": "software-mansion",
+    "type": "vendor"
+  },
+  {
+    "uuid": "17a586a1-c884-4c9a-bada-bb5f0620ea45",
+    "slug": "2121-8",
+    "name": "2121-8",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a88f875e-8a3f-4f54-b6d5-97f336513c57",
+    "slug": "ahmedjaved812",
+    "name": "ahmedjaved812",
+    "type": "vendor"
+  },
+  {
+    "uuid": "770247d0-a329-45a9-9a35-574b0cf396b4",
+    "slug": "springlab",
+    "name": "SPRINGLab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "71a83ebf-1d03-4d57-b03d-7801f69988b4",
+    "slug": "syvai",
+    "name": "syvai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f1d285f0-735d-458e-aac1-d25230527cf4",
+    "slug": "wasmdashai",
+    "name": "wasmdashai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b9d54080-f3e8-407a-b30e-822890375a52",
+    "slug": "cwhy",
+    "name": "CWhy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "203ee307-3ccb-436b-8426-3d57dc043aeb",
+    "slug": "jat-project",
+    "name": "jat-project",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7442b21b-e61f-4534-a39b-6288c5c797f9",
+    "slug": "baai-humanoid",
+    "name": "BAAI-Humanoid",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a2c9d835-ee26-4fa9-a003-aaad7076cddc",
+    "slug": "robertbogdon",
+    "name": "robertbogdon",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1d8b576a-2875-49b3-a890-c20eb16ba223",
+    "slug": "svnfs",
+    "name": "svnfs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e223e890-a8fa-46ae-b663-94a42386e23a",
+    "slug": "aliosmankaya",
+    "name": "aliosmankaya",
+    "type": "vendor"
+  },
+  {
+    "uuid": "944e4e23-30ad-485d-af8b-fbeedbd77fcf",
+    "slug": "opentargets",
+    "name": "opentargets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e1ba606f-7d04-4d70-ac4b-239bba394900",
+    "slug": "fabiszn",
+    "name": "fabiszn",
+    "type": "vendor"
+  },
+  {
+    "uuid": "01e31362-7768-4f79-8d7c-c97cd92bcb2d",
+    "slug": "ahmadswaid",
+    "name": "Ahmadswaid",
+    "type": "vendor"
+  },
+  {
+    "uuid": "478ac1ed-8557-4cb8-81f5-28b7ba20f6f9",
+    "slug": "cf-group-4",
+    "name": "cf-group-4",
+    "type": "vendor"
+  },
+  {
+    "uuid": "85baf9ab-1518-4a20-882f-8acee2a82cfc",
+    "slug": "trainings",
+    "name": "Trainings",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3c575c54-eaec-4684-be6f-804e70246c42",
+    "slug": "romalab",
+    "name": "RoMALab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4c50571f-2eff-40c7-b4f9-b77d55b3819e",
+    "slug": "jnm38",
+    "name": "jnm38",
+    "type": "vendor"
+  },
+  {
+    "uuid": "30c6d1a1-bbf2-4434-97b5-e4182463dd70",
+    "slug": "physical-intelligence",
+    "name": "physical-intelligence",
+    "type": "vendor"
+  },
+  {
+    "uuid": "035a4606-0e8a-43b4-be90-20dcbbf02909",
+    "slug": "beingbeyond",
+    "name": "BeingBeyond",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2a59209a-5c24-4cc4-a3a7-606f712bd796",
+    "slug": "x-humanoid",
+    "name": "X-Humanoid",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b8bc2a10-199a-4555-8d4d-2676ff09c582",
+    "slug": "open-orca",
+    "name": "Open-Orca",
+    "type": "vendor"
+  },
+  {
+    "uuid": "44c77240-5683-464d-8d84-0a8830cfcecc",
+    "slug": "creative-graphic-design",
+    "name": "creative-graphic-design",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e2753383-72aa-4bae-add6-5c60210aee1e",
+    "slug": "cnam-lmssc",
+    "name": "Cnam-LMSSC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b72aa916-0b8f-47e8-9963-72c5d5a4c55d",
+    "slug": "ai4math",
+    "name": "AI4Math",
+    "type": "vendor"
+  },
+  {
+    "uuid": "42265525-a7e1-40cd-800d-20c5c9882f2e",
+    "slug": "oatmealliu",
+    "name": "Oatmealliu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "27d8b32b-eb81-4421-8f9a-d9b369b9b383",
+    "slug": "emova-ollm",
+    "name": "Emova-ollm",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b1b181b6-0259-4b05-87be-6a3d80865784",
+    "slug": "wikimedia",
+    "name": "wikimedia",
+    "type": "vendor"
+  },
+  {
+    "uuid": "470f9709-3389-4b51-8992-a8d0d4e8de76",
+    "slug": "jamescalam",
+    "name": "jamescalam",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2323290d-c4b3-4256-8bdd-2a09b996d928",
+    "slug": "dell-research-harvard",
+    "name": "dell-research-harvard",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1c585c1d-07f3-4b77-9d85-3816c7024a35",
+    "slug": "yongchengyao",
+    "name": "YongchengYAO",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f7d980ec-df26-4bf1-897e-bc6689362e0f",
+    "slug": "ryann829",
+    "name": "Ryann829",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6d202ccd-44a7-4474-9819-73837f5ea324",
+    "slug": "spatialverse",
+    "name": "spatialverse",
+    "type": "vendor"
+  },
+  {
+    "uuid": "71a2fc42-a834-4876-a700-2f47b0041ca1",
+    "slug": "april-aigc",
+    "name": "APRIL-AIGC",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bc121a82-e352-4c54-84a9-437a42decbf1",
+    "slug": "cais",
+    "name": "cais",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4fa7cc9c-b662-4044-a0a6-9d2cc50bc67e",
+    "slug": "instruction-pretrain",
+    "name": "instruction-pretrain",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3573d60f-6c12-42fe-9527-9a558a29d651",
+    "slug": "shivaniachary123",
+    "name": "shivaniachary123",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4bb00e1f-d8c6-412f-9d2f-cc97d0c892bf",
+    "slug": "nyu-mll",
+    "name": "nyu-mll",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c70ad7bd-a85e-4b89-9ce9-0fda19990f97",
+    "slug": "linagora",
+    "name": "linagora",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0b855234-c4bd-4861-835f-6b52e1dfb39a",
+    "slug": "misikoff",
+    "name": "misikoff",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f0c003c6-03e9-4596-b22d-b03204f090d9",
+    "slug": "arkailab-adl",
+    "name": "ArkAiLab-Adl",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bd70fd9b-a999-4a7a-a9da-4f92623f8930",
+    "slug": "kyujinpy",
+    "name": "kyujinpy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6605bcff-899d-43a1-9fcc-f278bb956e21",
+    "slug": "malhajar",
+    "name": "malhajar",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5213a456-23ae-4cc8-b29f-2d0d39bca393",
+    "slug": "mlcommons",
+    "name": "MLCommons",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6a207525-b1d0-425c-9055-4c61d83920c3",
+    "slug": "trentmkelly",
+    "name": "trentmkelly",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cf2f738d-99d4-4dda-ae49-002fd71a49a1",
+    "slug": "fudan-fmri",
+    "name": "Fudan-fMRI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8c63383d-707a-4ef3-bfcf-7c94bd6a0d4c",
+    "slug": "bitext",
+    "name": "bitext",
+    "type": "vendor"
+  },
+  {
+    "uuid": "014a322d-e6ed-4b11-aede-4655984cf9d8",
+    "slug": "nampdn-ai",
+    "name": "nampdn-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bbe72455-1055-419e-a25d-5d2f9c851e14",
+    "slug": "bond005",
+    "name": "bond005",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0609ee21-883e-476d-bcdf-0794c7433bc9",
+    "slug": "hfforlegal",
+    "name": "HFforLegal",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4b64131d-9970-4c17-8082-7d43040033f5",
+    "slug": "mnemoraorg",
+    "name": "mnemoraorg",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a580bfee-e055-49bb-95bf-506fe1b444d2",
+    "slug": "xlangai",
+    "name": "xlangai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e885c445-c399-4a8a-9c01-9fd0ca2a8305",
+    "slug": "open-bee",
+    "name": "Open-Bee",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2c797fde-70f0-418c-a648-3e39b60db211",
+    "slug": "kd7",
+    "name": "kd7",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7ff8e71d-dfeb-4e77-9875-87806b816f9f",
+    "slug": "artificio",
+    "name": "Artificio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2fff348e-49ce-4b2f-9945-2a109977a1bc",
+    "slug": "xecades",
+    "name": "Xecades",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b0dcd47-3e2c-4eb2-83c8-e0d033b9ea0f",
+    "slug": "arrmlet",
+    "name": "arrmlet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "12ac06b1-cc06-40b6-a907-567b455d3ebc",
+    "slug": "pcvlab",
+    "name": "pcvlab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b79592b-2c90-4dd5-93b6-072e7b1ceb45",
+    "slug": "wanng",
+    "name": "wanng",
+    "type": "vendor"
+  },
+  {
+    "uuid": "89010e2c-4167-417d-96d2-396328894b97",
+    "slug": "ieasybooks-org",
+    "name": "ieasybooks-org",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d9d8dfe4-f66b-4c8d-a081-9355a6b47ae8",
+    "slug": "dropletx",
+    "name": "DropletX",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0de3bdaf-a8a5-4cea-98a2-3e2a2396a96c",
+    "slug": "divyaapp",
+    "name": "DivyaApp",
+    "type": "vendor"
+  },
+  {
+    "uuid": "140532b2-d556-40d6-9631-787550365d7d",
+    "slug": "detection-datasets",
+    "name": "detection-datasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "18093c9f-ef92-44c8-ba25-d8ca27944d4a",
+    "slug": "3dlg-hcvc",
+    "name": "3dlg-hcvc",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f6eeebb7-5cdb-4dd1-9b62-39852987e3a1",
+    "slug": "aadityaubhat",
+    "name": "aadityaubhat",
+    "type": "vendor"
+  },
+  {
+    "uuid": "856c6856-e743-45ab-bcc0-aefbf9f4c857",
+    "slug": "mrovkill",
+    "name": "MrOvkill",
+    "type": "vendor"
+  },
+  {
+    "uuid": "50cfc1a8-0f0e-40c9-b039-ac39484a44ea",
+    "slug": "jablonkagroup",
+    "name": "jablonkagroup",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6ff74bbc-508f-4a92-9f38-7db25c8e1a76",
+    "slug": "haerae-hub",
+    "name": "HAERAE-HUB",
+    "type": "vendor"
+  },
+  {
+    "uuid": "64f8d05c-5b69-4e38-98cd-5a92679abeac",
+    "slug": "librarian-bots",
+    "name": "librarian-bots",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2dac83f9-0288-46dc-b8c4-e5b83edbfbbf",
+    "slug": "cqsss",
+    "name": "cqsss",
+    "type": "vendor"
+  },
+  {
+    "uuid": "edcbbbea-d484-476b-a87c-316dea721da1",
+    "slug": "mixed-modality-search",
+    "name": "mixed-modality-search",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cfb398d1-5d09-44eb-87cf-6631ef405cff",
+    "slug": "iwslt",
+    "name": "IWSLT",
+    "type": "vendor"
+  },
+  {
+    "uuid": "85f1830a-b5d1-407c-bad3-e2f2245e1633",
+    "slug": "wuenlp",
+    "name": "WueNLP",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0ecc038a-8275-484c-bdd7-a895d2cd304f",
+    "slug": "multitalk",
+    "name": "MultiTalk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "74c434f7-9b00-479e-a9d9-2aac47fa5d38",
+    "slug": "joujiboi",
+    "name": "joujiboi",
+    "type": "vendor"
+  },
+  {
+    "uuid": "19a2bbdd-af71-4fb4-b57c-9eda65e3cc51",
+    "slug": "cdminix",
+    "name": "cdminix",
+    "type": "vendor"
+  },
+  {
+    "uuid": "398f2003-1c37-4b6a-bc7d-9cac7c379817",
+    "slug": "nexdata",
+    "name": "Nexdata",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9b5b780c-5837-49e4-8217-ddded333e5e4",
+    "slug": "agibot-world",
+    "name": "agibot-world",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b9e2ee84-f99a-4fe4-9284-645ed6ac1aaa",
+    "slug": "yifanzhang114",
+    "name": "yifanzhang114",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d33fa316-5b16-42ac-be55-ae1678121a63",
+    "slug": "caraj",
+    "name": "CaraJ",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6fe3cee5-93bd-4678-a064-347ab59c673b",
+    "slug": "codatta",
+    "name": "Codatta",
+    "type": "vendor"
+  },
+  {
+    "uuid": "29ccd8b5-3598-4857-8df8-ece50e7f1071",
+    "slug": "deepguess",
+    "name": "deepguess",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2397dc3e-c04e-4603-831c-c1edeeb8f4a2",
+    "slug": "chehablab",
+    "name": "chehablab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ce5e707a-3c1f-4528-ae83-273946c11b15",
+    "slug": "dream-textures",
+    "name": "dream-textures",
+    "type": "vendor"
+  },
+  {
+    "uuid": "23362c92-6a28-4ecf-b42e-36f38f11238f",
+    "slug": "chengzhag",
+    "name": "chengzhag",
+    "type": "vendor"
+  },
+  {
+    "uuid": "00809cc2-be71-43aa-b8a1-dffcfba57c40",
+    "slug": "noakraicer",
+    "name": "noakraicer",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f8494fa2-d80f-4b3e-bd24-a7ba6788d44e",
+    "slug": "controlnet",
+    "name": "ControlNet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a225b0e0-bc69-4e4f-a74c-a7458770559f",
+    "slug": "jdhruv14",
+    "name": "JDhruv14",
+    "type": "vendor"
+  },
+  {
+    "uuid": "886d9e0f-7b28-48fc-91e1-daffe93284c2",
+    "slug": "baber",
+    "name": "baber",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d3be4ef0-2f15-49af-b740-649e4b3baa54",
+    "slug": "tinybenchmarks",
+    "name": "tinyBenchmarks",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f3ca10bc-0d28-4189-b958-5db3eeec52e0",
+    "slug": "embo",
+    "name": "EMBO",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d8a3f4e6-3c21-4a1d-95ae-f974d0481616",
+    "slug": "dennlinger",
+    "name": "dennlinger",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bc84f60e-4c92-49b6-b11a-1c881fec4448",
+    "slug": "lmarena-ai",
+    "name": "lmarena-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "74b51bca-674f-443b-b2ea-cf46afb24ff8",
+    "slug": "open-thoughts",
+    "name": "open-thoughts",
+    "type": "vendor"
+  },
+  {
+    "uuid": "34808b16-b23a-4013-838a-9c89cd059450",
+    "slug": "epfml",
+    "name": "epfml",
+    "type": "vendor"
+  },
+  {
+    "uuid": "55d7d8eb-9d88-4345-a8fd-7249492bded6",
+    "slug": "greennode",
+    "name": "GreenNode",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5550aa56-9d26-426e-b719-717366e55733",
+    "slug": "neuclir",
+    "name": "neuclir",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2e08f3cf-ed8f-44e9-9386-2d528ef09bcc",
+    "slug": "artefactory",
+    "name": "artefactory",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c36b23e3-94b3-4664-96de-f1b743099ccd",
+    "slug": "ymoslem",
+    "name": "ymoslem",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3f6f5fe7-6212-4f8b-8140-0b0b62ed0182",
+    "slug": "fredzhang7",
+    "name": "FredZhang7",
+    "type": "vendor"
+  },
+  {
+    "uuid": "54639f71-0603-4177-a539-54f81cd65b3a",
+    "slug": "humynlabs",
+    "name": "HumynLabs",
+    "type": "vendor"
+  },
+  {
+    "uuid": "c0f43f67-448d-48f9-9307-72eeefbf0695",
+    "slug": "xprize-brazilian-team",
+    "name": "XPRIZE-Brazilian-Team",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1ba018b9-79d7-47cd-8cc8-8f727557d414",
+    "slug": "kth",
+    "name": "KTH",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1c250f7d-99fb-4817-840f-13e73e7f24f9",
+    "slug": "alakxender",
+    "name": "alakxender",
+    "type": "vendor"
+  },
+  {
+    "uuid": "30740406-8f98-4283-bda7-830229d2641e",
+    "slug": "mindweave",
+    "name": "mindweave",
+    "type": "vendor"
+  },
+  {
+    "uuid": "849dc3d9-7945-4bb8-8485-5d774483b5be",
+    "slug": "dannhiroaki",
+    "name": "DannHiroaki",
+    "type": "vendor"
+  },
+  {
+    "uuid": "d470992c-ba70-4bbb-b057-e4bd0ae264ef",
+    "slug": "mlnteam-unical",
+    "name": "MLNTeam-Unical",
+    "type": "vendor"
+  },
+  {
+    "uuid": "28c499fc-e8f3-4abf-844b-66ee7ed0aab3",
+    "slug": "eds-lab",
+    "name": "EDS-lab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "94ce66ee-bf2a-40a8-b988-d181b017c697",
+    "slug": "neovalle",
+    "name": "neovalle",
+    "type": "vendor"
+  },
+  {
+    "uuid": "86749ecb-069e-4dd5-873f-1dc3a18c5534",
+    "slug": "fleaven",
+    "name": "fleaven",
+    "type": "vendor"
+  },
+  {
+    "uuid": "21c62428-adaf-4261-a19d-d0eabb361b67",
+    "slug": "andreaskoepf",
+    "name": "andreaskoepf",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4669b585-71f4-4b13-bf95-bbec091bb606",
+    "slug": "wikipunk",
+    "name": "wikipunk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "360e3f4b-d437-422d-b34d-e8c552a20068",
+    "slug": "xieyizheng",
+    "name": "xieyizheng",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ff7c6930-822f-4d03-a510-54691a4cfb90",
+    "slug": "csplk",
+    "name": "Csplk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "26580c24-3544-41d0-a002-a704a60058b7",
+    "slug": "cua-lite",
+    "name": "cua-lite",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b619a1e8-7630-4d3c-a451-1eb0da80ce0d",
+    "slug": "themrguiller",
+    "name": "TheMrguiller",
+    "type": "vendor"
+  },
+  {
+    "uuid": "021ace17-359d-4816-9961-b94afadb9e40",
+    "slug": "horama",
+    "name": "Horama",
+    "type": "vendor"
+  },
+  {
+    "uuid": "8ec5ca33-b1ff-42d8-8d98-208fbc685258",
+    "slug": "shahardekel",
+    "name": "shahardekel",
+    "type": "vendor"
+  },
+  {
+    "uuid": "efef592e-bfc1-4757-aae0-6903283d067b",
+    "slug": "horizonrobotics",
+    "name": "HorizonRobotics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "368562c5-d58b-4879-acec-5d4be7ca2121",
+    "slug": "aiml-tuda",
+    "name": "AIML-TUDA",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f93fd2fd-6aab-45cb-bbf9-b074195c1451",
+    "slug": "opencompass",
+    "name": "opencompass",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a6dee963-412d-4540-9cef-da5530729d34",
+    "slug": "convergebio",
+    "name": "ConvergeBio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2ac56fb1-d5de-493f-8273-9cb6936f56e2",
+    "slug": "ignatius",
+    "name": "ignatius",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ac498d87-c178-4a2c-9acf-8542fc780692",
+    "slug": "medalpaca",
+    "name": "medalpaca",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3b22d4bd-13ce-493e-a0fe-7445d0305287",
+    "slug": "gart-labor",
+    "name": "gart-labor",
+    "type": "vendor"
+  },
+  {
+    "uuid": "503dc4f0-741c-40a5-9ade-7bfee558a094",
+    "slug": "mjbommar",
+    "name": "mjbommar",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3dcd64e9-ba74-4ce6-828d-7b401305fd34",
+    "slug": "tablesenseai",
+    "name": "TableSenseAI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e28d33d8-a3e1-4b9b-92ab-aadf28573ac5",
+    "slug": "pharaouk",
+    "name": "pharaouk",
+    "type": "vendor"
+  },
+  {
+    "uuid": "787996ea-0088-4d70-b0be-056353417d91",
+    "slug": "inverse-scaling",
+    "name": "inverse-scaling",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e0a8c593-9f49-461a-9030-e8482cc19216",
+    "slug": "somu9",
+    "name": "somu9",
+    "type": "vendor"
+  },
+  {
+    "uuid": "59cb616a-a295-4425-a958-a8209d2ba17c",
+    "slug": "thennal",
+    "name": "thennal",
+    "type": "vendor"
+  },
+  {
+    "uuid": "696919f5-59a0-46d3-8f39-f0345365adf1",
+    "slug": "javaabu",
+    "name": "javaabu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "df77d93f-2542-4afd-aafa-591bd049af73",
+    "slug": "benchmarkdatasets",
+    "name": "BenchmarkDatasets",
+    "type": "vendor"
+  },
+  {
+    "uuid": "033a0a79-395c-4ebf-8d70-277dd1db020e",
+    "slug": "qsbench",
+    "name": "QSBench",
+    "type": "vendor"
+  },
+  {
+    "uuid": "cd8028e3-9e24-4c42-ad5b-7029b16e0a45",
+    "slug": "zaai-ai",
+    "name": "zaai-ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "aca69856-1052-45e9-bb42-89f6d3b1ea66",
+    "slug": "jeremycochoy",
+    "name": "jeremycochoy",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1eda1432-39df-4551-8bbe-b478b8b41d1f",
+    "slug": "zennykenny",
+    "name": "ZennyKenny",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9f7f945e-ca65-4db9-b437-85cb293d4347",
+    "slug": "novastar112",
+    "name": "novastar112",
+    "type": "vendor"
+  },
+  {
+    "uuid": "7f03aa39-00af-476b-b5c5-bfffb612792d",
+    "slug": "jake123456789",
+    "name": "jake123456789",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bd5617a1-b445-463d-84a0-e998a4405b05",
+    "slug": "ai4ce",
+    "name": "ai4ce",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1882fbe3-b712-4455-966b-bf5251963b99",
+    "slug": "rootcauseanalytics",
+    "name": "RootCauseAnalytics",
+    "type": "vendor"
+  },
+  {
+    "uuid": "95daf4dc-2f65-4094-9e01-b89f18b6d07c",
+    "slug": "bangumibase",
+    "name": "BangumiBase",
+    "type": "vendor"
+  },
+  {
+    "uuid": "6e9ba6c5-9829-4390-99a3-84a783ae9a95",
+    "slug": "alk-15",
+    "name": "alk-15",
+    "type": "vendor"
+  },
+  {
+    "uuid": "dfbd822d-82e3-47ec-bd76-c83b6ac76978",
+    "slug": "carbon-lighthouse",
+    "name": "Carbon Lighthouse",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a9cf6c00-9c6e-476e-9a96-28e65045f092",
+    "slug": "audioburst",
+    "name": "Audioburst",
+    "type": "vendor"
+  },
+  {
+    "uuid": "146fe48d-fd98-4528-a4b1-66907d224f23",
+    "slug": "morpholio",
+    "name": "Morpholio",
+    "type": "vendor"
+  },
+  {
+    "uuid": "784a34c9-3d13-4247-bffc-849b5c9121ca",
+    "slug": "clearmetal",
+    "name": "ClearMetal",
+    "type": "vendor"
+  },
+  {
+    "uuid": "4396cb1e-ae59-4d38-8dab-89477d20c809",
+    "slug": "wealthfront",
+    "name": "Wealthfront",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a5f94fb6-b172-44e3-b91d-3196fd2b079b",
+    "slug": "mercedes-benz",
+    "name": "Mercedes-Benz",
+    "type": "company"
+  },
+  {
+    "uuid": "8a983e32-3e36-4751-b38b-21c5c5ed78d9",
+    "slug": "general-motors",
+    "name": "General Motors",
+    "type": "company"
+  },
+  {
+    "uuid": "14e8bc44-3304-4d1d-b89e-b0e9b41480ba",
+    "slug": "bmw",
+    "name": "BMW Group",
+    "type": "company"
+  },
+  {
+    "uuid": "6651fa6c-591d-4040-9e5f-bd77109b4993",
+    "slug": "volkswagen",
+    "name": "Volkswagen",
+    "type": "company"
+  },
+  {
+    "uuid": "8bb0dbe5-8e8b-4931-b7dd-eb7ff1599058",
+    "slug": "toyota",
+    "name": "Toyota",
+    "type": "company"
+  },
+  {
+    "uuid": "03e86796-d927-43a8-bbf9-68980cdea450",
+    "slug": "woven-toyota",
+    "name": "Woven by Toyota",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3abd2aaf-ea1a-4fe0-9359-fcf25af7be44",
+    "slug": "nuro",
+    "name": "Nuro",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ba5f3496-5f57-4240-8477-7ec7065e177f",
+    "slug": "geotab",
+    "name": "Geotab",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a4d62b1e-f3c1-49d9-8e9d-443c060c4a99",
+    "slug": "pods",
+    "name": "PODS",
+    "type": "company"
+  },
+  {
+    "uuid": "1019a097-6648-410b-8a05-291261cc7cd0",
+    "slug": "ups",
+    "name": "UPS",
+    "type": "company"
+  },
+  {
+    "uuid": "b0324b06-46d8-4f03-b8e7-e6a2f403d6d9",
+    "slug": "domina",
+    "name": "Domina",
+    "type": "vendor"
+  },
+  {
+    "uuid": "64e30797-86e6-4c31-91cb-3b042b3d9954",
+    "slug": "picterra",
+    "name": "Picterra",
+    "type": "vendor"
+  },
+  {
+    "uuid": "b13acde9-43e1-4c3a-86fd-6d504854f09c",
+    "slug": "prewave",
+    "name": "Prewave",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e9bf83ca-ab9c-44e2-89ab-f6a7cea2ba93",
+    "slug": "atmira",
+    "name": "atmira",
+    "type": "vendor"
+  },
+  {
+    "uuid": "eacc429d-3d19-4e2d-a35e-5a4aceedf67a",
+    "slug": "safe-rate",
+    "name": "Safe Rate",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3a7408fa-cf7d-48e3-9b9e-d9dbb9807f94",
+    "slug": "stax-ai",
+    "name": "Stax AI",
+    "type": "vendor"
+  },
+  {
+    "uuid": "30f2577d-da02-4b76-9e92-68ba8d9b05cf",
+    "slug": "dun-bradstreet",
+    "name": "Dun & Bradstreet",
+    "type": "vendor"
+  },
+  {
+    "uuid": "74a5c93f-cbe8-4054-adb8-715d82d0b63e",
+    "slug": "cotality",
+    "name": "Cotality",
+    "type": "vendor"
+  },
+  {
+    "uuid": "980cf6bd-d774-46e0-b341-1f48483edc01",
+    "slug": "zenpli",
+    "name": "Zenpli",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1ae8ac80-7aab-4b24-8f17-05c3ac060483",
+    "slug": "saviynt",
+    "name": "Saviynt",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1fe19e93-5163-476b-a129-60f6f7556c85",
+    "slug": "skyflow",
+    "name": "Skyflow",
+    "type": "vendor"
+  },
+  {
+    "uuid": "aba52480-c6c2-4df0-a9eb-7861f9d2ca0c",
+    "slug": "genpact",
+    "name": "Genpact",
+    "type": "vendor"
+  },
+  {
+    "uuid": "20741399-d970-4a55-80be-2e3062a5017b",
+    "slug": "avalara",
+    "name": "Avalara",
+    "type": "vendor"
+  },
+  {
+    "uuid": "3027036c-87b7-48b5-bcfa-eeaa58ca0b5a",
+    "slug": "deloitte",
+    "name": "Deloitte",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f3a304c6-1d3c-4701-aec0-b3fb9d30e112",
+    "slug": "bell-canada",
+    "name": "Bell Canada",
+    "type": "company"
+  },
+  {
+    "uuid": "e0b6096c-5cf3-47cc-b38f-83a173780fd8",
+    "slug": "verizon",
+    "name": "Verizon",
+    "type": "company"
+  },
+  {
+    "uuid": "7344d145-e956-47b1-b657-e446d1459b0e",
+    "slug": "vodafone",
+    "name": "Vodafone",
+    "type": "company"
+  },
+  {
+    "uuid": "4a8062ef-ef87-4ed3-b2b3-af1535f7d88b",
+    "slug": "ferret-ai",
+    "name": "Ferret.ai",
+    "type": "vendor"
+  },
+  {
+    "uuid": "9bcffedd-91b8-4f3a-b714-a6a06ba5e0e0",
+    "slug": "humanizadas",
+    "name": "Humanizadas",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2a6f09b3-b2bd-47f2-b7d1-b908a4e7fe15",
+    "slug": "zenbusiness",
+    "name": "ZenBusiness",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5c0fbc05-ad88-41ef-bae6-e30b143870b9",
+    "slug": "anara",
+    "name": "Anara",
+    "type": "vendor"
+  },
+  {
+    "uuid": "e9145e21-eb69-4e87-828d-e1609d29c6b6",
+    "slug": "iprally",
+    "name": "IPRally",
+    "type": "vendor"
+  },
+  {
+    "uuid": "ad1965e1-a9ae-43fe-a0de-b41e0de1d9de",
+    "slug": "instalily",
+    "name": "Instalily",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5fe08bce-56d4-4782-8447-50d9e63744b3",
+    "slug": "square-management",
+    "name": "Square Management",
+    "type": "vendor"
+  },
+  {
+    "uuid": "a6c5db7c-4a5b-47b2-8184-0c6a5c3cf339",
+    "slug": "synthpop",
+    "name": "Synthpop",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1645a2e5-2633-4982-9f0a-07d0fa7f30b3",
+    "slug": "comeen",
+    "name": "Comeen",
+    "type": "vendor"
+  },
+  {
+    "uuid": "5a1f5d35-f4aa-4469-8ab3-24d1371ac48a",
+    "slug": "agoda",
+    "name": "Agoda",
+    "type": "company"
+  },
+  {
+    "uuid": "cc07906c-3e8a-4f08-8a9d-a2707dbea8cf",
+    "slug": "spotify",
+    "name": "Spotify",
+    "type": "company"
+  },
+  {
+    "uuid": "60695e5f-dabf-4e02-b24a-8a1c5996b258",
+    "slug": "watershed",
+    "name": "Watershed",
+    "type": "vendor"
+  },
+  {
+    "uuid": "f23ad191-bcda-4117-81dc-c737759b3f02",
+    "slug": "fifth-dimension",
+    "name": "Fifth Dimension",
+    "type": "vendor"
+  },
+  {
+    "uuid": "bdbf3ac6-2f1e-4601-bfa8-a6f07ff826ec",
+    "slug": "gazelle",
+    "name": "Gazelle",
+    "type": "vendor"
+  },
+  {
+    "uuid": "2da77398-f065-4311-a949-94e65dfdb240",
+    "slug": "hcltech",
+    "name": "HCLTech",
+    "type": "vendor"
+  },
+  {
+    "uuid": "0e6fea6c-f260-433a-9feb-e8dfd035e871",
+    "slug": "juganu",
+    "name": "Juganu",
+    "type": "vendor"
+  },
+  {
+    "uuid": "1d3b5a1a-bc7b-4772-b22c-6e845bd793ea",
+    "slug": "populix",
+    "name": "Populix",
+    "type": "vendor"
+  },
+  {
+    "uuid": "751dde05-55db-4f06-9ec2-2067d94e4b3d",
+    "slug": "novo-nordisk",
+    "name": "Novo Nordisk",
+    "type": "company"
+  },
+  {
+    "uuid": "e41b0e71-e945-4aa5-be58-311a4ffbb538",
+    "slug": "manipal-hospitals",
+    "name": "Manipal Hospitals",
+    "type": "company"
+  },
+  {
+    "uuid": "c9b04e3c-b2a9-4241-a764-7e1db455c863",
+    "slug": "lemonade",
+    "name": "Lemonade",
+    "type": "company"
+  },
+  {
+    "uuid": "16007116-7c89-4812-8adf-e3f864bc9ccd",
+    "slug": "mayo-clinic",
+    "name": "Mayo Clinic",
+    "type": "company"
   }
 ]

@@ -892,5 +892,143 @@
     "slug": "clinical-risk-prediction-gap",
     "label": "Clinical risk-prediction gap",
     "description": "Readmission, sepsis, fall, and flare risk for individual patients isn't estimated with explainability that clinicians and regulators can act on."
+  },
+  {
+    "uuid": "311f533c-867f-4b05-a741-a909c9bd3298",
+    "slug": "shrinkage-and-theft-risk",
+    "label": "Retail shrinkage / theft risk",
+    "description": "Retail shelves bleed margin to mis-stocking, mis-pricing, theft, and out-of-stocks that human floor walks can't catch at scale."
+  },
+  {
+    "uuid": "73ffebee-e29a-4b58-a363-db89fad8bbc0",
+    "slug": "shipment-visibility-gap",
+    "label": "Shipment visibility gap",
+    "description": "Goods in transit (containers, parcels, B2B shipments) lack live ETA, exception, and routing visibility; ops teams react to disruptions after they hit."
+  },
+  {
+    "uuid": "cafaefdf-22a9-4333-b5d4-a88c09d2a1ab",
+    "slug": "succession-knowledge-loss-risk",
+    "label": "Founder / executive succession knowledge-loss risk",
+    "description": "Tacit decision-making style, judgment heuristics, and institutional context walk out the door with leaders; succession leaves a void."
+  },
+  {
+    "uuid": "946fa8a4-11fb-47cd-9b2e-2382b2481a6a",
+    "slug": "hospital-capacity-planning-gap",
+    "label": "Hospital capacity / admission planning gap",
+    "description": "Admissions, discharges, and unit occupancy fluctuate faster than manual capacity plans; bed shortages, ED diversions, and staffing misalignment follow."
+  },
+  {
+    "uuid": "10de37a0-76c3-4b5d-b303-451629409f5b",
+    "slug": "digital-footprint-leak-risk",
+    "label": "Digital-footprint data-leak risk",
+    "description": "Employees, vendors, and execs accidentally expose sensitive references (credentials, IP, customer data) across public web, social, code repos, and pastebins."
+  },
+  {
+    "uuid": "bb9a083c-234d-4200-bbc3-f6beea0c2aa4",
+    "slug": "policy-simulation-gap",
+    "label": "Policy / strategy simulation gap",
+    "description": "Major policy, pricing, or supply-chain decisions ship without stress-testing against simulated economies, agent behavior, or counter-strategy."
+  },
+  {
+    "uuid": "074cfba1-3a23-4dad-bc9c-71a0c790e27f",
+    "slug": "vehicle-driver-experience-gap",
+    "label": "Vehicle driver-experience / cockpit-AI gap",
+    "description": "Drivers can't access navigation, vehicle controls, owner-manual info, or media via natural conversation; in-car UX falls behind expectations set by smartphones."
+  },
+  {
+    "uuid": "8bd07c0b-76f6-4487-8031-c51bcf523002",
+    "slug": "consumer-debt-recovery-overhead",
+    "label": "Consumer-debt recovery overhead",
+    "description": "Collections teams can't scale outreach across high-volume consumer debt; recovery rates lag while operating cost is high."
+  },
+  {
+    "uuid": "0744f91f-45ec-4880-bf03-c4627fd64db4",
+    "slug": "last-mile-returns-overhead",
+    "label": "Last-mile return / reverse-logistics overhead",
+    "description": "Predicting which packages will be returned and routing them efficiently is manual and reactive; returns inflate logistics cost and erode margin."
+  },
+  {
+    "uuid": "75c43359-a2cf-4b52-a860-2c3a63100fae",
+    "slug": "av-perception-data-cap",
+    "label": "Autonomous-vehicle perception / training-data cap",
+    "description": "Building reliable perception (object classification, lane detection) for AVs is bottlenecked by training-data volume, edge-case coverage, and compute throughput."
+  },
+  {
+    "uuid": "360116aa-b141-4c82-ac41-92cab19e0e67",
+    "slug": "geospatial-mapping-overhead",
+    "label": "Geospatial / terrain-mapping overhead",
+    "description": "High-resolution mapping of large geographies (terrain models, asset condition, infrastructure inventory) is slow and inconsistent without ML on aerial / satellite imagery."
+  },
+  {
+    "uuid": "937b3782-f3d0-43f2-9084-30ac251644aa",
+    "slug": "pharma-regulatory-doc-overhead",
+    "label": "Pharma regulatory documentation overhead",
+    "description": "Clinical study reports, submissions, and compliance documents consume hundreds of regulatory-writer hours; cycle time slips drug launches."
+  },
+  {
+    "uuid": "eb1fabae-9ad8-4b93-b5ea-20ebd8194206",
+    "slug": "public-health-outbreak-detection-gap",
+    "label": "Public-health outbreak / surveillance gap",
+    "description": "Disease outbreaks, anomalous symptom clusters, and supply spikes aren't detected early enough for public-health response."
+  },
+  {
+    "uuid": "885c2ee5-7523-4d80-98aa-394a24f0c351",
+    "slug": "esg-reporting-overhead",
+    "label": "ESG / sustainability reporting overhead",
+    "description": "Carbon, social-impact, and governance disclosures pull data from dozens of sources; reporting cycles are manual, slow, and audit-fragile."
+  },
+  {
+    "uuid": "52772e72-e0f0-4a76-9846-8372a2d2f55d",
+    "slug": "ai-agent-governance-gap",
+    "label": "AI agent identity / runtime-governance gap",
+    "description": "As enterprises deploy many AI agents, identity, access, audit, and runtime data-protection controls don't yet exist for them \u2014 creating a new attack surface."
+  },
+  {
+    "uuid": "fd4f996f-de85-4f69-9fc7-bb0a8a5da37d",
+    "slug": "field-service-diagnostic-overhead",
+    "label": "Field-service diagnostic overhead",
+    "description": "Field technicians spend most of dispatch time diagnosing equipment by hand; first-call-resolution suffers and truck rolls cost margin."
+  },
+  {
+    "uuid": "3c8ee33a-2f53-4a05-a0a1-85aa0e372249",
+    "slug": "patent-search-overhead",
+    "label": "Patent / prior-art search overhead",
+    "description": "Searching, comparing, and clustering 100M+ global patents for novelty, prior-art, or freedom-to-operate analysis is slow and incomplete with traditional tools."
+  },
+  {
+    "uuid": "80438746-f066-4257-a4e6-6dcd2987c370",
+    "slug": "emergency-response-coordination-gap",
+    "label": "Emergency-response coordination gap",
+    "description": "Hazmat, disaster, and emergency operators need rapid synthesis of evolving information (hazard data, asset location, protocols) that manual lookup can't provide."
+  },
+  {
+    "uuid": "660f6cbe-52db-4f05-a191-78c12b0a3025",
+    "slug": "relationship-mapping-overhead",
+    "label": "Relationship / stakeholder intelligence overhead",
+    "description": "Understanding professional and personal networks of counterparties \u2014 for sales, KYC, board prep, or reputational risk \u2014 requires manual research that doesn't scale."
+  },
+  {
+    "uuid": "b8c49e36-0ca3-44c8-9743-2b40822cc3fb",
+    "slug": "business-formation-friction",
+    "label": "Business-formation / SMB-onboarding friction",
+    "description": "Forming a business, picking entity type, drafting compliance docs, and standing up a website is a multi-week multi-vendor slog for solo founders / SMBs."
+  },
+  {
+    "uuid": "f2e08870-b81e-4db7-8649-0c8341d05256",
+    "slug": "procedural-content-generation-need",
+    "label": "Procedural game / virtual content generation need",
+    "description": "Game and virtual-world studios need procedural NPCs, levels, quests, and behaviors at scale; hand-authoring caps content velocity."
+  },
+  {
+    "uuid": "2ed2951b-ef1e-4132-a078-5c4a324a6f75",
+    "slug": "clinical-treatment-personalization-gap",
+    "label": "Personalized-treatment / multimodal diagnosis gap",
+    "description": "Treatment plans rely on cohort averages; integrating patient images, genomics, and history into individualized plans needs AI synthesis."
+  },
+  {
+    "uuid": "d1687d96-f68c-4bb0-9e02-07e07ac0e592",
+    "slug": "smart-city-retail-twin-need",
+    "label": "Physical-space digital-twin need (retail / smart city)",
+    "description": "Retailers and city planners need real-time digital twins of physical spaces (stores, streets) for ops automation, planning, and customer-experience design."
   }
 ]

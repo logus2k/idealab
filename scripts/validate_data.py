@@ -43,6 +43,7 @@ def main():
     requirements = load("requirements.json") or []
     kpis = load("kpis.json") or []
     entities = load("entities.json") or []
+    tasks = load("tasks.json") or []
     links = load("links.json") or {}
     plans = load("plans.json") or []
 
@@ -50,6 +51,7 @@ def main():
     req_by_uuid = {r["uuid"] for r in requirements}
     kpi_by_uuid = {k["uuid"] for k in kpis}
     entity_by_uuid = {e["uuid"] for e in entities}
+    task_by_uuid = {t["uuid"] for t in tasks}
     plan_by_uuid = {p["uuid"] for p in plans}
 
     errors = 0
@@ -100,6 +102,27 @@ def main():
             if euid not in entity_by_uuid:
                 print(f"  ERROR: idea_entities -> unknown entity {euid}")
                 errors += 1
+
+    for row in links.get("idea_tasks", []):
+        if row["idea"] not in ideas_by_uuid:
+            print(f"  ERROR: idea_tasks -> unknown idea {row['idea']}")
+            errors += 1
+        for tuid in row.get("tasks", []):
+            if tuid not in task_by_uuid:
+                print(f"  ERROR: idea_tasks -> unknown task {tuid}")
+                errors += 1
+
+    # idea_models / idea_datasets use HF id strings, not UUIDs — we only
+    # validate the idea-side ref. The model_id / dataset_id strings are
+    # checked at build_graph time against the latest snapshot (soft-warn).
+    for row in links.get("idea_models", []):
+        if row["idea"] not in ideas_by_uuid:
+            print(f"  ERROR: idea_models -> unknown idea {row['idea']}")
+            errors += 1
+    for row in links.get("idea_datasets", []):
+        if row["idea"] not in ideas_by_uuid:
+            print(f"  ERROR: idea_datasets -> unknown idea {row['idea']}")
+            errors += 1
 
     for row in links.get("plan_ideas", []):
         if row.get("plan") not in plan_by_uuid:

@@ -62,7 +62,8 @@ CREATE TABLE kpis (
   uuid        TEXT PRIMARY KEY,
   slug        TEXT NOT NULL UNIQUE,
   label       TEXT NOT NULL,
-  description TEXT
+  description TEXT,
+  category    TEXT
 );
 
 CREATE TABLE entities (
@@ -113,6 +114,44 @@ CREATE TABLE idea_entities (
   PRIMARY KEY (idea_uuid, entity_uuid)
 );
 
+CREATE TABLE tasks (
+  uuid        TEXT PRIMARY KEY,
+  slug        TEXT NOT NULL UNIQUE,
+  label       TEXT NOT NULL,
+  category    TEXT,
+  applies_to  TEXT             -- JSON-encoded ["models","datasets"]
+);
+
+CREATE TABLE idea_tasks (
+  idea_uuid TEXT NOT NULL REFERENCES ideas(uuid),
+  task_uuid TEXT NOT NULL REFERENCES tasks(uuid),
+  PRIMARY KEY (idea_uuid, task_uuid)
+);
+
+CREATE TABLE idea_models (
+  idea_uuid TEXT NOT NULL REFERENCES ideas(uuid),
+  model_id  TEXT NOT NULL,        -- HF id string (e.g. "meta-llama/Llama-3.1-8B-Instruct")
+  PRIMARY KEY (idea_uuid, model_id)
+);
+
+CREATE TABLE idea_datasets (
+  idea_uuid  TEXT NOT NULL REFERENCES ideas(uuid),
+  dataset_id TEXT NOT NULL,       -- HF id string
+  PRIMARY KEY (idea_uuid, dataset_id)
+);
+
+CREATE TABLE plan_models (
+  plan_uuid TEXT NOT NULL REFERENCES plans(uuid),
+  model_id  TEXT NOT NULL,
+  PRIMARY KEY (plan_uuid, model_id)
+);
+
+CREATE TABLE plan_datasets (
+  plan_uuid  TEXT NOT NULL REFERENCES plans(uuid),
+  dataset_id TEXT NOT NULL,
+  PRIMARY KEY (plan_uuid, dataset_id)
+);
+
 CREATE TABLE plan_ideas (
   plan_uuid TEXT NOT NULL REFERENCES plans(uuid),
   idea_uuid TEXT NOT NULL REFERENCES ideas(uuid),
@@ -140,6 +179,15 @@ CREATE INDEX idx_ideas_section             ON ideas(section_no);
 CREATE INDEX idx_ideas_kind                ON ideas(kind);
 CREATE INDEX idx_entities_type             ON entities(type);
 CREATE INDEX idx_plans_type                ON plans(type);
+CREATE INDEX idx_kpis_category             ON kpis(category);
+CREATE INDEX idx_idea_tasks_task           ON idea_tasks(task_uuid);
+CREATE INDEX idx_idea_tasks_idea           ON idea_tasks(idea_uuid);
+CREATE INDEX idx_idea_models_idea          ON idea_models(idea_uuid);
+CREATE INDEX idx_idea_models_model         ON idea_models(model_id);
+CREATE INDEX idx_idea_datasets_idea        ON idea_datasets(idea_uuid);
+CREATE INDEX idx_idea_datasets_dataset     ON idea_datasets(dataset_id);
+CREATE INDEX idx_plan_models_plan          ON plan_models(plan_uuid);
+CREATE INDEX idx_plan_datasets_plan        ON plan_datasets(plan_uuid);
 
 CREATE VIRTUAL TABLE ideas_fts USING fts5(
   idea_uuid UNINDEXED,
@@ -273,6 +321,11 @@ def main():
         if (DATA / "entities.json").exists()
         else []
     )
+    tasks = (
+        json.loads((DATA / "tasks.json").read_text())
+        if (DATA / "tasks.json").exists()
+        else []
+    )
     links = json.loads((DATA / "links.json").read_text())
 
     plans_index_path = PLANS_DIR / "index.json"
@@ -347,8 +400,14 @@ def main():
         )
     for k in kpis:
         conn.execute(
-            "INSERT INTO kpis (uuid, slug, label, description) VALUES (?, ?, ?, ?)",
-            (k["uuid"], k["slug"], k["label"], k.get("description")),
+            "INSERT INTO kpis (uuid, slug, label, description, category) VALUES (?, ?, ?, ?, ?)",
+            (k["uuid"], k["slug"], k["label"], k.get("description"), k.get("category")),
+        )
+    for t in tasks:
+        applies = json.dumps(t.get("applies_to") or [])
+        conn.execute(
+            "INSERT INTO tasks (uuid, slug, label, category, applies_to) VALUES (?, ?, ?, ?, ?)",
+            (t["uuid"], t["slug"], t["label"], t.get("category"), applies),
         )
     for e in entities:
         conn.execute(
@@ -373,6 +432,24 @@ def main():
             conn.execute(
                 "INSERT INTO idea_entities (idea_uuid, entity_uuid) VALUES (?, ?)",
                 (row["idea"], euid),
+            )
+    for row in links.get("idea_tasks", []):
+        for tuid in row.get("tasks", []):
+            conn.execute(
+                "INSERT OR IGNORE INTO idea_tasks (idea_uuid, task_uuid) VALUES (?, ?)",
+                (row["idea"], tuid),
+            )
+    for row in links.get("idea_models", []):
+        for mid in row.get("model_ids", []):
+            conn.execute(
+                "INSERT OR IGNORE INTO idea_models (idea_uuid, model_id) VALUES (?, ?)",
+                (row["idea"], mid),
+            )
+    for row in links.get("idea_datasets", []):
+        for did in row.get("dataset_ids", []):
+            conn.execute(
+                "INSERT OR IGNORE INTO idea_datasets (idea_uuid, dataset_id) VALUES (?, ?)",
+                (row["idea"], did),
             )
 
     plans_path = DATA / "plans.json"
@@ -409,6 +486,18 @@ def main():
                 conn.execute(
                     "INSERT INTO plan_kpis (plan_uuid, kpi_uuid) VALUES (?, ?)",
                     (row["plan"], kuid),
+                )
+        for row in links.get("plan_models", []):
+            for mid in row.get("model_ids", []):
+                conn.execute(
+                    "INSERT OR IGNORE INTO plan_models (plan_uuid, model_id) VALUES (?, ?)",
+                    (row["plan"], mid),
+                )
+        for row in links.get("plan_datasets", []):
+            for did in row.get("dataset_ids", []):
+                conn.execute(
+                    "INSERT OR IGNORE INTO plan_datasets (plan_uuid, dataset_id) VALUES (?, ?)",
+                    (row["plan"], did),
                 )
 
     # FTS5

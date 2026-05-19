@@ -1650,5 +1650,565 @@
     "title": "Healthcare risk prediction with explainability",
     "section": "33. Healthcare & Life Sciences",
     "kind": "idea"
+  },
+  {
+    "uuid": "75e7c8db-cb42-49cd-85ee-a573f16c8169",
+    "slug": "facial-expression-emotion-recognition",
+    "title": "Facial-expression emotion recognition",
+    "section": "3. Customer Insights & Voice of Customer",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d6eb4a88-caae-458b-acbd-47f41abb37b8",
+    "slug": "voice-biometric-authentication",
+    "title": "Voice-biometric authentication",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "9785cd11-16e9-4d66-97bb-0f2eb4d02241",
+    "slug": "ai-farm-management-irrigation-optimization",
+    "title": "AI farm management / irrigation optimization",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "39e9a37c-cbd3-45cb-86a1-5c01fd8b056e",
+    "slug": "retail-shelf-monitoring-cv",
+    "title": "Retail shelf monitoring (computer vision)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ed74160e-b65d-46a3-bebd-8626ef4ea499",
+    "slug": "ai-travel-itinerary-generator",
+    "title": "AI travel itinerary generator",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "de07a5c3-ddfc-4cff-b065-24987e1781a2",
+    "slug": "generative-game-asset-creation",
+    "title": "Generative game asset creation",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6692e0b4-7834-413d-8111-69128c2da828",
+    "slug": "clinical-decision-support",
+    "title": "Clinical decision support (high-risk case flagging)",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c2c6df47-9c7f-40ca-8e3e-0800741943f6",
+    "slug": "smb-financial-automation",
+    "title": "SMB financial automation (auto-categorization + cash-flow forecast)",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5d4fe7ea-2341-4fa1-8331-d6a27c65a17f",
+    "slug": "market-trend-competitor-signal-detection",
+    "title": "Market trend & competitor signal detection",
+    "section": "6. Data, Analytics & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "acc1bb8b-0d94-4699-a081-9a7bbc98591c",
+    "slug": "warehouse-robotics-material-handling",
+    "title": "Warehouse robotics automation (material handling)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ef478d6f-cec2-4023-8e7a-101701a238e9",
+    "slug": "ai-assisted-surgical-robotics",
+    "title": "AI-assisted surgical robotics",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d17103f4-79da-40b0-8c00-c907fd2b8eee",
+    "slug": "hospital-admission-capacity-forecasting",
+    "title": "Hospital admission / capacity forecasting",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2a0767f1-8f11-4e83-a8d3-a1f5589c4a67",
+    "slug": "multimodal-customer-reaction-analysis",
+    "title": "Multimodal customer reaction analysis (video + audio)",
+    "section": "3. Customer Insights & Voice of Customer",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f8f2a80b-cb36-4a6d-be2a-6970f189edf1",
+    "slug": "audio-augmented-video-surveillance",
+    "title": "Audio-augmented video surveillance",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7675fa6a-1531-4ae5-a88e-04d9e979e46f",
+    "slug": "building-energy-efficiency-platform",
+    "title": "Building energy efficiency platform (Carbon Lighthouse pattern)",
+    "section": "29. Energy, Utilities, Oil & Gas",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5796bd7a-07a9-4abf-9079-3f8d6106b387",
+    "slug": "audio-content-search-engine",
+    "title": "Audio content search & transcription engine",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "337f1dfa-7eea-48ed-832f-a7c20dce2114",
+    "slug": "architectural-design-assistant",
+    "title": "Architectural design assistant",
+    "section": "26. Generative Product Design & Engineering",
+    "kind": "idea"
+  },
+  {
+    "uuid": "51bd78f8-034a-440a-be7d-8f364442cc99",
+    "slug": "supply-chain-visibility-platform",
+    "title": "Supply-chain visibility platform",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fa089ee2-8786-4087-8fe6-24a31e0ad8dc",
+    "slug": "robo-advisor-retail-wealth",
+    "title": "Robo-advisor (retail wealth management)",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "aa00b0a1-c6a6-433b-9885-9e177a6abc0c",
+    "slug": "enterprise-due-diligence-memory",
+    "title": "Enterprise due-diligence memory system",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "9b15c3d3-f8de-4c23-8a76-833aa3a865e4",
+    "slug": "executive-decision-style-ai-twin",
+    "title": "Executive decision-style AI twin",
+    "section": "12. Talent, People & Organization",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b3b38da7-de59-4cf2-9929-bbe1bf0adbd5",
+    "slug": "dynamic-self-renegotiating-contracts",
+    "title": "Dynamic self-renegotiating smart contracts",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "165aae37-6be3-43af-820f-bdf311dc33ed",
+    "slug": "multi-agent-swarm-coordination",
+    "title": "Multi-agent swarm coordination (security / logistics)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "9e96bc4e-3504-4d55-9ee7-c2804d90e4b9",
+    "slug": "ai-deception-detection",
+    "title": "AI deception / honesty detection (micro-expression + verbal)",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "88816d38-82e0-4550-ab91-cfe71a74b41b",
+    "slug": "digital-footprint-opsec-guardian",
+    "title": "Digital-footprint OPSEC guardian",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2e943b64-d276-49b2-b16f-be55a30cf529",
+    "slug": "synthetic-economy-policy-simulator",
+    "title": "Synthetic economy / policy-stress simulator",
+    "section": "8. Strategy & Transformation Advisory",
+    "kind": "idea"
+  },
+  {
+    "uuid": "025b25e5-affa-4a5d-bcae-4e5988ff194d",
+    "slug": "in-vehicle-conversational-ai-assistant",
+    "title": "In-vehicle conversational AI assistant",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f609f72e-52b0-4b3f-96c4-c4b8472ff1ac",
+    "slug": "dynamic-location-aware-ooh-advertising",
+    "title": "Dynamic location-aware out-of-home advertising",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "697c326f-40c1-4ce0-8fd9-4bcb2e789f47",
+    "slug": "owners-manual-conversational-search",
+    "title": "Owner's-manual conversational search",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4d345fb3-837e-40c7-b094-9d93a7301997",
+    "slug": "in-vehicle-safety-audio-detection",
+    "title": "In-vehicle safety audio detection",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e2fa1f22-9662-4e4f-b7e6-0e5661a43890",
+    "slug": "autonomous-vehicle-perception",
+    "title": "Autonomous-vehicle perception (object classification)",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "6e2c9f9e-c250-41d3-bd58-2e512fa5080b",
+    "slug": "vehicle-telematics-fleet-optimization",
+    "title": "Vehicle telematics fleet optimization",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c11992a0-da82-494e-b1b5-4eaaf6e6c405",
+    "slug": "av-data-platform",
+    "title": "Autonomous-vehicle data & ML platform",
+    "section": "34. Automotive & Mobility",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2b14026b-6c65-45af-bfb4-78fed53accf8",
+    "slug": "industrial-3d-digital-twin",
+    "title": "Industrial 3D digital twin (factory / asset)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "57beb26a-19ac-4638-aea1-213775300b33",
+    "slug": "cold-chain-temperature-monitoring",
+    "title": "Cold-chain temperature monitoring",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c8be63df-f1fa-4a07-9e9e-9c6326285089",
+    "slug": "package-return-prediction",
+    "title": "Package return / reverse-logistics prediction",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ccbb6e67-6d7a-4240-8e82-2f05c4a3ac10",
+    "slug": "esg-supply-chain-monitoring",
+    "title": "ESG / supply-chain risk monitoring",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "91ace5c0-8910-4058-8ed1-f51175413f2e",
+    "slug": "logistics-distribution-network-digital-twin",
+    "title": "Logistics distribution-network digital twin",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4b0f2f72-4a75-4cbe-88b0-a68a008af570",
+    "slug": "manufacturing-defect-prediction-cv",
+    "title": "Manufacturing defect prediction (computer vision)",
+    "section": "21. Supply Chain, Manufacturing & Logistics",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7211fafb-bb3d-41fc-9a64-027a8eeb8044",
+    "slug": "geospatial-terrain-modeling",
+    "title": "Geospatial AI terrain & infrastructure modeling",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "aee8369e-a6f8-44d2-8f0a-6037b029f031",
+    "slug": "emergency-management-chatbot",
+    "title": "Emergency-management & hazardous-material chatbot",
+    "section": "32. Public Sector & Government",
+    "kind": "idea"
+  },
+  {
+    "uuid": "34d7159d-cd09-4c38-9e37-deebafd3b628",
+    "slug": "ai-debt-collection-platform",
+    "title": "AI debt-collection platform",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "fcdb6c6b-631b-4781-acc4-9b509c04947e",
+    "slug": "ai-mortgage-rate-comparison-agent",
+    "title": "AI mortgage rate comparison & quote agent",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "eea5e8df-ca55-43ef-9519-1aac6328b3b4",
+    "slug": "retirement-planning-data-automation",
+    "title": "Retirement-planning data automation",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "18f20ac3-3f21-447f-bf6a-a9f51d261e1f",
+    "slug": "business-identity-verification-duns",
+    "title": "Business identity verification & D-U-N-S resolution",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d4a0039c-027b-4edb-a6ff-9e0f4e754a8c",
+    "slug": "mortgage-retention-analytics",
+    "title": "Mortgage payoff & retention analytics",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "1e0db3b1-d03c-4a11-87d7-eebed4d81174",
+    "slug": "multimodal-digital-identity-onboarding",
+    "title": "Multimodal digital-identity onboarding",
+    "section": "15. Finance & Accounting",
+    "kind": "idea"
+  },
+  {
+    "uuid": "5218e4f9-16e6-497a-b216-a35605b81281",
+    "slug": "ai-agent-identity-governance",
+    "title": "AI agent identity & runtime governance",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c1db530a-1e92-4c4d-9907-03545f029a24",
+    "slug": "ai-agent-runtime-data-protection",
+    "title": "AI agent runtime data protection",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "4e2aa5ea-db0c-4d7f-a214-72b085ee3048",
+    "slug": "vulnerability-remediation-automation",
+    "title": "Zero-day vulnerability remediation automation",
+    "section": "19. Cybersecurity & SOC",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3784e47a-2356-4dfc-8a81-1b300002844a",
+    "slug": "ai-radiology-workflow-assistant",
+    "title": "AI radiology workflow assistant",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "d85709b4-8502-4423-872f-0b726affea50",
+    "slug": "nurse-shift-handoff-documentation",
+    "title": "Nurse shift-handoff documentation AI",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e46fb556-9576-4461-9da7-1029abf35c94",
+    "slug": "generative-protein-design",
+    "title": "Generative protein / antibody design",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e20d3517-e6be-4c5e-bb7e-4ae88af16f76",
+    "slug": "pharma-regulatory-doc-automation",
+    "title": "Pharmaceutical regulatory documentation automation",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ae8cc3e9-7940-40ef-ad8f-afd4c627e9eb",
+    "slug": "clinical-research-data-search",
+    "title": "Clinical-research data search & cohort discovery",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "12acd468-f885-4318-b0ed-1de2a15305c3",
+    "slug": "disease-outbreak-prediction",
+    "title": "Disease-outbreak prediction (multi-signal)",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f0be7291-a24d-45e0-aa26-4e2a36a430c1",
+    "slug": "ai-embryo-analysis-ivf",
+    "title": "AI embryo morphology analysis (IVF)",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e4c21701-89a0-445e-9686-13c934aa7552",
+    "slug": "personalized-treatment-planning",
+    "title": "AI personalized-treatment planning",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a9ec0882-8a54-4ff9-83c8-e5bf5e2bbee9",
+    "slug": "ai-provider-network-finder",
+    "title": "AI provider-network finder",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ca21067f-fd6d-45fa-8fe3-be84833fc6dd",
+    "slug": "consultant-matching-platform",
+    "title": "AI consultant / contractor matching platform",
+    "section": "16. Human Resources & People Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "edc2fb68-9d93-4a3c-a7f0-1cb2043d5372",
+    "slug": "esg-sustainability-chatbot",
+    "title": "ESG / sustainability reporting chatbot",
+    "section": "11. Governance, Risk & Responsible AI",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e92ac759-6108-4689-b255-d55f959b5d5d",
+    "slug": "climate-intelligence-platform",
+    "title": "Climate / sustainability intelligence platform",
+    "section": "11. Governance, Risk & Responsible AI",
+    "kind": "idea"
+  },
+  {
+    "uuid": "74c0c424-b22c-4543-aae4-84b34a04bbbf",
+    "slug": "tax-compliance-agent",
+    "title": "Tax-compliance gateway agent",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "bf1fb1dc-0d9a-4b10-9b65-525725f52c94",
+    "slug": "customs-tariff-automation",
+    "title": "Customs tariff classification & filing automation",
+    "section": "17. Legal & Compliance",
+    "kind": "idea"
+  },
+  {
+    "uuid": "b065db24-10e6-4874-a43c-3b37b86a4f00",
+    "slug": "telecom-network-as-code-platform",
+    "title": "Network-as-Code developer platform",
+    "section": "28. Telecom & Network Operations",
+    "kind": "idea"
+  },
+  {
+    "uuid": "321db624-8441-48de-a6d9-58a7ea4eaed6",
+    "slug": "multilingual-subtitle-generation",
+    "title": "Multilingual subtitle generation at scale",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "3f444180-5db2-4c8d-81c3-5ee254e29677",
+    "slug": "travel-destination-video-generation",
+    "title": "Travel destination visual & video generation",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "c9f39e2f-a7ca-4f73-98b8-6aa6ae024e95",
+    "slug": "personalized-media-campaigns-spotify",
+    "title": "Ultra-personalized media campaigns (Spotify Wrapped pattern)",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "57ef0d0c-103c-45a2-a75c-cb8c6b7cc530",
+    "slug": "image-super-resolution",
+    "title": "Image super-resolution / restoration",
+    "section": "30. Media, Entertainment & Education",
+    "kind": "idea"
+  },
+  {
+    "uuid": "e517b55e-a91d-4f82-853d-ac0ba19f2fda",
+    "slug": "scientific-research-assistant",
+    "title": "Scientific document research assistant",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "ca319858-cdcf-4a73-aa4d-227f447cc005",
+    "slug": "patent-search-analytics",
+    "title": "Patent search & analytics platform",
+    "section": "4. Knowledge Management & Internal Research",
+    "kind": "idea"
+  },
+  {
+    "uuid": "25315316-49e7-463e-91bf-3706221a1549",
+    "slug": "field-service-ai-diagnostic-assistant",
+    "title": "Field-service technician AI diagnostic assistant",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "1583f1e3-6808-4155-b2a1-1a6e9ac6a0ef",
+    "slug": "survey-creation-analysis-automation",
+    "title": "Survey creation & analysis automation",
+    "section": "5. Workforce Productivity & Enablement",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f0e2295e-c94c-4098-80fb-45cc59f9784c",
+    "slug": "relationship-intelligence-monitoring",
+    "title": "Relationship-intelligence & counterparty monitoring",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "03f1b4bc-9460-45f1-ab49-8350b15ebd66",
+    "slug": "business-formation-assistant",
+    "title": "SMB business-formation assistant",
+    "section": "1. Sales, Marketing & Customer Experience",
+    "kind": "idea"
+  },
+  {
+    "uuid": "7eacd30c-6ae1-4d04-9b91-14c491967ee7",
+    "slug": "smart-city-retail-digital-twin",
+    "title": "Physical-space digital twin (retail / smart city)",
+    "section": "7. Enterprise Technology & Architecture",
+    "kind": "idea"
+  },
+  {
+    "uuid": "a854ae87-13ad-47d6-a74a-808fb615e150",
+    "slug": "ai-insurance-policy-generation",
+    "title": "AI insurance policy & document generation",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "2d250b60-4356-4f40-8bce-7eec392639f9",
+    "slug": "insurance-prior-auth-orchestration",
+    "title": "Insurance prior-auth / referral orchestration",
+    "section": "22. Insurance (Underwriting, Claims, Fraud)",
+    "kind": "idea"
+  },
+  {
+    "uuid": "f442ed2c-53b8-433d-bb75-59c30cb6d39c",
+    "slug": "procedural-game-content-generation",
+    "title": "Procedural game content generation (levels / NPCs / quests)",
+    "section": "25. Generative Marketing & Creative",
+    "kind": "idea"
+  },
+  {
+    "uuid": "26b02663-f237-4573-9fe9-9857394cb134",
+    "slug": "continuous-patient-iot-monitoring",
+    "title": "Continuous patient IoT-stream monitoring",
+    "section": "33. Healthcare & Life Sciences",
+    "kind": "idea"
   }
 ]

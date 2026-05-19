@@ -1,0 +1,202 @@
+[
+  {
+    "uuid": "84cc7d00-557b-44bc-806c-a0df289affca",
+    "slug": "consultancy-mckinsey-rewired",
+    "title": "McKinsey — Rewired (Digital & AI Transformation)",
+    "type": "consultancy-framework",
+    "file": "consultancy-mckinsey-rewired.md",
+    "order_idx": 0
+  },
+  {
+    "uuid": "903911d5-5c44-43b6-9f63-68bf30cf0b0d",
+    "slug": "consultancy-bcg-ai-at-scale",
+    "title": "BCG — AI at Scale & the 10-20-70 Rule",
+    "type": "consultancy-framework",
+    "file": "consultancy-bcg-ai-at-scale.md",
+    "order_idx": 1
+  },
+  {
+    "uuid": "4e054501-864f-4458-a6b6-673989f18a93",
+    "slug": "consultancy-bain-ai-playbook",
+    "title": "Bain & Company — AI Adoption Playbook (Sage + OpenAI Alliance)",
+    "type": "consultancy-framework",
+    "file": "consultancy-bain-ai-playbook.md",
+    "order_idx": 2
+  },
+  {
+    "uuid": "ccbb9910-baa2-4957-9518-aff0e4644de1",
+    "slug": "consultancy-deloitte-trustworthy-ai",
+    "title": "Deloitte — State of GenAI + Trustworthy AI Framework",
+    "type": "consultancy-framework",
+    "file": "consultancy-deloitte-trustworthy-ai.md",
+    "order_idx": 3
+  },
+  {
+    "uuid": "077b253f-7337-4768-ae42-394711ab6d8b",
+    "slug": "consultancy-accenture-total-enterprise-reinvention",
+    "title": "Accenture — Total Enterprise Reinvention (with Generative AI)",
+    "type": "consultancy-framework",
+    "file": "consultancy-accenture-total-enterprise-reinvention.md",
+    "order_idx": 4
+  },
+  {
+    "uuid": "fac5d578-a85e-47a9-a74e-ed912f08340b",
+    "slug": "consultancy-gartner-ai-maturity-trism",
+    "title": "Gartner — AI Maturity Model + AI TRiSM + CIO Roadmap",
+    "type": "consultancy-framework",
+    "file": "consultancy-gartner-ai-maturity-trism.md",
+    "order_idx": 5
+  },
+  {
+    "uuid": "e94cce73-e508-43dc-a58a-e6129e538bb9",
+    "slug": "case-pwc-copilot-global",
+    "title": "PwC — Global Microsoft 365 Copilot Rollout",
+    "type": "company-case-study",
+    "file": "case-pwc-copilot-global.md",
+    "order_idx": 6
+  },
+  {
+    "uuid": "9e0f0342-b232-4605-8982-02189614bce0",
+    "slug": "case-jpmorgan-llm-suite",
+    "title": "JPMorgan Chase — LLM Suite + Firm-wide AI Adoption",
+    "type": "company-case-study",
+    "file": "case-jpmorgan-llm-suite.md",
+    "order_idx": 7
+  },
+  {
+    "uuid": "3dbccfd9-00c3-42ce-811b-109f1af4e251",
+    "slug": "case-walmart-sparky-wallaby",
+    "title": "Walmart — Sparky, Wally + Wallaby LLM (Agentic Retail AI)",
+    "type": "company-case-study",
+    "file": "case-walmart-sparky-wallaby.md",
+    "order_idx": 8
+  },
+  {
+    "uuid": "76fa2121-1e6c-48be-b5fa-8df60c925b33",
+    "slug": "case-carrefour-hopla",
+    "title": "Carrefour — Hopla ChatGPT Shopping Assistant + Generative Retail",
+    "type": "company-case-study",
+    "file": "case-carrefour-hopla.md",
+    "order_idx": 9
+  },
+  {
+    "uuid": "50cc68ea-8a15-47f2-b3e0-6b551a93430e",
+    "slug": "case-moderna-mchat-chatgpt-enterprise",
+    "title": "Moderna — mChat → ChatGPT Enterprise (750 GPTs)",
+    "type": "company-case-study",
+    "file": "case-moderna-mchat-chatgpt-enterprise.md",
+    "order_idx": 10
+  },
+  {
+    "uuid": "c24c07c2-e7bb-476c-99d1-b53bfd5e9604",
+    "slug": "case-klarna-ai-customer-service",
+    "title": "Klarna — OpenAI Customer Service AI (and the 2025 Course Correction)",
+    "type": "company-case-study",
+    "file": "case-klarna-ai-customer-service.md",
+    "order_idx": 11
+  },
+  {
+    "uuid": "e1fc9107-be0f-4422-839a-16b0e58c283d",
+    "slug": "case-coca-cola-create-real-magic",
+    "title": "Coca-Cola — \"Create Real Magic\" + Y3000 (Generative Marketing)",
+    "type": "company-case-study",
+    "file": "case-coca-cola-create-real-magic.md",
+    "order_idx": 12
+  },
+  {
+    "uuid": "7eb78964-b62a-45b6-a1bd-b1bfd95743d9",
+    "slug": "case-bain-internal-sage",
+    "title": "Bain & Company (Internal) — Sage + ChatGPT Enterprise Firm-wide",
+    "type": "company-case-study",
+    "file": "case-bain-internal-sage.md",
+    "order_idx": 13
+  },
+  {
+    "uuid": "813ebaaa-af24-488b-bfdf-950324fb43a1",
+    "slug": "industry-banking-financial-services",
+    "title": "Banking & Financial Services — AI Adoption Blueprint",
+    "type": "industry-blueprint",
+    "file": "industry-banking-financial-services.md",
+    "order_idx": 14
+  },
+  {
+    "uuid": "44fbbcc5-9567-4e1b-b69f-5f3e57f6a9fc",
+    "slug": "industry-retail-cpg",
+    "title": "Retail & CPG — AI Adoption Blueprint",
+    "type": "industry-blueprint",
+    "file": "industry-retail-cpg.md",
+    "order_idx": 15
+  },
+  {
+    "uuid": "20585a29-f1a5-4d33-8762-3972b851853f",
+    "slug": "industry-healthcare-pharma",
+    "title": "Healthcare & Pharma — AI Adoption Blueprint",
+    "type": "industry-blueprint",
+    "file": "industry-healthcare-pharma.md",
+    "order_idx": 16
+  },
+  {
+    "uuid": "dc68001f-58d6-463f-978c-38baa17ef61b",
+    "slug": "industry-manufacturing-industrials",
+    "title": "Manufacturing & Industrials — AI Adoption Blueprint",
+    "type": "industry-blueprint",
+    "file": "industry-manufacturing-industrials.md",
+    "order_idx": 17
+  },
+  {
+    "uuid": "760c1fef-b271-414d-ace3-adf188a651a6",
+    "slug": "industry-insurance",
+    "title": "Insurance — AI Adoption Blueprint",
+    "type": "industry-blueprint",
+    "file": "industry-insurance.md",
+    "order_idx": 18
+  },
+  {
+    "uuid": "e6a65a8f-7a4a-4d05-97c3-61263f33b242",
+    "slug": "industry-telecom",
+    "title": "Telecom — AI Adoption Blueprint (TM Forum AI-Native + Autonomous Networks)",
+    "type": "industry-blueprint",
+    "file": "industry-telecom.md",
+    "order_idx": 19
+  },
+  {
+    "uuid": "24962a63-e518-4359-9cc0-100cd8fa2256",
+    "slug": "vendor-microsoft-caf-ai",
+    "title": "Microsoft Cloud Adoption Framework for AI",
+    "type": "vendor-architecture",
+    "file": "vendor-microsoft-caf-ai.md",
+    "order_idx": 20
+  },
+  {
+    "uuid": "a1f3267c-df21-4158-be33-7de1e13243ad",
+    "slug": "vendor-aws-caf-ai",
+    "title": "AWS CAF for AI + Well-Architected ML / GenAI Lenses",
+    "type": "vendor-architecture",
+    "file": "vendor-aws-caf-ai.md",
+    "order_idx": 21
+  },
+  {
+    "uuid": "ea972227-d478-40ad-9c95-ac2da180f05a",
+    "slug": "vendor-google-ai-adoption-framework",
+    "title": "Google Cloud AI Adoption Framework + Vertex AI / Gemini Enterprise",
+    "type": "vendor-architecture",
+    "file": "vendor-google-ai-adoption-framework.md",
+    "order_idx": 22
+  },
+  {
+    "uuid": "49970260-27b6-4b95-ba99-7c78450fe08e",
+    "slug": "vendor-nvidia-enterprise-ai-ra",
+    "title": "NVIDIA Enterprise AI Reference Architecture (AI Factory)",
+    "type": "vendor-architecture",
+    "file": "vendor-nvidia-enterprise-ai-ra.md",
+    "order_idx": 23
+  },
+  {
+    "uuid": "ae8a8c58-43b8-4ee1-bbb6-816a0d0f3cf7",
+    "slug": "vendor-databricks-data-intelligence",
+    "title": "Databricks Data Intelligence Platform + Mosaic AI",
+    "type": "vendor-architecture",
+    "file": "vendor-databricks-data-intelligence.md",
+    "order_idx": 24
+  }
+]

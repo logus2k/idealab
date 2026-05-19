@@ -3,654 +3,793 @@
     "uuid": "3e5a8950-4f12-46d6-9ae7-a3ea72d093bb",
     "slug": "conversion-rate",
     "label": "Conversion rate",
-    "description": "Share of visitors / leads / sessions that complete a target action (purchase, sign-up, qualified opportunity)."
+    "description": "Share of visitors / leads / sessions that complete a target action (purchase, sign-up, qualified opportunity).",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "d15e471f-886b-4fe7-9364-b3091eb2b7c3",
     "slug": "cart-abandonment-rate",
     "label": "Cart abandonment rate",
-    "description": "Share of initiated carts / checkouts that are not completed."
+    "description": "Share of initiated carts / checkouts that are not completed.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "91153676-523c-44df-908d-e20d2bdad264",
     "slug": "csat",
     "label": "Customer satisfaction (CSAT)",
-    "description": "Customer-reported satisfaction with interaction, purchase, or product."
+    "description": "Customer-reported satisfaction with interaction, purchase, or product.",
+    "category": "customer-experience"
   },
   {
     "uuid": "89c098de-d1ce-4f9b-8fb6-7f0317660496",
     "slug": "average-order-value",
     "label": "Average order value (AOV)",
-    "description": "Average revenue per completed transaction."
+    "description": "Average revenue per completed transaction.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "cfdb6605-2c89-4d38-822f-481e52f0533c",
     "slug": "online-revenue",
     "label": "Online revenue",
-    "description": "Gross e-commerce / digital channel revenue."
+    "description": "Gross e-commerce / digital channel revenue.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "81cf1a1f-76bc-4ecc-ba58-42aec2de66b2",
     "slug": "return-rate",
     "label": "Product return rate",
-    "description": "Share of shipped units returned or exchanged."
+    "description": "Share of shipped units returned or exchanged.",
+    "category": "customer-experience"
   },
   {
     "uuid": "212fcf88-5830-41eb-bbed-5da62b0e3ec8",
     "slug": "campaign-throughput",
     "label": "Campaign throughput",
-    "description": "Number of campaigns or creative assets shipped per period."
+    "description": "Number of campaigns or creative assets shipped per period.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "a2e519d4-fdd0-4dc2-89e2-9c187bdff32b",
     "slug": "content-cycle-time",
     "label": "Content / brief cycle time",
-    "description": "Elapsed time from brief request to publishable creative or content."
+    "description": "Elapsed time from brief request to publishable creative or content.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "2a455067-5096-4f3f-a0ec-eaa66bad571d",
     "slug": "pipeline-coverage",
     "label": "Pipeline coverage ratio",
-    "description": "Open pipeline value as a multiple of quota for the upcoming period."
+    "description": "Open pipeline value as a multiple of quota for the upcoming period.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "b6e090d7-041e-4136-be29-92feda668a91",
     "slug": "meetings-booked",
     "label": "Qualified meetings booked",
-    "description": "Number of qualified discovery meetings or demos booked per period / per rep."
+    "description": "Number of qualified discovery meetings or demos booked per period / per rep.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "d8a0aaf4-f5bb-4173-bbf6-0caa010c6fd6",
     "slug": "social-response-time",
     "label": "Social-channel response time",
-    "description": "Median time from inbound social mention / DM to brand response."
+    "description": "Median time from inbound social mention / DM to brand response.",
+    "category": "customer-experience"
   },
   {
     "uuid": "c7af9324-fa4b-4046-8344-ed31687ded20",
     "slug": "price-realization",
     "label": "Price realization",
-    "description": "Actual selling price as a share of list price across orders."
+    "description": "Actual selling price as a share of list price across orders.",
+    "category": "cost-and-margin"
   },
   {
     "uuid": "0f268e54-dac4-4f97-b11b-3892e505f0fa",
     "slug": "gross-margin",
     "label": "Gross margin",
-    "description": "Revenue minus cost of goods sold, as a share of revenue."
+    "description": "Revenue minus cost of goods sold, as a share of revenue.",
+    "category": "cost-and-margin"
   },
   {
     "uuid": "b6fe136f-1803-4d5a-90aa-22da563b8709",
     "slug": "marketing-roi",
     "label": "Marketing ROI / mROI",
-    "description": "Incremental revenue or contribution generated per marketing dollar spent."
+    "description": "Incremental revenue or contribution generated per marketing dollar spent.",
+    "category": "cost-and-margin"
   },
   {
     "uuid": "29481d68-8f31-470c-a854-763ff50e9be4",
     "slug": "brand-share-of-ai-answers",
     "label": "Share of voice in AI / LLM answers",
-    "description": "Share of LLM-generated answers, recommendations, or shopping responses in which the brand or product is surfaced."
+    "description": "Share of LLM-generated answers, recommendations, or shopping responses in which the brand or product is surfaced.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "bfbca713-ae9e-4e5f-8ae6-cb0869215789",
     "slug": "lead-conversion-rate",
     "label": "Lead-to-opportunity conversion rate",
-    "description": "Share of inbound leads that convert to qualified opportunities."
+    "description": "Share of inbound leads that convert to qualified opportunities.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "1a229972-2254-403a-8cb5-c97086924590",
     "slug": "churn-rate",
     "label": "Customer churn rate",
-    "description": "Share of customers (or revenue) lost over a period through cancellations, non-renewals, or attrition."
+    "description": "Share of customers (or revenue) lost over a period through cancellations, non-renewals, or attrition.",
+    "category": "customer-experience"
   },
   {
     "uuid": "7462d3e8-24e7-4e21-bb45-89a756167025",
     "slug": "win-rate",
     "label": "Sales win rate",
-    "description": "Share of qualified opportunities that close-won."
+    "description": "Share of qualified opportunities that close-won.",
+    "category": "revenue-and-growth"
   },
   {
     "uuid": "28df8f9d-e1a0-46bd-bc20-7e547f4f9b02",
     "slug": "rep-ramp-time",
     "label": "Rep ramp time",
-    "description": "Elapsed time from new-hire start date to productive quota attainment."
+    "description": "Elapsed time from new-hire start date to productive quota attainment.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "16e1f25d-330e-4641-891a-f7556266bf67",
     "slug": "procurement-cycle-time",
     "label": "Procurement cycle time",
-    "description": "Elapsed time from request initiation to PO placement / contract signed."
+    "description": "Elapsed time from request initiation to PO placement / contract signed.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "6a284a48-40e5-4755-adf0-ca6ce39893ed",
     "slug": "ap-cycle-time",
     "label": "Accounts-payable cycle time",
-    "description": "Elapsed time from invoice receipt to payment scheduled."
+    "description": "Elapsed time from invoice receipt to payment scheduled.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "2cc06fce-16ff-4bce-ae7b-d4e6319a138a",
     "slug": "error-rate",
     "label": "Document / data processing error rate",
-    "description": "Share of records (invoices, forms, transcripts) with extraction or validation errors."
+    "description": "Share of records (invoices, forms, transcripts) with extraction or validation errors.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "c0852425-f261-402f-9a29-5a7111ce4d20",
     "slug": "triage-time",
     "label": "Inbound triage time",
-    "description": "Median time from inbound message arrival to routing into the correct queue or workflow."
+    "description": "Median time from inbound message arrival to routing into the correct queue or workflow.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "4acd16a3-5307-46a1-93e3-7eda2af19f2a",
     "slug": "analyst-throughput",
     "label": "Analyst throughput",
-    "description": "Number of analyses / reports produced per analyst per period."
+    "description": "Number of analyses / reports produced per analyst per period.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "4eb3f87c-b46e-45ac-8d11-5df6fbab2116",
     "slug": "data-completeness",
     "label": "CRM / data-completeness score",
-    "description": "Share of expected fields populated across a dataset (e.g., CRM records, customer profiles)."
+    "description": "Share of expected fields populated across a dataset (e.g., CRM records, customer profiles).",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "48e5f471-6957-402c-8136-2a1684abbed1",
     "slug": "sla-compliance",
     "label": "SLA compliance rate",
-    "description": "Share of work items completed within the target service-level agreement."
+    "description": "Share of work items completed within the target service-level agreement.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "bde6bfda-6b07-41f0-aa8b-34b4f91ca4ff",
     "slug": "time-to-insight",
     "label": "Time to insight",
-    "description": "Elapsed time from a knowledge question to a usable, grounded answer or analysis."
+    "description": "Elapsed time from a knowledge question to a usable, grounded answer or analysis.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "eeba1249-7e98-4c7f-a0bb-fcde06139678",
     "slug": "meeting-time-saved",
     "label": "Meeting time saved",
-    "description": "Aggregate hours saved by automating meeting prep, notes, action items, and follow-ups."
+    "description": "Aggregate hours saved by automating meeting prep, notes, action items, and follow-ups.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "2843a21e-9670-48f8-b96c-fe3d55105ef1",
     "slug": "time-saved-per-employee",
     "label": "Time saved per employee",
-    "description": "Hours per employee per period reclaimed by AI productivity tooling."
+    "description": "Hours per employee per period reclaimed by AI productivity tooling.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "526ea0ba-275a-4e47-9dad-46dedb80674a",
     "slug": "cost-savings",
     "label": "Cost savings",
-    "description": "Hard-dollar cost reduction attributable to AI automation, deflection, or efficiency."
+    "description": "Hard-dollar cost reduction attributable to AI automation, deflection, or efficiency.",
+    "category": "cost-and-margin"
   },
   {
     "uuid": "397d5d25-fad3-438f-bc09-bb52a1537012",
     "slug": "deflection-rate",
     "label": "Self-service deflection rate",
-    "description": "Share of support / helpdesk interactions resolved without escalating to a human."
+    "description": "Share of support / helpdesk interactions resolved without escalating to a human.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "b0fecf4a-c093-4e0b-a4f3-08c58a899334",
     "slug": "signature-cycle-time",
     "label": "Signature cycle time",
-    "description": "Elapsed time from document send to fully executed signature."
+    "description": "Elapsed time from document send to fully executed signature.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "fcff93ae-da70-4516-910b-28b72609a48a",
     "slug": "data-quality-incidents",
     "label": "Data-quality incidents",
-    "description": "Count of data-quality issues caught (or escaped) per period across monitored pipelines."
+    "description": "Count of data-quality issues caught (or escaped) per period across monitored pipelines.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "ebe64033-cf20-499e-8acf-6a50858b6f69",
     "slug": "process-cycle-time",
     "label": "Process cycle time",
-    "description": "End-to-end elapsed time for a tracked business process."
+    "description": "End-to-end elapsed time for a tracked business process.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "1d81b43e-aec9-40db-ac54-8d908db02fa8",
     "slug": "hallucination-rate",
     "label": "LLM hallucination rate",
-    "description": "Share of LLM responses scored as ungrounded / inaccurate against a reference."
+    "description": "Share of LLM responses scored as ungrounded / inaccurate against a reference.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "4b189700-fdf9-4296-8661-1b0d92ae9fb3",
     "slug": "time-to-deploy",
     "label": "AI feature time-to-deploy",
-    "description": "Elapsed time from idea to production deployment of an AI capability."
+    "description": "Elapsed time from idea to production deployment of an AI capability.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "d21ee614-c2d8-4d55-8b6e-6f5a55bf8417",
     "slug": "fraud-detection-rate",
     "label": "Fraud detection rate",
-    "description": "Share of fraudulent transactions correctly identified before settlement."
+    "description": "Share of fraudulent transactions correctly identified before settlement.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "2e1e992c-38ff-4c69-bc4a-f5667154381a",
     "slug": "false-positive-rate",
     "label": "False-positive rate",
-    "description": "Share of legitimate transactions / events incorrectly flagged as suspicious."
+    "description": "Share of legitimate transactions / events incorrectly flagged as suspicious.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "b1e00d9a-dd4b-4695-8058-c4d55a451c0e",
     "slug": "close-cycle-time",
     "label": "Financial close cycle time",
-    "description": "Calendar days from period end to close completion."
+    "description": "Calendar days from period end to close completion.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "a13fdb17-749c-4a0e-a964-ada356f48c38",
     "slug": "compliance-cycle-time",
     "label": "Compliance review / approval cycle time",
-    "description": "Elapsed time for a compliance check (KYC, AML, regulatory review) to complete."
+    "description": "Elapsed time for a compliance check (KYC, AML, regulatory review) to complete.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "ea894a44-bbbd-4c32-ad18-c7433e3a6660",
     "slug": "ar-cycle-time",
     "label": "Accounts-receivable cycle time",
-    "description": "Elapsed time from invoice issued to payment received and matched."
+    "description": "Elapsed time from invoice issued to payment received and matched.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "6bb539b0-0da7-4dc7-85cf-a7d56758af16",
     "slug": "cash-position-accuracy",
     "label": "Cash-position accuracy",
-    "description": "Variance between predicted and actual cash position over a near-term horizon."
+    "description": "Variance between predicted and actual cash position over a near-term horizon.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "0349edbd-4405-41a1-9ce4-0398791fd2e0",
     "slug": "audit-cycle-time",
     "label": "Audit prep / cycle time",
-    "description": "Elapsed time from audit kick-off to evidence-ready / sign-off."
+    "description": "Elapsed time from audit kick-off to evidence-ready / sign-off.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "851b24fb-9828-4e86-8794-66778a5744ae",
     "slug": "loan-decision-time",
     "label": "Loan / credit decision time",
-    "description": "Elapsed time from credit application submission to approval / denial."
+    "description": "Elapsed time from credit application submission to approval / denial.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "1a32ecda-3651-4b6f-949f-fb8408f7351c",
     "slug": "default-rate",
     "label": "Loan default rate",
-    "description": "Share of issued credit that defaults within the observation period."
+    "description": "Share of issued credit that defaults within the observation period.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "915688ff-5aee-4af9-bb60-80087117662e",
     "slug": "valuation-accuracy",
     "label": "Property valuation accuracy",
-    "description": "Variance between AVM-predicted property value and actual transaction price."
+    "description": "Variance between AVM-predicted property value and actual transaction price.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "95946197-0ad1-4a85-b28a-8d09c592a3ef",
     "slug": "time-to-hire",
     "label": "Time to hire",
-    "description": "Calendar days from requisition open to offer accepted."
+    "description": "Calendar days from requisition open to offer accepted.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "1bba3342-f4c1-4edd-927d-06cc6c8ab33b",
     "slug": "diverse-hire-rate",
     "label": "Diverse / atypical hire share",
-    "description": "Share of hires that meet diversity / atypical-profile targets."
+    "description": "Share of hires that meet diversity / atypical-profile targets.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "def4586a-5127-4a63-8365-e71750a33a15",
     "slug": "training-engagement",
     "label": "Training engagement",
-    "description": "Completion rate or active participation in learning programs."
+    "description": "Completion rate or active participation in learning programs.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "bdae6ddb-5bb8-41d3-946d-efe864eb4981",
     "slug": "onboarding-time",
     "label": "Onboarding time-to-productivity",
-    "description": "Calendar days from start date to baseline productive output."
+    "description": "Calendar days from start date to baseline productive output.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "ed36152a-1f69-42c0-bad8-8bf4f024a005",
     "slug": "internal-fill-rate",
     "label": "Internal-fill rate",
-    "description": "Share of open roles filled by internal candidates."
+    "description": "Share of open roles filled by internal candidates.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "d8cf34a3-22a6-4f8c-bb70-7dd0df765eff",
     "slug": "retention-rate",
     "label": "Employee retention rate",
-    "description": "Share of employees retained over a defined period (inverse of attrition)."
+    "description": "Share of employees retained over a defined period (inverse of attrition).",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "bd75a1f0-3a36-4dca-88dd-ff76801b9f1f",
     "slug": "employee-engagement",
     "label": "Employee engagement score",
-    "description": "Composite engagement metric from pulse/sentiment signals."
+    "description": "Composite engagement metric from pulse/sentiment signals.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "327b3a55-1e2d-4240-bfc3-8305e5f5669e",
     "slug": "skills-coverage",
     "label": "Skills coverage vs. demand",
-    "description": "Share of required skills covered by current workforce capabilities."
+    "description": "Share of required skills covered by current workforce capabilities.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "deab6dd8-9209-4f15-93b8-aa60e69fbc92",
     "slug": "review-throughput",
     "label": "Performance-review throughput",
-    "description": "Calibrated reviews completed per period per manager."
+    "description": "Calibrated reviews completed per period per manager.",
+    "category": "talent-and-productivity"
   },
   {
     "uuid": "bc5b70e1-c594-4d55-85e5-e67f676f69b3",
     "slug": "model-fairness-score",
     "label": "Model fairness score",
-    "description": "Composite disparate-impact / counterfactual-fairness metric for AI decisions."
+    "description": "Composite disparate-impact / counterfactual-fairness metric for AI decisions.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "ae227f04-4109-402a-ab2a-a02384007da0",
     "slug": "review-cycle-time",
     "label": "Document review cycle time",
-    "description": "Elapsed time to review a defined batch of contracts, discovery documents, or filings."
+    "description": "Elapsed time to review a defined batch of contracts, discovery documents, or filings.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "358eb0cf-0f7e-44b2-91fa-f86b33884221",
     "slug": "research-cycle-time",
     "label": "Legal research cycle time",
-    "description": "Elapsed time from question posed to research memo / answer delivered."
+    "description": "Elapsed time from question posed to research memo / answer delivered.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "2243d2b4-9165-4ddf-85a7-a8672f089bb1",
     "slug": "intake-cycle-time",
     "label": "Client / matter intake cycle time",
-    "description": "Elapsed time from lead arrival to engaged matter."
+    "description": "Elapsed time from lead arrival to engaged matter.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "84300e19-b31f-446b-a6b4-6accf5c0518e",
     "slug": "aht",
     "label": "Average handle time (AHT)",
-    "description": "Average duration of a contact-center interaction (call, chat, ticket)."
+    "description": "Average duration of a contact-center interaction (call, chat, ticket).",
+    "category": "customer-experience"
   },
   {
     "uuid": "c6dbb2a0-0630-4df6-80c7-689078c50185",
     "slug": "first-contact-resolution",
     "label": "First-contact resolution rate",
-    "description": "Share of contacts resolved on the first interaction without escalation or return."
+    "description": "Share of contacts resolved on the first interaction without escalation or return.",
+    "category": "customer-experience"
   },
   {
     "uuid": "9c30337e-4a3e-47f3-ae02-105a6dfaf1a0",
     "slug": "nps",
     "label": "Net Promoter Score (NPS)",
-    "description": "Likelihood-to-recommend metric from customer surveys."
+    "description": "Likelihood-to-recommend metric from customer surveys.",
+    "category": "customer-experience"
   },
   {
     "uuid": "22a12a06-9e91-4c12-ab7f-ee7c9217bddd",
     "slug": "escalation-rate",
     "label": "Escalation rate",
-    "description": "Share of tickets escalated from Tier-1 to higher-skill queues."
+    "description": "Share of tickets escalated from Tier-1 to higher-skill queues.",
+    "category": "customer-experience"
   },
   {
     "uuid": "24f14e83-deeb-4e47-8bd4-b563294af0db",
     "slug": "call-answer-rate",
     "label": "Call answer rate",
-    "description": "Share of inbound calls answered (vs. abandoned / unanswered)."
+    "description": "Share of inbound calls answered (vs. abandoned / unanswered).",
+    "category": "customer-experience"
   },
   {
     "uuid": "89c5b289-6e3c-482e-99a7-3b4cfb7a9884",
     "slug": "alert-triage-time",
     "label": "Alert triage time",
-    "description": "Median time from alert generation to analyst-disposition decision."
+    "description": "Median time from alert generation to analyst-disposition decision.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "50d1137c-010f-4810-b427-6b3308295a05",
     "slug": "mttd",
     "label": "Mean time to detect (MTTD)",
-    "description": "Average elapsed time from threat presence to detection."
+    "description": "Average elapsed time from threat presence to detection.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "a434b768-8116-429a-8de9-688436e64dab",
     "slug": "mttr",
     "label": "Mean time to respond (MTTR)",
-    "description": "Average elapsed time from detection to containment / remediation."
+    "description": "Average elapsed time from detection to containment / remediation.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "bbe34386-91fa-406c-980f-a9147ea7bae9",
     "slug": "ato-incident-rate",
     "label": "Account-takeover incident rate",
-    "description": "Count or share of accounts compromised by ATO per period."
+    "description": "Count or share of accounts compromised by ATO per period.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "c236fade-4031-4572-a48c-15ef7ea4cfdc",
     "slug": "pr-cycle-time",
     "label": "PR cycle time",
-    "description": "Elapsed time from pull-request open to merged."
+    "description": "Elapsed time from pull-request open to merged.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "03b61de2-edf6-47fa-a812-9f7993b75dc7",
     "slug": "code-review-time",
     "label": "Code review time",
-    "description": "Elapsed time from PR ready-for-review to first complete review."
+    "description": "Elapsed time from PR ready-for-review to first complete review.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "45f8dc09-6ff2-454c-8543-1abc8900e689",
     "slug": "bug-triage-time",
     "label": "Bug triage time",
-    "description": "Elapsed time from bug report to assigned-and-prioritized."
+    "description": "Elapsed time from bug report to assigned-and-prioritized.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "ee6ce655-a750-47a6-92d3-4fc270bf5bcd",
     "slug": "unplanned-downtime-rate",
     "label": "Unplanned downtime rate",
-    "description": "Share of available equipment time lost to unplanned stoppages."
+    "description": "Share of available equipment time lost to unplanned stoppages.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "56a74dfc-0a72-4a17-8906-ef26bdd20aa3",
     "slug": "inventory-turnover",
     "label": "Inventory turnover",
-    "description": "Ratio of cost-of-goods-sold to average inventory; higher = leaner inventory."
+    "description": "Ratio of cost-of-goods-sold to average inventory; higher = leaner inventory.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "10d8adcd-da46-44b9-ad1b-19ed1c610d6a",
     "slug": "stockout-rate",
     "label": "Stockout rate",
-    "description": "Share of SKUs or order lines unavailable when ordered."
+    "description": "Share of SKUs or order lines unavailable when ordered.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "cb2b1726-47a2-4ba0-9979-b585da7508ae",
     "slug": "supplier-risk-score",
     "label": "Supplier-risk score coverage",
-    "description": "Share of suppliers under active risk monitoring with a current score."
+    "description": "Share of suppliers under active risk monitoring with a current score.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "d15407fc-8a65-4e90-8c96-ef3ed85e654b",
     "slug": "delivery-time",
     "label": "Delivery / ETA accuracy",
-    "description": "Variance between predicted and actual delivery time."
+    "description": "Variance between predicted and actual delivery time.",
+    "category": "customer-experience"
   },
   {
     "uuid": "b2aef09d-32cf-4d85-bdb0-167399f73840",
     "slug": "crop-yield",
     "label": "Crop yield",
-    "description": "Output per unit of farmland over a growing season."
+    "description": "Output per unit of farmland over a growing season.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "5df3e747-207c-42de-bba6-4945fd655602",
     "slug": "incident-rate",
     "label": "Workplace-incident rate",
-    "description": "Recordable incidents per worker-hour or per period."
+    "description": "Recordable incidents per worker-hour or per period.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "9ab05255-bb0e-4800-9310-9a45ffb0d959",
     "slug": "claims-cycle-time",
     "label": "Claims cycle time",
-    "description": "Elapsed time from claim first-notice-of-loss to resolution / payout."
+    "description": "Elapsed time from claim first-notice-of-loss to resolution / payout.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "c65a2cbc-7038-4525-a254-0c1646d801ef",
     "slug": "underwriting-cycle-time",
     "label": "Underwriting cycle time",
-    "description": "Elapsed time from application submitted to underwriting decision."
+    "description": "Elapsed time from application submitted to underwriting decision.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "95670704-9372-4772-8bc4-8c4515af04d9",
     "slug": "straight-through-processing",
     "label": "Straight-through-processing rate",
-    "description": "Share of policies / claims completed without manual intervention."
+    "description": "Share of policies / claims completed without manual intervention.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "aa303e8c-b7f4-4af7-b827-2ab704d8b137",
     "slug": "prior-auth-cycle-time",
     "label": "Prior-auth cycle time",
-    "description": "Elapsed time from prior-auth request to decision."
+    "description": "Elapsed time from prior-auth request to decision.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "ecc87b73-1b0b-4b36-bed7-687ea3c684ab",
     "slug": "drug-discovery-cycle-time",
     "label": "Drug discovery cycle time",
-    "description": "Elapsed time from target identification to lead candidate (or to clinical entry)."
+    "description": "Elapsed time from target identification to lead candidate (or to clinical entry).",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "39f5689a-971d-4b73-81e9-a4aefe59f5ce",
     "slug": "phase1-success-rate",
     "label": "Phase I clinical success rate",
-    "description": "Share of candidates that advance past Phase I trials."
+    "description": "Share of candidates that advance past Phase I trials.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "8ffa6de2-fa7d-481a-bf2f-5d830b0a6d42",
     "slug": "time-to-test",
     "label": "Time-to-test (audience / creative research)",
-    "description": "Elapsed time from concept to read-out on audience / message research."
+    "description": "Elapsed time from concept to read-out on audience / message research.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "0b379a6b-00e3-420b-a835-f7331d25b638",
     "slug": "part-weight-reduction",
     "label": "Part weight / mass reduction",
-    "description": "Reduction in part weight or material vs. baseline design, holding performance constant."
+    "description": "Reduction in part weight or material vs. baseline design, holding performance constant.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "e44ebd52-d4ff-429d-822f-99a4447b86cd",
     "slug": "model-accuracy",
     "label": "Model accuracy",
-    "description": "Accuracy / F1 / AUC of a deployed ML model against a held-out reference set."
+    "description": "Accuracy / F1 / AUC of a deployed ML model against a held-out reference set.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "5c66933b-04da-4a85-81c4-9498307f031c",
     "slug": "model-coverage",
     "label": "Model / training-data coverage",
-    "description": "Breadth of intents, edge cases, or sub-populations the model is trained or validated to handle."
+    "description": "Breadth of intents, edge cases, or sub-populations the model is trained or validated to handle.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "655d809a-4ffb-4b85-9c06-e38a57276cf1",
     "slug": "network-uptime",
     "label": "Network uptime / SLA performance",
-    "description": "Share of time the network meets its uptime and SLA targets."
+    "description": "Share of time the network meets its uptime and SLA targets.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "f6c2773c-e5f0-4af4-a3af-b9d37d274f9c",
     "slug": "forecast-accuracy",
     "label": "Demand / generation forecast accuracy",
-    "description": "Variance between predicted and actual demand / renewable generation."
+    "description": "Variance between predicted and actual demand / renewable generation.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "67c20c9c-eee3-44e5-a407-7c22959d01f1",
     "slug": "carbon-intensity",
     "label": "Carbon intensity / emissions",
-    "description": "Emissions per unit of output (kWh, $, ton); tracks decarbonization progress."
+    "description": "Emissions per unit of output (kWh, $, ton); tracks decarbonization progress.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "3411639b-f40e-492d-9670-3df881ee038a",
     "slug": "wells-per-period",
     "label": "Wells drilled per period",
-    "description": "Wells brought online per quarter / year, holding capital constant."
+    "description": "Wells brought online per quarter / year, holding capital constant.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "aed70e31-71bc-4842-a3fa-4e42424b1f68",
     "slug": "yield-percentage",
     "label": "Process yield",
-    "description": "Share of input converted to spec-meeting output in a refining / manufacturing process."
+    "description": "Share of input converted to spec-meeting output in a refining / manufacturing process.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "7b588009-2968-4d0a-bf2a-3d2e59f0602b",
     "slug": "charging-coverage",
     "label": "EV charging coverage",
-    "description": "Share of population, road-miles, or grid territory within reach of an EV charger."
+    "description": "Share of population, road-miles, or grid territory within reach of an EV charger.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "9ad7ae4b-0507-4523-9433-037387d7b94a",
     "slug": "student-mastery",
     "label": "Student mastery / test-score gain",
-    "description": "Improvement in measured mastery or test scores attributable to AI-augmented learning."
+    "description": "Improvement in measured mastery or test scores attributable to AI-augmented learning.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "afcc0c69-2d8f-4b4e-afef-01b24d577a3b",
     "slug": "viewer-engagement",
     "label": "Viewer engagement",
-    "description": "Watch time, completion rate, interaction rate, or return rate on content."
+    "description": "Watch time, completion rate, interaction rate, or return rate on content.",
+    "category": "customer-experience"
   },
   {
     "uuid": "6ff17a05-c902-428b-a276-2dc37c351589",
     "slug": "integrity-detection-rate",
     "label": "Academic-integrity detection rate",
-    "description": "Share of suspicious or non-policy-compliant submissions correctly flagged."
+    "description": "Share of suspicious or non-policy-compliant submissions correctly flagged.",
+    "category": "risk-and-compliance"
   },
   {
     "uuid": "956c0838-3fab-4cfe-9963-6b8831df9e4e",
     "slug": "content-moderation-accuracy",
     "label": "Content-moderation accuracy",
-    "description": "Precision / recall of content-moderation classifiers on a labeled benchmark."
+    "description": "Precision / recall of content-moderation classifiers on a labeled benchmark.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "ef594425-de76-467a-b828-85ef5a49f661",
     "slug": "captioning-coverage",
     "label": "Captioning / accessibility coverage",
-    "description": "Share of content shipped with captions, translations, or accessibility metadata."
+    "description": "Share of content shipped with captions, translations, or accessibility metadata.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "c6136cf2-49e6-40df-a53f-ef73f917ef27",
     "slug": "attendance-accuracy",
     "label": "Attendance / occupancy accuracy",
-    "description": "Accuracy of automated attendance vs. ground-truth roll."
+    "description": "Accuracy of automated attendance vs. ground-truth roll.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "ac3e80a2-2888-4731-b1de-4d85a2445c03",
     "slug": "inspection-throughput",
     "label": "Inspection throughput",
-    "description": "Inspections completed per inspector or per period."
+    "description": "Inspections completed per inspector or per period.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "188caf7d-ed88-4d53-9c01-87ef02ed623e",
     "slug": "enforcement-coverage",
     "label": "Enforcement coverage",
-    "description": "Share of road-miles / parking zones / tolls covered by automated enforcement."
+    "description": "Share of road-miles / parking zones / tolls covered by automated enforcement.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "3b6f11cf-846c-455e-816c-bf977b57792e",
     "slug": "diagnostic-accuracy",
     "label": "Diagnostic accuracy",
-    "description": "Sensitivity / specificity of AI-assisted diagnosis vs. ground truth."
+    "description": "Sensitivity / specificity of AI-assisted diagnosis vs. ground truth.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "81dbce3a-86fb-4bf8-8066-faedfa369128",
     "slug": "appointment-fill-rate",
     "label": "Appointment fill rate",
-    "description": "Share of available appointment slots filled."
+    "description": "Share of available appointment slots filled.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "09b95cfb-b367-4405-acad-a5806f2114b6",
     "slug": "care-level-routing-accuracy",
     "label": "Care-level routing accuracy",
-    "description": "Share of patients routed to the correct care level by triage AI."
+    "description": "Share of patients routed to the correct care level by triage AI.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "045ecc95-b4d4-465e-9e22-bd578e5f2ad5",
     "slug": "claim-denial-rate",
     "label": "Claim denial rate",
-    "description": "Share of submitted medical claims denied on first submission."
+    "description": "Share of submitted medical claims denied on first submission.",
+    "category": "cost-and-margin"
   },
   {
     "uuid": "12164382-266e-4ff4-8d28-c0fffaa4b7be",
     "slug": "chronic-care-adherence",
     "label": "Chronic-care adherence",
-    "description": "Share of patients meeting chronic-care self-management targets."
+    "description": "Share of patients meeting chronic-care self-management targets.",
+    "category": "quality-and-accuracy"
   },
   {
     "uuid": "c7474a3a-d858-4fd9-82d6-106454928d67",
     "slug": "monitoring-coverage",
     "label": "Vitals / activity monitoring coverage",
-    "description": "Share of cohort with continuous monitoring active and producing usable signal."
+    "description": "Share of cohort with continuous monitoring active and producing usable signal.",
+    "category": "operational-efficiency"
   },
   {
     "uuid": "da767310-d7a8-4014-afdf-8843d559a836",
     "slug": "risk-prediction-accuracy",
     "label": "Clinical risk-prediction accuracy",
-    "description": "Calibration / AUC of clinical risk predictions (readmission, sepsis, falls, flares)."
+    "description": "Calibration / AUC of clinical risk predictions (readmission, sepsis, falls, flares).",
+    "category": "quality-and-accuracy"
+  },
+  {
+    "uuid": "56eb5803-1837-46e0-a650-153e9b78aee6",
+    "slug": "shrinkage-rate",
+    "label": "Retail shrinkage rate",
+    "description": "Inventory loss (theft, damage, mis-counts) as a share of revenue or stock value."
+  },
+  {
+    "uuid": "afa6f09c-c5fc-49f2-9a38-03b85c25ed3d",
+    "slug": "debt-recovery-rate",
+    "label": "Debt-recovery rate",
+    "description": "Share of outstanding debt collected within the recovery window."
+  },
+  {
+    "uuid": "f3419bed-f79f-4614-a174-684d775181bd",
+    "slug": "esg-disclosure-coverage",
+    "label": "ESG disclosure coverage",
+    "description": "Share of required ESG / sustainability disclosures populated with auditable, current data."
+  },
+  {
+    "uuid": "80ce1ee9-3dbb-46ed-a76f-e7b83229e25f",
+    "slug": "outbreak-detection-lead-time",
+    "label": "Outbreak / anomaly detection lead time",
+    "description": "Days of advance warning between AI-detected anomaly signal and conventional surveillance confirmation."
+  },
+  {
+    "uuid": "0989340e-630f-42a1-bc40-0f9707eb6fd4",
+    "slug": "first-call-resolution-fs",
+    "label": "Field-service first-call resolution",
+    "description": "Share of dispatches resolved on the first technician visit."
   }
 ]
