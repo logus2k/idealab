@@ -38,6 +38,17 @@ def check_unique(items, field, name):
     return len(dups)
 
 
+RELATION_TAXONOMY = {
+    ("idea", "kpi"):         {"reduces", "increases", "trades-off-against", "leading-indicator-of"},
+    ("idea", "requirement"): {"addresses", "partially-mitigates", "creates-new-instance-of"},
+    ("idea", "idea"):        {"prerequisite-for", "extends", "evolves-into", "competes-with", "complementary-to"},
+    ("idea", "entity"):      {"case-study-at", "incumbent-competitor", "target-customer-of"},
+    ("idea", "model"):       {"production-baseline", "state-of-the-art-option", "cheap-option", "evaluation-only"},
+    ("idea", "dataset"):     {"training-on", "evaluation-on", "fine-tuning-on"},
+    ("plan", "idea"):        {"core-pillar", "optional-extension", "prerequisite", "pilot-only"},
+}
+
+
 def main():
     ideas = load("ideas.json") or []
     requirements = load("requirements.json") or []
@@ -46,6 +57,8 @@ def main():
     tasks = load("tasks.json") or []
     links = load("links.json") or {}
     plans = load("plans.json") or []
+    idea_semantics = load("idea_semantics.json") or []
+    sem_edges = load("semantic_edges.json") or {"edges": []}
 
     ideas_by_uuid = {i["uuid"] for i in ideas}
     req_by_uuid = {r["uuid"] for r in requirements}
@@ -150,6 +163,68 @@ def main():
             if kuid not in kpi_by_uuid:
                 print(f"  ERROR: plan_kpis -> unknown kpi {kuid}")
                 errors += 1
+
+    # --- idea_semantics.json ---
+    IDEA_SEM_FIELDS = {
+        "kpi_reduces":                          ("kpi",         kpi_by_uuid),
+        "kpi_increases":                        ("kpi",         kpi_by_uuid),
+        "kpi_trades_off_against":               ("kpi",         kpi_by_uuid),
+        "requirement_creates_new_instance_of":  ("requirement", req_by_uuid),
+        "prerequisite_for":                     ("idea",        ideas_by_uuid),
+        "extends":                              ("idea",        ideas_by_uuid),
+        "evolves_into":                         ("idea",        ideas_by_uuid),
+        "competes_with":                        ("idea",        ideas_by_uuid),
+        "complementary_to":                     ("idea",        ideas_by_uuid),
+        "case_study_at":                        ("entity",      entity_by_uuid),
+        "incumbent_competitors":                ("entity",      entity_by_uuid),
+    }
+    for row in idea_semantics:
+        if row.get("idea") not in ideas_by_uuid:
+            print(f"  ERROR: idea_semantics -> unknown idea {row.get('idea')}")
+            errors += 1
+            continue
+        for field, (kind, registry) in IDEA_SEM_FIELDS.items():
+            for uid in row.get(field, []) or []:
+                if uid not in registry:
+                    print(f"  ERROR: idea_semantics.{field} -> unknown {kind} {uid}")
+                    errors += 1
+
+    # --- semantic_edges.json ---
+    registries_by_prefix = {
+        "idea":        ideas_by_uuid,
+        "requirement": req_by_uuid,
+        "kpi":         kpi_by_uuid,
+        "entity":      entity_by_uuid,
+        "task":        task_by_uuid,
+        "plan":        plan_by_uuid,
+    }
+    for e in sem_edges.get("edges", []):
+        for end in ("from", "to"):
+            ref = e.get(end, "")
+            if ":" not in ref:
+                print(f"  ERROR: semantic_edges[{end}] missing type prefix: {ref}")
+                errors += 1
+                continue
+            prefix, inner = ref.split(":", 1)
+            # model/dataset use HF id strings, not UUIDs — soft-check only
+            if prefix in registries_by_prefix and inner not in registries_by_prefix[prefix]:
+                print(f"  ERROR: semantic_edges[{end}] unknown {prefix}: {inner}")
+                errors += 1
+        # relation must be valid for this source→target pair
+        from_pref = e.get("from", "").split(":", 1)[0]
+        to_pref   = e.get("to",   "").split(":", 1)[0]
+        allowed = RELATION_TAXONOMY.get((from_pref, to_pref))
+        if allowed is None:
+            print(f"  ERROR: semantic_edges relation pair not in taxonomy: {from_pref}->{to_pref}")
+            errors += 1
+        elif e.get("relation") not in allowed:
+            print(f"  ERROR: semantic_edges relation '{e.get('relation')}' not allowed for {from_pref}->{to_pref}")
+            errors += 1
+        # confidence range
+        c = e.get("confidence")
+        if c is None or not (0.0 <= float(c) <= 1.0):
+            print(f"  ERROR: semantic_edges confidence out of range: {c}")
+            errors += 1
 
     if errors == cross_errors_start:
         print("  OK")

@@ -1,0 +1,527 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "extractor": "extract_semantic_edges.py",
+    "extracted_at": "2026-05-19T13:13:53.266889+00:00",
+    "model": "gemma-4",
+    "processed_idea_uuids": [
+      "0275f620-75ea-42ed-ba71-a1204708de98",
+      "0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+      "17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "af74862c-8a22-4423-a9cb-63599ca1d940",
+      "d1020367-b54f-4c95-9719-108648233b3e",
+      "e41684d2-f3d4-44a0-acad-30fac4c22c92"
+    ],
+    "backend": "local"
+  },
+  "edges": [
+    {
+      "from": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "to": "entity:ec508739-2e2f-40a9-b2c9-eaa1e2610d39",
+      "relation": "case-study-at",
+      "confidence": 1.0,
+      "rationale": "(Carrefour deployed this on ChatGPT)",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "to": "kpi:3e5a8950-4f12-46d6-9ae7-a3ea72d093bb",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "helps shoppers find products, compare options, and make decisions",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "to": "kpi:91153676-523c-44df-908d-e20d2bdad264",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "Customer-facing advice chatbot embedded on the e-commerce site",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "to": "kpi:d15e471f-886b-4fe7-9364-b3091eb2b7c3",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "helps shoppers find products, compare options, and make decisions",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "to": "requirement:8344af08-5ac5-4a69-a45f-978b4f5e9039",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Customer-facing advice chatbot embedded on the e-commerce site that helps shoppers find products",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "to": "requirement:ec8ee7c9-437e-4150-a57b-4b05061bf42c",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "helps shoppers find products, compare options, and make decisions",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+      "to": "kpi:212fcf88-5830-41eb-bbed-5da62b0e3ec8",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "generate consistent ad creatives, lifestyle scenes, and social media posts on demand.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+      "to": "kpi:a2e519d4-fdd0-4dc2-89e2-9c187bdff32b",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "generate consistent ad creatives, lifestyle scenes, and social media posts on demand.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+      "to": "model:stabilityai/stable-diffusion-xl-base-1.0",
+      "relation": "production-baseline",
+      "confidence": 1.0,
+      "rationale": "Fine-tune Stable Diffusion (or equivalent) on a brand's product photos",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+      "to": "requirement:524b3f0c-9650-4203-825f-f8eb82835671",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "generate consistent ad creatives, lifestyle scenes, and social media posts on demand.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:0dc9e8ba-3b73-4425-9e66-cdd5e53498c0",
+      "to": "requirement:f7550fb3-ddff-4c65-94dd-dbab0bacd883",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "generate consistent ad creatives, lifestyle scenes, and social media posts on demand.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "to": "idea:0275f620-75ea-42ed-ba71-a1204708de98",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Implicit in shopping-advice flows; tailor offers to customer profile and intent.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "to": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Implicit in shopping-advice flows; tailor offers to customer profile and intent.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "to": "kpi:3e5a8950-4f12-46d6-9ae7-a3ea72d093bb",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "tailor offers to customer profile and intent.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "to": "kpi:89c098de-d1ce-4f9b-8fb6-7f0317660496",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "tailor offers to customer profile and intent.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "to": "requirement:c422debf-32d8-4b49-ab26-13c247a6ddce",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "tailor offers to customer profile and intent.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "to": "requirement:f1eb1bfe-716b-4789-a2c4-738a2363efeb",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "tailor offers to customer profile and intent.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "to": "idea:55ac250c-c20e-4cfc-9a42-fa5b86f40b46",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Automated generation of standardized product descriptions",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "to": "idea:9557f88b-7deb-49d6-9539-d5093d1d35f2",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Automated generation of standardized product descriptions",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "to": "kpi:a2e519d4-fdd0-4dc2-89e2-9c187bdff32b",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "ensuring tone consistency and time-to-market.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "to": "requirement:c9c20868-3e95-4ee3-9d2c-8746895633a8",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Automated generation... at scale, ensuring... time-to-market.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "to": "requirement:d8fa60cf-9387-4dfd-9839-6d6db1771b4f",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Automated generation of standardized product descriptions for own-brand catalogs",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:520d9a30-ab4c-4590-a4d7-998c62e63012",
+      "to": "requirement:f7550fb3-ddff-4c65-94dd-dbab0bacd883",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "ensuring tone consistency",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "entity:41ef199c-87bb-4990-a4e0-78625d0fae7b",
+      "relation": "case-study-at",
+      "confidence": 1.0,
+      "rationale": "Self-service commerce bot (Walmart pattern)",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "entity:983a619d-f3a0-46b7-86ec-ba79463ca8cc",
+      "relation": "case-study-at",
+      "confidence": 1.0,
+      "rationale": "Microsoft Copilot Studio customer story",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "relation": "extends",
+      "confidence": 1.0,
+      "rationale": "Conversational agent for product recommendations",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "idea:5b731609-c8cd-4f29-928d-21734ae7795c",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "reported -22% abandoned carts",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "kpi:91153676-523c-44df-908d-e20d2bdad264",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "reported +18% CSAT",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "kpi:cfdb6605-2c89-4d38-822f-481e52f0533c",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "reported +34% online revenue",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "kpi:d15e471f-886b-4fe7-9364-b3091eb2b7c3",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "reported -22% abandoned carts",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "requirement:5d6a27e0-706c-4106-a4e4-32891ee1b9c7",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "66% of interactions resolved via self-service",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "requirement:8344af08-5ac5-4a69-a45f-978b4f5e9039",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Conversational agent for product recommendations",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:68d70890-ff20-4b0f-86dc-6990836c4c47",
+      "to": "requirement:ec8ee7c9-437e-4150-a57b-4b05061bf42c",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "reported -22% abandoned carts",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "to": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "relation": "complementary-to",
+      "confidence": 0.9,
+      "rationale": "generate unique product descriptions, images, and virtual try-on experiences personalized per user.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "to": "idea:88ebc4b2-3ff8-4592-a49b-101b165d0e44",
+      "relation": "complementary-to",
+      "confidence": 0.9,
+      "rationale": "generate unique product descriptions, images, and virtual try-on experiences personalized per user.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "to": "kpi:3e5a8950-4f12-46d6-9ae7-a3ea72d093bb",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "generate unique product descriptions, images, and virtual try-on experiences personalized per user.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "to": "kpi:81cf1a1f-76bc-4ecc-ba58-42aec2de66b2",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "generate unique product descriptions, images, and virtual try-on experiences personalized per user.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "to": "requirement:255cce93-db0d-494f-a139-b901ad245c2a",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "generate unique product descriptions, images, and virtual try-on experiences personalized per user.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a43f6658-b61b-496d-b578-0cb69ced66ed",
+      "to": "requirement:36cf0ef5-2659-44ce-b6ab-5ea57ff1b721",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "generate unique product descriptions, images, and virtual try-on experiences personalized per user.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "entity:4d96271c-b4da-47c4-95b3-a297a6d8f043",
+      "relation": "case-study-at",
+      "confidence": 1.0,
+      "rationale": "Marketing throughput multiplier (Newman's Own pattern)",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "entity:b3aa6185-6f3d-4123-998a-ffbcc87a8715",
+      "relation": "case-study-at",
+      "confidence": 1.0,
+      "rationale": "Source: C5 Insight Microsoft 365 Copilot case studies",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "idea:55ac250c-c20e-4cfc-9a42-fa5b86f40b46",
+      "relation": "extends",
+      "confidence": 0.9,
+      "rationale": "Generative AI for campaign drafting, brief writing, and industry-news summarization",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "kpi:212fcf88-5830-41eb-bbed-5da62b0e3ec8",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "reported 3× campaign volume",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "kpi:a2e519d4-fdd0-4dc2-89e2-9c187bdff32b",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "briefs collapsed from 3 hrs to 30–60 min",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "requirement:524b3f0c-9650-4203-825f-f8eb82835671",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Generative AI for campaign drafting, brief writing",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "requirement:9594df5a-90a6-4377-9aad-fa2b382c770a",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "~70 hours/month saved on news summaries, briefs collapsed",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:a8812acd-ae9c-4f69-b0a9-452ba154a47d",
+      "to": "requirement:f449a11e-954c-4cbc-8159-21ee2a3f01f5",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "briefs collapsed from 3 hrs to 30–60 min",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:af74862c-8a22-4423-a9cb-63599ca1d940",
+      "to": "idea:14f74cb4-39d0-4ee9-aff1-6e4a71b9242e",
+      "relation": "extends",
+      "confidence": 1.0,
+      "rationale": "Autonomous agent that monitors buying signals... runs multi-touch sequences.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:af74862c-8a22-4423-a9cb-63599ca1d940",
+      "to": "idea:9557f88b-7deb-49d6-9539-d5093d1d35f2",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Autonomous agent... personalizes outreach.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:af74862c-8a22-4423-a9cb-63599ca1d940",
+      "to": "kpi:2a455067-5096-4f3f-a0ec-eaa66bad571d",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "Autonomous agent that monitors buying signals... personalizes outreach.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:af74862c-8a22-4423-a9cb-63599ca1d940",
+      "to": "kpi:b6e090d7-041e-4136-be29-92feda668a91",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "escalates to a rep when intent crosses threshold.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:af74862c-8a22-4423-a9cb-63599ca1d940",
+      "to": "requirement:0ed3b0c9-5b0a-40f0-8702-e4ba283475cd",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Autonomous agent... runs multi-touch sequences across email/chat.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:af74862c-8a22-4423-a9cb-63599ca1d940",
+      "to": "requirement:477a9665-9dbf-41a6-a283-6bec3547a746",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Autonomous agent that monitors buying signals (site visits, job changes, social activity).",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "to": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "relation": "complementary-to",
+      "confidence": 0.9,
+      "rationale": "guides customers through purchasing procedures (checkout, configuration, eligibility)",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "to": "kpi:3e5a8950-4f12-46d6-9ae7-a3ea72d093bb",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "AI support that guides customers through purchasing procedures",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "to": "kpi:91153676-523c-44df-908d-e20d2bdad264",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "AI support that guides customers through purchasing procedures",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "to": "kpi:d15e471f-886b-4fe7-9364-b3091eb2b7c3",
+      "relation": "reduces",
+      "confidence": 1.0,
+      "rationale": "AI support that guides customers through purchasing procedures",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "to": "requirement:8344af08-5ac5-4a69-a45f-978b4f5e9039",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "AI support that guides customers through purchasing procedures",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:d1020367-b54f-4c95-9719-108648233b3e",
+      "to": "requirement:bb2f2617-46c7-4fca-9d97-05c218591171",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "guides customers through purchasing procedures (checkout, configuration...)",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:e41684d2-f3d4-44a0-acad-30fac4c22c92",
+      "to": "idea:17b91bb0-3cd3-4268-97dd-80914e6b329c",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Generative AI tailors creative, offer, and channel mix to individual customers.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:e41684d2-f3d4-44a0-acad-30fac4c22c92",
+      "to": "idea:88ebc4b2-3ff8-4592-a49b-101b165d0e44",
+      "relation": "complementary-to",
+      "confidence": 1.0,
+      "rationale": "Generative AI tailors creative, offer, and channel mix to individual customers.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:e41684d2-f3d4-44a0-acad-30fac4c22c92",
+      "to": "kpi:3e5a8950-4f12-46d6-9ae7-a3ea72d093bb",
+      "relation": "increases",
+      "confidence": 1.0,
+      "rationale": "AI personalization is reported to lift conversion ~202%.",
+      "source": "idea_body"
+    },
+    {
+      "from": "idea:e41684d2-f3d4-44a0-acad-30fac4c22c92",
+      "to": "requirement:c422debf-32d8-4b49-ab26-13c247a6ddce",
+      "relation": "addresses",
+      "confidence": 1.0,
+      "rationale": "Generative AI tailors creative, offer, and channel mix to individual customers.",
+      "source": "idea_body"
+    }
+  ]
+}

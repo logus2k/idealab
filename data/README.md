@@ -15,8 +15,10 @@ See [`../documents/parallel_population_guide.md`](../documents/parallel_populati
 | `tasks.json`        | `[{uuid, slug, label, category, applies_to, icon_svg?, icon_color?}]` | HF pipeline_tag + task_categories taxonomy, 56 entries. `applies_to` is `["models"]`, `["datasets"]`, or both. |
 | `dataset_modalities.json` | `[{uuid, slug, label}]` | 9 entries from HF datasets taxonomy. |
 | `dataset_formats.json`    | `[{uuid, slug, label}]` | 10 entries from HF datasets taxonomy. |
-| `plans.json`        | `[{uuid, slug, title, type, file, order_idx}]` *(pending creation)* | Registry for `plans/*.md`. |
-| `links.json`        | object, partitioned by key | All cross-entity references. See below. |
+| `plans.json`        | `[{uuid, slug, title, type, file, order_idx}]` | Registry for `plans/*.md`. |
+| `links.json`        | object, partitioned by key | All structural cross-entity references. See below. |
+| `idea_semantics.json` | `[{idea, kpi_reduces?, kpi_increases?, ...}]` | Human-curated semantic refinements. Optional fields per idea; see "Semantic enrichment layer" below. |
+| `semantic_edges.json` | `{metadata, edges: [{from, to, relation, confidence, rationale, source}]}` | LLM-extracted typed relations. See "Semantic enrichment layer" below. |
 
 ## `links.json` keys (M:N edges)
 
@@ -46,6 +48,98 @@ Models and datasets live in HF snapshot files (`data/fetched/hf-*-*.json`), not 
 - Avoids the curation burden of a `models.json` / `datasets.json` registry that would need pruning every time the snapshot evolves.
 
 The build script's `idea_models` / `idea_datasets` / `plan_models` / `plan_datasets` tables therefore use `TEXT` columns for the IDs, not foreign-key references.
+
+## Semantic enrichment layer
+
+`links.json` records *that* two entities are connected (structural scaffold). The semantic layer records *how* they are connected — `reduces` vs `increases`, `prerequisite-for` vs `extends`, `case-study-at` vs `incumbent-competitor`. Two files feed it:
+
+- `idea_semantics.json` — human-curated, per-idea. High-confidence semantics a curator can add faster than an LLM (polarity on KPIs, prerequisite/competes pairs, case-study vs competitor distinction).
+- `semantic_edges.json` — LLM-extracted, flat edge list. Filled by `scripts/extract_semantic_edges.py` (Sonnet 4.6, conservative + auditable preset). Re-runnable as the catalog grows; only un-processed idea UUIDs are sent to the model.
+
+Both are *additive* — they don't replace structural edges, they refine them. When `build_graph.py` emits the graph, a structural edge between two entities gets upgraded with a `relation`, `polarity`, `confidence`, and `rationale` if either file has a match. Human-curated wins over LLM-extracted on conflict.
+
+### `idea_semantics.json` shape
+
+```json
+[
+  {
+    "idea": "<idea-uuid>",
+    "kpi_reduces":   ["<kpi-uuid>", ...],
+    "kpi_increases": ["<kpi-uuid>", ...],
+    "kpi_trades_off_against":             ["<kpi-uuid>", ...],
+    "requirement_creates_new_instance_of":["<req-uuid>", ...],
+    "prerequisite_for":   ["<idea-uuid>", ...],
+    "extends":            ["<idea-uuid>", ...],
+    "evolves_into":       ["<idea-uuid>", ...],
+    "competes_with":      ["<idea-uuid>", ...],
+    "complementary_to":   ["<idea-uuid>", ...],
+    "case_study_at":          ["<entity-uuid>", ...],
+    "incumbent_competitors":  ["<entity-uuid>", ...]
+  }
+]
+```
+
+All fields except `idea` are optional. Curator fills in only the high-confidence ones.
+
+### `semantic_edges.json` shape
+
+```json
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "extractor": "extract_semantic_edges.py",
+    "extracted_at": "<ISO 8601 UTC>",
+    "model": "claude-sonnet-4-6",
+    "processed_idea_uuids": ["<uuid>", ...]
+  },
+  "edges": [
+    {
+      "from": "idea:<uuid>",
+      "to":   "kpi:<uuid>",
+      "relation":   "reduces",
+      "confidence": 0.85,
+      "rationale":  "Body states: 'cuts time-to-hire from 5 days to 2'",
+      "source":     "idea_body"
+    }
+  ]
+}
+```
+
+`from` / `to` use the type-prefixed graph ID convention (`<type>:<inner>`) — see Type-prefixed node IDs below. `confidence` is in `[0,1]`; the extractor only emits edges ≥ 0.7. `rationale` is a short prose snippet quoted from the source for auditability. `source` is one of `idea_body`, `plan_body`, `human_curation`.
+
+### Closed relation taxonomy
+
+The extractor must pick from this list — no free-form relation names. Adding a new relation requires updating this taxonomy AND `EDGE_LABELS` in `scripts/build_graph.py`.
+
+| Source → Target | Relations |
+|---|---|
+| **idea → kpi**         | `reduces` · `increases` · `trades-off-against` · `leading-indicator-of` |
+| **idea → requirement** | `addresses` · `partially-mitigates` · `creates-new-instance-of` |
+| **idea → idea**        | `prerequisite-for` · `extends` · `evolves-into` · `competes-with` · `complementary-to` |
+| **idea → entity**      | `case-study-at` · `incumbent-competitor` · `target-customer-of` |
+| **idea → model**       | `production-baseline` · `state-of-the-art-option` · `cheap-option` · `evaluation-only` |
+| **idea → dataset**     | `training-on` · `evaluation-on` · `fine-tuning-on` |
+| **plan → idea**        | `core-pillar` · `optional-extension` · `prerequisite` · `pilot-only` |
+
+Polarity (used for color/icon hints in the graph viz):
+
+| Relation | Polarity |
+|---|---|
+| `reduces`, `increases` | `positive` (the idea moves the KPI in the desired direction) |
+| `trades-off-against`, `creates-new-instance-of` | `negative` (side-effect / anti-pattern signal) |
+| `competes-with`, `incumbent-competitor` | `competitive` |
+| everything else | `neutral` |
+
+### Type-prefixed graph node IDs
+
+When `build_graph.py` exports the graph, every node ID is `<type>:<inner>`:
+
+- `idea:<uuid>` · `requirement:<uuid>` · `kpi:<uuid>` · `entity:<uuid>`
+- `plan:<uuid>` · `task:<uuid>` · `modality:<uuid>` · `format:<uuid>`
+- `kpi_category:<slug>` · `task_category:<slug>` *(derived spine nodes)*
+- `model:<hf_id>` · `dataset:<hf_id>`
+
+Original IDs in `data/*.json` stay unprefixed; the prefix is only added at graph-export time so the viewer can route on `type` cheaply. `semantic_edges.json` already uses the prefixed form because it's an export-time artefact, not a registry.
 
 ## UUID + slug rules
 
